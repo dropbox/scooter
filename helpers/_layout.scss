@@ -1,0 +1,79 @@
+//---------------------------
+//
+// Layout Helpers
+//
+//---------------------------
+
+// Islands are the most common layout helper.
+// They throw a padding around the selected element equal to the global baseline.
+// Each layout helper has a vertical modifier (usually '*-v') to apply only top/bottom padding
+//
+.l-island {
+  padding: $g-s-baseline;
+  
+  &-v {
+    padding-top: $g-s-baseline;
+    padding-bottom: $g-s-baseline;
+  }
+}
+
+// Half an island
+.l-isle {
+  padding: round($g-s-baseline / 2);
+  
+  &-v {
+    padding-top: round($g-s-baseline / 2);
+    padding-bottom: round($g-s-baseline / 2);
+  }
+}
+
+// Half an isle
+.l-spit {
+  padding: round($g-s-baseline / 4);
+  
+  &-v {
+    padding-top: round($g-s-baseline / 4);
+    padding-bottom: round($g-s-baseline / 4);
+  }
+}
+
+// Twice the size of an island
+.l-country {
+  padding: round($g-s-baseline * 2);
+  
+  &-v {
+    padding-top: round($g-s-baseline * 2);
+    padding-bottom: round($g-s-baseline * 2);
+  }
+}
+
+// Twice the size of a country
+.l-continent {
+  padding: round($g-s-baseline * 4);
+  
+  &-v {
+    padding-top: round($g-s-baseline * 4);
+    padding-bottom: round($g-s-baseline * 4);
+  }
+}
+
+// Margin layout helpers
+// =====================
+//
+// Typically, we want most elements to have the same vertical spacing, often just with a margin-bottom.
+// The most basic element with this spacing is a paragraph, hence the 'l-p' selector name.
+// Only two modifiers here: half- and double-spacing.
+//
+// Vertical margins are strictly applied to the bottom edge only, with the exception of negative margin-top values.
+//
+.l-p {
+  margin-bottom: $g-s-baseline;
+  
+  &-dbl {
+    margin-bottom: round($g-s-baseline * 2);
+  }
+  
+  &-hlf {
+    margin-bottom: round($g-s-baseline / 2);
+  }
+}
