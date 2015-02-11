@@ -1,6 +1,10 @@
 //---------------------------
 //
 // Layout Helpers
+// ==============
+//
+// Class structure:
+// .l(ayout)-(helper)--(modifier)
 //
 //---------------------------
 
@@ -73,7 +77,7 @@
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-.l-p {
+.l-p, %l-p {
   margin-bottom: $g-u-baseline;
   
   &--dbl {

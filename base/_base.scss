@@ -1,0 +1,12 @@
+//---------------------------
+//
+// Base/root styles
+//
+//---------------------------
+
+html, :root {
+  font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  color: $g-c-gray;
+
+  box-sizing: border-box;
+}

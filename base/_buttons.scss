@@ -1,0 +1,56 @@
+//---------------------------
+//
+// Buttons
+//
+//---------------------------
+
+.btn {
+  display: inline-block;
+  padding: 7px 12px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  border: 1px solid;
+
+  cursor: pointer;
+
+  &[disabled], &.btn--disabled {
+    opacity: .4;
+    cursor: default;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($g-c-blue, .1);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn--big {
+    padding: 10px 26px;
+  }
+
+  &.btn--full {
+    display: block;
+  }
+
+  &.btn--primary {
+    color: $g-c-white;
+    background-color: $g-c-blue;
+    background-image: linear-gradient($g-c-blue, darken($g-c-blue, 10%));
+    border-color: darken($g-c-blue, 20%);
+  }
+
+  &.btn--secondary {
+    color: $g-c-gray;
+    background-color: $g-c-white;
+  }
+
+  &.btn--tertiary {
+    color: $g-c-blue;
+    background-color: $g-c-white;
+    background-image: linear-gradient($g-c-white, rgba($g-c-blue, .1));
+  }
+}

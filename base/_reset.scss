@@ -1,0 +1,27 @@
+//---------------------------
+//
+// Reset
+//
+//---------------------------
+
+// This is a pretty overzealous reset, but what the heck. That's what code
+// reviews are for.
+//
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: inherit;
+}
+
+input, button, textarea, select {
+  font: inherit;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+ul, ol {
+  margin-left: double($g-u-baseline);
+}

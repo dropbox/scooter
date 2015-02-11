@@ -1,0 +1,59 @@
+//---------------------------
+//
+// Typography
+// ==========
+//
+// Class structure:
+// .f(ont)-(helper)
+//
+//---------------------------
+
+// Headings
+// ========
+//
+// Only h1-h4 are used/styled. If your DOM heirarchy goes as deep at h5 or h6,
+// you have some rethinking to do.
+//
+h1, .f-alpha {
+  @extend %l-p;
+
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 36px;
+}
+
+h2, .f-beta {
+  @extend %l-p;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+h3, .f-gamma {
+  @extend %l-p;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+h4, .f-delta {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: $g-u-baseline;
+}
+
+// Other type styles
+// =================
+//
+a, .f-a, %f-a {
+  color: $g-c-blue;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
