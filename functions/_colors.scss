@@ -1,0 +1,15 @@
+//---------------------------
+//
+// Color functions
+//
+//---------------------------
+
+@function color($name) {
+  @if map-has-key($globalColors, $name) {
+    @return map-get($globalColors, $name);
+  } @else {
+    @warn "No global color called #{$name} found."
+        + "Are you sure it's in `variables/colors/$globalColors?`";
+  }
+}
+
