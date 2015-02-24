@@ -7,7 +7,7 @@
 // Grays
 // =====
 //
-// Grays can be either solid colors or at any 10% transparencies
+// Grays can be either solid colors, or at 10% transparency stops.
 // E.g.:
 //
 // background-color: rgba($g-c-black, .1);
@@ -28,10 +28,10 @@ $g-c-white: #fff;
 // Colors
 // ======
 //
-// Colors are typically only used as solid colors, or at 10% opacity.
+// Colors are typically only used as solid colors, or at 10% transparency stops.
 // E.g.:
 //
-// .el {
+// .el--warning {
 //   color: $g-c-red;
 //   background-color: rgba($g-c-red, .1);
 // }
