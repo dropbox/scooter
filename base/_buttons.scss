@@ -21,7 +21,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba($g-c-blue, .1);
+    box-shadow: 0 0 0 2px rgba(color(main), .1);
   }
 
   &:hover {
@@ -37,20 +37,20 @@
   }
 
   &.btn--primary {
-    color: $g-c-white;
-    background-color: $g-c-blue;
-    background-image: linear-gradient($g-c-blue, darken($g-c-blue, 10%));
-    border-color: darken($g-c-blue, 20%);
+    color: color(white);
+    background-color: color(main);
+    background-image: linear-gradient(color(main), mix(color(main), #000, 10%));
+    border-color: darken(color(main), 20%);
   }
 
   &.btn--secondary {
-    color: $g-c-gray;
-    background-color: $g-c-white;
+    color: color(gray);
+    background-color: color(white);
   }
 
   &.btn--tertiary {
-    color: $g-c-blue;
-    background-color: $g-c-white;
-    background-image: linear-gradient($g-c-white, rgba($g-c-blue, .1));
+    color: color(main);
+    background-color: color(white);
+    background-image: linear-gradient(color(white), rgba(color(main), .1));
   }
 }

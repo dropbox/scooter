@@ -1,0 +1,95 @@
+//---------------------------
+// 
+// Test sheet
+//
+// Just a few tests for the global styles introduced here
+//
+//---------------------------
+
+@import "global.scss";
+
+html, body {
+  height: 100%;
+}
+
+.color {
+  width: 10vw;
+  height: 100px;
+}
+
+.color--rgba {
+  @extend .color;
+}
+
+@each $color, $value in $globalColors {
+  $i: index(map-keys($globalColors), $color);
+  .color--rgba:nth-of-type(#{$i}) {
+    background-color: $value;
+
+    $b: "";
+    $p: 0vw;
+
+    @for $i from 10 through 1 {
+      $b: $b + " #{$p} 0 0 #{rgba($value, ($i/10))}";
+      $p: $p + 10vw;
+      
+      @if $i != 1 {
+        $b: $b + ",";
+      }
+    }
+
+    box-shadow: #{$b};
+  }
+}
+
+
+.color--lighten {
+  @extend .color;
+}
+
+@each $color, $value in $globalColors {
+  $i: index(map-keys($globalColors), $color);
+  .color--lighten:nth-of-type(#{$i}) {
+    background-color: $value;
+
+    $b: "";
+    $p: 0vw;
+
+    @for $i from 10 through 1 {
+      $b: $b + " #{$p} 0 0 #{mix($value, #fff, ($i*10%))}";
+      $p: $p + 10vw;
+      
+      @if $i != 1 {
+        $b: $b + ",";
+      }
+    }
+
+    box-shadow: #{$b};
+  }
+}
+
+
+.color--darken {
+  @extend .color;
+}
+
+@each $color, $value in $globalColors {
+  $i: index(map-keys($globalColors), $color);
+  .color--darken:nth-of-type(#{$i}) {
+    background-color: $value;
+
+    $b: "";
+    $p: 0vw;
+
+    @for $i from 10 through 1 {
+      $b: $b + " #{$p} 0 0 #{mix($value, #000, ($i*10%))}";
+      $p: $p + 10vw;
+      
+      @if $i != 1 {
+        $b: $b + ",";
+      }
+    }
+
+    box-shadow: #{$b};
+  }
+}
