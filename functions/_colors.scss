@@ -6,10 +6,8 @@
 
 @function color($name, $tone: "base") {
   @if map-has-key($globalColors, $name) {
-    @debug "Color #{$name} found in $globalColors";
     @return map-get(map-get($globalColors, $name), $tone);
   } @else if map-has-key($semanticColors, $name) {
-    @debug "Color #{$name} found in $semanticColors";
     @return map-get($semanticColors, $name);
   } @else {
     @warn "No global color called #{$name} found."
