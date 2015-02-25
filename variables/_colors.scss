@@ -40,4 +40,5 @@ $globalColors: (
 
 $semanticColors: (
   main: map-get(map-get($globalColors, blue), base),
+  black: map-get(map-get($globalColors, gray), x-dark),
 );
