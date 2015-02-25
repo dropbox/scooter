@@ -2,22 +2,42 @@
 //
 // Color variables
 //
+// Inspired by/based on Erskine's color palette structure:
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+//
 //---------------------------
 
-$globalColors: (
-  black: #25282b,
-  dark-gray: #3d464d,
-  gray: #47525d,
-  light-gray: #7b8994,
-  off-white: #f0f3f5,
-  white: #fff,
+$dbcolor-blue: #007ee5;
 
-  blue: #007ee5,
-  red: #f22322,
-  green: #48ac68,
-  yellow: #fcca00,
+$globalColors: (
+  gray: (
+       base: #47525d,
+     x-dark: #25282b,
+       dark: #3d464d,
+      light: #7b8994,
+    x-light: #f0f3f5
+  ),
+
+  blue: (
+       base: $dbcolor-blue,
+       dark: mix($dbcolor-blue, #000, 10%),
+      light: mix($dbcolor-blue, #fff, 10%),
+    x-light: mix($dbcolor-blue, #fff, 50%)
+  ),
+
+  red: (
+    base: #f22322,
+  ),
+  
+  green: (
+    base: #48ac68,
+  ),
+
+  yellow: (
+    base: #fcca00,
+  ),
 );
 
 $semanticColors: (
-  main: map-get($globalColors, blue),
+  main: map-get(map-get($globalColors, blue), base),
 );

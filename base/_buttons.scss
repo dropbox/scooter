@@ -37,7 +37,7 @@
   }
 
   &.btn--primary {
-    color: color(white);
+    color: #fff;
     background-color: color(main);
     background-image: linear-gradient(color(main), mix(color(main), #000, 10%));
     border-color: darken(color(main), 20%);
@@ -45,12 +45,12 @@
 
   &.btn--secondary {
     color: color(gray);
-    background-color: color(white);
+    background-color: #fff;
   }
 
   &.btn--tertiary {
     color: color(main);
-    background-color: color(white);
-    background-image: linear-gradient(color(white), rgba(color(main), .1));
+    background-color: #fff;
+    background-image: linear-gradient(#fff, rgba(color(main), .1));
   }
 }
