@@ -18,8 +18,7 @@
   padding: $g-u-baseline;
   
   &--v {
-    padding-top: $g-u-baseline;
-    padding-bottom: $g-u-baseline;
+    @include share(padding-top, padding-bottom, $g-u-baseline);
   }
 }
 
@@ -28,8 +27,7 @@
   padding: half($g-u-baseline);
   
   &--v {
-    padding-top: half($g-u-baseline);
-    padding-bottom: half($g-u-baseline);
+    @include share(padding-top, padding-bottom, half($g-u-baseline));
   }
 }
 
@@ -38,8 +36,7 @@
   padding: quarter($g-u-baseline);
   
   &--v {
-    padding-top: quarter($g-u-baseline);
-    padding-bottom: quarter($g-u-baseline);
+    @include share(padding-top, padding-bottom, quarter($g-u-baseline));
   }
 }
 
@@ -48,8 +45,7 @@
   padding: double($g-u-baseline);
   
   &--v {
-    padding-top: double($g-u-baseline);
-    padding-bottom: double($g-u-baseline);
+    @include share(padding-top, padding-bottom, double($g-u-baseline));
   }
 }
 
@@ -58,8 +54,7 @@
   padding: quadruple($g-u-baseline);
   
   &--v {
-    padding-top: quadruple($g-u-baseline);
-    padding-bottom: quadruple($g-u-baseline);
+    @include share(padding-top, padding-bottom, quadruple($g-u-baseline));
   }
 }
 
