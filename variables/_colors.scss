@@ -15,26 +15,39 @@ $globalColors: (
      x-dark: #25282b,
        dark: #3d464d,
       light: #7b8994,
-    x-light: #f0f3f5
+    x-light: #f0f3f5,
   ),
 
   blue: (
        base: $dbcolor-blue,
-       dark: mix($dbcolor-blue, #000, 10%),
-      light: mix($dbcolor-blue, #fff, 10%),
-    x-light: mix($dbcolor-blue, #fff, 50%)
+     x-dark: #004c8a,
+       dark: #0071ce, 
+      light: #198ae7,
+    x-light: #7fbef2,
   ),
 
   red: (
-    base: #f22322,
+       base: #f22322,
+     x-dark: #921515,
+       dark: #c21c1c,
+      light: #f54f4f,
+    x-light: #f99191,
   ),
   
   green: (
-    base: #48ac68,
+       base: #48ac68,
+     x-dark: #2c683f,
+       dark: #3a8a54,
+      light: #6dbd87,
+    x-light: #92cea5,
   ),
 
   yellow: (
-    base: #fcca00,
+       base: #fcca00,
+     x-dark: #987a00,
+       dark: #caa200,
+      light: #fdd533,
+    x-light: #fee066,
   ),
 );
 
