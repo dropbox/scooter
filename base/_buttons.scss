@@ -4,7 +4,7 @@
 //
 //---------------------------
 
-.btn {
+.c-btn {
   display: inline-block;
   padding: 7px 12px;
 
@@ -17,7 +17,7 @@
 
   cursor: pointer;
 
-  &[disabled], &.btn--disabled {
+  &[disabled], &.c-btn--disabled {
     opacity: .4;
     cursor: default;
   }
@@ -31,28 +31,28 @@
     text-decoration: none;
   }
 
-  &.btn--big {
+  &.c-btn--big {
     padding: 10px 26px;
   }
 
-  &.btn--full {
+  &.c-btn--full {
     display: block;
   }
 
-  &.btn--primary {
+  &.c-btn--primary {
     color: #fff;
     background-color: color(main);
     background-image: linear-gradient(color(main), color(blue, dark));
     border-color: color(blue, x-dark);
   }
 
-  &.btn--secondary {
+  &.c-btn--secondary {
     color: color(gray);
     border-color: color(gray, light);
     background-color: #fff;
   }
 
-  &.btn--tertiary {
+  &.c-btn--tertiary {
     color: color(main);
     background-color: #fff;
     background-image: linear-gradient(#fff, rgba(color(main), .1));
