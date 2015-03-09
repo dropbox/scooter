@@ -12,6 +12,7 @@
   font-weight: 600;
 
   border: 1px solid;
+  border-radius: 3px;
 
   cursor: pointer;
 
@@ -21,7 +22,8 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(color(main), .1);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(color(main), .3);
   }
 
   &:hover {
@@ -39,12 +41,13 @@
   &.btn--primary {
     color: #fff;
     background-color: color(main);
-    background-image: linear-gradient(color(main), mix(color(main), #000, 10%));
-    border-color: darken(color(main), 20%);
+    background-image: linear-gradient(color(main), color(blue, dark));
+    border-color: color(blue, x-dark);
   }
 
   &.btn--secondary {
     color: color(gray);
+    border-color: color(gray, light);
     background-color: #fff;
   }
 
