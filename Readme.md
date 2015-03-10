@@ -38,6 +38,18 @@ The overarching philosophy with Dropbox SCSS is a separation of concerns. Compon
 }
 ```
 
+## Partials And Organisation
+The typical SCSS file structure looks like this:
+
+- File: **global.scss** (imports partial importers)
+- Directory: **partial/type name** (e.g. “variables”)
+	- File: **__all.scss** (imports siblings)
+	- File: **_file.scss** (self-contained, no imports)
+
+The double-underscoring of partial importers is twofold:
+1. It helps ensure that the importer is always the first file listed in file views, `ls`, etc.
+2. It’s extremely explicit in its function—easy to spot the double-underscore and know that its only task is to import siblings.
+
 ## Namespaced Classes
 Where possible, classes should be namespaced. This helps facilitate abstraction and style isolation, as well as assisting debugging and development.
 
