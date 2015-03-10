@@ -2,11 +2,11 @@
 //
 // Base styles
 //
-// The bare minimum for the very essential components across Dropbox
+// Reset, normalisation, and raw tag styles for Dropbox web. Outside of these
+// files, all CSS selectors should be class names.
 //
 //---------------------------
 
 @import "reset";
 @import "base";
 @import "typography";
-@import "buttons";
