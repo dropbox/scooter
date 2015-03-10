@@ -3,7 +3,7 @@
 This is purposefully ambitious and aspirational.
 
 ## Separation of Concerns
-The overarching philosophy with Dropbox SCSS is a separation of concerns. Components should be live as independently as possible. Overrides and conflicting rules should be avoided and negated by abstractions. For example:
+The overarching philosophy with Dropbox SCSS is a separation of concerns. Components should live as independently as possible. Overrides and conflicting rules should be avoided and negated by abstractions. For example:
 
 ```scss
 // Bad code
