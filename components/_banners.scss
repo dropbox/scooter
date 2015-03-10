@@ -1,0 +1,47 @@
+//-----------------------------
+//
+// Banners
+//
+// Example:
+// <div class="c-banner l-island">
+//   This is a neutral banner
+// </div>
+// 
+// <div class="c-banner c-banner--warning l-island">
+//   This is a warning banner
+// </div>
+//
+// <div class="c-banner c-banner--unpinned l-island">
+//   This is a free-floating banner
+// </div>
+//
+//-----------------------------
+
+.c-banner {
+  background-color: color(gray, x-light);
+  border-color: rgba(color(gray, x-dark), .1);
+  border-bottom: 1px solid;
+
+  &#{&}--success {
+    background-color: color(green, x-light);
+    color: color(green, x-dark);
+  }
+
+  &#{&}--warning {
+    background-color: color(yellow, x-light);
+    color: color(yellow, x-dark);
+  }
+
+  &#{&}--error {
+    background-color: color(red, x-light);
+    color: color(red, x-dark);
+  }
+
+  // The default style for banners assumes that the banner is pinned to the top
+  // edge of the page. The unpinned modifier treats the banner as a fixed or
+  // relatively-positioned element.
+  &#{&}--unpinned {
+    border: 1px solid;
+    border-radius: 4px;
+  }
+}
