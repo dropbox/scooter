@@ -118,9 +118,9 @@ Here’s a fairly comprehensive example:
     box-shadow: 0 0 0 2px rgba(color(main), .3);
   }
 
-	> .c-icon {
+  > .c-icon {
     display: inline-block;
-		vertical-align: middle;
+    vertical-align: middle;
   }
 }
 ```
