@@ -17,7 +17,7 @@
 
   cursor: pointer;
 
-  &[disabled], &.c-btn--disabled {
+  &[disabled], &#{&}--disabled {
     opacity: .4;
     cursor: default;
   }
@@ -31,28 +31,28 @@
     text-decoration: none;
   }
 
-  &.c-btn--big {
+  &#{&}--big {
     padding: 10px 26px;
   }
 
-  &.c-btn--full {
+  &#{&}--full {
     display: block;
   }
 
-  &.c-btn--primary {
+  &#{&}--primary {
     color: #fff;
     background-color: color(main);
     background-image: linear-gradient(color(main), color(blue, dark));
     border-color: color(blue, x-dark);
   }
 
-  &.c-btn--secondary {
+  &#{&}--secondary {
     color: color(gray);
     border-color: color(gray, light);
     background-color: #fff;
   }
 
-  &.c-btn--tertiary {
+  &#{&}--tertiary {
     color: color(main);
     background-color: #fff;
     background-image: linear-gradient(#fff, rgba(color(main), .1));
