@@ -47,6 +47,7 @@ The typical SCSS file structure looks like this:
 	- File: **_file.scss** (self-contained, no imports)
 
 The double-underscoring of partial importers is twofold:
+
 1. It helps ensure that the importer is always the first file listed in file views, `ls`, etc.
 2. It’s extremely explicit in its function—easy to spot the double-underscore and know that its only task is to import siblings.
 
