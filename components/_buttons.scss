@@ -55,6 +55,6 @@
   &#{&}--tertiary {
     color: color(main);
     background-color: #fff;
-    background-image: linear-gradient(#fff, rgba(color(main), .1));
+    background-image: linear-gradient(#fff, mix(color(main), #fff, 10%));
   }
 }
