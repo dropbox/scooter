@@ -1,6 +1,12 @@
 # Aspirational Dropbox SCSS Principles
 
-This is purposefully ambitious and aspirational.
+This is purposefully ambitious and aspirational. Some concepts that are worth understanding in addition to the principles outlined here include:
+
+- [Object-Oriented CSS](http://www.stubbornella.org/content/2009/02/28/object-oriented-css-grids-on-github/)
+- [BEM naming methodology](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+- [CSS Namespacing](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+
+[Here’s a CodePen](http://codepen.io/daneden/pen/78bb26fcc11e72f5aa24162c151d3626?editors=110) I’ll periodically update with the compiled CSS to use as a testing playground.
 
 ## Separation of Concerns
 The overarching philosophy with Dropbox SCSS is a separation of concerns. Components should live as independently as possible. Overrides and conflicting rules should be avoided and negated by abstractions. For example:
@@ -152,7 +158,3 @@ Always prefer a unitless ‘0’ to ‘none’ where applicable.
   margin: 0;
 }
 ```
-
-* * *
-
-[Here’s a CodePen](http://codepen.io/daneden/pen/78bb26fcc11e72f5aa24162c151d3626?editors=110) I’ll periodically update with the compiled CSS to use as a testing playground.
