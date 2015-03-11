@@ -27,3 +27,7 @@ input, button, textarea, select {
 ul, ol {
   margin-left: double($g-u-baseline);
 }
+
+p {
+  margin-bottom: $g-u-baseline;
+}

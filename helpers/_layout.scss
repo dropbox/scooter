@@ -72,7 +72,7 @@
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-.l-p, %l-p {
+.l-p {
   margin-bottom: $g-u-baseline !important;
   
   &--dbl {
@@ -82,6 +82,10 @@
   &--hlf {
     margin-bottom: half($g-u-baseline) !important;
   }
+}
+
+.l-nm {
+  margin: 0 !important;
 }
 
 // Floats

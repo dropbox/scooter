@@ -13,6 +13,9 @@
 // Mixins
 @import "mixins/_all";
 
+// Base styles
+@import "base/_all";
+
 // Helpers
 @import "helpers/_all";
 
@@ -22,5 +25,3 @@
 // Objects
 @import "objects/_all";
 
-// Base styles
-@import "base/_all";

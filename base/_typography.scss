@@ -15,7 +15,7 @@
 // you have some rethinking to do.
 //
 h1, .f-alpha {
-  @extend %l-p;
+  margin-bottom: $g-u-baseline;
 
   font-size: 28px;
   font-weight: 200;
@@ -23,7 +23,7 @@ h1, .f-alpha {
 }
 
 h2, .f-beta {
-  @extend %l-p;
+  margin-bottom: $g-u-baseline;
 
   font-size: 20px;
   font-weight: 400;
@@ -31,7 +31,7 @@ h2, .f-beta {
 }
 
 h3, .f-gamma {
-  @extend %l-p;
+  margin-bottom: $g-u-baseline;
 
   font-size: 16px;
   font-weight: 400;
@@ -56,4 +56,17 @@ a, .f-a, %f-a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+// Todo: put this in a helper
+.f-ac {
+  text-align: center !important;
+}
+
+.f-al {
+  text-align: left !important;
+}
+
+.f-ar {
+  text-align: right !important;
 }
