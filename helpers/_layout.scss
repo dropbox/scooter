@@ -73,14 +73,14 @@
 // exception of negative margin-top values.
 //
 .l-p, %l-p {
-  margin-bottom: $g-u-baseline;
+  margin-bottom: $g-u-baseline !important;
   
   &--dbl {
-    margin-bottom: double($g-u-baseline);
+    margin-bottom: double($g-u-baseline) !important;
   }
   
   &--hlf {
-    margin-bottom: half($g-u-baseline);
+    margin-bottom: half($g-u-baseline) !important;
   }
 }
 
@@ -88,20 +88,20 @@
 // ======
 //
 .l-fl {
-  float: left;
+  float: left !important;
 }
 
 .l-fr {
-  float: right;
+  float: right !important;
 }
 
 // Display types
 // =============
 //
 .l-b {
-  display: block;
+  display: block !important;
 }
 
 .l-ib {
-  display: inline-block;
+  display: inline-block !important;
 }
