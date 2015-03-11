@@ -19,8 +19,9 @@
 
 .c-banner {
   background-color: color(gray, x-light);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   border-color: rgba(color(gray, x-dark), .1);
-  border-bottom: 1px solid;
 
   &#{&}--success {
     background-color: color(green, x-light);
@@ -41,7 +42,8 @@
   // edge of the page. The unpinned modifier treats the banner as a fixed or
   // relatively-positioned element.
   &#{&}--unpinned {
-    border: 1px solid;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 4px;
   }
 }
