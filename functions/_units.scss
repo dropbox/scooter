@@ -1,0 +1,10 @@
+//-----------------------------
+//
+// Units function
+//
+//-----------------------------
+
+// Strip units from passed value
+@function stripUnit($n) {
+  @return $n / ($n*0+1);
+}

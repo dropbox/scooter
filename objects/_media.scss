@@ -1,0 +1,31 @@
+//-----------------------------
+//
+// Media
+//
+//-----------------------------
+
+.o-media {
+    @extend %clearfix;
+    display: block;
+}
+
+    .o-media__img {
+        float: left;
+        margin-right: quarter($g-u-baseline);
+
+        > img {
+            display: block;
+        }
+
+    }
+
+    .o-media__body {
+        overflow: hidden;
+        display: block;
+
+        &,
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+    }

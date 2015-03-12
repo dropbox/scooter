@@ -5,7 +5,8 @@
 //-----------------------------
 
 .c-input {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 7px;
 
   line-height: 1.4;
@@ -18,7 +19,7 @@
 
   &:focus {
     outline: 0;
-    border-color: rgba(color(gray, x-dark), .3);
+    border-color: rgba(color(gray, x-dark), .2);
   }
 }
 
@@ -29,10 +30,4 @@
   font-size: 12px;
 
   color: color(gray, light);
-
-  // We want inputs within labels to be block elements
-  > .c-input {
-    display: block;
-    width: 100%;
-  }
 }

@@ -99,6 +99,16 @@
   float: right !important;
 }
 
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
 // Display types
 // =============
 //
@@ -108,4 +118,8 @@
 
 .l-ib {
   display: inline-block !important;
+
+  &#{&}--m {
+    vertical-align: middle;
+  }
 }
