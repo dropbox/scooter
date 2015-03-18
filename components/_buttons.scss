@@ -44,7 +44,7 @@
     color: #fff;
     background-color: color(main);
     background-image: linear-gradient(color(main), color(blue, dark));
-    border-color: color(blue, dark);
+    border-color: color(blue, x-dark);
   }
 
   &#{&}--secondary {
