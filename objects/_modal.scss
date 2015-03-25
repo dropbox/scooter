@@ -9,13 +9,27 @@ $o-modal-ns: "o-modal";
 .#{$o-modal-ns} {
   overflow: scroll;
 
-  background-color: color(gray, x-light);
-
-  &#{&}--unibody {
-    background-color: #fff;
-  }
+  background-color: #fff;
 }
 
-  .#{$o-modal-ns}__title, .#{$o-modal-ns}__header {
+  .#{$o-modal-ns}__title,
+  .#{$o-modal-ns}__header {
     background-color: #fff;
+  }
+
+  .#{$o-modal-ns}__content {
+    // Raise the z-index to enable overlapping of sibling banners
+    z-index: 2;
+
+    background-color: color(gray, x-light);
+
+    .#{$o-modal-ns}--unibody & {
+      // The 'unibody' variant of o-modal has no differentiation between the
+      // title and the content
+      background-color: #fff;
+    }
+  }
+
+  .#{$o-modal-ns}__banner {
+    box-shadow: inset 0 1px 0 rgba(color(gray, x-dark), .1);
   }
