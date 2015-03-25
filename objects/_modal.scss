@@ -1,0 +1,19 @@
+//-----------------------------
+//
+// Modal
+//
+//-----------------------------
+
+$o-modal-ns: "o-modal";
+
+.#{$o-modal-ns} {
+  background-color: color(gray, x-light);
+
+  &#{&}--unibody {
+    background-color: #fff;
+  }
+}
+
+  #{$o-modal-ns}__title {
+    background-color: #fff;
+  }
