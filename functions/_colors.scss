@@ -4,6 +4,9 @@
 //
 //---------------------------
 
+
+// Usage:
+// color(color, [shade]);
 @function color($name, $tone: "base") {
   @if map-has-key($globalColors, $name) {
     @return map-get(map-get($globalColors, $name), $tone);
