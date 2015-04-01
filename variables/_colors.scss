@@ -7,47 +7,50 @@
 //
 //---------------------------
 
-$dbcolor-blue: #007ee5;
-
 $globalColors: (
   gray: (
        base: #47525d,
-     x-dark: #25282B,
+     x-dark: #25282b,
        dark: #3d464d,
-      light: #7b8994,
-    x-light: #f0f3f5,
+    m-light: #7b8994,
+      light: #d0d4d9,
+    x-light: #f7f9fa,
   ),
 
   blue: (
-       base: $dbcolor-blue,
+       base: #007ee5,
      x-dark: #004c8a,
-       dark: #0071ce, 
-      light: #198ae7,
-    x-light: #e8f3fc,
+       dark: #0071ce,
+    m-light: #72b6ec,
+      light: #d0d4d9,
+    x-light: #f4faff,
   ),
 
   red: (
-       base: #f22322,
+       base: #e82110,
      x-dark: #921515,
        dark: #c21c1c,
-      light: #f54f4f,
-    x-light: #fcbdbd,
+    m-light: #ed7a6f,
+      light: #fcbdbd,
+    x-light: #ffe3e3,
   ),
-  
+
   green: (
        base: #48ac68,
      x-dark: #2c683f,
        dark: #3a8a54,
-      light: #6dbd87,
-    x-light: #dbefe1,
+    m-light: #86c49a,
+      light: #ddf0e2,
+    x-light: #edfaf1,
   ),
 
   yellow: (
        base: #fcca00,
-     x-dark: #987a00,
-       dark: #caa200,
-      light: #fdd533,
-    x-light: #fff5cc,
+     x-dark: #996e00,
+       dark: #c99700,
+    m-light: #fce897,
+      light: #fff5cc,
+    x-light: #fffdec,
   ),
 );
 
