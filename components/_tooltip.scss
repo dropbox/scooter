@@ -1,0 +1,123 @@
+//-----------------------------
+//
+// Tooltip
+// =======
+//
+// A tipsy-like tooltip component with default south direction
+//
+// Usage:
+// <div class="c-tooltip [c-tooltip--n | --e | --w]">
+//   {{content}}
+// </div>
+//
+//-----------------------------
+
+$c-tooltipColor: tooltipColor(gray, dark);
+$c-tooltipPointWidth: 5px;
+
+.c-tooltip {
+  display: inline-block;
+  position: relative;
+
+  &:before, &:after {
+    z-index: 1000;
+  }
+
+  &:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 50%;
+    white-space: nowrap;
+    padding: 7px 9px;
+    margin-top: $c-tooltipPointWidth;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #fff;
+    background-color: $c-tooltipColor;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 50%;
+    margin-left: -$c-tooltipPointWidth;
+    margin-top: -($c-tooltipPointWidth);
+
+    border: 5px solid transparent;
+    border-bottom-color: $c-tooltipColor;
+  }
+
+  &--n {
+    &:after {
+      top: auto;
+      bottom: 100%;
+      margin-bottom: $c-tooltipPointWidth;
+    }
+
+    &:before {
+      top: auto;
+      bottom: 100%;
+      border-bottom-color: transparent;
+      border-top-color: $c-tooltipColor;
+      margin-bottom: -$c-tooltipPointWidth;
+    }
+  }
+
+  &--e {
+    &:after {
+      top: 50%;
+      left: 100%;
+      margin-left: $c-tooltipPointWidth;
+      margin-top: 0;
+
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      top: 50%;
+      left: 100%;
+      border-bottom-color: transparent;
+      border-right-color: $c-tooltipColor;
+      margin-top: -$c-tooltipPointWidth;
+    }
+  }
+
+  &--w {
+    &:after {
+      top: 50%;
+      right: 100%;
+      left: auto;
+      margin-right: $c-tooltipPointWidth;
+      margin-top: 0;
+
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      top: 50%;
+      right: 100%;
+      left: auto;
+      border-bottom-color: transparent;
+      border-left-color: $c-tooltipColor;
+      margin-right: -$c-tooltipPointWidth;
+      margin-top: -$c-tooltipPointWidth;
+    }
+  }
+
+  &:hover, &:focus {
+    &:before, &:after {
+      display: block;
+      // Uncomment this line to disable tooltip interaction:
+      // pointer-events: none;
+    }
+  }
+}
