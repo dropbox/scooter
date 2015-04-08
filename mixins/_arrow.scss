@@ -1,0 +1,53 @@
+//-----------------------------
+//
+// Arrow mixin
+// ===========
+//
+// Allows creation of CSS-only directional arrows
+//
+// The following example turns the .el element into a 10px downward-facing
+// arrow that inherits its color from the parent.
+//
+// .el {
+//   @include arrow(10px, inherit, down);
+// }
+//
+//-----------------------------
+
+// Arrow Base
+// Used to set up an arrow element
+@mixin arrow-base($size: 10px) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  $size: $size/2;
+  border: $size solid transparent;
+}
+
+// Arrow Make
+// Used with arrow-base($size) to create an arrow shape
+@mixin arrow-make($color: inherit, $direction: down) {
+  // Set up the direction
+  @if $direction == down {
+    $direction: "top";
+  } @elseif $direction == up {
+    $direction: "bottom";
+  } @elseif $direction == left {
+    $direction: "right";
+  } @elseif $direction == right {
+    $direction: "left";
+  } @else {
+    @warn "[@include arrow[-*](vars)] $direction can only accept the following values: up, down, left, right. Falling back to default (down)";
+    $direction: "top";
+  }
+
+  border-#{$direction}-color: $color;
+}
+
+// Arrow
+// Shorthand mixin accessor for arrow-base() and arrow-make()
+@mixin arrow($size: 10px, $color: inherit, $direction: down) {
+  @include arrow-base($size);
+  @include arrow-make($color, $direction);
+}
