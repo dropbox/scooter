@@ -1,21 +1,21 @@
 //-----------------------------
 //
-// Tooltip
-// =======
+// Title Bubble
+// ============
 //
 // A tipsy-like tooltip component with default south direction
 //
 // Usage:
-// <div class="c-tooltip [c-tooltip--n | --e | --w]" data-tooltip="Some text">
+// <div class="c-title-bubble [c-title-bubble--n | --e | --w]" data-title="Some text">
 //   {{content}}
 // </div>
 //
 //-----------------------------
 
-$c-tooltipColor: color(gray, dark);
-$c-tooltipPointWidth: 5px;
+$c-title-bubbleColor: color(gray, dark);
+$c-title-bubblePointWidth: 5px;
 
-.c-tooltip {
+.c-title-bubble {
   display: inline-block;
   position: relative;
 
@@ -24,20 +24,20 @@ $c-tooltipPointWidth: 5px;
   }
 
   &:after {
-    content: attr(data-tooltip);
+    content: attr(data-title);
     position: absolute;
     display: none;
     top: 100%;
     left: 50%;
     white-space: nowrap;
     padding: 7px 9px;
-    margin-top: $c-tooltipPointWidth;
+    margin-top: $c-title-bubblePointWidth;
 
     font-size: 11px;
     font-weight: 500;
 
     color: #fff;
-    background-color: $c-tooltipColor;
+    background-color: $c-title-bubbleColor;
     border-radius: 3px;
     transform: translateX(-50%);
     transform-origin: 50% 50%;
@@ -49,26 +49,26 @@ $c-tooltipPointWidth: 5px;
     display: none;
     top: 100%;
     left: 50%;
-    margin-left: -$c-tooltipPointWidth;
-    margin-top: -($c-tooltipPointWidth);
+    margin-left: -$c-title-bubblePointWidth;
+    margin-top: -($c-title-bubblePointWidth);
 
     border: 5px solid transparent;
-    border-bottom-color: $c-tooltipColor;
+    border-bottom-color: $c-title-bubbleColor;
   }
 
   &--n {
     &:after {
       top: auto;
       bottom: 100%;
-      margin-bottom: $c-tooltipPointWidth;
+      margin-bottom: $c-title-bubblePointWidth;
     }
 
     &:before {
       top: auto;
       bottom: 100%;
       border-bottom-color: transparent;
-      border-top-color: $c-tooltipColor;
-      margin-bottom: -$c-tooltipPointWidth;
+      border-top-color: $c-title-bubbleColor;
+      margin-bottom: -$c-title-bubblePointWidth;
     }
   }
 
@@ -76,7 +76,7 @@ $c-tooltipPointWidth: 5px;
     &:after {
       top: 50%;
       left: 100%;
-      margin-left: $c-tooltipPointWidth;
+      margin-left: $c-title-bubblePointWidth;
       margin-top: 0;
 
       transform: translateY(-50%);
@@ -86,8 +86,8 @@ $c-tooltipPointWidth: 5px;
       top: 50%;
       left: 100%;
       border-bottom-color: transparent;
-      border-right-color: $c-tooltipColor;
-      margin-top: -$c-tooltipPointWidth;
+      border-right-color: $c-title-bubbleColor;
+      margin-top: -$c-title-bubblePointWidth;
     }
   }
 
@@ -96,7 +96,7 @@ $c-tooltipPointWidth: 5px;
       top: 50%;
       right: 100%;
       left: auto;
-      margin-right: $c-tooltipPointWidth;
+      margin-right: $c-title-bubblePointWidth;
       margin-top: 0;
 
       transform: translateY(-50%);
@@ -107,9 +107,9 @@ $c-tooltipPointWidth: 5px;
       right: 100%;
       left: auto;
       border-bottom-color: transparent;
-      border-left-color: $c-tooltipColor;
-      margin-right: -$c-tooltipPointWidth;
-      margin-top: -$c-tooltipPointWidth;
+      border-left-color: $c-title-bubbleColor;
+      margin-right: -$c-title-bubblePointWidth;
+      margin-top: -$c-title-bubblePointWidth;
     }
   }
 
