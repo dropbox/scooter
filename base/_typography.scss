@@ -47,6 +47,11 @@ h4, .f-delta {
 // Other type styles
 // =================
 //
+hr {
+  border: none;
+  border-top: 1px solid rgba(color(gray, x-dark), .1);
+}
+
 a, .f-a, %f-a {
   color: color(main);
   text-decoration: none;
@@ -56,25 +61,4 @@ a, .f-a, %f-a {
   &:hover {
     text-decoration: underline;
   }
-}
-
-// Todo: put this in a helper
-.f-ac {
-  text-align: center !important;
-}
-
-.f-al {
-  text-align: left !important;
-}
-
-.f-ar {
-  text-align: right !important;
-}
-
-.f-s {
-  font-size: .85em;
-}
-
-.f-meta {
-  color: color(gray, light);
 }

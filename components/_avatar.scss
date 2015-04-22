@@ -17,10 +17,10 @@ $avatar-sizes: (
 @mixin avatarSize($s: 32px) {
   height: $s;
   width: $s;
-  
+
   font-size: round($s*.45);
   line-height: ($s - 4px);
-  
+
   @if($s < 32px) {
     font-weight: 700;
   } @else if($s >= 48px) {
@@ -36,25 +36,26 @@ $avatar-sizes: (
   vertical-align: middle;
   position: relative;
   overflow: hidden;
-  
+
   // Default size for avatars without explicit sizing
   @include avatarSize(32px);
-  
+
   font-family: Open Sans, sans-serif;
   text-align: center;
-  
+
   // Default color for avatars without images
   color: #007ee5;
   border-radius: 100%;
 
-  &__img {
+  &__img,
+  > img {
     display: block;
     width: 100%;
     height: 100%;
     // Keep proportions in tact even if the container is the wrong size
     object-fit: cover;
   }
-  
+
   // Give avatars a subtle little border
   &:after {
     content: '';
@@ -63,26 +64,26 @@ $avatar-sizes: (
     left: 0;
     right: 0;
     bottom: 0;
-    
+
     box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
     border-radius: 100%;
   }
-  
+
   &#{&}--no-img {
     border: 2px solid;
-    
+
     &:after {
       content: attr(data-initials);
-      
+
       box-shadow: none;
     }
   }
-  
+
   // Loop through all the avatar sizes to generate selectors
   @each $key, $size in $avatar-sizes {
     &--#{$key} {
       @include avatarSize($size);
-      
+
       @if $key == "xs" {
         // Extra small avatars get no initials
         &:after {

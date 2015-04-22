@@ -1,0 +1,57 @@
+/*
+ * The Flag Object
+ * Built by @csswizzrdry
+ * http://csswizardry.com/2013/05/the.o-flag-object/
+ *
+ *
+ * Use to vertically center text against an image.
+ *
+ *  <div class="o-flag">
+ *      <div class="o-flag--image">
+ *          <img src="" alt="">
+ *      </div>
+ *      <div class="o-flag--body">
+ *          <p></p>
+ *      </div>
+ *  </div>
+ *
+ */
+
+.o-flag {
+  display: table;
+  width: 100%;
+}
+
+.o-flag--image,
+.o-flag--body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .o-flag--top & {
+        vertical-align: top;
+    }
+
+    .o-flag--bottom & {
+        vertical-align: bottom;
+    }
+
+}
+
+.o-flag--image {
+    padding-right: 10px;
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+    .o-flag--rev & {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+
+}
+
+.o-flag--body {
+    width: 100%;
+}

@@ -1,0 +1,31 @@
+//-----------------------------
+//
+// Utility: Typography
+// ===================
+//
+//-----------------------------
+//
+.u-font-center,
+%u-font-center {
+  text-align: center !important;
+}
+
+.u-font-left,
+%u-font-left {
+  text-align: left !important;
+}
+
+.u-font-right,
+%u-font-right {
+  text-align: right !important;
+}
+
+.u-font-small,
+%u-font-small {
+  font-size: .85em;
+}
+
+.u-font-meta,
+%u-font-meta {
+  color: color(gray, medium);
+}

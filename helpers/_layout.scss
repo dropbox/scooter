@@ -10,49 +10,54 @@
 
 // Islands are the most common layout helper. They throw a padding around the
 // selected element equal to the global baseline.
-// 
+//
 // Each layout helper has a vertical modifier ('*--v') to apply only
 // top/bottom padding
 //
-.l-island {
+.u-l-island,
+%u-l-island {
   padding: $g-u-baseline;
-  
+
   &--v {
     @include share(padding-top, padding-bottom, $g-u-baseline);
   }
 }
 
 // Half an island
-.l-isle {
+.u-l-isle,
+%u-l-isle {
   padding: half($g-u-baseline);
-  
+
   &--v {
     @include share(padding-top, padding-bottom, half($g-u-baseline));
   }
 }
 
 // Half an isle
-.l-spit {
+.u-l-spit,
+%u-l-spit {
   padding: quarter($g-u-baseline);
-  
+
   &--v {
     @include share(padding-top, padding-bottom, quarter($g-u-baseline));
   }
 }
 
 // Twice the size of an island
-.l-country {
+.u-l-country,
+%u-l-country {
   padding: double($g-u-baseline);
-  
+
   &--v {
     @include share(padding-top, padding-bottom, double($g-u-baseline));
   }
 }
 
 // Twice the size of a country
-.l-continent {
+.u-l-continent,
+%u-l-continent {
   padding: quadruple($g-u-baseline);
-  
+
   &--v {
     @include share(padding-top, padding-bottom, quadruple($g-u-baseline));
   }
@@ -66,36 +71,40 @@
 //
 // The most basic element with this spacing is a paragraph, hence the 'l-p'
 // selector name.
-// 
+//
 // Only two modifiers here: half- and double-spacing.
 //
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-.l-p {
+.u-l-p,
+%u-l-p {
   margin-bottom: $g-u-baseline !important;
-  
+
   &--dbl {
     margin-bottom: double($g-u-baseline) !important;
   }
-  
+
   &--hlf {
     margin-bottom: half($g-u-baseline) !important;
   }
 }
 
-.l-nm {
+.u-l-trim,
+%u-l-trim {
   margin: 0 !important;
 }
 
 // Floats
 // ======
 //
-.l-fl {
+.u-l-fl,
+%u-l-fl {
   float: left !important;
 }
 
-.l-fr {
+.u-l-fr,
+%u-l-fr {
   float: right !important;
 }
 
@@ -112,11 +121,13 @@
 // Display types
 // =============
 //
-.l-b {
+.u-l-b,
+%u-l-b {
   display: block !important;
 }
 
-.l-ib {
+.u-l-ib,
+%u-l-ib {
   display: inline-block !important;
 
   &#{&}--m {
