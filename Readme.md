@@ -26,8 +26,8 @@ The overarching philosophy with Dropbox SCSS is a separation of concerns. Compon
 
 // Good code
 // HTML:
-// <div class=“o-modal l-island”></div>
-// <div class=“o-modal l-isle”></div>
+// <div class=“o-modal u-l-island”></div>
+// <div class=“o-modal u-l-isle”></div>
 
 // objects/_modal.scss
 .o-modal {
@@ -35,11 +35,11 @@ The overarching philosophy with Dropbox SCSS is a separation of concerns. Compon
 }
 
 // helpers/_layout.scss
-.l-island {
+.u-l-island {
   padding: 32px;
 }
 
-.l-isle {
+.u-l-isle {
   padding: 23px;
 }
 ```
@@ -69,13 +69,12 @@ Where possible, classes should be namespaced. This helps facilitate abstraction 
 // components/_buttons.scss
 .c-btn { }
 
-// `.f-` for font hooks and helpers
-// base/_typography.scss
-.f-alpha { }
+// `.u-` for utilities and helpers
+// helpers/_typography.scss
+.u-font-small { }
 
-// `.l-` for layout helpers
 // helpers/_layout.scss
-.l-island { }
+.u-l-island { }
 ```
 
 ## Deference to Variables
@@ -110,7 +109,8 @@ Properties are grouped and ordered like so:
 4. UI properties
 5. Pseudo-elements
 6. Pseudo-selectors
-7. Nested elements
+7. Modifier classes
+8. Nested elements
 
 Here’s a fairly comprehensive example:
 
@@ -137,6 +137,10 @@ Here’s a fairly comprehensive example:
     box-shadow: 0 0 0 2px rgba(color(main), .3);
   }
 
+  &#{&}--big {
+    padding: 12px 24px;
+  }
+
   > .c-icon {
     display: inline-block;
     vertical-align: middle;
@@ -149,12 +153,12 @@ Always prefer a unitless ‘0’ to ‘none’ where applicable.
 
 ```scss
 // Bad code
-.l-trim {
+.u-l-trim {
   margin: none;
 }
 
 // Good code
-.l-trim {
+.u-l-trim {
   margin: 0;
 }
 ```
