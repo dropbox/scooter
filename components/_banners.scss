@@ -6,7 +6,7 @@
 // <div class="c-banner l-island">
 //   This is a neutral banner
 // </div>
-// 
+//
 // <div class="c-banner c-banner--warning l-island">
 //   This is a warning banner
 // </div>
@@ -21,7 +21,7 @@
   background-color: color(gray, x-light);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: rgba(color(gray, x-dark), .1);
+  border-color: color(gray, x-dark, 10%);
 
   &#{&}--success {
     background-color: color(green, x-light);

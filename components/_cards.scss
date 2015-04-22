@@ -14,10 +14,10 @@
 
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(color(gray, x-dark), .1);
+  border: 1px solid color(gray, x-dark, 10%);
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(color(gray, x-dark), .1);
-  
+  box-shadow: 0 1px 2px color(gray, x-dark, 10%);
+
   &#{&}--arrow {
     &:before, &:after {
       content: '';
@@ -28,13 +28,13 @@
       left: 50%;
       margin-left: -10px;
     }
-    
+
     &:before {
       border-width: 11px;
-      border-bottom-color: rgba(color(gray, x-dark), .2);
+      border-bottom-color: color(gray, x-dark, 20%);
       margin-left: -11px;
     }
-    
+
     // West/East directions are only affecting horizontal offsets, so we can
     // style North and South at the same time
     &-nw, &-sw {
@@ -42,24 +42,24 @@
         left: 0;
         margin-left: 15px;
       }
-      
+
       &:before {
         margin-left: 14px;
       }
     }
-    
+
     &-ne, &-se {
       &:after, &:before {
         left: auto;
         right: 0;
         margin-right: 15px;
       }
-      
+
       &:before {
         margin-right: 14px;
       }
     }
-    
+
     // South direction changes a lot of styles, and it’s probably safe to
     // assume North is the desired default.
     &-sw, &-se, &-s {
@@ -69,13 +69,13 @@
         border-bottom-color: transparent;
         border-top-color: #fff;
       }
-      
+
       &:before {
-        border-top-color: rgba(color(gray, x-dark), .2);
+        border-top-color: color(gray, x-dark, 20%);
         // Since we’re spoofing a triangle with borders, we can’t use
         // box-shadow, but we can use the drop-shadow filter. Limited support,
         // but it’s just a nice-to-have.
-        filter: drop-shadow(0 1px 2px rgba(color(gray, x-dark),.2));
+        filter: drop-shadow(0 1px 2px color(gray, x-dark, 20%));
       }
     }
   }

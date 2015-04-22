@@ -23,45 +23,45 @@
   max-height: 180px;
 
   line-height: 1.5;
-  
+
   background-color: #fff;
   background-clip: padding-box;
   border-radius: 0 0 4px 4px;
-  border: 1px solid rgba(color(gray, x-dark), .1);
-  box-shadow: 0 1px 2px rgba(color(gray, x-dark), .1);
-  
+  border: 1px solid color(gray, x-dark, 10%);
+  box-shadow: 0 1px 2px color(gray, x-dark, 10%);
+
   &.is-open {
     display: block;
   }
 
   &__result {
     margin-top: -1px;
-    
+
     cursor: pointer;
-    
+
     &.is-selected {
       margin-bottom: -2px;
       z-index: 2;
 
-      color: color(main);
+      color: color(blue);
       background-color: color(blue, x-light);
       border-bottom: 1px solid;
-      border-color: rgba(color(gray, x-dark), .1);
-      
+      border-color: color(gray, x-dark, 10%);
+
       .f-meta {
         color: inherit;
       }
     }
-    
+
     &.is-invalid {
       cursor: default;
     }
   }
- 
+
   &__media, &__content {
     display: inline-block;
     vertical-align: middle;
-  } 
+  }
 
   &__media {
     margin-right: half($g-u-baseline);

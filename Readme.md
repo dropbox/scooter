@@ -16,11 +16,11 @@ The overarching philosophy with Dropbox SCSS is a separation of concerns. Compon
 // HTML:
 // <div class=“modal compact”></div>
 .modal {
-	padding: 32px;
-	background-color: color(gray, x-light);
+  padding: 32px;
+  background-color: color(gray, x-light);
 
-	&.compact {
-		padding: 23px;
+  &.compact {
+    padding: 23px;
   }
 }
 

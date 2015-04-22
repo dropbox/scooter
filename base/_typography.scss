@@ -49,11 +49,11 @@ h4, .f-delta {
 //
 hr {
   border: none;
-  border-top: 1px solid rgba(color(gray, x-dark), .1);
+  border-top: 1px solid color(gray, x-dark, 10%);
 }
 
 a, .f-a, %f-a {
-  color: color(main);
+  color: color(blue);
   text-decoration: none;
 
   cursor: pointer;
