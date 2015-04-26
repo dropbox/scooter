@@ -40,7 +40,6 @@ $avatar-sizes: (
   // Default size for avatars without explicit sizing
   @include avatarSize(32px);
 
-  font-family: Open Sans, sans-serif;
   text-align: center;
 
   // Default color for avatars without images
