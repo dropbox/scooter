@@ -1,0 +1,23 @@
+//-----------------------------
+//
+// Clearfix
+// ========
+//
+// The micro clearfix: http://cssmojo.com/latest_new_clearfix_so_far/
+//
+// Use @extend to avoid having the .clearfix class appear over and over again in
+// markup
+//
+//-----------------------------
+
+.clearfix,
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
