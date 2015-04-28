@@ -1,0 +1,64 @@
+//-----------------------------
+//
+// Tokens
+//
+//-----------------------------
+
+.c-token {
+  display: inline-block;
+  padding: 4px;
+
+  line-height: 1;
+
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px color(gray, x-dark, 10%);
+  background-color: color(gray, light);
+
+  cursor: default;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px color(gray, x-dark, 30%);
+  }
+
+  > * {
+    vertical-align: middle;
+    margin-left: .25em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &--warning {
+    background-color: color(yellow, light);
+    color: color(yellow, x-dark);
+  }
+
+  &--invalid {
+    background-color: color(red, light);
+    color: color(red, x-dark);
+  }
+
+  &--is-selected, &--is-selected:hover {
+    box-shadow: inset 0 0 0 1px color(blue);
+  }
+}
+
+
+  .c-token__name {
+    top: 1px;
+    margin-left: .25em;
+  }
+
+  .c-token__delete {
+    margin-left: .25em;
+    margin-right: .15em;
+
+    font-size: 1.25em;
+
+    color: currentColor;
+    opacity: .7;
+
+    cursor: pointer;
+  }
+
