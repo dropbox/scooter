@@ -9,6 +9,8 @@
   padding: 4px;
 
   line-height: 1;
+  // We want tokens to always remain on one line
+  white-space: nowrap;
 
   border-radius: 3px;
   box-shadow: inset 0 0 0 1px color(gray, x-dark, 10%);
@@ -46,6 +48,7 @@
 
 
   .c-token__name {
+    // Open Sans' line-height needs some manual correction
     top: 1px;
     margin-left: .25em;
   }
