@@ -1,57 +1,71 @@
-/*
- * The Flag Object
- * Built by @csswizzrdry
- * http://csswizardry.com/2013/05/the.o-flag-object/
- *
- *
- * Use to vertically center text against an image.
- *
- *  <div class="o-flag">
- *      <div class="o-flag--image">
- *          <img src="" alt="">
- *      </div>
- *      <div class="o-flag--body">
- *          <p></p>
- *      </div>
- *  </div>
- *
- */
+//-----------------------------
+//
+// Flag object
+// ===========
+//
+// Modified version of Harry Roberts' flag object
+// (http://csswizardry.com/2013/05/the-flag-object/)
+//
+// Similar to the media object. Used to vertically align a fixed-width element
+// and a fluid-width element next to one another.
+//
+// Usage:
+//
+// <div class="o-flag">
+//   <div class="o-flag__fix">
+//     <img src="" alt="This element will maintain its width" />
+//   </div>
+//   <div class="o-flag__flex">
+//     <p>This element will grow to fill the remaining space</p>
+//   </div>
+// </div>
+//
+//-----------------------------
 
 .o-flag {
   display: table;
   width: 100%;
-}
 
-.o-flag__image,
-.o-flag__body {
+
+  &__fix,
+  &__flex {
     display: table-cell;
     vertical-align: middle;
 
+    // Use the --top modifier to align top edges of the elements
     .o-flag--top & {
-        vertical-align: top;
+      vertical-align: top;
     }
 
+    // Use --bottom to align bottom edges of the elements
     .o-flag--bottom & {
-        vertical-align: bottom;
+      vertical-align: bottom;
     }
 
-}
+  }
 
-.o-flag__image {
+  // The fixed-width element
+  &__fix {
     padding-right: 10px;
 
-    > img {
-        display: block;
-        max-width: none;
+    > * {
+      display: block;
+      max-width: none;
+      // Force the "pinned" element to not wrap lines
+      white-space: nowrap;
     }
 
+    // Use the --rev modifier when the order is reversed (fixed-width element on
+    // the right of the fluid with element)
     .o-flag--rev & {
-        padding-right: 0;
-        padding-left: 10px;
+      padding-right: 0;
+      padding-left: 10px;
     }
 
-}
+  }
 
-.o-flag__body {
+  // This element grows to fill the remainder of its container
+  &__flex {
     width: 100%;
+  }
 }
