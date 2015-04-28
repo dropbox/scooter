@@ -22,8 +22,8 @@
   width: 100%;
 }
 
-.o-flag--image,
-.o-flag--body {
+.o-flag__image,
+.o-flag__body {
     display: table-cell;
     vertical-align: middle;
 
@@ -37,7 +37,7 @@
 
 }
 
-.o-flag--image {
+.o-flag__image {
     padding-right: 10px;
 
     > img {
@@ -52,6 +52,6 @@
 
 }
 
-.o-flag--body {
+.o-flag__body {
     width: 100%;
 }
