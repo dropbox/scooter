@@ -25,17 +25,17 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
 //
 //---------------------------
 @function grayscale($gradation, $alpha: 100%) {
-    @if map-has-key($DBgrayScaleColors, $gradation) {
+    @if map-has-key($DBgrayscaleColors, $gradation) {
         $alpha-val: $alpha / 100;
 
         @if index($__alpha-stops, $alpha-val) == null {
             @error "Only alpha values in 10% increments are allowed";
         }
 
-        $grayscale-val: map-get($DBgrayScaleColors, $gradation);
+        $grayscale-val: map-get($DBgrayscaleColors, $gradation);
         @return rgba($grayscale-val, $alpha-val);
     } @else {
-        @warn "No gradation of #{$gradation} found in $DBgrayScaleColors map.";
+        @warn "No gradation of #{$gradation} found in $DBgrayscaleColors map.";
     }
 }
 
