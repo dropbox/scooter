@@ -7,10 +7,10 @@
 //
 //---------------------------
 
-$globalColors: (
-    white: rgb(255, 255, 255),
+$DBglobalColors: (
+    white: #ffffff,
 
-    black: rgb(0, 0, 0),
+    black: #000000,
 
     gray: (
         base: #47525d,
@@ -56,17 +56,17 @@ $globalColors: (
         light: #fff5cc,
         x-light: #fffdec,
     ),
-);
+) !default;
 
-$grayScale: (
-    1: rgb(23, 23, 23),
-    2: rgb(46, 46, 46),
-    3: rgb(69, 69, 69),
-    4: rgb(92, 92, 92),
-    5: rgb(115, 115, 115),
-    6: rgb(138, 138, 138),
-    7: rgb(161, 161, 161),
-    8: rgb(184, 184, 184),
-    9: rgb(207, 207, 207),
-    10: rgb(232, 232, 232),
-);
+$DBgrayScaleColors: (
+    1: #171717,
+    2: #2e2e2e,
+    3: #454545,
+    4: #5c5c5c,
+    5: #737373,
+    6: #8a8a8a,
+    7: #a1a1a1,
+    8: #b8b8b8,
+    9: #cfcfcf,
+    10: #e8e8e8,
+) !default;

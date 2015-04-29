@@ -16,50 +16,50 @@
 //
 .u-l-island,
 %u-l-island {
-  padding: $g-u-baseline;
+  padding: $DBbaseline;
 
   &--v {
-    @include share(padding-top, padding-bottom, $g-u-baseline);
+    @include share(padding-top, padding-bottom, $DBbaseline);
   }
 }
 
 // Half an island
 .u-l-isle,
 %u-l-isle {
-  padding: half($g-u-baseline);
+  padding: half($DBbaseline);
 
   &--v {
-    @include share(padding-top, padding-bottom, half($g-u-baseline));
+    @include share(padding-top, padding-bottom, half($DBbaseline));
   }
 }
 
 // Half an isle
 .u-l-spit,
 %u-l-spit {
-  padding: quarter($g-u-baseline);
+  padding: quarter($DBbaseline);
 
   &--v {
-    @include share(padding-top, padding-bottom, quarter($g-u-baseline));
+    @include share(padding-top, padding-bottom, quarter($DBbaseline));
   }
 }
 
 // Twice the size of an island
 .u-l-country,
 %u-l-country {
-  padding: double($g-u-baseline);
+  padding: double($DBbaseline);
 
   &--v {
-    @include share(padding-top, padding-bottom, double($g-u-baseline));
+    @include share(padding-top, padding-bottom, double($DBbaseline));
   }
 }
 
 // Twice the size of a country
 .u-l-continent,
 %u-l-continent {
-  padding: quadruple($g-u-baseline);
+  padding: quadruple($DBbaseline);
 
   &--v {
-    @include share(padding-top, padding-bottom, quadruple($g-u-baseline));
+    @include share(padding-top, padding-bottom, quadruple($DBbaseline));
   }
 }
 
@@ -79,14 +79,14 @@
 //
 .u-l-p,
 %u-l-p {
-  margin-bottom: $g-u-baseline !important;
+  margin-bottom: $DBbaseline !important;
 
   &--dbl {
-    margin-bottom: double($g-u-baseline) !important;
+    margin-bottom: double($DBbaseline) !important;
   }
 
   &--hlf {
-    margin-bottom: half($g-u-baseline) !important;
+    margin-bottom: half($DBbaseline) !important;
   }
 }
 

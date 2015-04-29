@@ -12,7 +12,7 @@
 // you have some rethinking to do.
 //
 h1, .f-alpha {
-  margin-bottom: $g-u-baseline;
+  margin-bottom: $DBbaseline;
 
   font-size: 28px;
   font-weight: 200;
@@ -20,7 +20,7 @@ h1, .f-alpha {
 }
 
 h2, .f-beta {
-  margin-bottom: $g-u-baseline;
+  margin-bottom: $DBbaseline;
 
   font-size: 20px;
   font-weight: 400;
@@ -28,7 +28,7 @@ h2, .f-beta {
 }
 
 h3, .f-gamma {
-  margin-bottom: $g-u-baseline;
+  margin-bottom: $DBbaseline;
 
   font-size: 16px;
   font-weight: 400;
@@ -38,7 +38,7 @@ h3, .f-gamma {
 h4, .f-delta {
   font-size: 13px;
   font-weight: 600;
-  line-height: $g-u-baseline;
+  line-height: $DBbaseline;
 }
 
 // Other type styles
