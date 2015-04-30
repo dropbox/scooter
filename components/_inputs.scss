@@ -4,12 +4,23 @@
 //
 //-----------------------------
 
+.c-label {
+  display: block;
+  margin-bottom: $DBbaseline;
+
+  line-height: 1.4;
+  font-size: 12px;
+
+  color: color(gray, medium);
+}
+
 .c-input {
   display: block;
   width: 100%;
-  padding: 7px;
+  padding: 10px;
 
   line-height: 1.4;
+  font-size: $DBfontSize;
 
   background-color: #fff;
   background-clip: padding-box;
@@ -23,11 +34,3 @@
   }
 }
 
-.c-label {
-  display: block;
-
-  line-height: 1.4;
-  font-size: 12px;
-
-  color: color(gray, medium);
-}
