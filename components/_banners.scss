@@ -3,39 +3,58 @@
 // Banners
 //
 // Example:
-// <div class="c-banner l-island">
+// <div class="c-banner">
 //   This is a neutral banner
 // </div>
 //
-// <div class="c-banner c-banner--warning l-island">
+// <div class="c-banner c-banner--warning">
 //   This is a warning banner
 // </div>
 //
-// <div class="c-banner c-banner--unpinned l-island">
+// <div class="c-banner c-banner--unpinned">
 //   This is a free-floating banner
 // </div>
 //
 //-----------------------------
 
-.c-banner {
-  background-color: color(gray, x-light);
+$DBbanner-namespace: "c-banner" !default;
+
+$DBbanner-background-neutral: color(gray, x-light) !default;
+$DBbanner-background-success: color(green, x-light) !default;
+$DBbanner-background-warning: color(yellow, x-light) !default;
+$DBbanner-background-error: color(red, x-light) !default;
+
+$DBbanner-text-neutral: color(gray) !default;
+$DBbanner-text-success: color(green, x-dark) !default;
+$DBbanner-text-warning: color(yellow, x-dark) !default;
+$DBbanner-text-error: color(red, x-dark) !default;
+
+/**
+ * Banner component. Used to display messages to the user, typically pinned to
+ * the top of the page.
+ */
+.#{$DBbanner-namespace} {
+  @extend %u-l-island;
+
+  background-color: $DBbanner-background-neutral;
+  color: $DBbanner-text-neutral;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-color: color(gray, x-dark, 0.1);
 
   &#{&}--success {
-    background-color: color(green, x-light);
-    color: color(green, x-dark);
+    background-color: $DBbanner-background-success;
+    color: $DBbanner-text-success;
   }
 
   &#{&}--warning {
-    background-color: color(yellow, x-light);
-    color: color(yellow, x-dark);
+    background-color: $DBbanner-background-warning;
+    color: $DBbanner-text-warning;
   }
 
   &#{&}--error {
-    background-color: color(red, x-light);
-    color: color(red, x-dark);
+    background-color: $DBbanner-background-error;
+    color: $DBbanner-text-error;
   }
 
   // The default style for banners assumes that the banner is pinned to the top
@@ -44,6 +63,6 @@
   &#{&}--unpinned {
     border-style: solid;
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 }

@@ -12,10 +12,15 @@
 //
 //-----------------------------
 
-$c-title-bubbleColor: color(gray, dark);
-$c-title-bubblePointWidth: 5px;
+$DBtitlebubble-namespace: 'c-title-bubble' !default;
 
-.c-title-bubble {
+$DBtitlebubble-background: color(gray, dark) !default;
+$DBtitlebubble-point-width: 5px !default;
+
+/**
+ * Title-bubble component
+ */
+.#{$DBtitlebubble-namespace} {
   display: inline-block;
   position: relative;
 
@@ -31,13 +36,13 @@ $c-title-bubblePointWidth: 5px;
     left: 50%;
     white-space: nowrap;
     padding: 7px 9px;
-    margin-top: $c-title-bubblePointWidth;
+    margin-top: $DBtitlebubble-point-width;
 
     font-size: 11px;
     font-weight: 500;
 
     color: #fff;
-    background-color: $c-title-bubbleColor;
+    background-color: $DBtitlebubble-background;
     border-radius: 3px;
     transform: translateX(-50%);
     transform-origin: 50% 50%;
@@ -49,26 +54,26 @@ $c-title-bubblePointWidth: 5px;
     display: none;
     top: 100%;
     left: 50%;
-    margin-left: -$c-title-bubblePointWidth;
-    margin-top: -($c-title-bubblePointWidth);
+    margin-left: -$DBtitlebubble-point-width;
+    margin-top: -($DBtitlebubble-point-width);
 
     border: 5px solid transparent;
-    border-bottom-color: $c-title-bubbleColor;
+    border-bottom-color: $DBtitlebubble-background;
   }
 
   &--n {
     &:after {
       top: auto;
       bottom: 100%;
-      margin-bottom: $c-title-bubblePointWidth;
+      margin-bottom: $DBtitlebubble-point-width;
     }
 
     &:before {
       top: auto;
       bottom: 100%;
       border-bottom-color: transparent;
-      border-top-color: $c-title-bubbleColor;
-      margin-bottom: -$c-title-bubblePointWidth;
+      border-top-color: $DBtitlebubble-background;
+      margin-bottom: -$DBtitlebubble-point-width;
     }
   }
 
@@ -76,7 +81,7 @@ $c-title-bubblePointWidth: 5px;
     &:after {
       top: 50%;
       left: 100%;
-      margin-left: $c-title-bubblePointWidth;
+      margin-left: $DBtitlebubble-point-width;
       margin-top: 0;
 
       transform: translateY(-50%);
@@ -86,8 +91,8 @@ $c-title-bubblePointWidth: 5px;
       top: 50%;
       left: 100%;
       border-bottom-color: transparent;
-      border-right-color: $c-title-bubbleColor;
-      margin-top: -$c-title-bubblePointWidth;
+      border-right-color: $DBtitlebubble-background;
+      margin-top: -$DBtitlebubble-point-width;
     }
   }
 
@@ -96,7 +101,7 @@ $c-title-bubblePointWidth: 5px;
       top: 50%;
       right: 100%;
       left: auto;
-      margin-right: $c-title-bubblePointWidth;
+      margin-right: $DBtitlebubble-point-width;
       margin-top: 0;
 
       transform: translateY(-50%);
@@ -107,9 +112,9 @@ $c-title-bubblePointWidth: 5px;
       right: 100%;
       left: auto;
       border-bottom-color: transparent;
-      border-left-color: $c-title-bubbleColor;
-      margin-right: -$c-title-bubblePointWidth;
-      margin-top: -$c-title-bubblePointWidth;
+      border-left-color: $DBtitlebubble-background;
+      margin-right: -$DBtitlebubble-point-width;
+      margin-top: -$DBtitlebubble-point-width;
     }
   }
 

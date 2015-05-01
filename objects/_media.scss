@@ -4,12 +4,14 @@
 //
 //-----------------------------
 
-.o-media {
+$DBmedia-namespace: "o-media" !default;
+
+.#{$DBmedia-namespace} {
     @extend %clearfix;
     display: block;
 }
 
-    .o-media__img {
+    .#{$DBmedia-namespace}__img {
         float: left;
         margin-right: quarter($DBbaseline);
 
@@ -19,7 +21,7 @@
 
     }
 
-    .o-media__body {
+    .#{$DBmedia-namespace}__body {
         overflow: hidden;
         display: block;
 

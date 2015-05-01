@@ -4,9 +4,9 @@
 //
 //-----------------------------
 
-$DBavatar-ns: "c-avatar";
+$DBavatar-namespace: "c-avatar" !default;
 // Ideally, colors are set by JS, but this provides a fallback
-$DBavatar-color: color(blue);
+$DBavatar-color: color(blue) !default;
 
 // Map for the various sizes of avatars
 // This will help automate generation of classes for different avatar sizes
@@ -16,7 +16,7 @@ $DBavatar-sizes: (
    m: 32px,
    l: 48px,
   xl: 64px
-);
+) !default;
 
 // @private mixin avatarSize
 // Set proportional font size, weight, and line-height for avatars without photos
@@ -36,7 +36,11 @@ $DBavatar-sizes: (
   }
 }
 
-.#{$DBavatar-ns} {
+/**
+ * Avatar component. A wrapper element with an (optional) image or the user's
+ * initials.
+ */
+.#{$DBavatar-namespace} {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;

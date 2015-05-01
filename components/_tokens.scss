@@ -13,7 +13,24 @@
 //
 //-----------------------------
 
-.c-token {
+$DBtoken-namespace: "c-token" !default;
+
+$DBtoken-background-neutral: color(gray, x-light) !default;
+$DBtoken-background-warning: color(yellow, x-light) !default;
+$DBtoken-background-error: color(red, x-light) !default;
+
+$DBtoken-background-neutral-selected: color(gray, medium) !default;
+$DBtoken-background-warning-selected: color(yellow, dark) !default;
+$DBtoken-background-error-selected: color(red, dark) !default;
+
+$DBtoken-text-neutral: color(gray) !default;
+$DBtoken-text-warning: color(yellow, x-dark) !default;
+$DBtoken-text-error: color(red, x-dark) !default;
+
+/**
+ * Token components
+ */
+.#{$DBtoken-namespace} {
   display: inline-block;
   padding: 4px;
 
@@ -21,9 +38,10 @@
   // We want tokens to always remain on one line
   white-space: nowrap;
 
+  color: $DBtoken-text-neutral;
   border-radius: 3px;
   box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
-  background-color: color(gray, light);
+  background-color: $DBtoken-background-neutral;
 
   cursor: default;
 
@@ -43,47 +61,48 @@
 
   // Warning state
   // (Out-of-org, non-blocking)
-  .c-token--warning {
-    background-color: color(yellow, light);
-    color: color(yellow, x-dark);
+  .#{$DBtoken-namespace}--warning {
+    background-color: $DBtoken-background-warning;
+    color: $DBtoken-text-warning;
   }
 
   // Invalid state
   // (Out-of-org, suspended)
-  .c-token--invalid {
-    background-color: color(red, light);
-    color: color(red, x-dark);
+  .#{$DBtoken-namespace}--invalid {
+    background-color: $DBtoken-background-error;
+    color: $DBtoken-text-error;
   }
 
   // Pending state
   // Transient state while actual state is determined
-  .c-token--pending {
+  .#{$DBtoken-namespace}--pending {
     opacity: 50%;
   }
 
   // Selected state
-  .c-token--is-selected, .c-token--is-selected:hover {
+  .#{$DBtoken-namespace}--is-selected, .#{$DBtoken-namespace}--is-selected:hover {
+    background-color: $DBtoken-background-neutral-selected;
     color: #fff;
 
-    &.c-token--warning {
-      background-color: color(yellow, dark);
+    &.#{$DBtoken-namespace}--warning {
+      background-color: $DBtoken-background-warning-selected;
     }
 
-    &.c-token--invalid {
-      background-color: color(red, dark);
+    &.#{$DBtoken-namespace}--invalid {
+      background-color: $DBtoken-background-error-selected;
     }
   }
 
 
   // User name or email
-  .c-token__name {
+  .#{$DBtoken-namespace}__name {
     // Open Sans' line-height needs some manual correction
     top: 1px;
     margin-left: .25em;
   }
 
   // Delete token glyph
-  .c-token__delete {
+  .#{$DBtoken-namespace}__delete {
     margin-left: .25em;
     margin-right: .15em;
 

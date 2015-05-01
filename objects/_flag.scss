@@ -22,7 +22,9 @@
 //
 //-----------------------------
 
-.o-flag {
+$DBflag-namespace: "o-flag" !default;
+
+.#{$DBflag-namespace} {
   display: table;
   width: 100%;
 
@@ -33,12 +35,12 @@
     vertical-align: middle;
 
     // Use the --top modifier to align top edges of the elements
-    .o-flag--top & {
+    .#{$DBflag-namespace}--top & {
       vertical-align: top;
     }
 
     // Use --bottom to align bottom edges of the elements
-    .o-flag--bottom & {
+    .#{$DBflag-namespace}--bottom & {
       vertical-align: bottom;
     }
 
@@ -57,7 +59,7 @@
 
     // Use the --rev modifier when the order is reversed (fixed-width element on
     // the right of the fluid width element)
-    .o-flag--rev & {
+    .#{$DBflag-namespace}--rev & {
       padding-right: 0;
       padding-left: 10px;
     }

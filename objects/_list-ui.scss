@@ -4,7 +4,9 @@
 //
 //-----------------------------
 
-.o-list-ui {
+$DBlist-ui-namespace: "o-list-ui" !default;
+
+.#{$DBlist-ui-namespace} {
   margin: 0;
   padding: 0;
   list-style: none;

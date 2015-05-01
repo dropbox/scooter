@@ -4,34 +4,37 @@
 //
 //-----------------------------
 
-$DBmodal-ns: "c-modal" !default;
+$DBmodal-namespace: "c-modal" !default;
 $DBmodal-background: #fff !default;
 $DBmodal-background-alt: color(gray, x-light) !default;
 
-.#{$DBmodal-ns} {
+/**
+ * Modal component
+ */
+.#{$DBmodal-namespace} {
   overflow: scroll;
 
   background-color: $DBmodal-background;
 }
 
-  .#{$DBmodal-ns}__title,
-  .#{$DBmodal-ns}__header {
+  .#{$DBmodal-namespace}__title,
+  .#{$DBmodal-namespace}__header {
     background-color: $DBmodal-background;
   }
 
-  .#{$DBmodal-ns}__content {
+  .#{$DBmodal-namespace}__content {
     // Raise the z-index to enable overlapping of sibling banners
     z-index: 2;
 
     background-color: $DBmodal-background-alt;
 
-    .#{$DBmodal-ns}--unibody & {
+    .#{$DBmodal-namespace}--unibody & {
       // The 'unibody' variant of c-modal has no differentiation between the
       // title and the content
       background-color: $DBmodal-background;
     }
   }
 
-  .#{$DBmodal-ns}__banner {
+  .#{$DBmodal-namespace}__banner {
     box-shadow: inset 0 1px 0 color(gray, x-dark, 0.1);
   }

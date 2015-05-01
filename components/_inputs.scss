@@ -4,33 +4,52 @@
 //
 //-----------------------------
 
-.c-label {
+$DBlabel-namespace: "c-label" !default;
+$DBinput-namespace: "c-input" !default;
+
+$DBlabel-color: color(gray, medium) !default;
+$DBinput-color: color(gray) !default;
+$DBinput-color-disabled: color(gray, medium) !default;
+
+$DBinput-border: color(gray, x-dark, 0.1) !default;
+$DBinput-border-focused: color(gray, x-dark, 0.2) !default;
+
+$DBinput-background: #fff !default;
+$DBinput-background-disabled: color(gray, x-light) !default;
+
+/**
+ * Input & label components
+ */
+.#{$DBlabel-namespace} {
   display: block;
   margin-bottom: $DBbaseline;
 
-  line-height: 1.4;
   font-size: 12px;
 
-  color: color(gray, medium);
+  color: $DBlabel-color;
 }
 
-.c-input {
+.#{$DBinput-namespace} {
   display: block;
   width: 100%;
   padding: 10px;
 
-  line-height: 1.4;
   font-size: $DBfontSize;
 
-  background-color: #fff;
+  background-color: $DBinput-background;
   background-clip: padding-box;
-  color: color(gray);
-  border: 1px solid color(gray, x-dark, 0.1);
+  color: $DBinput-color;
+  border: 1px solid $DBinput-border;
   border-radius: 3px;
 
   &:focus {
     outline: 0;
-    border-color: color(gray, x-dark, 0.2);
+    border-color: $DBinput-border-focused;
+  }
+
+  &:disabled, &--is-disabled {
+    color: $DBinput-color-disabled;
+    background-color: $DBinput-background-disabled;
   }
 }
 

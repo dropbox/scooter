@@ -4,7 +4,24 @@
 //
 //---------------------------
 
-.c-btn {
+$DBbutton-namespace: "c-btn" !default;
+
+$DBbutton-background-primary: linear-gradient(color(blue), color(blue, dark)) !default;
+$DBbutton-background-secondary: #fff !default;
+$DBbutton-background-tertiary: linear-gradient(#fff, color(blue, x-light)) !default;
+
+$DBbutton-text-primary: #fff !default;
+$DBbutton-text-secondary: color(gray) !default;
+$DBbutton-text-tertiary: color(blue) !default;
+
+$DBbutton-border-primary: color(blue, dark) !default;
+$DBbutton-border-secondary: color(gray, light) !default;
+$DBbutton-border-tertiary: color(blue) !default;
+
+/**
+ * Button component
+ */
+.#{$DBbutton-namespace} {
   display: inline-block;
   padding: 7px 12px;
 
@@ -13,13 +30,13 @@
   text-decoration: none;
   font-weight: 600;
 
-  border: 1px solid;
+  border: 1px solid currentColor;
   border-radius: 3px;
 
   cursor: pointer;
 
   &[disabled], &#{&}--disabled {
-    opacity: .4;
+    opacity: .5;
     cursor: default;
   }
 
@@ -41,21 +58,20 @@
   }
 
   &#{&}--primary {
-    color: #fff;
-    background-color: color(blue);
-    background-image: linear-gradient(color(blue), color(blue, dark));
-    border-color: color(blue, dark);
+    color: $DBbutton-text-primary;
+    background: $DBbutton-background-primary;
+    border-color: $DBbutton-border-primary;
   }
 
   &#{&}--secondary {
-    color: color(gray);
-    border-color: color(gray, light);
-    background-color: #fff;
+    color: $DBbutton-text-secondary;
+    background: $DBbutton-background-secondary;
+    border-color: $DBbutton-border-secondary;
   }
 
   &#{&}--tertiary {
-    color: color(blue);
-    background-color: #fff;
-    background-image: linear-gradient(#fff, mix(color(blue), #fff, 0.1));
+    color: $DBbutton-text-tertiary;
+    background: $DBbutton-background-tertiary;
+    border-color: $DBbutton-border-tertiary;
   }
 }

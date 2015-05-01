@@ -4,7 +4,11 @@
 //
 //-----------------------------
 
-.c-input--typeahead {
+$DBtypeahead-namespace: "c-typeahead" !default;
+
+$DBtypeahead-background: #fff !default;
+
+.#{$DBinput-namespace}--typeahead {
   &.is-active {
     border-bottom: 0;
     border-bottom-left-radius: 0;
@@ -12,7 +16,10 @@
   }
 }
 
-.c-typeahead {
+/**
+ * Typeahead component
+ */
+.#{$DBtypeahead-namespace} {
   display: none;
   position: absolute;
   top: 100%;
@@ -24,7 +31,7 @@
 
   line-height: 1.5;
 
-  background-color: #fff;
+  background-color: $DBtypeahead-background;
   background-clip: padding-box;
   border-radius: 0 0 4px 4px;
   border: 1px solid color(gray, x-dark, 0.1);
