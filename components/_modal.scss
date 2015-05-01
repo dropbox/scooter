@@ -4,9 +4,9 @@
 //
 //-----------------------------
 
-$DBmodal-ns: "c-modal";
-$DBmodal-background: #fff;
-$DBmodal-background-alt: color(gray, x-light);
+$DBmodal-ns: "c-modal" !default;
+$DBmodal-background: #fff !default;
+$DBmodal-background-alt: color(gray, x-light) !default;
 
 .#{$DBmodal-ns} {
   overflow: scroll;
