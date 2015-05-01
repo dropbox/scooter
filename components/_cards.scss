@@ -14,9 +14,9 @@
 
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid color(gray, x-dark, 10%);
+  border: 1px solid color(gray, x-dark, 0.1);
   border-radius: 4px;
-  box-shadow: 0 1px 2px color(gray, x-dark, 10%);
+  box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
 
   &#{&}--arrow {
     &:before, &:after {
@@ -31,7 +31,7 @@
 
     &:before {
       border-width: 11px;
-      border-bottom-color: color(gray, x-dark, 20%);
+      border-bottom-color: color(gray, x-dark, 0.2);
       margin-left: -11px;
     }
 
@@ -71,11 +71,11 @@
       }
 
       &:before {
-        border-top-color: color(gray, x-dark, 20%);
+        border-top-color: color(gray, x-dark, 0.2);
         // Since we’re spoofing a triangle with borders, we can’t use
         // box-shadow, but we can use the drop-shadow filter. Limited support,
         // but it’s just a nice-to-have.
-        filter: drop-shadow(0 1px 2px color(gray, x-dark, 20%));
+        filter: drop-shadow(0 1px 2px color(gray, x-dark, 0.2));
       }
     }
   }

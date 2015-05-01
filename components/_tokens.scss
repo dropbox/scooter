@@ -22,13 +22,13 @@
   white-space: nowrap;
 
   border-radius: 3px;
-  box-shadow: inset 0 0 0 1px color(gray, x-dark, 10%);
+  box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
   background-color: color(gray, light);
 
   cursor: default;
 
   &:hover {
-    box-shadow: inset 0 0 0 1px color(gray, x-dark, 30%);
+    box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.3);
   }
 
   > * {

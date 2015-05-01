@@ -25,12 +25,12 @@
   background-color: #fff;
   background-clip: padding-box;
   color: color(gray);
-  border: 1px solid color(gray, x-dark, 10%);
+  border: 1px solid color(gray, x-dark, 0.1);
   border-radius: 3px;
 
   &:focus {
     outline: 0;
-    border-color: color(gray, x-dark, 20%);
+    border-color: color(gray, x-dark, 0.2);
   }
 }
 

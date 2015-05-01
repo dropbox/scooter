@@ -18,18 +18,18 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
 //  REQUIRED: Level of gray
 //    There are 10 levels of gray, ranging from 1 to 10 (darkest to lightest).
 //  OPTIONAL: Level of opacity
-//    There are 11 levels of opacity, ranging from 0% to 100% (transparent to opaque).
+//    There are 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
 //
-// Example: grayscale(1, 100%);
+// Example: grayscale(1, 1);
 // This will create a dark gray that is fully opaque.
 //
 //---------------------------
-@function grayscale($gradation, $alpha: 100%) {
+@function grayscale($gradation, $alpha: 1) {
     @if map-has-key($DBgrayscaleColors, $gradation) {
-        $alpha-val: $alpha / 100;
+        $alpha-val: $alpha;
 
         @if index($__alpha-stops, $alpha-val) == null {
-            @error "Only alpha values in 10% increments are allowed";
+            @error "Only alpha values in 0.1 increments are allowed";
         }
 
         $grayscale-val: map-get($DBgrayscaleColors, $gradation);
@@ -47,15 +47,15 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
 //  OPTIONAL: Shade
 //    Each color has 6 shades (x-dark, dark, base, medium, light, x-light).
 //  OPTIONAL: Opacity
-//    Each shade has 11 levels of opacity, ranging from 0% to 100% (transparent to opaque).
+//    Each shade has 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
 //
 // Example: color(blue);
 // This will create a base blue that is fully opaque.
 //
-// Example 2: color(red, dark, 80%);
+// Example 2: color(red, dark, 0.8);
 // This will create a dark red that is 80% opaque.
 //
-// Example 3: color(yellow, 60%);
+// Example 3: color(yellow, 0.6);
 // This will create a base yellow that is 60% opaque.
 //
 //---------------------------
@@ -72,7 +72,7 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
         @if type-of($current-property) == "string" {
             $shade-val: $current-property;
         } @else if type-of($current-property) == "number" {
-            $alpha-val: $current-property / 100;
+            $alpha-val: $current-property;
         }
 
         $i: $i + 1;
@@ -83,7 +83,7 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
     }
 
     @if index($__alpha-stops, $alpha-val) == null {
-        @error "Only alpha values in 10% increments are allowed";
+        @error "Only alpha values in 0.1 increments are allowed";
     }
 
     @if map-has-key($DBglobalColors, $name) {

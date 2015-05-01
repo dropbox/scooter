@@ -33,5 +33,5 @@ $DBmodal-background-alt: color(gray, x-light) !default;
   }
 
   .#{$DBmodal-ns}__banner {
-    box-shadow: inset 0 1px 0 rgba(color(gray, x-dark), .1);
+    box-shadow: inset 0 1px 0 color(gray, x-dark, 0.1);
   }

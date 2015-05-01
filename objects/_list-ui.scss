@@ -8,9 +8,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  
+
   &__item + &__item {
     border-top: 1px solid;
-    border-color: rgba(color(gray, x-dark), .1);
+    border-color: color(gray, x-dark, 0.1);
   }
 }

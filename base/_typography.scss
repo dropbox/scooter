@@ -11,7 +11,9 @@
 // Only h1-h4 are used/styled. If your DOM heirarchy goes as deep at h5 or h6,
 // you have some rethinking to do.
 //
-h1, .f-alpha {
+h1,
+%f-alpha,
+.f-alpha {
   margin-bottom: $DBbaseline;
 
   font-size: 28px;
@@ -19,7 +21,9 @@ h1, .f-alpha {
   line-height: 36px;
 }
 
-h2, .f-beta {
+h2,
+%f-beta,
+.f-beta {
   margin-bottom: $DBbaseline;
 
   font-size: 20px;
@@ -27,7 +31,9 @@ h2, .f-beta {
   line-height: 28px;
 }
 
-h3, .f-gamma {
+h3,
+%f-gamma,
+.f-gamma {
   margin-bottom: $DBbaseline;
 
   font-size: 16px;
@@ -35,7 +41,9 @@ h3, .f-gamma {
   line-height: 28px;
 }
 
-h4, .f-delta {
+h4,
+%f-delta,
+.f-delta {
   font-size: 13px;
   font-weight: 600;
   line-height: $DBbaseline;
@@ -44,12 +52,15 @@ h4, .f-delta {
 // Other type styles
 // =================
 //
-hr {
+hr,
+%hr{
   border: none;
-  border-top: 1px solid color(gray, x-dark, 10%);
+  border-top: 1px solid color(gray, x-dark, 0.1);
 }
 
-a, .f-a, %f-a {
+a,
+%f-a,
+.f-a {
   color: color(blue);
   text-decoration: none;
 

@@ -21,7 +21,7 @@
   background-color: color(gray, x-light);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: color(gray, x-dark, 10%);
+  border-color: color(gray, x-dark, 0.1);
 
   &#{&}--success {
     background-color: color(green, x-light);

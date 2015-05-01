@@ -27,8 +27,8 @@
   background-color: #fff;
   background-clip: padding-box;
   border-radius: 0 0 4px 4px;
-  border: 1px solid color(gray, x-dark, 10%);
-  box-shadow: 0 1px 2px color(gray, x-dark, 10%);
+  border: 1px solid color(gray, x-dark, 0.1);
+  box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
 
   &.is-open {
     display: block;
@@ -46,7 +46,7 @@
       color: color(blue);
       background-color: color(blue, x-light);
       border-bottom: 1px solid;
-      border-color: color(gray, x-dark, 10%);
+      border-color: color(gray, x-dark, 0.1);
 
       .f-meta {
         color: inherit;

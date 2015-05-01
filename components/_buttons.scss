@@ -25,7 +25,7 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px color(blue, 30%);
+    box-shadow: 0 0 0 2px color(blue, 0.3);
   }
 
   &:hover {
@@ -56,6 +56,6 @@
   &#{&}--tertiary {
     color: color(blue);
     background-color: #fff;
-    background-image: linear-gradient(#fff, mix(color(blue), #fff, 10%));
+    background-image: linear-gradient(#fff, mix(color(blue), #fff, 0.1));
   }
 }

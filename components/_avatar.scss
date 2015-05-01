@@ -4,8 +4,13 @@
 //
 //-----------------------------
 
+$DBavatar-ns: "c-avatar";
+// Ideally, colors are set by JS, but this provides a fallback
+$DBavatar-color: color(blue);
+
 // Map for the various sizes of avatars
-$avatar-sizes: (
+// This will help automate generation of classes for different avatar sizes
+$DBavatar-sizes: (
   xs: 16px,
    s: 24px,
    m: 32px,
@@ -13,8 +18,9 @@ $avatar-sizes: (
   xl: 64px
 );
 
+// @private mixin avatarSize
 // Set proportional font size, weight, and line-height for avatars without photos
-@mixin avatarSize($s: 32px) {
+@mixin __avatarSize($s: 32px) {
   height: $s;
   width: $s;
 
@@ -30,7 +36,7 @@ $avatar-sizes: (
   }
 }
 
-.c-avatar {
+.#{$DBavatar-ns} {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -38,12 +44,12 @@ $avatar-sizes: (
   overflow: hidden;
 
   // Default size for avatars without explicit sizing
-  @include avatarSize(32px);
+  @include __avatarSize(32px);
 
   text-align: center;
 
   // Default color for avatars without images
-  color: #007ee5;
+  color: $DBavatar-color;
   border-radius: 100%;
 
   &__img,
@@ -64,12 +70,12 @@ $avatar-sizes: (
     right: 0;
     bottom: 0;
 
-    box-shadow: inset 0 0 0 1px color(gray, x-dark, 10%);
+    box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
     border-radius: 100%;
   }
 
   &#{&}--no-img {
-    border: 2px solid;
+    border: 2px solid currentColor;
 
     &:after {
       content: attr(data-initials);
@@ -79,9 +85,10 @@ $avatar-sizes: (
   }
 
   // Loop through all the avatar sizes to generate selectors
-  @each $key, $size in $avatar-sizes {
+  @each $key, $size in $DBavatar-sizes {
+    // This is output to `.#{DBavatar-ns}--size`
     &--#{$key} {
-      @include avatarSize($size);
+      @include __avatarSize($size);
 
       @if $key == "xs" {
         // Extra small avatars get no initials
