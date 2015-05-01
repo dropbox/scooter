@@ -1,0 +1,69 @@
+//-----------------------------
+//
+// Loading indicator
+// =================
+//
+// Usage:
+// <div class="c-loader">Loading...</div>
+//
+//-----------------------------
+
+$DBloadingindicator-namespace: "c-loader";
+
+$DBloadingindicator-color: color(gray, dark);
+
+$DBloadingindicator-size: 6px;
+
+$DBloadingindicator-speed: .9s;
+
+/**
+ * Loading indicator component
+ */
+.#{$DBloadingindicator-namespace} {
+  position: relative;
+  display: inline-block;
+  width: $DBloadingindicator-size;
+  height: $DBloadingindicator-size;
+  margin: ($DBloadingindicator-size*2) 0;
+
+  font-size: 0;
+
+  color: transparent;
+  border-radius: 100%;
+  background-color: rgba($DBloadingindicator-color, .3);
+
+  &, &:after, &:before {
+    animation: loaderFade $DBloadingindicator-speed ease-in-out infinite;
+  }
+
+  &:after, &:before {
+    vertical-align: middle;
+    position: absolute;
+    content: '';
+    width: $DBloadingindicator-size;
+    height: $DBloadingindicator-size;
+    margin-left: round($DBloadingindicator-size*.6);
+    left: 100%;
+
+    border-radius: 100%;
+    background-color: rgba($DBloadingindicator-color, .3);
+    animation-delay: ($DBloadingindicator-speed/3);
+  }
+
+  &:after {
+    left: 200%;
+    margin-left: (round($DBloadingindicator-size*.3)+$DBloadingindicator-size);
+
+    animation-delay: (($DBloadingindicator-speed/3)*2);
+  }
+}
+
+@keyframes loaderFade {
+  50% {
+    background-color: rgba($DBloadingindicator-color, 1);
+  }
+
+  0%, 100% {
+    background-color: rgba($DBloadingindicator-color, .3);
+  }
+}
