@@ -4,32 +4,34 @@
 //
 //-----------------------------
 
-$o-modal-ns: "o-modal";
+$DBmodal-ns: "c-modal";
+$DBmodal-background: #fff;
+$DBmodal-background-alt: color(gray, x-light);
 
-.#{$o-modal-ns} {
+.#{$DBmodal-ns} {
   overflow: scroll;
 
-  background-color: #fff;
+  background-color: $DBmodal-background;
 }
 
-  .#{$o-modal-ns}__title,
-  .#{$o-modal-ns}__header {
-    background-color: #fff;
+  .#{$DBmodal-ns}__title,
+  .#{$DBmodal-ns}__header {
+    background-color: $DBmodal-background;
   }
 
-  .#{$o-modal-ns}__content {
+  .#{$DBmodal-ns}__content {
     // Raise the z-index to enable overlapping of sibling banners
     z-index: 2;
 
-    background-color: color(gray, x-light);
+    background-color: $DBmodal-background-alt;
 
-    .#{$o-modal-ns}--unibody & {
-      // The 'unibody' variant of o-modal has no differentiation between the
+    .#{$DBmodal-ns}--unibody & {
+      // The 'unibody' variant of c-modal has no differentiation between the
       // title and the content
-      background-color: #fff;
+      background-color: $DBmodal-background;
     }
   }
 
-  .#{$o-modal-ns}__banner {
+  .#{$DBmodal-ns}__banner {
     box-shadow: inset 0 1px 0 rgba(color(gray, x-dark), .1);
   }
