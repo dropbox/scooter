@@ -47,6 +47,9 @@
 #   end
 # end
 
+set :source, "docs/source"
+set :build_dir, "docs/build"
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
