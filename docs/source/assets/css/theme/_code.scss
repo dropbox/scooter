@@ -1,0 +1,12 @@
+pre.highlight {
+  padding: ($sc-baseline/2);
+  margin-bottom: $sc-baseline;
+
+  background-color: #35383C;
+  border-radius: 3px;
+
+  .c, .cd, .cm, .c1, .cs {
+    color: #9FA8A7;
+  }
+
+}

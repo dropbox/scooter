@@ -1,0 +1,17 @@
+$sc-utility-layout-namespace: "#{$sc-namespace}u-l";
+
+.#{$sc-utility-layout-namespace}-wrap {
+  padding: 0 $sc-baseline;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.#{$sc-utility-layout-namespace}-island,
+%#{$sc-utility-layout-namespace}-island {
+  padding: $sc-baseline;
+}
+
+.#{$sc-utility-layout-namespace}-isle,
+%#{$sc-utility-layout-namespace}-isle {
+  padding: ($sc-baseline/2);
+}

@@ -15,3 +15,9 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # gh-pages deployment
 gem 'middleman-deploy', '~> 1.0'
+
+# TOC-friendly markdown engine
+gem 'redcarpet'
+
+# Syntax highlighting
+gem "middleman-syntax"

@@ -3,12 +3,53 @@
   <head>
     <meta charset="utf-8">
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title>Scooter<%= " - " + current_page.data.title %></title>
 
     <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "vendor/syntax" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <header class="sc-site__header">
+
+      <div class="sc-u-l-wrap">
+        <a href="index.html" class="site__title">Scooter</a>
+      </div>
+
+      <div class="sc-u-l-wrap">
+        <nav class="sc-site__nav">
+          <ul class="sc-o-nav sc-o-nav--inline">
+            <li><%= link_to 'Home', 'index.html', nav_active('index.html') %></li>
+            <li><%= link_to 'Variables', 'variables.html', nav_active('variables.html') %></li>
+            <li><%= link_to 'Functions', 'functions.html', nav_active('functions.html') %></li>
+            <li><%= link_to 'Mixins', 'mixins.html', nav_active('mixins.html') %></li>
+            <li><%= link_to 'Base styles', 'base.html', nav_active('base.html') %></li>
+            <li><%= link_to 'Objects', 'objects.html', nav_active('objects.html') %></li>
+            <li><%= link_to 'Components', 'components.html', nav_active('components.html') %></li>
+            <li><%= link_to 'Utilities', 'utilities.html', nav_active('utilities.html') %></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <main class="sc-site__content">
+      <div class="sc-u-l-wrap">
+        <div class="sc-o-grid">
+
+          <div class="sc-o-grid__col sc-o-grid__col--8-of-12">
+            <h1><%= current_page.data.title %></h1>
+            <%= yield %>
+          </div>
+
+          <div class="sc-o-grid__col sc-o-grid__col--4-of-12">
+            <h4>On this page</h4>
+            <nav class="content__nav sc-o-nav">
+              <%= table_of_contents(current_page) %>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

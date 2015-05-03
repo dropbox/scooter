@@ -1,0 +1,57 @@
+p, ul, ol, table, form, hr,
+%p {
+  margin-bottom: $sc-baseline;
+}
+
+%vspacer {
+  * + & {
+    padding-top: $sc-baseline;
+  }
+}
+
+h1,
+.#{$sc-namespace}f-alpha,
+%#{$sc-namespace}f-alpha {
+  @extend %p;
+  @extend %vspacer;
+
+  font-size: ($sc-baseline*2);
+  font-weight: 100;
+  line-height: 1;
+}
+
+h2,
+.#{$sc-namespace}f-beta,
+%#{$sc-namespace}f-beta {
+  @extend %p;
+  @extend %vspacer;
+
+  font-size: ($sc-baseline*1.25);
+  font-weight: 200;
+  line-height: 1;
+}
+
+h3,
+.#{$sc-namespace}f-gamma,
+%#{$sc-namespace}f-gamma {
+  @extend %vspacer;
+
+  margin-bottom: ($sc-baseline/2);
+
+  font-size: $sc-baseline;
+  font-weight: 400;
+  line-height: 1;
+}
+
+a {
+  color: $sc-color-highlight;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul, ol {
+  padding-left: $sc-baseline;
+}

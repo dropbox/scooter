@@ -1,0 +1,20 @@
+$sc-o-nav-namespace: "#{$sc-namespace}o-nav";
+
+.#{$sc-o-nav-namespace} {
+
+  &, & ul, & ol {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    display: inline-block
+  }
+
+  &--inline {
+    li {
+      display: inline-block;
+    }
+  }
+}
