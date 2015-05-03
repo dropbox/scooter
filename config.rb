@@ -24,8 +24,6 @@ end
 # activate :automatic_image_sizes
 
 configure :development do
-  activate :livereload
-
   set :sass, :sourcemap => :inline
 end
 
