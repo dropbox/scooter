@@ -50,11 +50,15 @@
 set :source, "docs/source"
 set :build_dir, "docs/build"
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'assets/css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'assets/js'
 
-set :images_dir, 'images'
+set :images_dir, 'assets/images'
+
+# Relative links for assets that actually work no gh-pages
+activate :relative_assets
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
