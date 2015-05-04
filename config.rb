@@ -29,6 +29,16 @@ configure :development do
   set :sass, :sourcemap => :inline
 end
 
+configure :build do
+  compass_config do |config|
+    config.line_comments = false
+    # config.output_style = :compact did not seem to work for me but config.sass_options = {} did
+    config.sass_options = {
+      :style => :compressed
+    }
+  end
+end
+
 # Methods defined in the helpers block are available in templates
 helpers do
   def nav_active(path)
