@@ -12,11 +12,12 @@ p, ul, ol, table, form, hr,
 h1,
 .#{$sc-namespace}f-alpha,
 %#{$sc-namespace}f-alpha {
-  @extend %p;
   @extend %vspacer;
 
+  margin-bottom: ($sc-baseline*2);
+
   font-size: ($sc-baseline*2);
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1;
 }
 
