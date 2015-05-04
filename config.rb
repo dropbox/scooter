@@ -39,6 +39,10 @@ configure :build do
   end
 end
 
+activate :deploy do |deploy|
+  deploy.build_before = true # default: false
+end
+
 # Methods defined in the helpers block are available in templates
 helpers do
   def nav_active(path)
