@@ -1,5 +1,26 @@
 .#{$sc-namespace}site__nav {
+  margin-bottom: ($sc-baseline*2);
+
+  li + li {
+    margin-left: $sc-baseline;
+  }
+
+  a {
+    color: inherit;
+    padding: ($sc-baseline/2) 0;
+
+    &:hover {
+      text-decoration: none;
+      color: $sc-color-highlight;
+    }
+  }
+
   .is-active {
+    margin-top: -2px;
+
     font-weight: 700;
+
+    color: $sc-color-highlight;
+    border-top: 2px solid currentColor;
   }
 }

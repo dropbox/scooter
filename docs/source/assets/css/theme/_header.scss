@@ -1,3 +1,17 @@
 .#{$sc-namespace}site__header {
-  @extend %p;
+  padding: $sc-baseline 0;
+
+  background-color: #F7F9FA;
+}
+
+.#{$sc-namespace}site__title {
+  display: block;
+  overflow: hidden;
+  width: 147px;
+  height: 24px;
+
+  white-space: nowrap;
+  text-indent: 100%;
+
+  background-image: image-url('scooter-logo.svg');
 }
