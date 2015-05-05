@@ -14,9 +14,9 @@
 //
 //-----------------------------
 
-// Arrow Base
+// @private mixin arrow-base
 // Used to set up an arrow element
-@mixin arrow-base($size: 10px) {
+@mixin __arrow-base($size: 10px) {
   display: inline-block;
   width: 0;
   height: 0;
@@ -25,9 +25,9 @@
   border: $size solid transparent;
 }
 
-// Arrow Make
+// @private mixin arrow-make
 // Used with arrow-base($size) to create an arrow shape
-@mixin arrow-make($color: inherit, $direction: down) {
+@mixin __arrow-make($color: inherit, $direction: down) {
   // Set up the direction
   @if $direction == down {
     $direction: "top";
@@ -48,6 +48,6 @@
 // Arrow
 // Shorthand mixin accessor for arrow-base() and arrow-make()
 @mixin arrow($size: 10px, $color: inherit, $direction: down) {
-  @include arrow-base($size);
-  @include arrow-make($color, $direction);
+  @include __arrow-base($size);
+  @include __arrow-make($color, $direction);
 }
