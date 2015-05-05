@@ -1,6 +1,6 @@
 # Set markdown engine so we can get TOC
 set :markdown_engine, :redcarpet
-set :markdown, with_toc_data: true, :fenced_code_blocks => true, :smartypants => true
+set :markdown, with_toc_data: true, :fenced_code_blocks => true, :no_intraemphasis => true
 
 ###
 # Compass
@@ -45,6 +45,12 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+
+  def escape_characters_in_string(string)
+    pattern = /(\_)/
+    string.gsub(pattern){|match|"\\"  + match} # <-- Trying to take the currently found match and add a \ before it I have no idea how to do that).
+  end
+
   def nav_active(path)
     current_page.path == path ? {:class => "is-active"} : {}
   end
@@ -54,6 +60,15 @@ helpers do
     toc_renderer = Redcarpet::Render::HTML_TOC.new(nesting_level: 2)
     markdown = Redcarpet::Markdown.new(toc_renderer)
     markdown.render(content)
+  end
+
+  def code_example(input)
+    source = input
+    formatter = Rouge::Formatters::HTML.new(css_class: 'highlight')
+    lexer = Rouge::Lexers::Shell.new
+    output = formatter.format(lexer.lex(source))
+    output = escape_characters_in_string(output)
+    "<div class='sc-demo'><div class='sc-demo__output'>#{input.to_s}</div><div class='sc-demo__input'>#{output}</div></div>"
   end
 end
 

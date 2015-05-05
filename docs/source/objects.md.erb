@@ -1,0 +1,51 @@
+---
+
+title: Objects
+
+---
+
+## Grid
+The grid object offers a collection of classes for grid-based layout. It should
+be used within a container that sets the width or max-width.
+
+### Configuration
+The grid object comes with a few configuration options:
+
+- `$DBcol-groups` is a map that sets the grid divisions. The default value is
+  `2, 3, 4, 6, 12`.
+- `$DBgutter-width` sets the margins (or gutters) between columns. Defaults to 20px.
+
+<%= code_example('<div class="o-grid">
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+
+  <div class="o-grid__col o-grid__col--6-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--3-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+</div>') %>
+
+## Media
+
+
+## List-UI
+
+
+## Flag

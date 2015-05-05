@@ -37,6 +37,7 @@ html, :root {
 
 h1,
 .f-alpha {
+  display: block;
   margin-bottom: 23px;
   font-size: 28px;
   font-weight: 200;
@@ -44,6 +45,7 @@ h1,
 
 h2,
 .f-beta {
+  display: block;
   margin-bottom: 23px;
   font-size: 20px;
   font-weight: 400;
@@ -51,6 +53,7 @@ h2,
 
 h3,
 .f-gamma {
+  display: block;
   margin-bottom: 23px;
   font-size: 16px;
   font-weight: 400;
@@ -58,11 +61,13 @@ h3,
 
 h4,
 .f-delta {
+  display: block;
   font-size: 13px;
   font-weight: 600;
   line-height: 23px; }
 
 hr {
+  margin-bottom: 23px;
   border: none;
   border-top: 1px solid rgba(37, 40, 43, 0.1); }
 

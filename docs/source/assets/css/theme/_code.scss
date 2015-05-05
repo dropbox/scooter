@@ -1,4 +1,21 @@
+code {
+  padding: 2px 4px;
+
+  font-size: .8rem;
+  font-family: "Source Code Pro";
+
+  background-color: #F0F3F5;
+  border-radius: 3px;
+
+  .highlight & {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
 pre.highlight {
+  -webkit-font-smoothing: antialiased;
   padding: ($sc-baseline/2);
   margin-bottom: $sc-baseline;
 
@@ -9,4 +26,10 @@ pre.highlight {
     color: #9FA8A7;
   }
 
+}
+
+// Some code examples are rendering an empty <p>, and this is a
+// hacky/last-resort way to get rid of it.
+p:empty {
+  display: none;
 }

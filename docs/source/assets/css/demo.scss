@@ -1,0 +1,25 @@
+.sc-demo {
+  .highlight {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.sc-demo__output {
+  padding: 1.5rem;
+
+  font: 81.25%/1.75 "Open Sans", sans-serif;
+
+  border: 1px solid rgba(#25282B, .2);
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+
+  @import "vendor/scooter";
+
+  .o-grid__col {
+    background-color: rgba(#FFBB01, .3);
+    background-clip: content-box;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+}

@@ -14,6 +14,7 @@
 h1,
 %f-alpha,
 .f-alpha {
+  display: block;
   margin-bottom: $DBbaseline;
 
   font-size: 28px;
@@ -24,6 +25,7 @@ h1,
 h2,
 %f-beta,
 .f-beta {
+  display: block;
   margin-bottom: $DBbaseline;
 
   font-size: 20px;
@@ -34,6 +36,7 @@ h2,
 h3,
 %f-gamma,
 .f-gamma {
+  display: block;
   margin-bottom: $DBbaseline;
 
   font-size: 16px;
@@ -44,6 +47,7 @@ h3,
 h4,
 %f-delta,
 .f-delta {
+  display: block;
   font-size: 13px;
   font-weight: 600;
   line-height: $DBbaseline;
@@ -54,6 +58,8 @@ h4,
 //
 hr,
 %hr{
+  margin-bottom: $DBbaseline;
+
   border: none;
   border-top: 1px solid color(gray, x-dark, 0.1);
 }
