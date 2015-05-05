@@ -5,6 +5,7 @@ $sc-o-nav-namespace: "#{$sc-namespace}o-nav";
   &, & ul, & ol {
     list-style: none;
     padding-left: 0;
+    margin-left: 0;
     margin-bottom: 0;
   }
 

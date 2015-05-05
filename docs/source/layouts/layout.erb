@@ -5,8 +5,10 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Scooter<%= " - " + current_page.data.title %></title>
 
+    <%= stylesheet_link_tag "vendor/scooter" %>
     <%= stylesheet_link_tag "style" %>
     <%= stylesheet_link_tag "vendor/syntax" %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body class="<%= page_classes %>">
