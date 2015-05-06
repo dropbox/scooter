@@ -13,7 +13,7 @@ $DBmedia-namespace: "o-media" !default;
 
     .#{$DBmedia-namespace}__img {
         float: left;
-        margin-right: quarter($DBbaseline);
+        margin-right: half($DBbaseline);
 
         > img {
             display: block;
