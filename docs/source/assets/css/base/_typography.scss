@@ -9,9 +9,7 @@ p, ul, ol, table, form, hr,
   }
 }
 
-h1,
-.#{$sc-namespace}f-alpha,
-%#{$sc-namespace}f-alpha {
+h1 {
   @extend %vspacer;
 
   margin-bottom: ($sc-baseline*2);
@@ -22,9 +20,7 @@ h1,
   line-height: 1;
 }
 
-h2,
-.#{$sc-namespace}f-beta,
-%#{$sc-namespace}f-beta {
+h2 {
   @extend %p;
   @extend %vspacer;
 
@@ -34,9 +30,7 @@ h2,
   line-height: 1;
 }
 
-h3,
-.#{$sc-namespace}f-gamma,
-%#{$sc-namespace}f-gamma {
+h3 {
   margin-bottom: ($sc-baseline/2);
 
   -webkit-font-smoothing: antialiased;
@@ -48,9 +42,10 @@ h3,
 h4 {
   margin-bottom: $sc-baseline/2;
 
-  font-size: 1rem;
+  font-size: .75rem;
+  line-height: 1;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: .075em;
 
   color: #7B8994;
 }

@@ -1,6 +1,8 @@
 .#{$sc-namespace}site__nav {
   margin-bottom: ($sc-baseline*2);
 
+  background-color: #F0F3F5;
+
   li + li {
     margin-left: $sc-baseline;
   }
@@ -8,7 +10,7 @@
   a {
     padding: ($sc-baseline/2) 0;
 
-    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     color: inherit;
 
     &:hover {
@@ -20,6 +22,6 @@
 
   .is-active {
     color: $sc-color-highlight;
-    border-top-color: currentColor;
+    border-bottom-color: currentColor;
   }
 }

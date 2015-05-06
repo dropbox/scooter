@@ -1,7 +1,7 @@
 code {
   padding: 2px 4px;
 
-  font-size: .8rem;
+  font-size: 13px;
   font-family: "Source Code Pro";
 
   background-color: #F0F3F5;
@@ -19,7 +19,7 @@ pre.highlight {
   padding: ($sc-baseline/2);
   margin-bottom: $sc-baseline;
 
-  background-color: #35383C;
+  border: 1px solid rgba(#25282B, .1);
   border-radius: 3px;
 
   .c, .cd, .cm, .c1, .cs {

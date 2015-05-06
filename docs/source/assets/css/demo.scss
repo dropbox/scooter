@@ -2,6 +2,7 @@
   .highlight {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-top: none;
   }
 }
 
@@ -10,8 +11,7 @@
 
   font: 81.25%/1.75 "Open Sans", sans-serif;
 
-  border: 1px solid rgba(#25282B, .2);
-  border-bottom: 0;
+  border: 1px solid rgba(#25282B, .1);
   border-radius: 4px 4px 0 0;
 
   @import "vendor/scooter";
