@@ -1,0 +1,52 @@
+---
+
+title: Functions
+
+---
+
+<h2>Maths</h2>
+
+<h3>half($number)</h3>
+<p>Divides a passed value by 2. Returns a whole number.</p>
+
+<h3>quarter($number)</h3>
+<p>Divides a passed value by 4. Returns a whole number.</p>
+
+<h3>double($number)</h3>
+<p>Multiplies a passed value by 2. Returns a whole number.</p>
+
+<h3>quadruple($number)</h3>
+<p>Multiplies a passed value by 4. Returns a whole number.</p>
+
+
+<h2>Colors</h2>
+
+<h3>grayscale($gradation, [$alpha: 1])</h3>
+<p>Returns a value from <a href="$variables.html#$dbgrayscalecolor"><code>sDBGrayscaleColors</code></a>.
+Passing an <code>$alpha</code> value between <code>0.0</code> and <code>1.0</code> returns the color as an
+<code>rgba</code> value.</p>
+
+<h3>color($name, [$shade, $alpha])</h3>
+<p>Returns a value from <a href="variables.html#$dbglobalcolors"><code>$DBGlobalColors</code></a>.
+With only the <code>$name</code> parameter, the base shade is returned. The
+optional <code>$shade</code> parameter can be one of the following:</p>
+
+<ul>
+  <li>x-dark</li>
+  <li>dark</li>
+  <li>base (default)</li>
+  <li>medium</li>
+  <li>light</li>
+  <li>x-light</li>
+</ul>
+
+<p>The optional <code>$alpha</code> parameter can be between <code>0.0</code>
+and <code>1.0</code>. Passing an <code>$alpha</code> value returns the color as
+an <code>rgba</code> value.</p>
+
+
+<h2>Units</h2>
+
+<h3>stripUnit($value)</h3>
+<p>Accepts a number and returns the unitless value. Useful for getting unitless
+versions of <code>em</code> values, for example.</p>
