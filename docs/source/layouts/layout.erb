@@ -40,16 +40,22 @@
       <div class="sc-u-l-wrap">
         <div class="sc-o-grid">
 
-          <div class="sc-o-grid__col sc-o-grid__col--8-of-12">
+          <div class="sc-o-grid__col sc-o-grid__col--9-of-12">
             <h1><%= current_page.data.title %></h1>
             <%= yield %>
           </div>
 
-          <div class="sc-o-grid__col sc-o-grid__col--4-of-12">
-            <h4>On this page</h4>
-            <nav class="content__nav sc-o-nav">
-
-            </nav>
+          <div class="sc-o-grid__col sc-o-grid__col--3-of-12">
+            <% if current_page.data.toc %>
+              <h4>On this page</h4>
+              <nav class="sc-content__nav sc-o-nav">
+                <ul>
+                  <% current_page.data.toc.length.times do | i | %>
+                    <li><a href="#<%= current_page.data.toc[i].downcase %>"><%= current_page.data.toc[i] %></a></li>
+                  <% end %>
+                </ul>
+              </nav>
+            <% end %>
           </div>
         </div>
       </div>

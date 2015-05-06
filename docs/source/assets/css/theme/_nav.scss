@@ -25,3 +25,14 @@
     border-bottom-color: currentColor;
   }
 }
+
+.#{$sc-namespace}content__nav {
+  a {
+    display: block;
+    padding: ($sc-baseline/2) 0;
+  }
+
+  li + li {
+    border-top: 1px solid rgba($sc-color-black, .1);
+  }
+}

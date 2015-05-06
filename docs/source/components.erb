@@ -2,9 +2,16 @@
 
 title: Components
 
+toc:
+- Banners
+- Buttons
+- Cards
+- Inputs
+- Avatars
+
 ---
 
-<h2>Banners</h2>
+<h2 id="banners">Banners</h2>
 <p>Banners are used to display important information to the user. Typically,
   they are pinned to the top of the page, but may also be detached or appear
   anywhere in the page.</p>
@@ -38,7 +45,7 @@ title: Components
   This is a floating or "unpinned" banner.
 </div>') %>
 
-<h2>Buttons</h2>
+<h2 id="buttons">Buttons</h2>
 <p>Buttons come in three flavors:</p>
 
 <ul>
@@ -60,7 +67,7 @@ title: Components
   <button class="c-btn c-btn--tertiary" disabled>Disabled tertiary button</button>
 </p>') %>
 
-<h2>Cards</h2>
+<h2 id="cards">Cards</h2>
 <p>Cards are used to display and contain all sorts of content. Places you see
   cards today include the account dropdown menu and the "contact cards" in the
   shared folder modals.</p>
@@ -112,7 +119,7 @@ title: Components
 </p>') %>
 
 
-<h2>Inputs and Labels</h2>
+<h2 id="inputs">Inputs and Labels</h2>
 <p>Inputs and labels are used in forms. But you knew that.</p>
 
 <%= code_example('<form>
@@ -140,7 +147,7 @@ title: Components
 </form>') %>
 
 
-<h2>Avatars</h2>
+<h2 id="avatars" >Avatars</h2>
 <p>Avatars come in five sizes:</p>
 
 <ul>
@@ -151,11 +158,11 @@ title: Components
   <li>xl (64px)</li>
 </ul>
 
-<%= code_example('<figure class="c-avatar c-avatar--xs">
+<%= code_example('<figure class="c-avatar c-avatar--xl">
   <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
 </figure>
 
-<figure class="c-avatar c-avatar--s">
+<figure class="c-avatar c-avatar--l">
   <img src="http://i.imgur.com/l2Gk1Q5.jpg" alt="Kristen Spilman" />
 </figure>
 
@@ -163,11 +170,11 @@ title: Components
   <img src="http://i.imgur.com/0tRX9MO.jpg" alt="Daniel Eden" />
 </figure>
 
-<figure class="c-avatar c-avatar--l">
+<figure class="c-avatar c-avatar--s">
   <img src="http://i.imgur.com/txMlllW.jpg" alt="Linda Eliasen" />
 </figure>
 
-<figure class="c-avatar c-avatar--xl">
+<figure class="c-avatar c-avatar--xs">
   <img src="http://i.imgur.com/3DzNLJQ.jpg" alt="Ryhan Hassan" />
 </figure>') %>
 
@@ -175,19 +182,19 @@ title: Components
   <code>data-initials</code> attribute and adding the <code>no-img</code>
   attribute achieves this result:</p>
 
-<%= code_example('<figure class="c-avatar c-avatar--xs c-avatar--no-img" data-initials="AR">
+<%= code_example('<figure class="c-avatar c-avatar--xl c-avatar--no-img" data-initials="AR">
 </figure>
 
-<figure class="c-avatar c-avatar--s c-avatar--no-img" data-initials="KS">
+<figure class="c-avatar c-avatar--l c-avatar--no-img" data-initials="KS">
 </figure>
 
 <figure class="c-avatar c-avatar--no-img" data-initials="DE">
 </figure>
 
-<figure class="c-avatar c-avatar--l c-avatar--no-img" data-initials="LE">
+<figure class="c-avatar c-avatar--s c-avatar--no-img" data-initials="LE">
 </figure>
 
-<figure class="c-avatar c-avatar--xl c-avatar--no-img" data-initials="RH">
+<figure class="c-avatar c-avatar--xs c-avatar--no-img" data-initials="RH">
 </figure>') %>
 
 <p><em>Note that in this example, the avatar color is set via JavaScript. By
