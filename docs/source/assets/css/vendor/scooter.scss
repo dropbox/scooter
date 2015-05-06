@@ -374,8 +374,11 @@ a,
     outline: 0;
     border-color: rgba(37, 40, 43, 0.2); }
   .c-input:disabled, .c-input--is-disabled {
-    color: #7b8994;
+    color: rgba(71, 82, 93, 0.7);
     background-color: #f7f9fa; }
+
+textarea.c-input {
+  resize: vertical; }
 
 /**
  * Avatar component. A wrapper element with an (optional) image or the user's

@@ -131,18 +131,35 @@ toc:
   <p>Inputs take up the entire width of their parent, so you can and should use them in the grid.</p>
 
   <div class="o-grid">
+
     <div class="o-grid__col o-grid__col--1-of-2">
       <label class="c-label">
         Password
         <input class="c-input" placeholder="Keep it secret." type="password" />
       </label>
     </div>
+
     <div class="o-grid__col o-grid__col--1-of-2">
       <label class="c-label">
         Confirm password
         <input class="c-input" placeholder="Keep it safe." type="password" />
       </label>
     </div>
+
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        Disabled field
+        <input class="c-input" value="This is disabled" disabled />
+      </label>
+    </div>
+
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        Textarea
+        <textarea class="c-input">Edit me, yo</textarea>
+      </label>
+    </div>
+
   </div>
 </form>') %>
 
