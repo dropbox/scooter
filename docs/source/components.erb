@@ -138,3 +138,54 @@ title: Components
     </div>
   </div>
 </form>') %>
+
+
+<h2>Avatars</h2>
+<p>Avatars come in five sizes:</p>
+
+<ul>
+  <li>xs (16px)</li>
+  <li>s (24px)</li>
+  <li>m (32px, default)</li>
+  <li>l (48px)</li>
+  <li>xl (64px)</li>
+</ul>
+
+<%= code_example('<figure class="c-avatar c-avatar--xs">
+  <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
+</figure>
+
+<figure class="c-avatar c-avatar--s">
+  <img src="http://i.imgur.com/l2Gk1Q5.jpg" alt="Kristen Spilman" />
+</figure>
+
+<figure class="c-avatar">
+  <img src="http://i.imgur.com/0tRX9MO.jpg" alt="Daniel Eden" />
+</figure>
+
+<figure class="c-avatar c-avatar--l">
+  <img src="http://i.imgur.com/txMlllW.jpg" alt="Linda Eliasen" />
+</figure>
+
+<figure class="c-avatar c-avatar--xl">
+  <img src="http://i.imgur.com/3DzNLJQ.jpg" alt="Ryhan Hassan" />
+</figure>') %>
+
+<p>Users without profile pictures have their initials as avatars. Setting the
+  <code>data-initials</code> attribute and adding the <code>no-img</code>
+  attribute achieves this result:</p>
+
+<%= code_example('<figure class="c-avatar c-avatar--xs c-avatar--no-img" data-initials="AR">
+</figure>
+
+<figure class="c-avatar c-avatar--s c-avatar--no-img" data-initials="KS">
+</figure>
+
+<figure class="c-avatar c-avatar--no-img" data-initials="DE">
+</figure>
+
+<figure class="c-avatar c-avatar--l c-avatar--no-img" data-initials="LE">
+</figure>
+
+<figure class="c-avatar c-avatar--xl c-avatar--no-img" data-initials="RH">
+</figure>') %>

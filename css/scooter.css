@@ -415,6 +415,8 @@ a,
     .c-avatar.c-avatar--no-img:after {
       content: attr(data-initials);
       box-shadow: none; }
+    .c-avatar.c-avatar--no-img.c-avatar--xs:after {
+      content: ''; }
   .c-avatar--xs {
     height: 16px;
     width: 16px;

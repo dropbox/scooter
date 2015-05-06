@@ -86,6 +86,10 @@ $DBavatar-sizes: (
 
       box-shadow: none;
     }
+
+    &.#{$DBavatar-namespace}--xs:after {
+      content: '';
+    }
   }
 
   // Loop through all the avatar sizes to generate selectors
