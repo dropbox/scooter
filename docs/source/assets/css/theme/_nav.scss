@@ -5,8 +5,8 @@
 
   background-color: #F0F3F5;
 
-  li + li {
-    margin-left: $sc-baseline;
+  li {
+    margin-right: $sc-baseline;
   }
 
   a {
