@@ -75,3 +75,36 @@ divider between items.</p>
 
 
 <h2>Flag</h2>
+<p>The Flag object is very similar to the Media object, but allows you to control
+  the vertical alignment of the text and image.</p>
+<p>By default, elements are vertically center-aligned. Add <code>top</code> or
+  <code>bottom</code> modifiers to align top or bottom edges respectively.</p>
+<p>Add the <code>rev</code> modifier for a fixed-width right-aligned element,
+  and flexible-with left-aligned element.</p>
+
+<%= code_example('<div class="o-flag u-l-p">
+  <div class="o-flag__fix">
+    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
+  </div>
+  <div class="o-flag__flex">
+    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  </div>
+</div>
+
+<div class="o-flag o-flag--top u-l-p">
+  <div class="o-flag__fix">
+    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
+  </div>
+  <div class="o-flag__flex">
+    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  </div>
+</div>
+
+<div class="o-flag o-flag--rev">
+  <div class="o-flag__flex">
+    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+  </div>
+  <div class="o-flag__fix">
+    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
+  </div>
+ </div>') %>
