@@ -37,3 +37,104 @@ title: Components
 <div class="c-banner c-banner--unpinned">
   This is a floating or "unpinned" banner.
 </div>') %>
+
+<h2>Buttons</h2>
+<p>Buttons come in three flavors:</p>
+
+<ul>
+  <li>primary</li>
+  <li>secondary</li>
+  <li>tertiary</li>
+</ul>
+
+<p>Buttons <strong>must</strong> use a modifier class to select a button type.</p>
+
+<%= code_example('<p>
+  <button class="c-btn c-btn--primary">Primary button</button>
+  <button class="c-btn c-btn--secondary">Secondary button</button>
+  <button class="c-btn c-btn--tertiary">Tertiary button</button>
+</p>
+<p>
+  <button class="c-btn c-btn--primary" disabled>Disabled via "disabled" attribute</button>
+  <button class="c-btn c-btn--secondary c-btn--disabled">Disabled via class</button>
+  <button class="c-btn c-btn--tertiary" disabled>Disabled tertiary button</button>
+</p>') %>
+
+<h2>Cards</h2>
+<p>Cards are used to display and contain all sorts of content. Places you see
+  cards today include the account dropdown menu and the "contact cards" in the
+  shared folder modals.</p>
+
+<h3>Arrows</h3>
+<p>Cards can have arrow pointers attached to them with the `arrow` modifier. An
+  additional directional class can be added from the following:</p>
+
+<ul>
+  <li><code>c-card--arrow-n</code> (default)</li>
+  <li><code>c-card--arrow-nw</code></li>
+  <li><code>c-card--arrow-ne</code></li>
+  <li><code>c-card--arrow-s</code></li>
+  <li><code>c-card--arrow-sw</code></li>
+  <li><code>c-card--arrow-se</code></li>
+</ul>
+
+<%= code_example('<p>
+  <div class="c-card">
+    This is a card with come content.
+  </div>
+
+  <div class="c-card c-card--arrow">
+    This is a card with a North arrow
+  </div>
+</p>
+
+<p>
+  <div class="c-card c-card--arrow c-card--arrow-nw">
+    <p class="u-l-p--hlf">This is a card with a Northwest arrow. <br/>You can nest components, you know.</p>
+    <button class="c-btn c-btn--primary">Wow cool</button>
+  </div>
+
+  <div class="c-card c-card--arrow c-card--arrow-ne">
+    This is a card with a Northeast arrow.
+  </div>
+</p>
+
+<p>
+  <div class="c-card c-card--arrow c-card--arrow-s">
+    South arrow
+  </div>
+  <div class="c-card c-card--arrow c-card--arrow-sw">
+    Southwest arrow
+  </div>
+  <div class="c-card c-card--arrow c-card--arrow-se">
+    Southeast arrow
+  </div>
+</p>') %>
+
+
+<h2>Inputs and Labels</h2>
+<p>Inputs and labels are used in forms. But you knew that.</p>
+
+<%= code_example('<form>
+  <label class="c-label">
+    Email address
+    <input class="c-input" placeholder="drew@dropbox.com" />
+  </label>
+
+  <p>Inputs take up the entire width of their parent, so you can and should use them in the grid.</p>
+
+  <div class="o-grid">
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        Password
+        <input class="c-input" placeholder="Keep it secret." type="password" />
+      </label>
+    </div>
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        Confirm password
+        <input class="c-input" placeholder="Keep it safe." type="password" />
+      </label>
+    </div>
+  </div>
+</form>') %>
