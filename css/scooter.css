@@ -292,6 +292,7 @@ a,
     display: block; }
   .c-btn.c-btn--primary {
     color: #fff;
+    background-color: #007ee5;
     background: -webkit-linear-gradient(#007ee5, #0071ce);
     background: linear-gradient(#007ee5, #0071ce);
     border-color: #0071ce; }
@@ -301,6 +302,7 @@ a,
     border-color: #d0d4d9; }
   .c-btn.c-btn--tertiary {
     color: #007ee5;
+    background-color: #fff;
     background: -webkit-linear-gradient(#fff, #f4faff);
     background: linear-gradient(#fff, #f4faff);
     border-color: #007ee5; }

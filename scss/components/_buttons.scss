@@ -10,6 +10,10 @@ $DBbutton-background-primary: linear-gradient(color(blue), color(blue, dark)) !d
 $DBbutton-background-secondary: #fff !default;
 $DBbutton-background-tertiary: linear-gradient(#fff, color(blue, x-light)) !default;
 
+// Providing fallback colors for IE <= 9
+$DBbutton-background-fallback-primary: color(blue);
+$DBbutton-background-fallback-tertiary: #fff;
+
 $DBbutton-text-primary: #fff !default;
 $DBbutton-text-secondary: color(gray) !default;
 $DBbutton-text-tertiary: color(blue) !default;
@@ -59,6 +63,7 @@ $DBbutton-border-tertiary: color(blue) !default;
 
   &#{&}--primary {
     color: $DBbutton-text-primary;
+    background-color: $DBbutton-background-fallback-primary;
     background: $DBbutton-background-primary;
     border-color: $DBbutton-border-primary;
   }
@@ -71,6 +76,7 @@ $DBbutton-border-tertiary: color(blue) !default;
 
   &#{&}--tertiary {
     color: $DBbutton-text-tertiary;
+    background-color: $DBbutton-background-fallback-tertiary;
     background: $DBbutton-background-tertiary;
     border-color: $DBbutton-border-tertiary;
   }
