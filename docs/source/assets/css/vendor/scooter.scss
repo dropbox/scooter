@@ -217,7 +217,7 @@ a,
   margin: 0;
   padding: 0;
   list-style: none; }
-  .o-list-ui__item + .o-list-ui__item {
+  .o-list-ui--dividers li + li {
     border-top: 1px solid;
     border-color: rgba(37, 40, 43, 0.1); }
 

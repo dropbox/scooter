@@ -47,13 +47,23 @@ The media object allows you to layout an image and a block of text beside one
 another.
 
 <%= code_example('<div class="o-media">
-  <img class="o-media__img" src="http://lorempixel.com/64/64" />
+  <img class="o-media__img" src="http://placebear.com/64/64" alt="A photo of a bear" />
   <div class="o-media__body">
     <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
   </div>
 </div>') %>
 
 ## List-UI
+The List-UI object turns a `ul` or `ol` element into an unstyled, vertically
+stacked list of navigation items. Using the `o-list-ui__item` class on children
+also adds a divider between items.
+
+<%= code_example('<ul class="o-list-ui">
+  <li><a href="#">A menu item</a></li>
+  <li><a href="#">Another menu item</a></li>
+  <li><a href="#">A third menu item</a></li>
+  <li><a href="#">A final menu item</a></li>
+</ul>') %>
 
 
 ## Flag
