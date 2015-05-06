@@ -3,7 +3,7 @@
 
   avatars = document.querySelectorAll(".c-avatar--no-img");
 
-  for (i in avatars) {
+  for (i = 0; i < avatars.length; i++) {
     a = avatars[i];
     h = Math.floor(Math.random() * 256);
     color = "hsl(" + h + ", 65%, 45%)";

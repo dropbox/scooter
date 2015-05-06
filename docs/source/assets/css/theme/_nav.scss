@@ -1,4 +1,6 @@
 .#{$sc-namespace}site__nav {
+  white-space: nowrap;
+  overflow: scroll;
   margin-bottom: ($sc-baseline*2);
 
   background-color: #F0F3F5;
