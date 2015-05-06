@@ -4,6 +4,36 @@ title: Components
 
 ---
 
-<%= code_example('<div class="c-card">
-  Hello, world
+<h2>Banners</h2>
+<p>Banners are used to display important information to the user. Typically,
+  they are pinned to the top of the page, but may also be detached or appear
+  anywhere in the page.</p>
+
+<p>Banners come in four flavors:</p>
+
+<ul>
+  <li>neutral</li>
+  <li>success</li>
+  <li>warning</li>
+  <li>error</li>
+</ul>
+
+<%= code_example('<div class="c-banner">
+  This is a neutral banner.
+</div>
+
+<div class="c-banner c-banner--success">
+  This is a success banner! You did it!
+</div>
+
+<div class="c-banner c-banner--warning">
+  This is a warning banner. Something&rsquo;s up.
+</div>
+
+<div class="c-banner c-banner--error u-l-p">
+  This is an error banner. Go back to square one.
+</div>
+
+<div class="c-banner c-banner--unpinned">
+  This is a floating or "unpinned" banner.
 </div>') %>
