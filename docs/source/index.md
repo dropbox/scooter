@@ -17,8 +17,6 @@ This is purposefully ambitious and aspirational. Some concepts that are worth un
 - [BEM naming methodology](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 - [CSS Namespacing](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 
-[Here’s a CodePen](http://codepen.io/daneden/pen/78bb26fcc11e72f5aa24162c151d3626?editors=110) I’ll periodically update with the compiled CSS to use as a testing playground.
-
 ### Separation of Concerns
 The overarching philosophy with Dropbox SCSS is a separation of concerns. Components should live as independently as possible. Overrides and conflicting rules should be avoided and negated by abstractions. For example:
 
