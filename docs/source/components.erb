@@ -216,3 +216,31 @@ toc:
 
 <p><em>Note that in this example, the avatar color is set via JavaScript. By
     default, the color is set to <code>color(blue)</code>.</em></p>
+
+
+<h2 id="modal">Modal</h2>
+
+<%= code_example('<div class="c-modal-overlay">
+  <div class="c-modal">
+    <div class="c-modal__header">
+      <h2>Modal title</h2>
+    </div>
+    <div class="c-modal__content">
+      <p>This is some content inside the modal.</p>
+    </div>
+  </div>
+</div>') %>
+
+<p>You can add the <code>unibody</code> modifier to remove the contrasting style
+  between the modal header and content.</p>
+
+<%= code_example('<div class="c-modal-overlay">
+  <div class="c-modal c-modal--unibody">
+    <div class="c-modal__header">
+      <h2>Modal title</h2>
+    </div>
+    <div class="c-modal__content">
+      <p>This is some content inside the modal.</p>
+    </div>
+  </div>
+</div>') %>

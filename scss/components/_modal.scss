@@ -5,24 +5,55 @@
 //-----------------------------
 
 $DBmodal-namespace: "c-modal" !default;
+
+$DBmodal-padding: 32px;
+
 $DBmodal-background: #fff !default;
 $DBmodal-background-alt: color(gray, x-light) !default;
 
 /**
  * Modal component
  */
+.#{$DBmodal-namespace}-overlay {
+  padding: $DBmodal-padding;
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  background-color: color(gray, dark, .6);
+}
+
 .#{$DBmodal-namespace} {
+  max-width: 640px;
+  flex: 1 1 640px;
   overflow: scroll;
 
   background-color: $DBmodal-background;
+  box-shadow: 0 1px 2px color(gray, x-dark, .1);
+  border-radius: 3px;
 }
 
   .#{$DBmodal-namespace}__title,
   .#{$DBmodal-namespace}__header {
+    z-index: 3;
+    padding: ($DBmodal-padding/2) $DBmodal-padding;
+
     background-color: $DBmodal-background;
+    box-shadow: 0 1px 1px color(gray, x-dark, .1);
+
+    .#{$DBmodal-namespace}--unibody & {
+      padding-bottom: 0;
+
+      box-shadow: none;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
   }
 
   .#{$DBmodal-namespace}__content {
+    padding: $DBmodal-padding;
     // Raise the z-index to enable overlapping of sibling banners
     z-index: 2;
 
