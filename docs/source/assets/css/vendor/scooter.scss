@@ -472,6 +472,10 @@ textarea.c-input {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(61, 70, 77, 0.6); }
 
 .c-modal {
