@@ -10,6 +10,13 @@ toc:
 
 ---
 
+<p>Object classes are common design patterns, not unique to Dropbox specifically.
+  These classes are not designed to be tinkered with, since they affect high-level
+  layout properties and carry little visual styling.</p>
+
+<p>Rather than trying to create new pages with unique layouts, you may find all
+  the layout patterns you'll need right here.</p>
+
 <h2 id="grid">Grid</h2>
 <p>The grid object offers a collection of classes for grid-based layout. It should
 be used within a container that sets the width or max-width.</p>
@@ -50,7 +57,9 @@ be used within a container that sets the width or max-width.</p>
 </div>', "grid") %>
 
 <h2 id="media">Media</h2>
-<p>The media object allows you to layout an image and a block of text beside one another.</p>
+<p>The media object allows you to layout an image and a block of text beside one
+  another. Based on Nicole Sullivan's original <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+    media object</a>.</p>
 
 <%= code_example('<div class="o-media">
   <img class="o-media__img" src="http://i.imgur.com/GoCxCU3.jpg" width="64" alt="Aaron Robbs" />
@@ -82,8 +91,10 @@ be used within a container that sets the width or max-width.</p>
 
 
 <h2 id="flag">Flag</h2>
-<p>The Flag object is very similar to the Media object, but allows you to control
-  the vertical alignment of the text and image.</p>
+<p>The Flag object is very similar to the <a href="#media">Media object</a>, but
+  allows you to control the vertical alignment of the text and image. Based on
+  Harry Roberts' <a href="http://csswizardry.com/2013/05/the-flag-object/">flag
+  object</a>.</p>
 <p>By default, elements are vertically center-aligned. Add <code>top</code> or
   <code>bottom</code> modifiers to align top or bottom edges respectively.</p>
 <p>Add the <code>rev</code> modifier for a fixed-width right-aligned element,
