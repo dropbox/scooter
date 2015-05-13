@@ -18,7 +18,7 @@ pre.highlight {
   -webkit-font-smoothing: antialiased;
   padding: ($sc-baseline/2);
   margin-bottom: $sc-baseline;
-  overflow: scroll;
+  overflow: auto;
 
   border: 1px solid rgba(#25282B, .1);
   border-radius: 3px;

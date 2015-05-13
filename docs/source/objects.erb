@@ -53,7 +53,7 @@ be used within a container that sets the width or max-width.</p>
 <p>The media object allows you to layout an image and a block of text beside one another.</p>
 
 <%= code_example('<div class="o-media">
-  <img class="o-media__img" src="http://placebear.com/64/64" alt="A photo of a bear" />
+  <img class="o-media__img" src="http://i.imgur.com/GoCxCU3.jpg" width="64" alt="Aaron Robbs" />
   <div class="o-media__body">
     <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
   </div>
@@ -91,29 +91,33 @@ be used within a container that sets the width or max-width.</p>
 
 <%= code_example('<div class="o-flag u-l-p">
   <div class="o-flag__fix">
-    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
+    <img src="http://i.imgur.com/l2Gk1Q5.jpg" width="64" alt="Kristen Spilman" />
   </div>
   <div class="o-flag__flex">
-    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    This is a center-aligned flag object, the default state. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
   </div>
 </div>
 
-<!-- The `top` modifier aligns the top edges of elements -->
-<div class="o-flag o-flag--top u-l-p">
-  <div class="o-flag__fix">
-    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
-  </div>
-  <div class="o-flag__flex">
-    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-  </div>
-</div>
+<hr/>
 
 <!-- The `rev` modifier lets you have a right-aligned fixed-width element -->
-<div class="o-flag o-flag--rev">
+<div class="o-flag o-flag--rev u-l-p">
   <div class="o-flag__flex">
-    Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    This is a reversed flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
   </div>
   <div class="o-flag__fix">
-    <img src="http://placebear.com/64/64" alt="A photo of a bear" />
+    <img src="http://i.imgur.com/txMlllW.jpg" width="64" alt="Linda Eliasen" />
   </div>
- </div>') %>
+</div>
+
+<hr/>
+
+<!-- The `top` modifier aligns the top edges of elements -->
+<div class="o-flag o-flag--top">
+  <div class="o-flag__fix">
+    <img src="http://i.imgur.com/3DzNLJQ.jpg" width="64" alt="Ryhan Hassan" />
+  </div>
+  <div class="o-flag__flex">
+    This is a top-aligned flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
+  </div>
+</div>') %>
