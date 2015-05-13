@@ -1,7 +1,7 @@
 ---
 
 title: Functions
-
+gh_path: functions
 toc:
 - Maths
 - Colors
@@ -9,49 +9,62 @@ toc:
 
 ---
 
-<h2 id="maths">Maths</h2>
+<section id="maths" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Maths</h2>
+    <%= gh_link("functions/_maths.scss") %>
+  </header>
 
-<h3>half($number)</h3>
-<p>Divides a passed value by 2. Returns a whole number.</p>
+  <h3>half($number)</h3>
+  <p>Divides a passed value by 2. Returns a whole number.</p>
 
-<h3>quarter($number)</h3>
-<p>Divides a passed value by 4. Returns a whole number.</p>
+  <h3>quarter($number)</h3>
+  <p>Divides a passed value by 4. Returns a whole number.</p>
 
-<h3>double($number)</h3>
-<p>Multiplies a passed value by 2. Returns a whole number.</p>
+  <h3>double($number)</h3>
+  <p>Multiplies a passed value by 2. Returns a whole number.</p>
 
-<h3>quadruple($number)</h3>
-<p>Multiplies a passed value by 4. Returns a whole number.</p>
+  <h3>quadruple($number)</h3>
+  <p>Multiplies a passed value by 4. Returns a whole number.</p>
+</section>
 
+<section id="colors" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Colors</h2>
+    <%= gh_link("functions/_colors.scss") %>
+  </header>
 
-<h2 id="colors">Colors</h2>
+  <h3 id="grayscale">grayscale($gradation, [$alpha: 1])</h3>
+  <p>Returns a value from <a href="variables.html#$dbgrayscalecolors"><code>$DBGrayscaleColors</code></a>.
+    Passing an <code>$alpha</code> value between <code>0.0</code> and <code>1.0</code> returns the color as an
+    <code>rgba</code> value.</p>
 
-<h3>grayscale($gradation, [$alpha: 1])</h3>
-<p>Returns a value from <a href="$variables.html#$dbgrayscalecolor"><code>$DBGrayscaleColors</code></a>.
-Passing an <code>$alpha</code> value between <code>0.0</code> and <code>1.0</code> returns the color as an
-<code>rgba</code> value.</p>
+  <h3 id="color">color($name, [$shade, $alpha])</h3>
+  <p>Returns a value from <a href="variables.html#$dbglobalcolors"><code>$DBGlobalColors</code></a>.
+    With only the <code>$name</code> parameter, the base shade is returned. The
+    optional <code>$shade</code> parameter can be one of the following:</p>
 
-<h3>color($name, [$shade, $alpha])</h3>
-<p>Returns a value from <a href="variables.html#$dbglobalcolors"><code>$DBGlobalColors</code></a>.
-With only the <code>$name</code> parameter, the base shade is returned. The
-optional <code>$shade</code> parameter can be one of the following:</p>
+  <ul>
+    <li>x-dark</li>
+    <li>dark</li>
+    <li>base (default)</li>
+    <li>medium</li>
+    <li>light</li>
+    <li>x-light</li>
+  </ul>
 
-<ul>
-  <li>x-dark</li>
-  <li>dark</li>
-  <li>base (default)</li>
-  <li>medium</li>
-  <li>light</li>
-  <li>x-light</li>
-</ul>
+  <p>The optional <code>$alpha</code> parameter can be between <code>0.0</code>
+    and <code>1.0</code>. Passing an <code>$alpha</code> value returns the color as
+    an <code>rgba</code> value.</p>
+</section>
 
-<p>The optional <code>$alpha</code> parameter can be between <code>0.0</code>
-and <code>1.0</code>. Passing an <code>$alpha</code> value returns the color as
-an <code>rgba</code> value.</p>
+<section id="units" class="sc-def">
+  <header class="sc-def__header">
+    <h2 id="units">Units</h2>
+    <%= gh_link("functions/_units.scss") %>
+  </header>
 
-
-<h2 id="units">Units</h2>
-
-<h3>stripUnit($value)</h3>
-<p>Accepts a number and returns the unitless value. Useful for getting unitless
-versions of <code>em</code> values, for example.</p>
+  <h3>stripUnit($value)</h3>
+  <p>Accepts a number and returns the unitless value. Useful for getting unitless
+    versions of <code>em</code> values, for example.</p>
+</section>

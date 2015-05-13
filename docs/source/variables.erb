@@ -1,0 +1,47 @@
+---
+
+title: Variables
+gh_path: variables
+toc:
+- Colors
+- Units
+
+---
+
+<section id="colors" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Colors</h2>
+    <%= gh_link("variables/_colors.scss") %>
+  </header>
+
+  <h3 id="$dbglobalcolors">$DBGlobalColors</h3>
+  <p><code>$DBGlobalColors</code> is the variable for Dropbox's color palette. It's
+    actually a Sass map containing white, black, and five distinct colors, each in
+    five shades.</p>
+
+  <p>It's not intended to be accessed or used directly, but instead via the
+    <a href="functions.html#color"><code>color</code>
+      function</a>.</p>
+
+
+  <h3 id="$dbgrayscalecolors">$DBGrayscaleColors</h3>
+  <code>$DBGrayscaleColors</code> is a map of ten predefined gray colors. Again,
+  it should not be accessed directly, but instead using the
+  <a href="functions.html#grayscale"><code>grayscale</code>
+    function</a>.</p>
+</section>
+
+<section id="units" class="sc-def">
+  <header class="sc-def__header">
+    <h2 id="units">Units</h2>
+    <%= gh_link("variables/_units.scss") %>
+  </header>
+
+  <h3>$DBBaseline</h3>
+  <p><code>$DBBaseline</code> is the baseline height for Scooter. Changing this
+    variable changes the values for many components and utilities.</p>
+
+  <h3>$DBFontSize</h3>
+  <p><code>$DBFontSize</code> is the root element font size. Changing this unit
+    affects font sizes across Scooter.</p>
+</section>

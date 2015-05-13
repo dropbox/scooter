@@ -1,3 +1,29 @@
 .#{$sc-namespace}site__content {
   margin-bottom: ($sc-baseline*2);
 }
+
+.#{$sc-namespace}def__header,
+.#{$sc-namespace}content__header {
+  margin-bottom: ($sc-baseline*2);
+
+  h1, h2, h3 {
+    margin-bottom: 0;
+  }
+}
+
+.#{$sc-namespace}def__header {
+  margin-bottom: $sc-baseline;
+}
+
+.#{$sc-namespace}def {
+  margin-bottom: ($sc-baseline*3);
+}
+
+.ext-link {
+  font-size: .875rem;
+
+  &:after {
+    content: '\27B6';
+    margin-left: .25em;
+  }
+}

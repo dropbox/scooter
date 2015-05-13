@@ -58,6 +58,10 @@ helpers do
     type = type ? 'sc-demo--' + type : ""
     "<div class='sc-demo #{type}'><div class='sc-demo__output'>#{input.to_s}</div><div class='sc-demo__input'>#{output}</div></div>"
   end
+
+  def gh_link(path)
+    "<a class='ext-link sc-u-font-meta' href='https://github.com/daneden/scooter/tree/master/scss/#{path}'>View on GitHub</a>"
+  end
 end
 
 set :source, "docs/source"
