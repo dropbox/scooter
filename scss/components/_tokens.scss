@@ -76,7 +76,7 @@ $DBtoken-text-error: color(red, x-dark) !default;
   // Pending state
   // Transient state while actual state is determined
   .#{$DBtoken-namespace}--pending {
-    opacity: 50%;
+    opacity: .5;
   }
 
   // Selected state

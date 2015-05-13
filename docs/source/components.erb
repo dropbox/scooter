@@ -9,6 +9,8 @@ toc:
 - Inputs
 - Avatars
 - Modals
+- Title-bubble
+- Tokens
 
 ---
 
@@ -271,4 +273,70 @@ toc:
   <p>
     <span class="c-title-bubble c-title-bubble--w" data-title="This is a tooltip">This tooltip will appear on the left</span>
   </p>
+</div>') %>
+
+
+<h2 id="tokens">Tokens</h2>
+<p>Tokens are typically only used in the typeahead to display user identities
+  and emails. They come in three states: neutral, warning, and invalid. As well as
+  those states, a token may be in an additional "pending" state.</p>
+
+<%= code_example('<div class="c-token">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
+  </figure>
+  <span class="c-token__name">Aaron Robbs</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--warning">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/l2Gk1Q5.jpg" alt="Kristen Spilman" />
+  </figure>
+  <span class="c-token__name">Kristen Spilman</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--invalid">
+  <span class="c-token__name">dan.eden@</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--pending">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/3DzNLJQ.jpg" alt="Ryhan Hassan" />
+  </figure>
+  <span class="c-token__name">Ryhan Hassan</span>
+  <span class="c-token__delete">&times;</span>
+</div>') %>
+
+<p>Tokens also have a selected state, triggered by JavaScript:</p>
+
+<%= code_example('<div class="c-token c-token--is-selected">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
+  </figure>
+  <span class="c-token__name">Aaron Robbs</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--warning c-token--is-selected">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/l2Gk1Q5.jpg" alt="Kristen Spilman" />
+  </figure>
+  <span class="c-token__name">Kristen Spilman</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--invalid c-token--is-selected">
+  <span class="c-token__name">dan.eden@</span>
+  <span class="c-token__delete">&times;</span>
+</div>
+
+<div class="c-token c-token--pending c-token--is-selected">
+  <figure class="c-avatar c-avatar--xs">
+    <img src="http://i.imgur.com/3DzNLJQ.jpg" alt="Ryhan Hassan" />
+  </figure>
+  <span class="c-token__name">Ryhan Hassan</span>
+  <span class="c-token__delete">&times;</span>
 </div>') %>
