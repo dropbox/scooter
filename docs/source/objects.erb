@@ -22,7 +22,6 @@ be used within a container that sets the width or max-width.</p>
   <li><code>$DBgutter-width</code> sets the margins (or gutters) between columns. Defaults to 20px.</li>
 </ul>
 
-<div class="sc-grid-demo">
 <%= code_example('<div class="o-grid">
   <div class="o-grid__col o-grid__col--1-of-12"></div>
   <div class="o-grid__col o-grid__col--1-of-12"></div>
@@ -48,8 +47,7 @@ be used within a container that sets the width or max-width.</p>
   <div class="o-grid__col o-grid__col--2-of-12"></div>
   <div class="o-grid__col o-grid__col--3-of-12"></div>
   <div class="o-grid__col o-grid__col--1-of-12"></div>
-</div>') %>
-</div>
+</div>', "grid") %>
 
 <h2 id="media">Media</h2>
 <p>The media object allows you to layout an image and a block of text beside one another.</p>
@@ -62,9 +60,9 @@ be used within a container that sets the width or max-width.</p>
 </div>') %>
 
 <h2 id="list-ui">List-UI</h2>
-<p>The List-UI object turns a `ul` or `ol` element into an unstyled, vertically
-stacked list of navigation items. Using the `dividers` modifier also adds a
-divider between items.</p>
+<p>The List-UI object turns a <code>ul</code> or <code>ol</code> element into an
+  unstyled, vertically stacked list of navigation items. Using the <code>dividers</code>
+  modifier also adds a divider between items.</p>
 
 <%= code_example('<ul class="o-list-ui u-l-p">
   <!-- The `u-l-p` class is just to add some space between these examples. -->

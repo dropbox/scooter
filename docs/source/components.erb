@@ -8,6 +8,7 @@ toc:
 - Cards
 - Inputs
 - Avatars
+- Modals
 
 ---
 
@@ -229,7 +230,7 @@ toc:
       <p>This is some content inside the modal.</p>
     </div>
   </div>
-</div>') %>
+</div>', "modal") %>
 
 <p>You can add the <code>unibody</code> modifier to remove the contrasting style
   between the modal header and content.</p>
@@ -243,4 +244,31 @@ toc:
       <p>This is some content inside the modal.</p>
     </div>
   </div>
+</div>', "modal") %>
+
+
+<h2 id="title-bubble">Title Bubble</h2>
+<p>The title bubble component is a tooltip-like component that appears on hover.
+  It's intended for non-vital information about a given element.</p>
+<p>The title bubble requires that the element has a `data-title` attribute
+  containing the tooltip content. By default, the tooltip appears below the
+  element</p>
+
+<%= code_example('<div class="u-l-isle u-font-center">
+  <p class="c-title-bubble" data-title="This is a tooltip">Hover me</p>
+</div>') %>
+
+<p>There are a number of modifiers available to change the direction and
+  behaviour of the tooltip:</p>
+
+<%= code_example('<div class="u-l-isle u-font-center">
+  <p>
+    <span class="c-title-bubble c-title-bubble--n" data-title="This is a tooltip">This tooltip will appear above</span>
+  </p>
+  <p>
+    <span class="c-title-bubble c-title-bubble--e" data-title="This is a tooltip">This tooltip will appear on the right</span>
+  </p>
+  <p>
+    <span class="c-title-bubble c-title-bubble--w" data-title="This is a tooltip">This tooltip will appear on the left</span>
+  </p>
 </div>') %>

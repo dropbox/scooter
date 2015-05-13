@@ -50,12 +50,13 @@ helpers do
     current_page.path == path ? {:class => "is-active"} : {}
   end
 
-  def code_example(input)
+  def code_example(input, type="")
     source = input
     formatter = Rouge::Formatters::HTML.new(css_class: 'highlight')
     lexer = Rouge::Lexers::Shell.new
     output = formatter.format(lexer.lex(source))
-    "<div class='sc-demo'><div class='sc-demo__output'>#{input.to_s}</div><div class='sc-demo__input'>#{output}</div></div>"
+    type = type ? 'sc-demo--' + type : ""
+    "<div class='sc-demo #{type}'><div class='sc-demo__output'>#{input.to_s}</div><div class='sc-demo__input'>#{output}</div></div>"
   end
 end
 

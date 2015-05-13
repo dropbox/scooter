@@ -461,6 +461,11 @@ textarea.c-input {
  */
 .c-modal-overlay {
   padding: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

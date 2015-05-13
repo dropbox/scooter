@@ -17,11 +17,22 @@
   @import "vendor/scooter";
 
 }
-.sc-grid-demo {
+.sc-demo--grid {
   .o-grid__col {
     background-color: rgba(#FFBB01, .3);
     background-clip: content-box;
     height: 20px;
     margin-bottom: 20px;
+  }
+}
+
+.sc-demo--modal {
+  .sc-demo__output {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .c-modal-overlay {
+    position: relative;
   }
 }
