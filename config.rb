@@ -80,6 +80,9 @@ set :relative_links, true
 # Syntax highlighting
 activate :syntax
 
+# Prefix stuff, yo
+activate :autoprefixer
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

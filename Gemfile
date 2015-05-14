@@ -21,3 +21,6 @@ gem 'redcarpet'
 
 # Syntax highlighting
 gem "middleman-syntax"
+
+# Autoprefixer!
+gem 'middleman-autoprefixer'

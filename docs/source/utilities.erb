@@ -2,10 +2,35 @@
 
 title: Utilities and Helpers
 gh_path: helpers
+toc:
+- Clearfix
+- Layout
+- Typography
 
 ---
 
 <section class="sc-def">
   <p>Utility classes are used for layout and font helpers, clearfixes, and other
     helpful things.</p>
+</section>
+
+<section class="sc-def" id="clearfix">
+  <header class="sc-def__header">
+    <h2>Clearfix</h2>
+    <%= gh_link("helpers/_clearfix.scss") %>
+  </header>
+
+  <p>The clearfix helper is based on Thierry Koblentz's <a href="http://cssmojo.com/latest_new_clearfix_so_far/">
+      micro clearfix</a>. Use it to ensure that elements with floated children
+    correctly clear floats.</p>
+  <p>Either use the <code>clearfix</code> class in your markup or <code>@extend %clearfix</code>
+    in your SCSS.</p>
+</section>
+
+<section class="sc-def" id="layout">
+  <header class="sc-def__header">
+    <h2>Layout</h2>
+    <%= gh_link("helpers/_layout.scss") %>
+  </header>
+
 </section>

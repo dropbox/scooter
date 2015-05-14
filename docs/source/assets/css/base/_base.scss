@@ -1,3 +1,7 @@
+::selection {
+  background-color: rgba($sc-color-highlight, .25);
+}
+
 html, :root {
   box-sizing: border-box;
 
