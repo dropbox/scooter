@@ -1,7 +1,7 @@
 ---
 
 title: Components
-
+gh_path: components
 toc:
 - Banners
 - Buttons
@@ -15,25 +15,32 @@ toc:
 
 ---
 
-<p>Component classes are isolated, designed pieces of UI&mdash;things like buttons,
-  inputs, avatars, and whatnot. In Scooter, components are built in a way that
-  makes them relatively easy to restyle without breaking other parts of the CSS.</p>
+<section class="sc-def">
+  <p>Component classes are isolated, designed pieces of UI&mdash;things like buttons,
+    inputs, avatars, and whatnot. In Scooter, components are built in a way that
+    makes them relatively easy to restyle without breaking other parts of the CSS.</p>
+</section>
 
-<h2 id="banners">Banners</h2>
-<p>Banners are used to display important information to the user. Typically,
-  they are pinned to the top of the page, but may also be detached or appear
-  anywhere in the page.</p>
+<section class="sc-def" id="banners">
+  <header class="sc-def__header">
+    <h2>Banners</h2>
+    <%= gh_link("components/_banners.scss") %>
+  </header>
 
-<p>Banners come in four flavors:</p>
+  <p>Banners are used to display important information to the user. Typically,
+    they are pinned to the top of the page, but may also be detached or appear
+    anywhere in the page.</p>
 
-<ul>
-  <li>neutral</li>
-  <li>success</li>
-  <li>warning</li>
-  <li>error</li>
-</ul>
+  <p>Banners come in four flavors:</p>
 
-<%= code_example('<div class="c-banner">
+  <ul>
+    <li>neutral</li>
+    <li>success</li>
+    <li>warning</li>
+    <li>error</li>
+  </ul>
+
+  <%= code_example('<div class="c-banner">
   This is a neutral banner.
 </div>
 
@@ -52,19 +59,25 @@ toc:
 <div class="c-banner c-banner--unpinned">
   This is a floating or "unpinned" banner.
 </div>') %>
+</section>
 
-<h2 id="buttons">Buttons</h2>
-<p>Buttons come in three flavors:</p>
+<section class="sc-def" id="buttons">
+  <header class="sc-def__header">
+    <h2>Buttons</h2>
+    <%= gh_link("components/_buttons.scss") %>
+  </header>
 
-<ul>
-  <li>primary</li>
-  <li>secondary</li>
-  <li>tertiary</li>
-</ul>
+  <p>Buttons come in three flavors:</p>
 
-<p>Buttons <strong>must</strong> use a modifier class to select a button type.</p>
+  <ul>
+    <li>primary</li>
+    <li>secondary</li>
+    <li>tertiary</li>
+  </ul>
 
-<%= code_example('<p>
+  <p>Buttons <strong>must</strong> use a modifier class to select a button type.</p>
+
+  <%= code_example('<p>
   <button class="c-btn c-btn--primary">Primary button</button>
   <button class="c-btn c-btn--secondary">Secondary button</button>
   <button class="c-btn c-btn--tertiary">Tertiary button</button>
@@ -74,26 +87,32 @@ toc:
   <button class="c-btn c-btn--secondary c-btn--disabled">Disabled via class</button>
   <button class="c-btn c-btn--tertiary" disabled>Disabled tertiary button</button>
 </p>') %>
+</section>
 
-<h2 id="cards">Cards</h2>
-<p>Cards are used to display and contain all sorts of content. Places you see
-  cards today include the account dropdown menu and the "contact cards" in the
-  shared folder modals.</p>
+<section class="sc-def" id="cards">
+  <header class="sc-def__header">
+    <h2>Cards</h2>
+    <%= gh_link("components/_cards.scss") %>
+  </header>
 
-<h3>Arrows</h3>
-<p>Cards can have arrow pointers attached to them with the `arrow` modifier. An
-  additional directional class can be added from the following:</p>
+  <p>Cards are used to display and contain all sorts of content. Places you see
+    cards today include the account dropdown menu and the "contact cards" in the
+    shared folder modals.</p>
 
-<ul>
-  <li><code>c-card--arrow-n</code> (default)</li>
-  <li><code>c-card--arrow-nw</code></li>
-  <li><code>c-card--arrow-ne</code></li>
-  <li><code>c-card--arrow-s</code></li>
-  <li><code>c-card--arrow-sw</code></li>
-  <li><code>c-card--arrow-se</code></li>
-</ul>
+  <h3>Arrows</h3>
+  <p>Cards can have arrow pointers attached to them with the `arrow` modifier. An
+    additional directional class can be added from the following:</p>
 
-<%= code_example('<p>
+  <ul>
+    <li><code>c-card--arrow-n</code> (default)</li>
+    <li><code>c-card--arrow-nw</code></li>
+    <li><code>c-card--arrow-ne</code></li>
+    <li><code>c-card--arrow-s</code></li>
+    <li><code>c-card--arrow-sw</code></li>
+    <li><code>c-card--arrow-se</code></li>
+  </ul>
+
+  <%= code_example('<p>
   <div class="c-card">
     This is a card with come content.
   </div>
@@ -125,12 +144,17 @@ toc:
     Southeast arrow
   </div>
 </p>') %>
+</section>
 
+<section class="sc-def" id="inputs">
+  <header class="sc-def__header">
+    <h2>Inputs and Labels</h2>
+    <%= gh_link("components/_inputs.scss") %>
+  </header>
 
-<h2 id="inputs">Inputs and Labels</h2>
-<p>Inputs and labels are used in forms. But you knew that.</p>
+  <p>Inputs and labels are used in forms. But you knew that.</p>
 
-<%= code_example('<form>
+  <%= code_example('<form>
   <label class="c-label">
     Email address
     <input class="c-input" placeholder="drew@dropbox.com" />
@@ -170,20 +194,25 @@ toc:
 
   </div>
 </form>') %>
+</section>
 
+<section class="sc-def" id="avatars">
+  <header class="sc-def__header" id="avatars">
+    <h2>Avatars</h2>
+    <%= gh_link("components/_avatar.scss") %>
+  </header>
 
-<h2 id="avatars" >Avatars</h2>
-<p>Avatars come in five sizes:</p>
+  <p>Avatars come in five sizes:</p>
 
-<ul>
-  <li>xs (16px)</li>
-  <li>s (24px)</li>
-  <li>m (32px, default)</li>
-  <li>l (48px)</li>
-  <li>xl (64px)</li>
-</ul>
+  <ul>
+    <li>xs (16px)</li>
+    <li>s (24px)</li>
+    <li>m (32px, default)</li>
+    <li>l (48px)</li>
+    <li>xl (64px)</li>
+  </ul>
 
-<%= code_example('<figure class="c-avatar c-avatar--xl">
+  <%= code_example('<figure class="c-avatar c-avatar--xl">
   <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
 </figure>
 
@@ -224,11 +253,15 @@ toc:
 
 <p><em>Note that in this example, the avatar color is set via JavaScript. By
     default, the color is set to <code>color(blue)</code>.</em></p>
+</section>
 
+<section id="modals" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Modal</h2>
+    <%= gh_link("components/_modal.scss") %>
+  </header>
 
-<h2 id="modal">Modal</h2>
-
-<%= code_example('<div class="c-modal-overlay">
+  <%= code_example('<div class="c-modal-overlay">
   <div class="c-modal">
     <div class="c-modal__header">
       <h2>Modal title</h2>
@@ -252,16 +285,20 @@ toc:
     </div>
   </div>
 </div>', "modal") %>
+</section>
 
+<section class="sc-def" id="title-bubble">
+  <header class="sc-def__header">
+    <h2>Title Bubble</h2>
+    <%= gh_link("components/_title-bubble.scss") %>
+  </header>
+  <p>The title bubble component is a tooltip-like component that appears on hover.
+    It's intended for non-vital information about a given element.</p>
+  <p>The title bubble requires that the element has a `data-title` attribute
+    containing the tooltip content. By default, the tooltip appears below the
+    element</p>
 
-<h2 id="title-bubble">Title Bubble</h2>
-<p>The title bubble component is a tooltip-like component that appears on hover.
-  It's intended for non-vital information about a given element.</p>
-<p>The title bubble requires that the element has a `data-title` attribute
-  containing the tooltip content. By default, the tooltip appears below the
-  element</p>
-
-<%= code_example('<div class="u-l-isle u-font-center">
+  <%= code_example('<div class="u-l-isle u-font-center">
   <p class="c-title-bubble" data-title="This is a tooltip">Hover me</p>
 </div>') %>
 
@@ -279,14 +316,19 @@ toc:
     <span class="c-title-bubble c-title-bubble--w" data-title="This is a tooltip">This tooltip will appear on the left</span>
   </p>
 </div>') %>
+</section>
 
+<section class="sc-def" id="tokens">
+  <header class="sc-def__header">
+    <h2>Tokens</h2>
+    <%= gh_link("components/_tokens.scss") %>
+  </header>
 
-<h2 id="tokens">Tokens</h2>
-<p>Tokens are typically only used in the typeahead to display user identities
-  and emails. They come in three states: neutral, warning, and invalid. As well as
-  those states, a token may be in an additional "pending" state.</p>
+  <p>Tokens are typically only used in the typeahead to display user identities
+    and emails. They come in three states: neutral, warning, and invalid. As well as
+    those states, a token may be in an additional "pending" state.</p>
 
-<%= code_example('<div class="c-token">
+  <%= code_example('<div class="c-token">
   <figure class="c-avatar c-avatar--xs">
     <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
   </figure>
@@ -345,10 +387,16 @@ toc:
   <span class="c-token__name">Ryhan Hassan</span>
   <span class="c-token__delete">&times;</span>
 </div>') %>
+</section>
 
+<section id="loading-indicator" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Loading Indicator</h2>
+    <%= gh_link("components/_loading-indicator.scss") %>
+  </header>
 
-<h2 class="loading-indicator">Loading Indicator</h2>
-<p>The loading indicator component is a screenreader-friendly, left-aligned
-  loading animation. It's a really simple one-liner.</p>
+  <p>The loading indicator component is a screenreader-friendly, left-aligned
+    loading animation. It's a really simple one-liner.</p>
 
-<%= code_example('<div class="c-loader">Loading...</div>') %>
+  <%= code_example('<div class="c-loader">Loading...</div>') %>
+</section>

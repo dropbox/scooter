@@ -1,7 +1,7 @@
 ---
 
 title: Objects
-
+gh_path: objects
 toc:
 - Grid
 - Media
@@ -9,27 +9,32 @@ toc:
 - Flag
 
 ---
-
+<section class="sc-def">
 <p>Object classes are common design patterns, not unique to Dropbox specifically.
   These classes are not designed to be tinkered with, since they affect high-level
   layout properties and carry little visual styling.</p>
 
 <p>Rather than trying to create new pages with unique layouts, you may find all
   the layout patterns you'll need right here.</p>
+</section>
 
-<h2 id="grid">Grid</h2>
-<p>The grid object offers a collection of classes for grid-based layout. It should
-be used within a container that sets the width or max-width.</p>
+<section id="grid" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Grid</h2>
+    <%= gh_link("objects/_grid.scss") %>
+  </header>
+  <p>The grid object offers a collection of classes for grid-based layout. It should
+    be used within a container that sets the width or max-width.</p>
 
-<h3>Configuration</h3>
-<p>The grid object comes with a few configuration options:</p>
+  <h3>Configuration</h3>
+  <p>The grid object comes with a few configuration options:</p>
 
-<ul>
-  <li><code>$DBcol-groups</code> is a map that sets the grid divisions. The default value is <code>2, 3, 4, 6, 12</code>.</li>
-  <li><code>$DBgutter-width</code> sets the margins (or gutters) between columns. Defaults to 20px.</li>
-</ul>
+  <ul>
+    <li><code>$DBcol-groups</code> is a map that sets the grid divisions. The default value is <code>2, 3, 4, 6, 12</code>.</li>
+    <li><code>$DBgutter-width</code> sets the margins (or gutters) between columns. Defaults to 20px.</li>
+  </ul>
 
-<%= code_example('<div class="o-grid">
+  <%= code_example('<div class="o-grid">
   <div class="o-grid__col o-grid__col--1-of-12"></div>
   <div class="o-grid__col o-grid__col--1-of-12"></div>
   <div class="o-grid__col o-grid__col--1-of-12"></div>
@@ -55,25 +60,36 @@ be used within a container that sets the width or max-width.</p>
   <div class="o-grid__col o-grid__col--3-of-12"></div>
   <div class="o-grid__col o-grid__col--1-of-12"></div>
 </div>', "grid") %>
+</section>
 
-<h2 id="media">Media</h2>
-<p>The media object allows you to layout an image and a block of text beside one
-  another. Based on Nicole Sullivan's original <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
-    media object</a>.</p>
+<section id="media" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Media</h2>
+    <%= gh_link("objects/_media.scss") %>
+  </header>
 
-<%= code_example('<div class="o-media">
+  <p>The media object allows you to layout an image and a block of text beside one
+    another. Based on Nicole Sullivan's original <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+      media object</a>.</p>
+
+  <%= code_example('<div class="o-media">
   <img class="o-media__img" src="http://i.imgur.com/GoCxCU3.jpg" width="64" alt="Aaron Robbs" />
   <div class="o-media__body">
     <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
   </div>
 </div>') %>
+</section>
 
-<h2 id="list-ui">List-UI</h2>
-<p>The List-UI object turns a <code>ul</code> or <code>ol</code> element into an
-  unstyled, vertically stacked list of navigation items. Using the <code>dividers</code>
-  modifier also adds a divider between items.</p>
+<section id="list-ui" class="sc-def">
+  <header class="sc-def__header">
+    <h2 id="list-ui">List-UI</h2>
+    <%= gh_link("objects/_list-ui.scss") %>
+  </header>
+  <p>The List-UI object turns a <code>ul</code> or <code>ol</code> element into an
+    unstyled, vertically stacked list of navigation items. Using the <code>dividers</code>
+    modifier also adds a divider between items.</p>
 
-<%= code_example('<ul class="o-list-ui u-l-p">
+  <%= code_example('<ul class="o-list-ui u-l-p">
   <!-- The `u-l-p` class is just to add some space between these examples. -->
   <li><a href="#">A menu item</a></li>
   <li><a href="#">Another menu item</a></li>
@@ -88,19 +104,23 @@ be used within a container that sets the width or max-width.</p>
   <li><a href="#">A third menu item</a></li>
   <li><a href="#">A final menu item</a></li>
 </ul>') %>
+</section>
 
+<section id="flag" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Flag</h2>
+    <%= gh_link("objects/_flag.scss") %>
+  </header>
+  <p>The Flag object is very similar to the <a href="#media">Media object</a>, but
+    allows you to control the vertical alignment of the text and image. Based on
+    Harry Roberts' <a href="http://csswizardry.com/2013/05/the-flag-object/">flag
+      object</a>.</p>
+  <p>By default, elements are vertically center-aligned. Add <code>top</code> or
+    <code>bottom</code> modifiers to align top or bottom edges respectively.</p>
+  <p>Add the <code>rev</code> modifier for a fixed-width right-aligned element,
+    and flexible-with left-aligned element.</p>
 
-<h2 id="flag">Flag</h2>
-<p>The Flag object is very similar to the <a href="#media">Media object</a>, but
-  allows you to control the vertical alignment of the text and image. Based on
-  Harry Roberts' <a href="http://csswizardry.com/2013/05/the-flag-object/">flag
-  object</a>.</p>
-<p>By default, elements are vertically center-aligned. Add <code>top</code> or
-  <code>bottom</code> modifiers to align top or bottom edges respectively.</p>
-<p>Add the <code>rev</code> modifier for a fixed-width right-aligned element,
-  and flexible-with left-aligned element.</p>
-
-<%= code_example('<div class="o-flag u-l-p">
+  <%= code_example('<div class="o-flag u-l-p">
   <div class="o-flag__fix">
     <img src="http://i.imgur.com/l2Gk1Q5.jpg" width="64" alt="Kristen Spilman" />
   </div>
@@ -132,3 +152,4 @@ be used within a container that sets the width or max-width.</p>
     This is a top-aligned flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
   </div>
 </div>') %>
+</section>

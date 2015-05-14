@@ -1,7 +1,7 @@
 ---
 
 title: Base
-
+gh_path: base
 toc:
 - Reset
 - Base
@@ -9,22 +9,39 @@ toc:
 
 ---
 
-<h2 id="reset">Reset</h2>
-<p><code>base/reset</code> provides a simple CSS reset that removes margins and
-padding, sets <code>box-sizing</code>, and adds some basic margins to common
-content elements such as <code>p</code> and <code>ul</code>.</p>
+<section id="reset" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Reset</h2>
+    <%= gh_link("base/_reset.scss") %>
+  </header>
 
-<h2 id="base">Base</h2>
-<p><code>base/base</code> sets styles for the <code>html</code> element,
-including font styles for the page.</p>
+  <p><code>base/reset</code> provides a simple CSS reset that removes margins and
+    padding, sets <code>box-sizing</code>, and adds some basic margins to common
+    content elements such as <code>p</code> and <code>ul</code>.</p>
+</section>
 
-<h2 id="typography">Typography</h2>
-<p><code>base/typography</code> sets default styles for typographic elements and
-adds classes for those styles. For example, if you want a piece of text to
-<em>look</em> like a <code>h1</code> without changing its semantic value, you
-can add a class of <code>f-alpha</code> to the element.</p>
+<section id="base" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Base</h2>
+    <%= gh_link("base/_base.scss") %>
+  </header>
 
-<%= code_example('<h1>This is a level 1 heading</h1>
+  <p><code>base/base</code> sets styles for the <code>html</code> element,
+    including font styles for the page.</p>
+</section>
+
+<section id="typography" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Typography</h2>
+    <%= gh_link("base/_typography.scss") %>
+  </header>
+
+  <p><code>base/typography</code> sets default styles for typographic elements and
+    adds classes for those styles. For example, if you want a piece of text to
+    <em>look</em> like a <code>h1</code> without changing its semantic value, you
+    can add a class of <code>f-alpha</code> to the element.</p>
+
+  <%= code_example('<h1>This is a level 1 heading</h1>
 
 <h2>A level 2 heading</h2>
 
@@ -41,3 +58,4 @@ can add a class of <code>f-alpha</code> to the element.</p>
 <span class="f-alpha">This is a span with the appearance of h1</span>
 
 <span class="f-beta">This is a span with the appearance of h2</span>')%>
+</section>
