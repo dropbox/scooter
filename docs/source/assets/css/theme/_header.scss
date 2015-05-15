@@ -4,17 +4,3 @@
   background-color: $sc-color-highlight;
 }
 
-.#{$sc-namespace}site__title {
-  display: block;
-  overflow: hidden;
-  width: 147px;
-  height: 24px;
-
-  white-space: nowrap;
-  text-indent: 100%;
-
-  background-image: image-url('scooter-logo.svg');
-  background-size: 147px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
