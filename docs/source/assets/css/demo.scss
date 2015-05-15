@@ -36,3 +36,16 @@
     position: relative;
   }
 }
+
+.sc-demo--padding {
+  .sc-demo__output {
+    span {
+      display: inline-block;
+
+      background-color: rgba(#7b8994, .3);
+      background-clip: content-box;
+      border: 1px solid currentColor;
+    }
+  }
+}
+

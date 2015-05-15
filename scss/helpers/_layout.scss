@@ -1,10 +1,6 @@
 //---------------------------
 //
 // Layout Helpers
-// ==============
-//
-// Class structure:
-// .l(ayout)-(helper)--(modifier)
 //
 //---------------------------
 
@@ -106,16 +102,6 @@
 .u-l-fr,
 %u-l-fr {
   float: right !important;
-}
-
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
 }
 
 // Display types

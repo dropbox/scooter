@@ -33,4 +33,99 @@ toc:
     <%= gh_link("helpers/_layout.scss") %>
   </header>
 
+  <h3>Padding (Islands)</h3>
+  <p>Padding helpers are known as "islands". Islands come in five types:</p>
+
+  <ul>
+    <li><strong>Islands</strong> have padding equal to the global baseline.</li>
+    <li><strong>Isles</strong> have padding half the size of the global baseline.</li>
+    <li><strong>Spits</strong> have padding half the size of <strong>isles</strong>.</li>
+    <li><strong>Countries</strong> have double the padding of <strong>islands</strong>.</li>
+    <li><strong>Continents</strong> have double the padding of <strong>countries</strong>.</li>
+  </ul>
+
+  <p>We're getting a little lost in the weeds here, so let's just look at some examples.
+  Note that the border and background color are only present for demonstration purposes.</p>
+
+  <%= code_example('<p>
+  <span class="u-l-island">This is an island</span>
+</p>
+<p>
+  <span class="u-l-isle">This is an isle</span>
+</p>
+<p>
+  <span class="u-l-spit">This is a spit</span>
+</p>
+<p>
+  <span class="u-l-country">This is a country</span>
+</p>
+<p>
+  <span class="u-l-continent">This is a continent</span>
+</p>', "padding") %>
+
+  <p>You can also add a <code>--v</code> modifier to any island to apply only vertical padding:</p>
+
+  <%= code_example('<span class="u-l-island--v">This is an island</span>', "padding") %>
+
+  <h3>Margins</h3>
+  <p>Use margin classes to add or remove margins to elements when they don't have any of their own.</p>
+
+  <p>The <code>p</code> in the margin helpers (<code>u-l-p</code> et al) indicates inheritence from
+    the bare <code>&lt;p&gt;</code> tag, which basically only has a margin applied to it.</p>
+
+  <%= code_example('<div class="u-l-p">This has a margin-bottom equal to the baseline</div>
+
+<hr/>
+
+<div class="u-l-p--dbl">This has a double-height margin-bottom</div>
+
+<hr/>
+
+<div class="u-l-p--hlf">This has a half-height margin-bottom</div>
+
+<hr/>
+
+<p class="u-l-trim">This paragraph has been trimmed of its margin</p>') %>
+
+  <h3>Floats</h3>
+  <p>You can float things left and right with ease. Don't forget to put floated
+    elements in a clearfix.</p>
+
+  <%= code_example('<div class="clearfix">
+  <img class="u-l-fl" src="http://i.imgur.com/l2Gk1Q5.jpg" width="128" alt="Kristen Spilman" />
+  <img class="u-l-fr" src="http://i.imgur.com/0tRX9MO.jpg" width="128" alt="Daniel Eden" />
+</div>') %>
+
+  <h3>Display helpers</h3>
+  <p>There are display helper classes available to change box-model behaviour of
+  elements.</p>
+
+  <ul>
+    <li><code>u-l-b</code> will set the element to <code>display: block;</code></li>
+    <li><code>u-l-ib</code> will set the element to <code>display: inline-block;</code>
+      <ul>
+        <li>There is an <code>--m</code> modifier available to set the element to
+          <code>vertical-align: middle;</code></li>
+      </ul>
+    </li>
+  </ul>
+
 </section>
+
+<section id="typography" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Typography</h2>
+    <%= gh_link('helpers/_typography.scss') %>
+  </header>
+
+  <p>Use the typography helper classes to change text alignment, size, and color.</p>
+
+  <%= code_example('<p class="u-font-center">Center-aligned text</p>
+<hr/>
+<p class="u-font-left">Left-aligned text</p>
+<hr/>
+<p class="u-font-right">Right-aligned text</p>
+<hr/>
+<p class="u-font-small">Small text</p>
+<hr/>
+<p class="u-font-meta">De-emphasised or "meta" text</p>') %>
