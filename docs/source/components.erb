@@ -12,6 +12,7 @@ toc:
 - Title-bubble
 - Tokens
 - Loading-indicator
+- Tab-nav
 
 ---
 
@@ -400,3 +401,19 @@ toc:
 
   <%= code_example('<div class="c-loader">Loading...</div>') %>
 </section>
+
+<section id="tab-nav" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Tab Nav</h2>
+    <%= gh_link("components/_tab-nav.scss") %>
+  </header>
+
+  <p>The tab nav component provides a tab-style navigation with active tab states.</p>
+
+  <%= code_example('<nav>
+  <ul class="c-tab-nav">
+    <li class="c-tab-nav__tab c-tab-nav__tab--is-active"><a href="#">Everything</a></li>
+    <li class="c-tab-nav__tab"><a href="#">Photos</a></li>
+    <li class="c-tab-nav__tab"><a href="#">Documents</a></li>
+  </ul>
+</nav>') %>
