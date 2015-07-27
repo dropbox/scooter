@@ -9,7 +9,7 @@
 
 $DBcard-namespace: "c-card" !default;
 
-$DBcard-background: #fff !default;
+$DBcard-background: color(white) !default;
 
 // The opaque color for the card border/shadow. Transparency is handled by
 // the class itself.
@@ -42,7 +42,7 @@ $DBcard-border-selected: color(blue) !default;
       margin-left: -8px;
 
       border: 8px solid transparent;
-      border-bottom-color: #fff;
+      border-bottom-color: color(white);
       transition: .1s;
     }
 
@@ -79,21 +79,21 @@ $DBcard-border-selected: color(blue) !default;
       }
     }
 
-    // South direction changes a lot of styles, and it’s probably safe to
+    // South direction changes a lot of styles, and it's probably safe to
     // assume North is the desired default.
     &-sw, &-se, &-s {
       &::after, &::before {
         bottom: auto;
         top: 100%;
         border-bottom-color: transparent;
-        border-top-color: #fff;
+        border-top-color: color(white);
       }
 
       &::before {
         border-top-color: rgba($DBcard-border,0.2);
-        // Since we’re spoofing a triangle with borders, we can’t use
+        // Since we're spoofing a triangle with borders, we can't use
         // box-shadow, but we can use the drop-shadow filter. Limited support,
-        // but it’s just a nice-to-have.
+        // but it's just a nice-to-have.
         filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.2));
       }
     }

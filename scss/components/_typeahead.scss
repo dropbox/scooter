@@ -6,7 +6,7 @@
 
 $DBtypeahead-namespace: "c-typeahead" !default;
 
-$DBtypeahead-background: #fff !default;
+$DBtypeahead-background: color(white) !default;
 
 .#{$DBinput-namespace}--typeahead {
   &.is-active {

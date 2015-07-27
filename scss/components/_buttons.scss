@@ -7,14 +7,14 @@
 $DBbutton-namespace: "c-btn" !default;
 
 $DBbutton-background-primary: linear-gradient(color(blue), color(blue, dark)) !default;
-$DBbutton-background-secondary: #fff !default;
-$DBbutton-background-tertiary: linear-gradient(#fff, color(blue, x-light)) !default;
+$DBbutton-background-secondary: color(white) !default;
+$DBbutton-background-tertiary: linear-gradient(color(white), color(blue, x-light)) !default;
 
 // Providing fallback colors for IE <= 9
 $DBbutton-background-fallback-primary: color(blue);
-$DBbutton-background-fallback-tertiary: #fff;
+$DBbutton-background-fallback-tertiary: color(white);
 
-$DBbutton-text-primary: #fff !default;
+$DBbutton-text-primary: color(white) !default;
 $DBbutton-text-secondary: color(gray) !default;
 $DBbutton-text-tertiary: color(blue) !default;
 
