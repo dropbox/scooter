@@ -205,6 +205,20 @@ toc:
       </label>
     </div>
 
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        First name <span class="u-font-error">(Required)</span>
+        <input class="c-input is-invalid" type="text" />
+      </label>
+    </div>
+
+    <div class="o-grid__col o-grid__col--1-of-2">
+      <label class="c-label">
+        Last name
+        <input class="c-input is-valid" type="text" value="Housten" />
+      </label>
+    </div>
+
   </div>
 </form>') %>
 </section>
@@ -372,7 +386,7 @@ toc:
 
 <p>Tokens also have a selected state, triggered by JavaScript:</p>
 
-<%= code_example('<div class="c-token c-token--is-selected">
+<%= code_example('<div class="c-token is-selected">
   <figure class="c-avatar c-avatar--xs">
     <img src="http://i.imgur.com/GoCxCU3.jpg" alt="Aaron Robbs" />
   </figure>
@@ -380,7 +394,7 @@ toc:
   <span class="c-token__delete">&times;</span>
 </div>
 
-<div class="c-token c-token--warning c-token--is-selected">
+<div class="c-token c-token--warning is-selected">
   <figure class="c-avatar c-avatar--xs">
     <img src="http://i.imgur.com/l2Gk1Q5.jpg" alt="Kristen Spilman" />
   </figure>
@@ -388,12 +402,12 @@ toc:
   <span class="c-token__delete">&times;</span>
 </div>
 
-<div class="c-token c-token--invalid c-token--is-selected">
+<div class="c-token c-token--invalid is-selected">
   <span class="c-token__name">dan.eden@</span>
   <span class="c-token__delete">&times;</span>
 </div>
 
-<div class="c-token c-token--pending c-token--is-selected">
+<div class="c-token c-token--pending is-selected">
   <figure class="c-avatar c-avatar--xs">
     <img src="http://i.imgur.com/3DzNLJQ.jpg" alt="Ryhan Hassan" />
   </figure>

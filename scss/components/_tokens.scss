@@ -80,7 +80,7 @@ $DBtoken-text-error: color(red, x-dark) !default;
   }
 
   // Selected state
-  .#{$DBtoken-namespace}--is-selected, .#{$DBtoken-namespace}--is-selected:hover {
+  .#{$DBtoken-namespace}.is-selected, .#{$DBtoken-namespace}.is-selected:hover {
     background-color: $DBtoken-background-neutral-selected;
     color: color(white);
 

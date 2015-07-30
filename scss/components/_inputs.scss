@@ -47,8 +47,17 @@ $DBinput-background-disabled: color(gray, x-light) !default;
     border-color: $DBinput-border-focused;
   }
 
-  &:disabled, &--is-disabled {
+  &:disabled, &.is-disabled {
     background-color: $DBinput-background-disabled;
+  }
+
+  &.is-invalid {
+    @include background-image("icon-form-invalid.svg", 14px, right 10px center);
+    border-color: color(red, 0.5);
+  }
+
+  &.is-valid {
+    @include background-image("icon-form-valid.svg", 14px, right 10px center);
   }
 }
 

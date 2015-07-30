@@ -29,3 +29,13 @@
 %u-font-meta {
   color: color(gray, medium);
 }
+
+.u-font-error,
+%u-font-error {
+  color: color(red);
+}
+
+.u-font-success,
+%u-font-success {
+  color: color(green);
+}
