@@ -172,14 +172,18 @@ $DBresponsive-grid: false !default;
   // All direct descendents of .grid get treated the same way.
   // This might be overkill for some, but it's a time-saver for me.
   .#{$DBgrid-column-namespace} {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     display: inline-block;
     margin-right: -.25em;
     min-height: 1px;
     padding-left: $DBgutter-width;
     vertical-align: top;
+
+    [data-reactid] & {
+      // React spits out markup with no whitespace between elements, so the inline-block hack to remove spaces is no
+      // longer necessary.
+      margin-right: 0;
+    }
 
     @if ($DBresponsive-grid == true) {
     @media (max-width: $DBbreakpoint-medium) {
