@@ -401,12 +401,14 @@ a,
   .c-input:disabled, .c-input.is-disabled {
     background-color: #f7f9fa; }
   .c-input.is-invalid {
+    padding-right: 34px;
     background-image: url("../images/icon-form-invalid.svg");
     background-size: 14px;
     background-position: right 10px center;
     background-repeat: no-repeat;
     border-color: rgba(232, 33, 16, 0.5); }
   .c-input.is-valid {
+    padding-right: 34px;
     background-image: url("../images/icon-form-valid.svg");
     background-size: 14px;
     background-position: right 10px center;
@@ -414,6 +416,13 @@ a,
 
 textarea.c-input {
   resize: vertical; }
+
+select.c-input {
+  padding-right: 27px;
+  background-image: url("../images/icon-form-dropdown.svg");
+  background-size: 7px 14px;
+  background-position: right 10px center;
+  background-repeat: no-repeat; }
 
 /**
  * Avatar component. A wrapper element with an (optional) image or the user's

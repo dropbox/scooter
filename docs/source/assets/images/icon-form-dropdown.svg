@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="7px" height="14px" viewBox="0 0 7 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-form-dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-3-Copy-+-icon-form-valid-+-Last-name-Copy" sketch:type="MSLayerGroup" transform="translate(-203.000000, -30.000000)" fill="#7B8994">
+            <path d="M205.921656,43.6642978 C206.241248,44.1106698 206.757646,44.1131299 207.078999,43.6642978 L209.843429,39.8032269 C210.16302,39.3568549 209.977924,38.9949989 209.42871,38.9949989 L203.571945,38.9949989 C203.023311,38.9949989 202.835873,39.3543947 203.157226,39.8032269 L205.921656,43.6642978 Z M205.921656,30.3357022 C206.241248,29.8893302 206.757646,29.8868701 207.078999,30.3357022 L209.843429,34.1967731 C210.16302,34.6431451 209.977924,35.0050011 209.42871,35.0050011 L203.571945,35.0050011 C203.023311,35.0050011 202.835873,34.6456053 203.157226,34.1967731 L205.921656,30.3357022 Z" id="icon-form-dropdown" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

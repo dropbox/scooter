@@ -52,11 +52,15 @@ $DBinput-background-disabled: color(gray, x-light) !default;
   }
 
   &.is-invalid {
+    padding-right: 34px;
+
     @include background-image("icon-form-invalid.svg", 14px, right 10px center);
     border-color: color(red, 0.5);
   }
 
   &.is-valid {
+    padding-right: 34px;
+
     @include background-image("icon-form-valid.svg", 14px, right 10px center);
   }
 }
@@ -65,3 +69,8 @@ textarea.#{$DBinput-namespace} {
   resize: vertical;
 }
 
+select.#{$DBinput-namespace} {
+  padding-right: 27px;
+
+  @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
+}
