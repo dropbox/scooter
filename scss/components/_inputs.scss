@@ -4,6 +4,7 @@
 //
 //-----------------------------
 
+$DBform-namespace: "c-form" !default;
 $DBlabel-namespace: "c-label" !default;
 $DBinput-namespace: "c-input" !default;
 
@@ -51,14 +52,20 @@ $DBinput-background-disabled: color(gray, x-light) !default;
     background-color: $DBinput-background-disabled;
   }
 
-  &.is-invalid {
+  &.is-invalid,
+  .#{$DBform-namespace}--validated &:invalid {
     padding-right: 34px;
+
+    // Override default invalidation styles
+    box-shadow: none;
+    outline: 0;
 
     @include background-image("icon-form-invalid.svg", 14px, right 10px center);
     border-color: color(red, 0.5);
   }
 
-  &.is-valid {
+  &.is-valid,
+  .#{$DBform-namespace}--validated &:valid {
     padding-right: 34px;
 
     @include background-image("icon-form-valid.svg", 14px, right 10px center);

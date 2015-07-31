@@ -174,6 +174,8 @@ a,
     min-height: 1px;
     padding-left: 20px;
     vertical-align: top; }
+    [data-reactid] .o-grid .o-grid__col {
+      margin-right: 0; }
   .o-grid .o-grid__col--centered {
     display: block;
     margin-left: auto;
@@ -400,14 +402,16 @@ a,
     border-color: #72b6ec; }
   .c-input:disabled, .c-input.is-disabled {
     background-color: #f7f9fa; }
-  .c-input.is-invalid {
+  .c-input.is-invalid, .c-form--validated .c-input:invalid {
     padding-right: 34px;
+    box-shadow: none;
+    outline: 0;
     background-image: url("../images/icon-form-invalid.svg");
     background-size: 14px;
     background-position: right 10px center;
     background-repeat: no-repeat;
     border-color: rgba(232, 33, 16, 0.5); }
-  .c-input.is-valid {
+  .c-input.is-valid, .c-form--validated .c-input:valid {
     padding-right: 34px;
     background-image: url("../images/icon-form-valid.svg");
     background-size: 14px;
