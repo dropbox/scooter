@@ -39,3 +39,11 @@
 %u-font-success {
   color: color(green);
 }
+
+// Hide text in element
+// Useful for icons with screenreader-accessible text
+.u-thide {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}

@@ -1,0 +1,73 @@
+//-----------------------------
+//
+// Component: Calendar
+//
+//-----------------------------
+
+$DBcalendar-namespace: "c-calendar";
+
+.#{$DBcalendar-namespace} {
+  display: inline-block;
+
+  background-color: color(gray, x-light);
+  border-radius: 5px;
+
+  &__header {
+    padding-bottom: 4px;
+
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+
+    color: color(gray, medium);
+  }
+
+  &__date {
+    padding: 4px 8px;
+
+    text-align: center;
+
+    color: color(blue);
+    background-color: color(white);
+    border: 1px solid color(gray, x-light);
+
+    cursor: pointer;
+
+    tr:first-child &:first-child {
+      border-top-left-radius: 4px;
+    }
+
+    tr:first-child &:last-child {
+      border-top-right-radius: 4px;
+    }
+
+    tr:last-child &:first-child {
+      border-bottom-left-radius: 4px;
+    }
+
+    tr:last-child &:last-child {
+      border-bottom-right-radius: 4px;
+    }
+
+    &:hover {
+      background-color: color(blue, x-light);
+    }
+
+    &--disabled, &--disabled:hover {
+      color: color(gray, light);
+      background-color: color(gray, x-light);
+
+      cursor: default;
+    }
+
+    &.is-selected {
+      color: color(white);
+      background-color: color(blue);
+    }
+
+    &.is-in-range {
+      color: color(white);
+      background-color: color(blue, medium);
+    }
+  }
+}

@@ -17,10 +17,6 @@
 input, button, textarea, select {
   font: inherit;
 
-  // Prefixes are normally handled by something like autoprefixer, but
-  // `appearance` is not a part of the CSS spec, so prefixes are explicit
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -30,4 +26,8 @@ ul, ol {
 
 p {
   margin-bottom: $DBbaseline;
+}
+
+table {
+  border-collapse: collapse;
 }

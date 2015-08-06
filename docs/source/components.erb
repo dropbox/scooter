@@ -13,6 +13,7 @@ toc:
 - Tokens
 - Loading-indicator
 - Tab-nav
+- Calendar
 
 ---
 
@@ -454,3 +455,80 @@ toc:
     <li class="c-tab-nav__tab"><a href="#">Documents</a></li>
   </ul>
 </nav>') %>
+</section>
+
+<section id="calendar" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Calendar</h2>
+    <%= gh_link("components/_calendar.scss") %>
+  </header>
+
+  <%= code_example('<div class="c-calendar  u-l-spit">
+    <nav class="c-calendar__nav  u-cf u-font-center u-l-p--hlf">
+      <div class="u-l-fl">
+        <a title="Previous month" href="#" class="u-thide  c-arrow c-arrow--left">Previous</a>
+      </div>
+      <div class="u-l-fr">
+        <a title="Next month" href="#" class="u-thide  c-arrow c-arrow--right">Next</a>
+      </div>
+      <strong>September 2015</strong>
+    </nav>
+    <table class="c-calendar__picker">
+      <tr>
+        <th class="c-calendar__header">Sun</th>
+        <th class="c-calendar__header">Mon</th>
+        <th class="c-calendar__header">Tue</th>
+        <th class="c-calendar__header">Wed</th>
+        <th class="c-calendar__header">Thu</th>
+        <th class="c-calendar__header">Fri</th>
+        <th class="c-calendar__header">Sat</th>
+      </tr>
+      <tr>
+        <td class="c-calendar__date c-calendar__date--disabled">30</td>
+        <td class="c-calendar__date c-calendar__date--disabled">31</td>
+        <td class="c-calendar__date">1</td>
+        <td class="c-calendar__date">2</td>
+        <td class="c-calendar__date">3</td>
+        <td class="c-calendar__date">4</td>
+        <td class="c-calendar__date">5</td>
+      </tr>
+      <tr>
+        <td class="c-calendar__date">6</td>
+        <td class="c-calendar__date">7</td>
+        <td class="c-calendar__date">8</td>
+        <td class="c-calendar__date">9</td>
+        <td class="c-calendar__date">10</td>
+        <td class="c-calendar__date">11</td>
+        <td class="c-calendar__date">12</td>
+      </tr>
+      <tr>
+        <td class="c-calendar__date">13</td>
+        <td class="c-calendar__date">14</td>
+        <td class="c-calendar__date">15</td>
+        <td class="c-calendar__date">16</td>
+        <td class="c-calendar__date">17</td>
+        <td class="c-calendar__date">18</td>
+        <td class="c-calendar__date">19</td>
+      </tr>
+      <tr>
+        <td class="c-calendar__date">20</td>
+        <td class="c-calendar__date">21</td>
+        <td class="c-calendar__date is-selected">22</td>
+        <td class="c-calendar__date is-in-range">23</td>
+        <td class="c-calendar__date is-in-range">24</td>
+        <td class="c-calendar__date is-in-range">25</td>
+        <td class="c-calendar__date is-in-range">26</td>
+      </tr>
+      <tr>
+        <td class="c-calendar__date is-in-range">27</td>
+        <td class="c-calendar__date is-selected">28</td>
+        <td class="c-calendar__date">29</td>
+        <td class="c-calendar__date">30</td>
+        <td class="c-calendar__date c-calendar__date--disabled">1</td>
+        <td class="c-calendar__date c-calendar__date--disabled">2</td>
+        <td class="c-calendar__date c-calendar__date--disabled">3</td>
+      </tr>
+    </table>
+
+  </div>') %>
+</section>

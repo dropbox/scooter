@@ -21,14 +21,17 @@
 input, button, textarea, select {
   font: inherit;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+     -moz-appearance: none;
+          appearance: none; }
 
 ul, ol {
   margin-left: 46px; }
 
 p {
   margin-bottom: 23px; }
+
+table {
+  border-collapse: collapse; }
 
 html, :root {
   font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
@@ -818,6 +821,69 @@ select.c-input {
     border-bottom-color: currentColor;
     color: #3d464d; }
 
+.c-calendar {
+  display: inline-block;
+  background-color: #f7f9fa;
+  border-radius: 5px; }
+  .c-calendar__header {
+    padding-bottom: 4px;
+    font-size: .6em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #7b8994; }
+  .c-calendar__date {
+    padding: 4px 8px;
+    text-align: center;
+    color: #007ee5;
+    background-color: white;
+    border: 1px solid #f7f9fa;
+    cursor: pointer; }
+    tr:first-child .c-calendar__date:first-child {
+      border-top-left-radius: 4px; }
+    tr:first-child .c-calendar__date:last-child {
+      border-top-right-radius: 4px; }
+    tr:last-child .c-calendar__date:first-child {
+      border-bottom-left-radius: 4px; }
+    tr:last-child .c-calendar__date:last-child {
+      border-bottom-right-radius: 4px; }
+    .c-calendar__date:hover {
+      background-color: #f4faff; }
+    .c-calendar__date--disabled, .c-calendar__date--disabled:hover {
+      color: #d0d4d9;
+      background-color: #f7f9fa;
+      cursor: default; }
+    .c-calendar__date.is-selected {
+      color: white;
+      background-color: #007ee5; }
+    .c-calendar__date.is-in-range {
+      color: white;
+      background-color: #72b6ec; }
+
+.c-arrow, .c-arrow--down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: currentColor; }
+.c-arrow--left {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-right-color: currentColor; }
+.c-arrow--right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: currentColor; }
+.c-arrow--up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: currentColor; }
+
 .clearfix:after,
 .o-media:after {
   content: "";
@@ -899,5 +965,10 @@ select.c-input {
 
 .u-font-success {
   color: #48ac68; }
+
+.u-thide {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=scooter.css.map */
