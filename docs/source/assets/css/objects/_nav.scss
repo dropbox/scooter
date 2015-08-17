@@ -10,7 +10,9 @@ $sc-o-nav-namespace: "#{$sc-namespace}o-nav";
   }
 
   a {
-    display: inline-block
+    display: inline-block;
+
+    text-decoration: none;
   }
 
   &--inline {
