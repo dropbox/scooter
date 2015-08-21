@@ -83,6 +83,11 @@ a,
   .f-a:hover {
     text-decoration: underline; }
 
+.o-wrap {
+  display: block;
+  max-width: 990px;
+  margin: 0 auto; }
+
 .o-grid {
   list-style: none;
   margin-left: -20px; }
