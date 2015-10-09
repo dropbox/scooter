@@ -20,6 +20,14 @@ input, button, textarea, select {
   appearance: none;
 }
 
+input[type=checkbox] {
+  appearance: checkbox;
+}
+
+input[type=radio] {
+  appearance: radio;
+}
+
 ul, ol {
   margin-left: double($DBbaseline);
 }

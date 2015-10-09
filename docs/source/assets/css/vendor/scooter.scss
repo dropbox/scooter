@@ -24,6 +24,12 @@ input, button, textarea, select {
      -moz-appearance: none;
           appearance: none; }
 
+input[type=checkbox] {
+  appearance: checkbox; }
+
+input[type=radio] {
+  appearance: radio; }
+
 ul, ol {
   margin-left: 46px; }
 
