@@ -8,4 +8,6 @@ components, and rapid static prototyping for Dropbox.
 
 ## Contributing
 
-Before contributing, you must agree to [Dropbox’s CLA](https://opensource.dropbox.com/cla/). This grants us an explicit license to the contributed code.
+For anything beyond minor contributions, such as spelling corrections and minor doc
+fixes, you must agree to [Dropbox’s CLA](https://opensource.dropbox.com/cla/). This
+grants us an explicit license to the contributed code.
