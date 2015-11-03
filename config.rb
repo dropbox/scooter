@@ -60,7 +60,7 @@ helpers do
   end
 
   def gh_link(path)
-    "<a class='ext-link sc-u-font-meta' href='https://github.com/daneden/scooter/tree/master/scss/#{path}'>View on GitHub</a>"
+    "<a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/#{path}'>View on GitHub</a>"
   end
 end
 
