@@ -11,3 +11,7 @@ components, and rapid static prototyping for Dropbox.
 For anything beyond minor contributions, such as spelling corrections and minor doc
 fixes, you must agree to [Dropbox’s CLA](https://opensource.dropbox.com/cla/). This
 grants us an explicit license to the contributed code.
+
+## License
+
+Created by and copyright Dropbox, Inc. Released under the [MIT license](https://github.com/dropbox/scooter/blob/master/LICENSE.md).
