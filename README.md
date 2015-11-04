@@ -14,4 +14,4 @@ grants us an explicit license to the contributed code.
 
 ## License
 
-Created by and copyright Dropbox, Inc. Released under the [MIT license](https://github.com/dropbox/scooter/blob/master/LICENSE.md).
+Created by and copyright Dropbox, Inc. Released under the [Apache 2.0 license](https://github.com/dropbox/scooter/blob/master/LICENSE.md).
