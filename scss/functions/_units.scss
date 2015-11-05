@@ -5,6 +5,6 @@
 //-----------------------------
 
 // Strip units from passed value
-@function stripUnit($n) {
+@function strip-unit($n) {
   @return $n / ($n*0+1);
 }
