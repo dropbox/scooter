@@ -6,7 +6,7 @@
 //-----------------------------------
 
 // Assert that the parent selector matches one of the selectors passed into $selectors
-@mixin assert($selectors...) {
+@mixin assert-selector($selectors...) {
   &:not(#{$selectors}) {
     /*! You must ensure the element matches one of these selectors: #{$selectors} */
     outline: 2px solid red !important;

@@ -294,8 +294,8 @@ a,
   border: 1px solid currentColor;
   border-radius: 3px;
   cursor: pointer; }
-  .c-btn:not(button) {
-    /*! You must ensure the element matches one of these selectors: button */
+  .c-btn:not(button, [type=submit]) {
+    /*! You must ensure the element matches one of these selectors: button, [type=submit] */
     outline: 2px solid red !important; }
   .c-btn[disabled], .c-btn.c-btn--disabled {
     opacity: .5;
@@ -403,6 +403,9 @@ a,
   margin-bottom: 23px;
   font-size: 12px;
   color: #7b8994; }
+  .c-label:not(label) {
+    /*! You must ensure the element matches one of these selectors: label */
+    outline: 2px solid red !important; }
 
 .c-input {
   display: block;
@@ -414,6 +417,9 @@ a,
   color: #47525d;
   border: 1px solid rgba(37, 40, 43, 0.1);
   border-radius: 3px; }
+  .c-input:not(input, select, textarea) {
+    /*! You must ensure the element matches one of these selectors: input, select, textarea */
+    outline: 2px solid red !important; }
   .c-input:focus {
     outline: 0;
     border-color: #72b6ec; }

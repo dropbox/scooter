@@ -40,7 +40,7 @@ $DBbutton-border-tertiary: color(blue) !default;
   cursor: pointer;
 
   // Ensure the element is actually a button
-  @include assert(button);
+  @include assert-selector(button, '[type=submit]');
 
   &[disabled], &#{&}--disabled {
     opacity: .5;

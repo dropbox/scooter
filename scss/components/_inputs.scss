@@ -22,6 +22,9 @@ $DBinput-background-disabled: color(gray, x-light) !default;
  * Input & label components
  */
 .#{$DBlabel-namespace} {
+  // Ensure the element is actually a label
+  @include assert-selector(label);
+
   display: block;
   margin-bottom: $DBbaseline;
 
@@ -31,6 +34,9 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 }
 
 .#{$DBinput-namespace} {
+  // Ensure the element is actually a kind of input
+  @include assert-selector(input, select, textarea);
+
   display: block;
   width: 100%;
   padding: 7px;
