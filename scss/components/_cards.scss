@@ -35,7 +35,7 @@ $DBcard-border-selected: color(blue) !default;
 
   &#{&}--arrow {
     &::before, &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 100%;
       left: 50%;

@@ -67,7 +67,7 @@ $DBavatar-sizes: (
 
   // Give avatars a subtle little border
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@ $DBavatar-sizes: (
     }
 
     &.#{$DBavatar-namespace}--xs:after {
-      content: '';
+      content: "";
     }
   }
 
@@ -103,7 +103,7 @@ $DBavatar-sizes: (
       @if $key == "xs" {
         // Extra small avatars get no initials
         &:after {
-          content: '';
+          content: "";
         }
       }
     }
