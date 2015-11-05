@@ -39,7 +39,7 @@ $DBloadingindicator-speed: .9s;
   &:after, &:before {
     vertical-align: middle;
     position: absolute;
-    content: '';
+    content: "";
     width: $DBloadingindicator-size;
     height: $DBloadingindicator-size;
     margin-left: round($DBloadingindicator-size*.6);

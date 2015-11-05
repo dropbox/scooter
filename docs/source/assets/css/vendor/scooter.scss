@@ -340,7 +340,7 @@ a,
   -webkit-transition: .1s;
           transition: .1s; }
   .c-card.c-card--arrow::before, .c-card.c-card--arrow::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -468,7 +468,7 @@ select.c-input {
     -o-object-fit: cover;
        object-fit: cover; }
   .c-avatar:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -483,7 +483,7 @@ select.c-input {
       content: attr(data-initials);
       box-shadow: none; }
     .c-avatar.c-avatar--no-img.c-avatar--xs:after {
-      content: ''; }
+      content: ""; }
   .c-avatar--xs {
     height: 16px;
     width: 16px;
@@ -491,7 +491,7 @@ select.c-input {
     line-height: 12px;
     font-weight: 700; }
     .c-avatar--xs:after {
-      content: ''; }
+      content: ""; }
   .c-avatar--s {
     height: 24px;
     width: 24px;
@@ -653,7 +653,7 @@ select.c-input {
         -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%; }
   .c-title-bubble:before {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
     top: 100%;
@@ -777,7 +777,7 @@ select.c-input {
   .c-loader:after, .c-loader:before {
     vertical-align: middle;
     position: absolute;
-    content: '';
+    content: "";
     width: 6px;
     height: 6px;
     margin-left: 4px;

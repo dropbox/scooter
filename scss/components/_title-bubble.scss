@@ -12,7 +12,7 @@
 //
 //-----------------------------
 
-$DBtitlebubble-namespace: 'c-title-bubble' !default;
+$DBtitlebubble-namespace: "c-title-bubble" !default;
 
 $DBtitlebubble-background: color(gray, dark) !default;
 $DBtitlebubble-point-width: 5px !default;
@@ -49,7 +49,7 @@ $DBtitlebubble-point-width: 5px !default;
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
     top: 100%;
