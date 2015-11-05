@@ -294,6 +294,9 @@ a,
   border: 1px solid currentColor;
   border-radius: 3px;
   cursor: pointer; }
+  .c-btn:not(button) {
+    /*! You must ensure the element matches one of these selectors: button */
+    outline: 2px solid red !important; }
   .c-btn[disabled], .c-btn.c-btn--disabled {
     opacity: .5;
     cursor: default; }
