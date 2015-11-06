@@ -48,6 +48,7 @@ h4,
 %f-delta,
 .f-delta {
     display: block;
+
     font-size: 13px;
     font-weight: 600;
     line-height: $DBbaseline;
@@ -60,15 +61,16 @@ hr,
 %hr{
     margin-bottom: $DBbaseline;
 
-    border: none;
+    border: 0;
     border-top: 1px solid color(gray, x-dark, 0.1);
 }
 
 a,
 %f-a,
 .f-a {
-    color: color(blue);
     text-decoration: none;
+
+    color: color(blue);
 
     cursor: pointer;
 

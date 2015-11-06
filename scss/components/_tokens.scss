@@ -27,16 +27,16 @@ $DBtoken-text-neutral: color(gray) !default;
 $DBtoken-text-warning: color(yellow, x-dark) !default;
 $DBtoken-text-error: color(red, x-dark) !default;
 
-/**
+/*!
  * Token components
  */
 .#{$DBtoken-namespace} {
     display: inline-block;
+    // We want tokens to always remain on one line
+    white-space: nowrap;
     padding: 4px;
 
     line-height: 1;
-    // We want tokens to always remain on one line
-    white-space: nowrap;
 
     color: $DBtoken-text-neutral;
     border-radius: 3px;
@@ -62,15 +62,15 @@ $DBtoken-text-error: color(red, x-dark) !default;
 // Warning state
 // (Out-of-org, non-blocking)
 .#{$DBtoken-namespace}--warning {
-    background-color: $DBtoken-background-warning;
     color: $DBtoken-text-warning;
+    background-color: $DBtoken-background-warning;
 }
 
 // Invalid state
 // (Out-of-org, suspended)
 .#{$DBtoken-namespace}--invalid {
-    background-color: $DBtoken-background-error;
     color: $DBtoken-text-error;
+    background-color: $DBtoken-background-error;
 }
 
 // Pending state
@@ -81,8 +81,8 @@ $DBtoken-text-error: color(red, x-dark) !default;
 
 // Selected state
 .#{$DBtoken-namespace}.is-selected, .#{$DBtoken-namespace}.is-selected:hover {
-    background-color: $DBtoken-background-neutral-selected;
     color: color(white);
+    background-color: $DBtoken-background-neutral-selected;
 
     &.#{$DBtoken-namespace}--warning {
         background-color: $DBtoken-background-warning-selected;
@@ -103,8 +103,8 @@ $DBtoken-text-error: color(red, x-dark) !default;
 
 // Delete token glyph
 .#{$DBtoken-namespace}__delete {
-    margin-left: 0.25em;
     margin-right: 0.15em;
+    margin-left: 0.25em;
 
     font-size: 1.25em;
 

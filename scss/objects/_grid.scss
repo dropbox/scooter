@@ -58,8 +58,9 @@ $DBbreakpoint-small: 480px !default;
 $DBresponsive-grid: false !default;
 
 .#{$DBgrid-namespace} {
-    list-style: none;
     margin-left: -$DBgutter-width;
+
+    list-style: none;
 
     > %span-all       { width: percentage(1 / 1); }
     > %one-half       { width: percentage(1 / 2); }
@@ -162,12 +163,13 @@ $DBresponsive-grid: false !default;
     // All direct descendents of .grid get treated the same way.
     // This might be overkill for some, but it's a time-saver for me.
     .#{$DBgrid-column-namespace} {
-        box-sizing: border-box;
         display: inline-block;
-        margin-right: -0.24em;
-        min-height: 1px;
-        padding-left: $DBgutter-width;
         vertical-align: top;
+        min-height: 1px;
+        margin-right: -0.24em;
+        padding-left: $DBgutter-width;
+
+        box-sizing: border-box;
 
         [data-reactid] & {
             // React spits out markup with no whitespace between elements, so the inline-block hack to remove spaces is no
@@ -178,9 +180,9 @@ $DBresponsive-grid: false !default;
         @if ($DBresponsive-grid == true) {
             @media (max-width: $DBbreakpoint-medium) {
                 display: block;
-                margin-left: 0;
-                margin-right: 0;
                 width: auto;
+                margin-right: 0;
+                margin-left: 0;
             }
 
             @media (max-width: $DBbreakpoint-medium) and (min-width: $DE-breakpoint-small) {
@@ -244,8 +246,8 @@ $DBresponsive-grid: false !default;
     // Centers the column in the grid and clears the row of all other columns
     .#{$DBgrid-column-namespace}--centered {
         display: block;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
     }
 
 
@@ -261,16 +263,16 @@ $DBresponsive-grid: false !default;
 
     // Removes gutters from the columns
     &.grid--no-gutter {
-        margin-left: 0;
         width: 100%;
+        margin-left: 0;
 
         .#{$DBgrid-column-namespace} {
             padding-left: 0;
         }
 
         .#{$DBgrid-column-namespace}--span-all {
-            margin-left: 0;
             width: 100%;
+            margin-left: 0;
         }
     }
 

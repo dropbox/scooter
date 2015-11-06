@@ -26,30 +26,31 @@ $DBbutton-border-tertiary: color(blue) !default;
  * Button component
  */
 .#{$DBbutton-namespace} {
+    // Ensure the element is actually a button
+    @include assert-selector(button, "[type=submit]");
+
     display: inline-block;
     padding: 7px 12px;
 
+    font-weight: 600;
     line-height: 1.4;
     text-align: center;
     text-decoration: none;
-    font-weight: 600;
 
     border: 1px solid currentColor;
     border-radius: 3px;
 
     cursor: pointer;
 
-    // Ensure the element is actually a button
-    @include assert-selector(button, '[type=submit]');
-
     &[disabled], &#{&}--disabled {
-        opacity: .5;
+        opacity: 0.5;
+
         cursor: default;
     }
 
     &:focus {
-        outline: none;
         box-shadow: 0 0 0 2px color(blue, 0.3);
+        outline: none;
     }
 
     &:hover {
@@ -66,21 +67,21 @@ $DBbutton-border-tertiary: color(blue) !default;
 
     &#{&}--primary {
         color: $DBbutton-text-primary;
+        border-color: $DBbutton-border-primary;
         background-color: $DBbutton-background-fallback-primary;
         background: $DBbutton-background-primary;
-        border-color: $DBbutton-border-primary;
     }
 
     &#{&}--secondary {
         color: $DBbutton-text-secondary;
-        background: $DBbutton-background-secondary;
         border-color: $DBbutton-border-secondary;
+        background: $DBbutton-background-secondary;
     }
 
     &#{&}--tertiary {
         color: $DBbutton-text-tertiary;
+        border-color: $DBbutton-border-tertiary;
         background-color: $DBbutton-background-fallback-tertiary;
         background: $DBbutton-background-tertiary;
-        border-color: $DBbutton-border-tertiary;
     }
 }

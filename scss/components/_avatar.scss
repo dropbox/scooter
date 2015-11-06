@@ -21,10 +21,10 @@ xl: 64px
 // @private mixin avatarSize
 // Set proportional font size, weight, and line-height for avatars without photos
 @mixin __avatarSize($s: 32px) {
-    height: $s;
     width: $s;
+    height: $s;
 
-    font-size: round($s*.45);
+    font-size: round($s * 0.45);
     line-height: ($s - 4px);
 
     @if($s < 32px) {
@@ -41,14 +41,14 @@ xl: 64px
  * initials.
  */
 .#{$DBavatar-namespace} {
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    overflow: hidden;
-
     // Default size for avatars without explicit sizing
     @include __avatarSize(32px);
+
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
 
     text-align: center;
 
@@ -70,12 +70,12 @@ xl: 64px
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
 
-        box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
         border-radius: 100%;
+        box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
 
         pointer-events: none;
     }

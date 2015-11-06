@@ -15,25 +15,25 @@ $DBmodal-background-alt: color(gray, x-light) !default;
  * Modal component
  */
 .#{$DBmodal-namespace}-overlay {
-    padding: $DBmodal-padding;
-    position: absolute;
     @include share(top, right, bottom, left, 0);
     display: flex;
-    align-items: center;
+    position: absolute;
     align-content: center;
+    align-items: center;
     justify-content: center;
+    padding: $DBmodal-padding;
 
-    background-color: color(gray, dark, .6);
+    background-color: color(gray, dark, 0.6);
 }
 
 .#{$DBmodal-namespace} {
-    max-width: 640px;
-    flex: 1 1 640px;
     overflow: scroll;
+    flex: 1 1 640px;
+    max-width: 640px;
 
-    background-color: $DBmodal-background;
-    box-shadow: 0 1px 2px color(gray, x-dark, .1);
     border-radius: 3px;
+    box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
+    background-color: $DBmodal-background;
 }
 
 .#{$DBmodal-namespace}__title,
@@ -41,8 +41,8 @@ $DBmodal-background-alt: color(gray, x-light) !default;
     z-index: 3;
     padding: ($DBmodal-padding/2) $DBmodal-padding;
 
+    box-shadow: 0 1px 1px color(gray, x-dark, 0.1);
     background-color: $DBmodal-background;
-    box-shadow: 0 1px 1px color(gray, x-dark, .1);
 
     .#{$DBmodal-namespace}--unibody & {
         padding-bottom: 0;
@@ -56,9 +56,9 @@ $DBmodal-background-alt: color(gray, x-light) !default;
 }
 
 .#{$DBmodal-namespace}__content {
-    padding: $DBmodal-padding;
     // Raise the z-index to enable overlapping of sibling banners
     z-index: 2;
+    padding: $DBmodal-padding;
 
     background-color: $DBmodal-background-alt;
 

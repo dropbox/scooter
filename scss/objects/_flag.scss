@@ -52,9 +52,9 @@ $DBflag-namespace: "o-flag" !default;
 
         > * {
             display: block;
-            max-width: none;
             // Force the "pinned" element to not wrap lines
             white-space: nowrap;
+            max-width: none;
         }
 
         // Use the --rev modifier when the order is reversed (fixed-width element on

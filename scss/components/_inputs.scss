@@ -10,7 +10,7 @@ $DBinput-namespace: "c-input" !default;
 
 $DBlabel-color: color(gray, medium) !default;
 $DBinput-color: color(gray) !default;
-$DBinput-color-disabled: color(gray, .7) !default;
+$DBinput-color-disabled: color(gray, 0.7) !default;
 
 $DBinput-border: color(gray, x-dark, 0.1) !default;
 $DBinput-border-focused: color(blue, medium) !default;
@@ -43,15 +43,15 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 
     font-size: $DBfont-size;
 
-    background-color: $DBinput-background;
-    background-clip: padding-box;
     color: $DBinput-color;
     border: 1px solid $DBinput-border;
     border-radius: 3px;
+    background-color: $DBinput-background;
+    background-clip: padding-box;
 
     &:focus {
-        outline: 0;
         border-color: $DBinput-border-focused;
+        outline: 0;
     }
 
     &:disabled, &.is-disabled {
@@ -60,21 +60,21 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 
     &.is-invalid,
     .#{$DBform-namespace}--validated &:invalid {
+        @include background-image("icon-form-invalid.svg", 14px, right 10px center);
+
         padding-right: 34px;
 
+        border-color: color(red, 0.5);
         // Override default invalidation styles
         box-shadow: none;
         outline: 0;
-
-        @include background-image("icon-form-invalid.svg", 14px, right 10px center);
-        border-color: color(red, 0.5);
     }
 
     &.is-valid,
     .#{$DBform-namespace}--validated &:valid {
-        padding-right: 34px;
-
         @include background-image("icon-form-valid.svg", 14px, right 10px center);
+
+        padding-right: 34px;
     }
 }
 
@@ -83,7 +83,7 @@ textarea.#{$DBinput-namespace} {
 }
 
 select.#{$DBinput-namespace} {
-    padding-right: 27px;
-
     @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
+
+    padding-right: 27px;
 }

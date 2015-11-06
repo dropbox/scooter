@@ -1,3 +1,5 @@
+// scss-lint:disable NestingDepth
+//
 //-----------------------------
 //
 // Cards
@@ -20,18 +22,18 @@ $DBcard-border-selected: color(blue) !default;
  * Card component with optional arrow/tail
  */
 .#{$DBcard-namespace} {
-    box-sizing: border-box;
-    position: relative;
     display: inline-block;
     vertical-align: top;
+    position: relative;
     padding: 12px;
+    box-sizing: border-box;
 
+    border: 1px solid rgba($DBcard-border, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba($DBcard-border, 0.1);
     background-color: $DBcard-background;
     background-clip: padding-box;
-    border: 1px solid rgba($DBcard-border,0.1);
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgba($DBcard-border,0.1);
-    transition: .1s;
+    transition: 0.1s;
 
     &#{&}--arrow {
         &::before, &::after {
@@ -43,13 +45,14 @@ $DBcard-border-selected: color(blue) !default;
 
             border: 8px solid transparent;
             border-bottom-color: color(white);
-            transition: .1s;
+            transition: 0.1s;
         }
 
         &::before {
-            border-width: 9px;
-            border-bottom-color: rgba($DBcard-border,0.2);
             margin-left: -9px;
+
+            border-width: 9px;
+            border-bottom-color: rgba($DBcard-border, 0.2);
         }
 
 
@@ -69,8 +72,8 @@ $DBcard-border-selected: color(blue) !default;
 
         &-ne, &-se {
             &::after, &::before {
-                left: auto;
                 right: 0;
+                left: auto;
                 margin-right: 12px;
             }
 
@@ -83,18 +86,19 @@ $DBcard-border-selected: color(blue) !default;
         // assume North is the desired default.
         &-sw, &-se, &-s {
             &::after, &::before {
-                bottom: auto;
                 top: 100%;
-                border-bottom-color: transparent;
+                bottom: auto;
+
                 border-top-color: color(white);
+                border-bottom-color: transparent;
             }
 
             &::before {
-                border-top-color: rgba($DBcard-border,0.2);
+                border-top-color: rgba($DBcard-border, 0.2);
                 // Since we're spoofing a triangle with borders, we can't use
                 // box-shadow, but we can use the drop-shadow filter. Limited support,
                 // but it's just a nice-to-have.
-                filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.2));
+                filter: drop-shadow(0 1px 2px rgba($DBcard-border, 0.2));
             }
         }
     }
@@ -103,8 +107,8 @@ $DBcard-border-selected: color(blue) !default;
 // Floating cards have a hover state and selected states
 .#{$DBcard-namespace}--floating {
     &:hover {
-        border-color: rgba($DBcard-border,0.2);
-        box-shadow: 0 1px 2px rgba($DBcard-border,0.2);
+        border-color: rgba($DBcard-border, 0.2);
+        box-shadow: 0 1px 2px rgba($DBcard-border, 0.2);
     }
 
     &.#{$DBcard-namespace}--arrow {
@@ -114,9 +118,9 @@ $DBcard-border-selected: color(blue) !default;
 
         &-se, &-sw, &-s {
             &:hover::before {
-                border-bottom-color: transparent;
                 border-top-color: rgba($DBcard-border, 0.3);
-                filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.3));
+                border-bottom-color: transparent;
+                filter: drop-shadow(0 1px 2px rgba($DBcard-border, 0.3));
             }
         }
     }
@@ -134,8 +138,8 @@ $DBcard-border-selected: color(blue) !default;
     &--arrow-se, &--arrow-sw, &--arrow-s {
         &.is-selected {
             &::before, &:hover::before {
-                border-bottom-color: transparent;
                 border-top-color: $DBcard-border-selected;
+                border-bottom-color: transparent;
             }
         }
     }

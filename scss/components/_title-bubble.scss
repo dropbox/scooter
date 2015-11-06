@@ -30,32 +30,33 @@ $DBtitlebubble-point-width: 5px !default;
 
     &:after {
         content: attr(data-title);
-        position: absolute;
         display: none;
+        position: absolute;
         top: 100%;
         left: 50%;
         white-space: nowrap;
-        padding: 7px 9px;
         margin-top: $DBtitlebubble-point-width;
+        padding: 7px 9px;
 
         font-size: 11px;
         font-weight: 500;
 
         color: color(white);
-        background-color: $DBtitlebubble-background;
         border-radius: 3px;
+        background-color: $DBtitlebubble-background;
+
         transform: translateX(-50%);
         transform-origin: 50% 50%;
     }
 
     &:before {
         content: "";
-        position: absolute;
         display: none;
+        position: absolute;
         top: 100%;
         left: 50%;
-        margin-left: -$DBtitlebubble-point-width;
         margin-top: -($DBtitlebubble-point-width);
+        margin-left: -$DBtitlebubble-point-width;
 
         border: 5px solid transparent;
         border-bottom-color: $DBtitlebubble-background;
@@ -71,9 +72,10 @@ $DBtitlebubble-point-width: 5px !default;
         &:before {
             top: auto;
             bottom: 100%;
-            border-bottom-color: transparent;
-            border-top-color: $DBtitlebubble-background;
             margin-bottom: -$DBtitlebubble-point-width;
+
+            border-top-color: $DBtitlebubble-background;
+            border-bottom-color: transparent;
         }
     }
 
@@ -81,8 +83,8 @@ $DBtitlebubble-point-width: 5px !default;
         &:after {
             top: 50%;
             left: 100%;
-            margin-left: $DBtitlebubble-point-width;
             margin-top: 0;
+            margin-left: $DBtitlebubble-point-width;
 
             transform: translateY(-50%);
         }
@@ -90,9 +92,10 @@ $DBtitlebubble-point-width: 5px !default;
         &:before {
             top: 50%;
             left: 100%;
-            border-bottom-color: transparent;
-            border-right-color: $DBtitlebubble-background;
             margin-top: -$DBtitlebubble-point-width;
+
+            border-right-color: $DBtitlebubble-background;
+            border-bottom-color: transparent;
         }
     }
 
@@ -101,8 +104,8 @@ $DBtitlebubble-point-width: 5px !default;
             top: 50%;
             right: 100%;
             left: auto;
-            margin-right: $DBtitlebubble-point-width;
             margin-top: 0;
+            margin-right: $DBtitlebubble-point-width;
 
             transform: translateY(-50%);
         }
@@ -111,18 +114,17 @@ $DBtitlebubble-point-width: 5px !default;
             top: 50%;
             right: 100%;
             left: auto;
+            margin-top: -$DBtitlebubble-point-width;
+            margin-right: -$DBtitlebubble-point-width;
+
             border-bottom-color: transparent;
             border-left-color: $DBtitlebubble-background;
-            margin-right: -$DBtitlebubble-point-width;
-            margin-top: -$DBtitlebubble-point-width;
         }
     }
 
     &:hover, &:focus {
         &:before, &:after {
             display: block;
-            // Uncomment this line to disable tooltip interaction:
-            // pointer-events: none;
         }
     }
 }

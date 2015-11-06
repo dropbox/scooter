@@ -14,47 +14,47 @@ $DBloadingindicator-color: color(gray, dark);
 
 $DBloadingindicator-size: 6px;
 
-$DBloadingindicator-speed: .9s;
+$DBloadingindicator-speed: 0.9s;
 
 /**
  * Loading indicator component
  */
 .#{$DBloadingindicator-namespace} {
-    position: relative;
     display: inline-block;
+    position: relative;
     width: $DBloadingindicator-size;
     height: $DBloadingindicator-size;
-    margin: ($DBloadingindicator-size*2) 0;
+    margin: ($DBloadingindicator-size * 2) 0;
 
     font-size: 0;
 
     color: transparent;
     border-radius: 100%;
-    background-color: rgba($DBloadingindicator-color, .3);
+    background-color: rgba($DBloadingindicator-color, 0.3);
 
     &, &:after, &:before {
         animation: loaderFade $DBloadingindicator-speed ease-in-out infinite;
     }
 
     &:after, &:before {
+        content: "";
         vertical-align: middle;
         position: absolute;
-        content: "";
+        left: 100%;
         width: $DBloadingindicator-size;
         height: $DBloadingindicator-size;
-        margin-left: round($DBloadingindicator-size*.6);
-        left: 100%;
+        margin-left: round($DBloadingindicator-size * 0.6);
 
         border-radius: 100%;
-        background-color: rgba($DBloadingindicator-color, .3);
-        animation-delay: ($DBloadingindicator-speed/3);
+        background-color: rgba($DBloadingindicator-color, 0.3);
+        animation-delay: ($DBloadingindicator-speed / 3);
     }
 
     &:after {
         left: 200%;
-        margin-left: (round($DBloadingindicator-size*.3)+$DBloadingindicator-size);
+        margin-left: (round($DBloadingindicator-size * 0.3)+$DBloadingindicator-size);
 
-        animation-delay: (($DBloadingindicator-speed/3)*2);
+        animation-delay: (($DBloadingindicator-speed / 3) * 2);
     }
 }
 
@@ -64,6 +64,6 @@ $DBloadingindicator-speed: .9s;
     }
 
     0%, 100% {
-        background-color: rgba($DBloadingindicator-color, .3);
+        background-color: rgba($DBloadingindicator-color, 0.3);
     }
 }
