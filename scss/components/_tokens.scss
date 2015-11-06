@@ -51,7 +51,7 @@ $DBtoken-text-error: color(red, x-dark) !default;
 
     > * {
         vertical-align: middle;
-        margin-left: .25em;
+        margin-left: 0.25em;
 
         &:first-child {
             margin-left: 0;
@@ -76,7 +76,7 @@ $DBtoken-text-error: color(red, x-dark) !default;
 // Pending state
 // Transient state while actual state is determined
 .#{$DBtoken-namespace}--pending {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 // Selected state
@@ -98,18 +98,18 @@ $DBtoken-text-error: color(red, x-dark) !default;
 .#{$DBtoken-namespace}__name {
     // Open Sans' line-height needs some manual correction
     top: 1px;
-    margin-left: .25em;
+    margin-left: 0.25em;
 }
 
 // Delete token glyph
 .#{$DBtoken-namespace}__delete {
-    margin-left: .25em;
-    margin-right: .15em;
+    margin-left: 0.25em;
+    margin-right: 0.15em;
 
     font-size: 1.25em;
 
     color: currentColor;
-    opacity: .7;
+    opacity: 0.7;
 
     cursor: pointer;
 }

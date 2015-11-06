@@ -162,7 +162,7 @@ $DBresponsive-grid: false !default;
     .#{$DBgrid-column-namespace} {
         box-sizing: border-box;
         display: inline-block;
-        margin-right: -.25em;
+        margin-right: -0.24em;
         min-height: 1px;
         padding-left: $DBgutter-width;
         vertical-align: top;
@@ -184,7 +184,7 @@ $DBresponsive-grid: false !default;
             @media (max-width: $DBbreakpoint-medium) and (min-width: $DE-breakpoint-small) {
                 &[class*="#{$DBgrid-column-namespace}--m-"] {
                     display: inline-block;
-                    margin-right: -.24em;
+                    margin-right: -0.24em;
                 }
 
                 &.#{$DBgrid-column-namespace}--m-1-of-2,
@@ -212,7 +212,7 @@ $DBresponsive-grid: false !default;
             @media (max-width: $DBbreakpoint-small) {
                 &[class*="#{$DBgrid-column-namespace}--s-"] {
                     display: inline-block;
-                    margin-right: -.24em;
+                    margin-right: -0.24em;
                 }
 
                 &.#{$DBgrid-column-namespace}--s-1-of-2,
