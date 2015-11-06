@@ -183,7 +183,7 @@ linters:
     style: one_space # or 'no_space'
 
   SpaceBeforeBrace:
-    enabled: true
+    enabled: false
     style: space # or 'new_line'
     allow_single_line_padding: true
 
