@@ -12,8 +12,8 @@ $DBmedia-namespace: "o-media" !default;
 }
 
 .#{$DBmedia-namespace}__img {
-    float: left;
     margin-right: half($DBbaseline);
+    float: left;
 
     > img {
         display: block;
@@ -22,8 +22,8 @@ $DBmedia-namespace: "o-media" !default;
 }
 
 .#{$DBmedia-namespace}__body {
-    overflow: hidden;
     display: block;
+    overflow: hidden;
 
     &,
     > :last-child {
