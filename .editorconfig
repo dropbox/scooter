@@ -15,7 +15,7 @@ trim_trailing_whitespace = true
 indent_size = 2
 
 # Set indentation for CSS files
-[*.{css,scss,less,sass}]
+[*.{css,scss,sass}]
 indent_size = 4
 
 # Disable trimming trailing whitespace in MD files
