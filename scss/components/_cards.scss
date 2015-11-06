@@ -20,123 +20,123 @@ $DBcard-border-selected: color(blue) !default;
  * Card component with optional arrow/tail
  */
 .#{$DBcard-namespace} {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 12px;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px;
 
-  background-color: $DBcard-background;
-  background-clip: padding-box;
-  border: 1px solid rgba($DBcard-border,0.1);
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba($DBcard-border,0.1);
-  transition: .1s;
+    background-color: $DBcard-background;
+    background-clip: padding-box;
+    border: 1px solid rgba($DBcard-border,0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba($DBcard-border,0.1);
+    transition: .1s;
 
-  &#{&}--arrow {
-    &::before, &::after {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      margin-left: -8px;
+    &#{&}--arrow {
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -8px;
 
-      border: 8px solid transparent;
-      border-bottom-color: color(white);
-      transition: .1s;
+            border: 8px solid transparent;
+            border-bottom-color: color(white);
+            transition: .1s;
+        }
+
+        &::before {
+            border-width: 9px;
+            border-bottom-color: rgba($DBcard-border,0.2);
+            margin-left: -9px;
+        }
+
+
+
+        // West/East directions are only affecting horizontal offsets, so we can
+        // style North and South at the same time
+        &-nw, &-sw {
+            &::after, &::before {
+                left: 0;
+                margin-left: 12px;
+            }
+
+            &::before {
+                margin-left: 11px;
+            }
+        }
+
+        &-ne, &-se {
+            &::after, &::before {
+                left: auto;
+                right: 0;
+                margin-right: 12px;
+            }
+
+            &::before {
+                margin-right: 11px;
+            }
+        }
+
+        // South direction changes a lot of styles, and it's probably safe to
+        // assume North is the desired default.
+        &-sw, &-se, &-s {
+            &::after, &::before {
+                bottom: auto;
+                top: 100%;
+                border-bottom-color: transparent;
+                border-top-color: color(white);
+            }
+
+            &::before {
+                border-top-color: rgba($DBcard-border,0.2);
+                // Since we're spoofing a triangle with borders, we can't use
+                // box-shadow, but we can use the drop-shadow filter. Limited support,
+                // but it's just a nice-to-have.
+                filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.2));
+            }
+        }
     }
-
-    &::before {
-      border-width: 9px;
-      border-bottom-color: rgba($DBcard-border,0.2);
-      margin-left: -9px;
-    }
-
-
-
-    // West/East directions are only affecting horizontal offsets, so we can
-    // style North and South at the same time
-    &-nw, &-sw {
-      &::after, &::before {
-        left: 0;
-        margin-left: 12px;
-      }
-
-      &::before {
-        margin-left: 11px;
-      }
-    }
-
-    &-ne, &-se {
-      &::after, &::before {
-        left: auto;
-        right: 0;
-        margin-right: 12px;
-      }
-
-      &::before {
-        margin-right: 11px;
-      }
-    }
-
-    // South direction changes a lot of styles, and it's probably safe to
-    // assume North is the desired default.
-    &-sw, &-se, &-s {
-      &::after, &::before {
-        bottom: auto;
-        top: 100%;
-        border-bottom-color: transparent;
-        border-top-color: color(white);
-      }
-
-      &::before {
-        border-top-color: rgba($DBcard-border,0.2);
-        // Since we're spoofing a triangle with borders, we can't use
-        // box-shadow, but we can use the drop-shadow filter. Limited support,
-        // but it's just a nice-to-have.
-        filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.2));
-      }
-    }
-  }
 }
 
 // Floating cards have a hover state and selected states
 .#{$DBcard-namespace}--floating {
-  &:hover {
-    border-color: rgba($DBcard-border,0.2);
-    box-shadow: 0 1px 2px rgba($DBcard-border,0.2);
-  }
-
-  &.#{$DBcard-namespace}--arrow {
-    &:hover::before {
-      border-bottom-color: rgba($DBcard-border, 0.3);
+    &:hover {
+        border-color: rgba($DBcard-border,0.2);
+        box-shadow: 0 1px 2px rgba($DBcard-border,0.2);
     }
 
-    &-se, &-sw, &-s {
-      &:hover::before {
-        border-bottom-color: transparent;
-        border-top-color: rgba($DBcard-border, 0.3);
-        filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.3));
-      }
+    &.#{$DBcard-namespace}--arrow {
+        &:hover::before {
+            border-bottom-color: rgba($DBcard-border, 0.3);
+        }
+
+        &-se, &-sw, &-s {
+            &:hover::before {
+                border-bottom-color: transparent;
+                border-top-color: rgba($DBcard-border, 0.3);
+                filter: drop-shadow(0 1px 2px rgba($DBcard-border,0.3));
+            }
+        }
     }
-  }
 
-  &.is-selected {
-    border-color: $DBcard-border-selected;
-  }
-
-  &--arrow.is-selected {
-    &::before, &:hover::before {
-      border-bottom-color: $DBcard-border-selected;
-    }
-  }
-
-  &--arrow-se, &--arrow-sw, &--arrow-s {
     &.is-selected {
-      &::before, &:hover::before {
-        border-bottom-color: transparent;
-        border-top-color: $DBcard-border-selected;
-      }
+        border-color: $DBcard-border-selected;
     }
-  }
+
+    &--arrow.is-selected {
+        &::before, &:hover::before {
+            border-bottom-color: $DBcard-border-selected;
+        }
+    }
+
+    &--arrow-se, &--arrow-sw, &--arrow-s {
+        &.is-selected {
+            &::before, &:hover::before {
+                border-bottom-color: transparent;
+                border-top-color: $DBcard-border-selected;
+            }
+        }
+    }
 }

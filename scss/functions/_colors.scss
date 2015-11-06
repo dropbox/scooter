@@ -98,7 +98,7 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
         @return rgba($rgb-val, $alpha-val);
     } @else {
         @warn "No global color called #{$name} found."
-            + "Are you sure it's in `variables/colors?`";
+        + "Are you sure it's in `variables/colors?`";
     }
 }
 

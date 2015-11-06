@@ -11,23 +11,23 @@ $DBmedia-namespace: "o-media" !default;
     display: block;
 }
 
-    .#{$DBmedia-namespace}__img {
-        float: left;
-        margin-right: half($DBbaseline);
+.#{$DBmedia-namespace}__img {
+    float: left;
+    margin-right: half($DBbaseline);
 
-        > img {
-            display: block;
-        }
-
-    }
-
-    .#{$DBmedia-namespace}__body {
-        overflow: hidden;
+    > img {
         display: block;
-
-        &,
-        > :last-child {
-            margin-bottom: 0;
-        }
-
     }
+
+}
+
+.#{$DBmedia-namespace}__body {
+    overflow: hidden;
+    display: block;
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}

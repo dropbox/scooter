@@ -9,68 +9,68 @@ $DBtypeahead-namespace: "c-typeahead" !default;
 $DBtypeahead-background: color(white) !default;
 
 .#{$DBinput-namespace}--typeahead {
-  &.is-active {
-    border-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+    &.is-active {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 /**
  * Typeahead component
  */
 .#{$DBtypeahead-namespace} {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin-top: -1px;
-  overflow: scroll;
-  max-height: 180px;
-
-  line-height: 1.5;
-
-  background-color: $DBtypeahead-background;
-  background-clip: padding-box;
-  border-radius: 0 0 4px 4px;
-  border: 1px solid color(gray, x-dark, 0.1);
-  box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
-
-  &.is-open {
-    display: block;
-  }
-
-  &__result {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     margin-top: -1px;
+    overflow: scroll;
+    max-height: 180px;
 
-    cursor: pointer;
+    line-height: 1.5;
 
-    &.is-selected {
-      margin-bottom: -2px;
-      z-index: 2;
+    background-color: $DBtypeahead-background;
+    background-clip: padding-box;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid color(gray, x-dark, 0.1);
+    box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
 
-      color: color(blue);
-      background-color: color(blue, x-light);
-      border-bottom: 1px solid;
-      border-color: color(gray, x-dark, 0.1);
-
-      .f-meta {
-        color: inherit;
-      }
+    &.is-open {
+        display: block;
     }
 
-    &.is-invalid {
-      cursor: default;
+    &__result {
+        margin-top: -1px;
+
+        cursor: pointer;
+
+        &.is-selected {
+            margin-bottom: -2px;
+            z-index: 2;
+
+            color: color(blue);
+            background-color: color(blue, x-light);
+            border-bottom: 1px solid;
+            border-color: color(gray, x-dark, 0.1);
+
+            .f-meta {
+                color: inherit;
+            }
+        }
+
+        &.is-invalid {
+            cursor: default;
+        }
     }
-  }
 
-  &__media, &__content {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &__media, &__content {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-  &__media {
-    margin-right: half($DBbaseline);
-  }
+    &__media {
+        margin-right: half($DBbaseline);
+    }
 }
