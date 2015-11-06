@@ -60,34 +60,25 @@ $DBresponsive-grid: false !default;
     margin-left: -$DBgutter-width;
 
     > %span-all       { width: percentage(1 / 1); }
-
     > %one-half       { width: percentage(1 / 2); }
-
     > %one-third      { width: percentage(1 / 3); }
     > %two-thirds     { width: percentage(2 / 3); }
-
     > %one-quarter    { width: percentage(1 / 4); }
     > %two-quarters   { width: percentage(2 / 4); }
     > %three-quarters { width: percentage(3 / 4); }
 
     > %push-span-all       { margin-left: percentage(1 / 1); }
-
     > %push-one-half       { margin-left: percentage(1 / 2); }
-
     > %push-one-third      { margin-left: percentage(1 / 3); }
     > %push-two-thirds     { margin-left: percentage(2 / 3); }
-
     > %push-one-quarter    { margin-left: percentage(1 / 4); }
     > %push-two-quarters   { margin-left: percentage(2 / 4); }
     > %push-three-quarters { margin-left: percentage(3 / 4); }
 
     > %pull-span-all       { margin-left: -(percentage(1 / 1)); }
-
     > %pull-one-half       { margin-left: -(percentage(1 / 2)); }
-
     > %pull-one-third      { margin-left: -(percentage(1 / 3)); }
     > %pull-two-thirds     { margin-left: -(percentage(2 / 3)); }
-
     > %pull-one-quarter    { margin-left: -(percentage(1 / 4)); }
     > %pull-two-quarters   { margin-left: -(percentage(2 / 4)); }
     > %pull-three-quarters { margin-left: -(percentage(3 / 4)); }
