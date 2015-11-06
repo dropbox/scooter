@@ -20,7 +20,6 @@ $DBloadingindicator-speed: 0.9s;
  * Loading indicator component
  */
 .#{$DBloadingindicator-namespace} {
-    position: relative;
     display: inline-block;
     position: relative;
     width: $DBloadingindicator-size;
@@ -45,7 +44,6 @@ $DBloadingindicator-speed: 0.9s;
         width: $DBloadingindicator-size;
         height: $DBloadingindicator-size;
         margin-left: round($DBloadingindicator-size * 0.6);
-        left: 100%;
 
         border-radius: 100%;
         background-color: rgba($DBloadingindicator-color, 0.3);
