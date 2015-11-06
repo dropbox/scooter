@@ -36,23 +36,28 @@ $DBbanner-text-error: color(red, x-dark) !default;
 .#{$DBbanner-namespace} {
     @extend %u-l-isle;
 
+    background-color: $DBbanner-background-neutral;
     color: $DBbanner-text-neutral;
+    border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-color: color(gray, x-dark, 0.1);
     background-color: $DBbanner-background-neutral;
 
     &#{&}--success {
+        background-color: $DBbanner-background-success;
         color: $DBbanner-text-success;
         background-color: $DBbanner-background-success;
     }
 
     &#{&}--warning {
+        background-color: $DBbanner-background-warning;
         color: $DBbanner-text-warning;
         background-color: $DBbanner-background-warning;
     }
 
     &#{&}--error {
+        background-color: $DBbanner-background-error;
         color: $DBbanner-text-error;
         background-color: $DBbanner-background-error;
     }
@@ -61,6 +66,7 @@ $DBbanner-text-error: color(red, x-dark) !default;
     // edge of the page. The unpinned modifier treats the banner as a fixed or
     // relatively-positioned element.
     &#{&}--unpinned {
+        border-style: solid;
         border-width: 1px;
         border-style: solid;
         border-radius: 3px;

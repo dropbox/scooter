@@ -18,6 +18,7 @@
 $DBtab-nav-namespace: "c-tab-nav" !default;
 
 .#{$DBtab-nav-namespace} {
+    padding-left: 0;
     margin-left: 0;
     padding-left: 0;
 
@@ -35,6 +36,7 @@ $DBtab-nav-namespace: "c-tab-nav" !default;
     transition: 0.2s;
 
     &:hover {
+        border-bottom-color: color(gray, dark, .3);
         color: color(gray, dark);
         border-bottom-color: color(gray, dark, 0.3);
     }
@@ -60,5 +62,6 @@ $DBtab-nav-namespace: "c-tab-nav" !default;
 
         color: color(gray, dark);
         border-bottom-color: currentColor;
+        color: color(gray, dark);
     }
 }

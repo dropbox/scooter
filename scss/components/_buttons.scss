@@ -36,11 +36,15 @@ $DBbutton-border-tertiary: color(blue) !default;
     line-height: 1.4;
     text-align: center;
     text-decoration: none;
+    font-weight: 600;
 
     border: 1px solid currentColor;
     border-radius: 3px;
 
     cursor: pointer;
+    // Ensure the element is actually a button
+
+    @include assert-selector(button, '[type=submit]');
 
     &[disabled], &#{&}--disabled {
         opacity: 0.5;
@@ -49,6 +53,7 @@ $DBbutton-border-tertiary: color(blue) !default;
     }
 
     &:focus {
+        outline: none;
         box-shadow: 0 0 0 2px color(blue, 0.3);
         outline: none;
     }
@@ -70,10 +75,12 @@ $DBbutton-border-tertiary: color(blue) !default;
         border-color: $DBbutton-border-primary;
         background-color: $DBbutton-background-fallback-primary;
         background: $DBbutton-background-primary;
+        border-color: $DBbutton-border-primary;
     }
 
     &#{&}--secondary {
         color: $DBbutton-text-secondary;
+        background: $DBbutton-background-secondary;
         border-color: $DBbutton-border-secondary;
         background: $DBbutton-background-secondary;
     }
@@ -83,5 +90,6 @@ $DBbutton-border-tertiary: color(blue) !default;
         border-color: $DBbutton-border-tertiary;
         background-color: $DBbutton-background-fallback-tertiary;
         background: $DBbutton-background-tertiary;
+        border-color: $DBbutton-border-tertiary;
     }
 }

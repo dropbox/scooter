@@ -180,6 +180,8 @@ $DBresponsive-grid: false !default;
         @if ($DBresponsive-grid == true) {
             @media (max-width: $DBbreakpoint-medium) {
                 display: block;
+                margin-left: 0;
+                margin-right: 0;
                 width: auto;
                 margin-right: 0;
                 margin-left: 0;
@@ -246,6 +248,7 @@ $DBresponsive-grid: false !default;
     // Centers the column in the grid and clears the row of all other columns
     .#{$DBgrid-column-namespace}--centered {
         display: block;
+        margin-left: auto;
         margin-right: auto;
         margin-left: auto;
     }

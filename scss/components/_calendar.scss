@@ -9,6 +9,7 @@ $DBcalendar-namespace: "c-calendar";
 .#{$DBcalendar-namespace} {
     display: inline-block;
 
+    background-color: color(gray, x-light);
     border-radius: 5px;
     background-color: color(gray, x-light);
 
@@ -18,6 +19,7 @@ $DBcalendar-namespace: "c-calendar";
         font-size: 0.6em;
         letter-spacing: 0.05em;
         text-transform: uppercase;
+        letter-spacing: .05em;
 
         color: color(gray, medium);
     }
@@ -28,6 +30,7 @@ $DBcalendar-namespace: "c-calendar";
         text-align: center;
 
         color: color(blue);
+        background-color: color(white);
         border: 1px solid color(gray, x-light);
         background-color: color(white);
 

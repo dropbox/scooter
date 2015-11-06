@@ -22,6 +22,8 @@ $DBcard-border-selected: color(blue) !default;
  * Card component with optional arrow/tail
  */
 .#{$DBcard-namespace} {
+    box-sizing: border-box;
+    position: relative;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -33,6 +35,9 @@ $DBcard-border-selected: color(blue) !default;
     box-shadow: 0 1px 2px rgba($DBcard-border, 0.1);
     background-color: $DBcard-background;
     background-clip: padding-box;
+    border: 1px solid rgba($DBcard-border,0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba($DBcard-border,0.1);
     transition: 0.1s;
 
     &#{&}--arrow {
@@ -72,6 +77,7 @@ $DBcard-border-selected: color(blue) !default;
 
         &-ne, &-se {
             &::after, &::before {
+                left: auto;
                 right: 0;
                 left: auto;
                 margin-right: 12px;
@@ -86,6 +92,7 @@ $DBcard-border-selected: color(blue) !default;
         // assume North is the desired default.
         &-sw, &-se, &-s {
             &::after, &::before {
+                bottom: auto;
                 top: 100%;
                 bottom: auto;
 
@@ -118,6 +125,7 @@ $DBcard-border-selected: color(blue) !default;
 
         &-se, &-sw, &-s {
             &:hover::before {
+                border-bottom-color: transparent;
                 border-top-color: rgba($DBcard-border, 0.3);
                 border-bottom-color: transparent;
                 filter: drop-shadow(0 1px 2px rgba($DBcard-border, 0.3));
@@ -138,6 +146,7 @@ $DBcard-border-selected: color(blue) !default;
     &--arrow-se, &--arrow-sw, &--arrow-s {
         &.is-selected {
             &::before, &:hover::before {
+                border-bottom-color: transparent;
                 border-top-color: $DBcard-border-selected;
                 border-bottom-color: transparent;
             }

@@ -43,6 +43,8 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 
     font-size: $DBfont-size;
 
+    background-color: $DBinput-background;
+    background-clip: padding-box;
     color: $DBinput-color;
     border: 1px solid $DBinput-border;
     border-radius: 3px;
@@ -50,6 +52,7 @@ $DBinput-background-disabled: color(gray, x-light) !default;
     background-clip: padding-box;
 
     &:focus {
+        outline: 0;
         border-color: $DBinput-border-focused;
         outline: 0;
     }
@@ -68,10 +71,15 @@ $DBinput-background-disabled: color(gray, x-light) !default;
         // Override default invalidation styles
         box-shadow: none;
         outline: 0;
+
+        @include background-image("icon-form-invalid.svg", 14px, right 10px center);
+        border-color: color(red, 0.5);
     }
 
     &.is-valid,
     .#{$DBform-namespace}--validated &:valid {
+        padding-right: 34px;
+
         @include background-image("icon-form-valid.svg", 14px, right 10px center);
 
         padding-right: 34px;
@@ -83,6 +91,8 @@ textarea.#{$DBinput-namespace} {
 }
 
 select.#{$DBinput-namespace} {
+    padding-right: 27px;
+
     @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
 
     padding-right: 27px;

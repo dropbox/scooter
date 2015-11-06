@@ -30,11 +30,13 @@ $DBtitlebubble-point-width: 5px !default;
 
     &:after {
         content: attr(data-title);
+        position: absolute;
         display: none;
         position: absolute;
         top: 100%;
         left: 50%;
         white-space: nowrap;
+        padding: 7px 9px;
         margin-top: $DBtitlebubble-point-width;
         padding: 7px 9px;
 
@@ -51,10 +53,12 @@ $DBtitlebubble-point-width: 5px !default;
 
     &:before {
         content: "";
+        position: absolute;
         display: none;
         position: absolute;
         top: 100%;
         left: 50%;
+        margin-left: -$DBtitlebubble-point-width;
         margin-top: -($DBtitlebubble-point-width);
         margin-left: -$DBtitlebubble-point-width;
 
@@ -72,6 +76,8 @@ $DBtitlebubble-point-width: 5px !default;
         &:before {
             top: auto;
             bottom: 100%;
+            border-bottom-color: transparent;
+            border-top-color: $DBtitlebubble-background;
             margin-bottom: -$DBtitlebubble-point-width;
 
             border-top-color: $DBtitlebubble-background;
@@ -83,6 +89,7 @@ $DBtitlebubble-point-width: 5px !default;
         &:after {
             top: 50%;
             left: 100%;
+            margin-left: $DBtitlebubble-point-width;
             margin-top: 0;
             margin-left: $DBtitlebubble-point-width;
 
@@ -104,6 +111,7 @@ $DBtitlebubble-point-width: 5px !default;
             top: 50%;
             right: 100%;
             left: auto;
+            margin-right: $DBtitlebubble-point-width;
             margin-top: 0;
             margin-right: $DBtitlebubble-point-width;
 
