@@ -7,43 +7,43 @@
 //
 .u-font-center,
 %u-font-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .u-font-left,
 %u-font-left {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 .u-font-right,
 %u-font-right {
-  text-align: right !important;
+    text-align: right !important;
 }
 
 .u-font-small,
 %u-font-small {
-  font-size: .85em;
+    font-size: .85em;
 }
 
 .u-font-meta,
 %u-font-meta {
-  color: color(gray, medium);
+    color: color(gray, medium);
 }
 
 .u-font-error,
 %u-font-error {
-  color: color(red);
+    color: color(red);
 }
 
 .u-font-success,
 %u-font-success {
-  color: color(green);
+    color: color(green);
 }
 
 // Hide text in element
 // Useful for icons with screenreader-accessible text
 .u-thide {
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
 }

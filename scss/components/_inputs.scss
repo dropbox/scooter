@@ -22,68 +22,68 @@ $DBinput-background-disabled: color(gray, x-light) !default;
  * Input & label components
  */
 .#{$DBlabel-namespace} {
-  // Ensure the element is actually a label
-  @include assert-selector(label);
+    // Ensure the element is actually a label
+    @include assert-selector(label);
 
-  display: block;
-  margin-bottom: $DBbaseline;
+    display: block;
+    margin-bottom: $DBbaseline;
 
-  font-size: 12px;
+    font-size: 12px;
 
-  color: $DBlabel-color;
+    color: $DBlabel-color;
 }
 
 .#{$DBinput-namespace} {
-  // Ensure the element is actually a kind of input
-  @include assert-selector(input, select, textarea);
+    // Ensure the element is actually a kind of input
+    @include assert-selector(input, select, textarea);
 
-  display: block;
-  width: 100%;
-  padding: 7px;
+    display: block;
+    width: 100%;
+    padding: 7px;
 
-  font-size: $DBfont-size;
+    font-size: $DBfont-size;
 
-  background-color: $DBinput-background;
-  background-clip: padding-box;
-  color: $DBinput-color;
-  border: 1px solid $DBinput-border;
-  border-radius: 3px;
+    background-color: $DBinput-background;
+    background-clip: padding-box;
+    color: $DBinput-color;
+    border: 1px solid $DBinput-border;
+    border-radius: 3px;
 
-  &:focus {
-    outline: 0;
-    border-color: $DBinput-border-focused;
-  }
+    &:focus {
+        outline: 0;
+        border-color: $DBinput-border-focused;
+    }
 
-  &:disabled, &.is-disabled {
-    background-color: $DBinput-background-disabled;
-  }
+    &:disabled, &.is-disabled {
+        background-color: $DBinput-background-disabled;
+    }
 
-  &.is-invalid,
-  .#{$DBform-namespace}--validated &:invalid {
-    padding-right: 34px;
+    &.is-invalid,
+    .#{$DBform-namespace}--validated &:invalid {
+        padding-right: 34px;
 
-    // Override default invalidation styles
-    box-shadow: none;
-    outline: 0;
+        // Override default invalidation styles
+        box-shadow: none;
+        outline: 0;
 
-    @include background-image("icon-form-invalid.svg", 14px, right 10px center);
-    border-color: color(red, 0.5);
-  }
+        @include background-image("icon-form-invalid.svg", 14px, right 10px center);
+        border-color: color(red, 0.5);
+    }
 
-  &.is-valid,
-  .#{$DBform-namespace}--validated &:valid {
-    padding-right: 34px;
+    &.is-valid,
+    .#{$DBform-namespace}--validated &:valid {
+        padding-right: 34px;
 
-    @include background-image("icon-form-valid.svg", 14px, right 10px center);
-  }
+        @include background-image("icon-form-valid.svg", 14px, right 10px center);
+    }
 }
 
 textarea.#{$DBinput-namespace} {
-  resize: vertical;
+    resize: vertical;
 }
 
 select.#{$DBinput-namespace} {
-  padding-right: 27px;
+    padding-right: 27px;
 
-  @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
+    @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
 }

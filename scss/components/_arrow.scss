@@ -7,19 +7,19 @@
 $DBarrow-namespace: "c-arrow";
 
 .#{$DBarrow-namespace} {
-  &, &--down {
-    @include arrow(10px, currentColor, down);
-  }
+    &, &--down {
+        @include arrow(10px, currentColor, down);
+    }
 
-  &--left {
-    @include arrow(10px, currentColor, left);
-  }
+    &--left {
+        @include arrow(10px, currentColor, left);
+    }
 
-  &--right {
-    @include arrow(10px, currentColor, right);
-  }
+    &--right {
+        @include arrow(10px, currentColor, right);
+    }
 
-  &--up {
-    @include arrow(10px, currentColor, up);
-  }
+    &--up {
+        @include arrow(10px, currentColor, up);
+    }
 }

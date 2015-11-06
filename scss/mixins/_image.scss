@@ -6,10 +6,10 @@
 //-----------------------------------
 
 @mixin background-image($name, $size: null, $position: center, $repeat: no-repeat) {
-  background-image: url("#{$DBimage-path}#{$name}");
-  @if ($size != null) {
-    background-size: $size;
-  }
-  background-position: $position;
-  background-repeat: $repeat;
+    background-image: url("#{$DBimage-path}#{$name}");
+    @if ($size != null) {
+        background-size: $size;
+    }
+    background-position: $position;
+    background-repeat: $repeat;
 }

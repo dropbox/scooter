@@ -6,7 +6,7 @@ $DBwrap-namespace: "o-wrap";
 $DBwrap-width: 990px;
 
 .#{$DBwrap-namespace} {
-  display: block;
-  max-width: $DBwrap-width;
-  margin: 0 auto;
+    display: block;
+    max-width: $DBwrap-width;
+    margin: 0 auto;
 }
