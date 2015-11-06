@@ -25,7 +25,7 @@ linters:
     enabled: false
 
   ColorVariable:
-    enabled: true
+    enabled: false
 
   Comment:
     enabled: true
