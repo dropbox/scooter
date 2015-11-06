@@ -29,6 +29,7 @@ linters:
 
   Comment:
     enabled: true
+    allowed: '/\*!'
 
   DebugStatement:
     enabled: true
