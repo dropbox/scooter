@@ -109,7 +109,7 @@ $DBresponsive-grid: false !default;
                 } @else if $relation == (3 / 4) {
                     @extend %three-quarters;
                 } @else {
-                    width: percentage($i/$group);
+                    width: percentage($i / $group);
                 }
             }
 
@@ -130,7 +130,7 @@ $DBresponsive-grid: false !default;
                 } @else if $relation == (3 / 4) {
                     @extend %push-three-quarters;
                 } @else {
-                    margin-left: percentage($i/$group);
+                    margin-left: percentage($i / $group);
                 }
             }
 
@@ -152,7 +152,7 @@ $DBresponsive-grid: false !default;
                     @extend %pull-three-quarters;
                 } @else {
 
-                    margin-left: -(percentage($i/$group));
+                    margin-left: -(percentage($i / $group));
 
                 }
             }

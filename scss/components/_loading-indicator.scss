@@ -52,7 +52,7 @@ $DBloadingindicator-speed: 0.9s;
 
     &:after {
         left: 200%;
-        margin-left: (round($DBloadingindicator-size * 0.3)+$DBloadingindicator-size);
+        margin-left: (round($DBloadingindicator-size * 0.3) + $DBloadingindicator-size);
 
         animation-delay: (($DBloadingindicator-speed / 3) * 2);
     }
