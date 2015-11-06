@@ -1,0 +1,7 @@
+scss:
+  enabled: true
+  config_file: .scss-style.yml
+  exclude:
+    - 'docs/**'
+
+fail_on_violations: true
