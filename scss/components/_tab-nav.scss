@@ -18,46 +18,47 @@
 $DBtab-nav-namespace: "c-tab-nav" !default;
 
 .#{$DBtab-nav-namespace} {
-  padding-left: 0;
-  margin-left: 0;
+    margin-left: 0;
+    padding-left: 0;
 
-  list-style: none;
-  border-bottom: 1px solid color(gray, dark, .1);
+    list-style: none;
+
+    border-bottom: 1px solid color(gray, dark, 0.1);
 }
 
-  .#{$DBtab-nav-namespace}__tab {
+.#{$DBtab-nav-namespace}__tab {
     display: inline-block;
     margin-bottom: -1px;
 
-    border-bottom: 1px solid transparent;
     color: color(gray, medium);
-    transition: .2s;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
 
     &:hover {
-      border-bottom-color: color(gray, dark, .3);
-      color: color(gray, dark);
+        color: color(gray, dark);
+        border-bottom-color: color(gray, dark, 0.3);
     }
 
     // Adjacent siblings get a margin-left
     + #{&} {
-      margin-left: 16px;
+        margin-left: 16px;
     }
 
     a {
-      display: inline-block;
-      padding-bottom: 8px;
+        display: inline-block;
+        padding-bottom: 8px;
 
-      color: inherit;
+        color: inherit;
 
-      &:hover {
-        text-decoration: none;
-      }
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &#{&}--is-active {
-      font-weight: 600;
+        font-weight: 600;
 
-      border-bottom-color: currentColor;
-      color: color(gray, dark);
+        color: color(gray, dark);
+        border-bottom-color: currentColor;
     }
-  }
+}

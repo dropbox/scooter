@@ -25,49 +25,49 @@
 $DBflag-namespace: "o-flag" !default;
 
 .#{$DBflag-namespace} {
-  display: table;
-  width: 100%;
-
-
-  &__fix,
-  &__flex {
-    display: table-cell;
-    vertical-align: middle;
-
-    // Use the --top modifier to align top edges of the elements
-    .#{$DBflag-namespace}--top & {
-      vertical-align: top;
-    }
-
-    // Use --bottom to align bottom edges of the elements
-    .#{$DBflag-namespace}--bottom & {
-      vertical-align: bottom;
-    }
-
-  }
-
-  // The fixed-width element
-  &__fix {
-    padding-right: 10px;
-
-    > * {
-      display: block;
-      max-width: none;
-      // Force the "pinned" element to not wrap lines
-      white-space: nowrap;
-    }
-
-    // Use the --rev modifier when the order is reversed (fixed-width element on
-    // the right of the fluid width element)
-    .#{$DBflag-namespace}--rev & {
-      padding-right: 0;
-      padding-left: 10px;
-    }
-
-  }
-
-  // This element grows to fill the remainder of its container
-  &__flex {
+    display: table;
     width: 100%;
-  }
+
+
+    &__fix,
+    &__flex {
+        display: table-cell;
+        vertical-align: middle;
+
+        // Use the --top modifier to align top edges of the elements
+        .#{$DBflag-namespace}--top & {
+            vertical-align: top;
+        }
+
+        // Use --bottom to align bottom edges of the elements
+        .#{$DBflag-namespace}--bottom & {
+            vertical-align: bottom;
+        }
+
+    }
+
+    // The fixed-width element
+    &__fix {
+        padding-right: 10px;
+
+        > * {
+            display: block;
+            // Force the "pinned" element to not wrap lines
+            white-space: nowrap;
+            max-width: none;
+        }
+
+        // Use the --rev modifier when the order is reversed (fixed-width element on
+        // the right of the fluid width element)
+        .#{$DBflag-namespace}--rev & {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+    }
+
+    // This element grows to fill the remainder of its container
+    &__flex {
+        width: 100%;
+    }
 }

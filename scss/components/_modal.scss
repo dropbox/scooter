@@ -15,60 +15,60 @@ $DBmodal-background-alt: color(gray, x-light) !default;
  * Modal component
  */
 .#{$DBmodal-namespace}-overlay {
-  padding: $DBmodal-padding;
-  position: absolute;
-  @include share(top, right, bottom, left, 0);
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+    @include share(top, right, bottom, left, 0);
+    display: flex;
+    position: absolute;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: $DBmodal-padding;
 
-  background-color: color(gray, dark, .6);
+    background-color: color(gray, dark, 0.6);
 }
 
 .#{$DBmodal-namespace} {
-  max-width: 640px;
-  flex: 1 1 640px;
-  overflow: scroll;
+    overflow: scroll;
+    flex: 1 1 640px;
+    max-width: 640px;
 
-  background-color: $DBmodal-background;
-  box-shadow: 0 1px 2px color(gray, x-dark, .1);
-  border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px color(gray, x-dark, 0.1);
+    background-color: $DBmodal-background;
 }
 
-  .#{$DBmodal-namespace}__title,
-  .#{$DBmodal-namespace}__header {
+.#{$DBmodal-namespace}__title,
+.#{$DBmodal-namespace}__header {
     z-index: 3;
     padding: ($DBmodal-padding/2) $DBmodal-padding;
 
+    box-shadow: 0 1px 1px color(gray, x-dark, 0.1);
     background-color: $DBmodal-background;
-    box-shadow: 0 1px 1px color(gray, x-dark, .1);
 
     .#{$DBmodal-namespace}--unibody & {
-      padding-bottom: 0;
+        padding-bottom: 0;
 
-      box-shadow: none;
+        box-shadow: none;
     }
 
     h2 {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
-  }
+}
 
-  .#{$DBmodal-namespace}__content {
-    padding: $DBmodal-padding;
+.#{$DBmodal-namespace}__content {
     // Raise the z-index to enable overlapping of sibling banners
     z-index: 2;
+    padding: $DBmodal-padding;
 
     background-color: $DBmodal-background-alt;
 
     .#{$DBmodal-namespace}--unibody & {
-      // The 'unibody' variant of c-modal has no differentiation between the
-      // title and the content
-      background-color: $DBmodal-background;
+        // The 'unibody' variant of c-modal has no differentiation between the
+        // title and the content
+        background-color: $DBmodal-background;
     }
-  }
+}
 
-  .#{$DBmodal-namespace}__banner {
+.#{$DBmodal-namespace}__banner {
     box-shadow: inset 0 1px 0 color(gray, x-dark, 0.1);
-  }
+}

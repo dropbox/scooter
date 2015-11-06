@@ -5,17 +5,17 @@
 //---------------------------
 
 @function half($n) {
-  @return round($n / 2);
+    @return round($n / 2);
 }
 
 @function quarter($n) {
-  @return round($n / 4);
+    @return round($n / 4);
 }
 
 @function double($n) {
-  @return round($n * 2);
+    @return round($n * 2);
 }
 
 @function quadruple($n) {
-  @return round($n * 4);
+    @return round($n * 4);
 }

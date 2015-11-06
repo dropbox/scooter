@@ -24,3 +24,5 @@ gem "middleman-syntax"
 
 # Autoprefixer!
 gem 'middleman-autoprefixer'
+
+gem 'scss-lint'

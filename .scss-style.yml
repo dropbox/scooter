@@ -29,7 +29,7 @@ linters:
 
   Comment:
     enabled: true
-    allowed: '/\*!'
+    allowed: '/\*[!*]'
 
   DebugStatement:
     enabled: true
@@ -244,7 +244,7 @@ linters:
       -
       - quotes
       - speak
-    ignore_unspecified: false
+    ignore_unspecified: true
     min_properties: 2
     separate_groups: true
 

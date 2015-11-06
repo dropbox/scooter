@@ -10,7 +10,7 @@
 // @include share(padding-top, padding-bottom, 23px);
 //
 @mixin share($props.../*, $value */) {
-  @for $i from 1 to length($props) {
-    #{nth($props, $i)}: nth($props, -1);
-  }
+    @for $i from 1 to length($props) {
+        #{nth($props, $i)}: nth($props, -1);
+    }
 }

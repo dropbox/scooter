@@ -14,43 +14,44 @@
 h1,
 %f-alpha,
 .f-alpha {
-  display: block;
-  margin-bottom: $DBbaseline;
+    display: block;
+    margin-bottom: $DBbaseline;
 
-  font-size: 28px;
-  font-weight: 200;
-  line-height: 36px;
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 36px;
 }
 
 h2,
 %f-beta,
 .f-beta {
-  display: block;
-  margin-bottom: $DBbaseline;
+    display: block;
+    margin-bottom: $DBbaseline;
 
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 h3,
 %f-gamma,
 .f-gamma {
-  display: block;
-  margin-bottom: $DBbaseline;
+    display: block;
+    margin-bottom: $DBbaseline;
 
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 h4,
 %f-delta,
 .f-delta {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: $DBbaseline;
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: $DBbaseline;
 }
 
 // Other type styles
@@ -58,21 +59,22 @@ h4,
 //
 hr,
 %hr{
-  margin-bottom: $DBbaseline;
+    margin-bottom: $DBbaseline;
 
-  border: none;
-  border-top: 1px solid color(gray, x-dark, 0.1);
+    border: 0;
+    border-top: 1px solid color(gray, x-dark, 0.1);
 }
 
 a,
 %f-a,
 .f-a {
-  color: color(blue);
-  text-decoration: none;
+    text-decoration: none;
 
-  cursor: pointer;
+    color: color(blue);
 
-  &:hover {
-    text-decoration: underline;
-  }
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

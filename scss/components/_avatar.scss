@@ -11,29 +11,29 @@ $DBavatar-color: color(blue) !default;
 // Map for the various sizes of avatars
 // This will help automate generation of classes for different avatar sizes
 $DBavatar-sizes: (
-  xs: 16px,
-   s: 24px,
-   m: 32px,
-   l: 48px,
-  xl: 64px
+xs: 16px,
+s: 24px,
+m: 32px,
+l: 48px,
+xl: 64px
 ) !default;
 
 // @private mixin avatarSize
 // Set proportional font size, weight, and line-height for avatars without photos
 @mixin __avatarSize($s: 32px) {
-  height: $s;
-  width: $s;
+    width: $s;
+    height: $s;
 
-  font-size: round($s*.45);
-  line-height: ($s - 4px);
+    font-size: round($s * 0.45);
+    line-height: ($s - 4px);
 
-  @if($s < 32px) {
-    font-weight: 700;
-  } @else if($s >= 48px) {
-    font-weight: 400;
-  } @else {
-    font-weight: 600;
-  }
+    @if($s < 32px) {
+        font-weight: 700;
+    } @else if($s >= 48px) {
+        font-weight: 400;
+    } @else {
+        font-weight: 600;
+    }
 }
 
 /**
@@ -41,71 +41,71 @@ $DBavatar-sizes: (
  * initials.
  */
 .#{$DBavatar-namespace} {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  overflow: hidden;
+    // Default size for avatars without explicit sizing
+    @include __avatarSize(32px);
 
-  // Default size for avatars without explicit sizing
-  @include __avatarSize(32px);
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
 
-  text-align: center;
+    text-align: center;
 
-  // Default color for avatars without images
-  color: $DBavatar-color;
-  border-radius: 100%;
-
-  &__img,
-  > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    // Keep proportions in tact even if the container is the wrong size
-    object-fit: cover;
-  }
-
-  // Give avatars a subtle little border
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
+    // Default color for avatars without images
+    color: $DBavatar-color;
     border-radius: 100%;
 
-    pointer-events: none;
-  }
+    &__img,
+    > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // Keep proportions in tact even if the container is the wrong size
+        object-fit: cover;
+    }
 
-  &#{&}--no-img {
-    border: 2px solid currentColor;
-
+    // Give avatars a subtle little border
     &:after {
-      content: attr(data-initials);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-      box-shadow: none;
+        border-radius: 100%;
+        box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
+
+        pointer-events: none;
     }
 
-    &.#{$DBavatar-namespace}--xs:after {
-      content: "";
-    }
-  }
+    &#{&}--no-img {
+        border: 2px solid currentColor;
 
-  // Loop through all the avatar sizes to generate selectors
-  @each $key, $size in $DBavatar-sizes {
-    // This is output to `.#{DBavatar-ns}--size`
-    &--#{$key} {
-      @include __avatarSize($size);
-
-      @if $key == "xs" {
-        // Extra small avatars get no initials
         &:after {
-          content: "";
+            content: attr(data-initials);
+
+            box-shadow: none;
         }
-      }
+
+        &.#{$DBavatar-namespace}--xs:after {
+            content: "";
+        }
     }
-  } // end @each
+
+    // Loop through all the avatar sizes to generate selectors
+    @each $key, $size in $DBavatar-sizes {
+        // This is output to `.#{DBavatar-ns}--size`
+        &--#{$key} {
+            @include __avatarSize($size);
+
+            @if $key == "xs" {
+                // Extra small avatars get no initials
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    } // end @each
 } // end .avatar

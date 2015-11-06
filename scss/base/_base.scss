@@ -5,8 +5,9 @@
 //---------------------------
 
 html, :root {
-  font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  color: color(gray);
+    box-sizing: border-box;
 
-  box-sizing: border-box;
+    font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
+
+    color: color(gray);
 }
