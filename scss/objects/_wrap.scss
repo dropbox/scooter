@@ -2,8 +2,8 @@
 // Object: Wrap
 //-----------------------------
 
-$DBwrap-namespace: "o-wrap";
-$DBwrap-width: 990px;
+$DBwrap-namespace: "o-wrap" !default;
+$DBwrap-width: 990px !default;
 
 .#{$DBwrap-namespace} {
     display: block;
