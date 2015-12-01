@@ -24,15 +24,15 @@
 //  Customisation
 //  =============
 //
-//  $grid-namespace and $grid-column-namespace adjusts the class names for the
+//  $DBgrid-namespace and $grid-column-namespace adjusts the class names for the
 //  grid. With default values, grid wrappers have a class of '.grid' and
 //  columns '.grid__col'.
 //
-//  $col-groups(n) adjusts column divisions.
-//  For example, $col-groups(12) will produce a 12-column grid.
-//  $col-groups(3,6,8) will produce a 3-, 6-, and 8-column grid.
+//  $DBcol-groups(n) adjusts column divisions.
+//  For example, $DBcol-groups(12) will produce a 12-column grid.
+//  $DBcol-groups(3,6,8) will produce a 3-, 6-, and 8-column grid.
 //
-//  $gutter-width is-you guessed it-the gutter width. Accepts any unit.
+//  $DBgutter-width is-you guessed it-the gutter width. Accepts any unit.
 //
 //  That's it. Have fun.
 //
@@ -43,8 +43,8 @@
 $DBgrid-namespace: "o-grid" !default;
 $DBgrid-column-namespace: "o-grid__col" !default;
 
-// $col-groups are the column groups you want
-// For example, $col-groups: (3, 4, 5) will output:
+// $DBcol-groups are the column groups you want
+// For example, $DBcol-groups: (3, 4, 5) will output:
 // .grid__col--n-of-3, .grid__col--n-of-4, [...]
 $DBcol-groups: (2, 3, 4, 6, 12) !default;
 
@@ -52,238 +52,246 @@ $DBcol-groups: (2, 3, 4, 6, 12) !default;
 $DBgutter-width: 20px !default;
 
 // Breakpoints
-$DBbreakpoint-medium: 700px !default;
-$DBbreakpoint-small: 480px !default;
-
 $DBresponsive-grid: false !default;
+$DBbreakpoint-medium: 750px !default;
+$DBbreakpoint-small: 550px !default;
 
 .#{$DBgrid-namespace} {
-    margin-left: -$DBgutter-width;
-
     list-style: none;
+    margin-left: -$DBgutter-width;
+}
 
-    > %span-all       { width: percentage(1 / 1); }
-    > %one-half       { width: percentage(1 / 2); }
-    > %one-third      { width: percentage(1 / 3); }
-    > %two-thirds     { width: percentage(2 / 3); }
-    > %one-quarter    { width: percentage(1 / 4); }
-    > %two-quarters   { width: percentage(2 / 4); }
-    > %three-quarters { width: percentage(3 / 4); }
+%span-all       { width: percentage(1 / 1); }
 
-    > %push-span-all       { margin-left: percentage(1 / 1); }
-    > %push-one-half       { margin-left: percentage(1 / 2); }
-    > %push-one-third      { margin-left: percentage(1 / 3); }
-    > %push-two-thirds     { margin-left: percentage(2 / 3); }
-    > %push-one-quarter    { margin-left: percentage(1 / 4); }
-    > %push-two-quarters   { margin-left: percentage(2 / 4); }
-    > %push-three-quarters { margin-left: percentage(3 / 4); }
+%one-half       { width: percentage(1 / 2); }
 
-    > %pull-span-all       { margin-left: -(percentage(1 / 1)); }
-    > %pull-one-half       { margin-left: -(percentage(1 / 2)); }
-    > %pull-one-third      { margin-left: -(percentage(1 / 3)); }
-    > %pull-two-thirds     { margin-left: -(percentage(2 / 3)); }
-    > %pull-one-quarter    { margin-left: -(percentage(1 / 4)); }
-    > %pull-two-quarters   { margin-left: -(percentage(2 / 4)); }
-    > %pull-three-quarters { margin-left: -(percentage(3 / 4)); }
+%one-third      { width: percentage(1 / 3); }
+%two-thirds     { width: percentage(2 / 3); }
 
-    // For each of our column groups...
-    @each $group in $DBcol-groups {
+%one-quarter    { width: percentage(1 / 4); }
+%two-quarters   { width: percentage(2 / 4); }
+%three-quarters { width: percentage(3 / 4); }
 
-        // For each column width from 1 to the column group...
-        @for $i from 1 through $group {
-            $relation: ($i / $group);
+%push-span-all       { margin-left: percentage(1 / 1); }
 
-            > .#{$DBgrid-column-namespace}--#{$i}-of-#{$group} {
-                @if $relation == 1 {
-                    @extend %span-all;
-                } @else if $relation == 1 {
-                    @extend %one-half;
-                } @else if $relation == (1 / 3) {
-                    @extend %one-third;
-                } @else if $relation == (2 / 3) {
-                    @extend %two-thirds;
-                } @else if $relation == (1 / 4) {
-                    @extend %one-quarter;
-                } @else if $relation == (2 / 4) {
-                    @extend %two-quarters;
-                } @else if $relation == (3 / 4) {
-                    @extend %three-quarters;
-                } @else {
-                    width: percentage($i / $group);
-                }
-            }
+%push-one-half       { margin-left: percentage(1 / 2); }
 
-            > .#{$DBgrid-column-namespace}--push-#{$i}-of-#{$group} {
+%push-one-third      { margin-left: percentage(1 / 3); }
+%push-two-thirds     { margin-left: percentage(2 / 3); }
 
-                @if $relation == 1 {
-                    @extend %push-span-all;
-                } @else if $relation == (1 / 2) {
-                    @extend %push-one-half;
-                } @else if $relation == (1 / 3) {
-                    @extend %push-one-third;
-                } @else if $relation == (2 / 3) {
-                    @extend %push-two-thirds;
-                } @else if $relation == (1 / 4) {
-                    @extend %push-one-quarter;
-                } @else if $relation == (2 / 4) {
-                    @extend %push-two-quarters;
-                } @else if $relation == (3 / 4) {
-                    @extend %push-three-quarters;
-                } @else {
-                    margin-left: percentage($i / $group);
-                }
-            }
+%push-one-quarter    { margin-left: percentage(1 / 4); }
+%push-two-quarters   { margin-left: percentage(2 / 4); }
+%push-three-quarters { margin-left: percentage(3 / 4); }
 
-            > .#{$DBgrid-column-namespace}--pull-#{$i}-of-#{$group} {
+%pull-span-all       { margin-left: -(percentage(1 / 1)); }
 
-                @if $relation == 1 {
-                    @extend %pull-span-all;
-                } @else if $relation == (1 / 2) {
-                    @extend %pull-one-half;
-                } @else if $relation == (1 / 3) {
-                    @extend %pull-one-third;
-                } @else if $relation == (2 / 3) {
-                    @extend %pull-two-thirds;
-                } @else if $relation == (1 / 4) {
-                    @extend %pull-one-quarter;
-                } @else if $relation == (2 / 4) {
-                    @extend %pull-two-quarters;
-                } @else if $relation == (3 / 4) {
-                    @extend %pull-three-quarters;
-                } @else {
+%pull-one-half       { margin-left: -(percentage(1 / 2)); }
 
-                    margin-left: -(percentage($i / $group));
+%pull-one-third      { margin-left: -(percentage(1 / 3)); }
+%pull-two-thirds     { margin-left: -(percentage(2 / 3)); }
 
-                }
-            }
-        } // end @for
+%pull-one-quarter    { margin-left: -(percentage(1 / 4)); }
+%pull-two-quarters   { margin-left: -(percentage(2 / 4)); }
+%pull-three-quarters { margin-left: -(percentage(3 / 4)); }
 
-    } // end @each
+// For each of our column groups...
+@each $group in $DBcol-groups {
 
-    // All direct descendents of .grid get treated the same way.
-    // This might be overkill for some, but it's a time-saver for me.
-    .#{$DBgrid-column-namespace} {
-        display: inline-block;
-        vertical-align: top;
-        min-height: 1px;
-        margin-right: -0.24em;
-        padding-left: $DBgutter-width;
+    // For each column width from 1 to the column group...
+    @for $i from 1 through $group {
+        $relation: ($i / $group);
 
-        box-sizing: border-box;
-
-        [data-reactid] & {
-            // React spits out markup with no whitespace between elements, so the inline-block hack to remove spaces is no
-            // longer necessary.
-            margin-right: 0;
-        }
-
-        @if ($DBresponsive-grid == true) {
-            @media (max-width: $DBbreakpoint-medium) {
-                display: block;
-                width: auto;
-                margin-right: 0;
-                margin-left: 0;
-            }
-
-            @media (max-width: $DBbreakpoint-medium) and (min-width: $DE-breakpoint-small) {
-                &[class*="#{$DBgrid-column-namespace}--m-"] {
-                    display: inline-block;
-                    margin-right: -0.24em;
-                }
-
-                &.#{$DBgrid-column-namespace}--m-1-of-2,
-                &.#{$DBgrid-column-namespace}--m-2-of-4 {
-                    width: percentage(1 / 2);
-                }
-
-                &.#{$DBgrid-column-namespace}--m-1-of-3 {
-                    width: percentage(1 / 3);
-                }
-
-                &.#{$DBgrid-column-namespace}--m-2-of-3 {
-                    width: percentage(2 / 3);
-                }
-
-                &.#{$DBgrid-column-namespace}--m-1-of-4 {
-                    width: percentage(1 / 4);
-                }
-
-                &.#{$DBgrid-column-namespace}--m-3-of-4 {
-                    width: percentage(3 / 4);
-                }
-            }
-
-            @media (max-width: $DBbreakpoint-small) {
-                &[class*="#{$DBgrid-column-namespace}--s-"] {
-                    display: inline-block;
-                    margin-right: -0.24em;
-                }
-
-                &.#{$DBgrid-column-namespace}--s-1-of-2,
-                &.#{$DBgrid-column-namespace}--s-2-of-4 {
-                    width: percentage(1 / 2);
-                }
-
-                &.#{$DBgrid-column-namespace}--s-1-of-3 {
-                    width: percentage(1 / 3);
-                }
-
-                &.#{$DBgrid-column-namespace}--s-2-of-3 {
-                    width: percentage(2 / 3);
-                }
-
-                &.#{$DBgrid-column-namespace}--s-1-of-4 {
-                    width: percentage(1 / 4);
-                }
-
-                &.#{$DBgrid-column-namespace}--s-3-of-4 {
-                    width: percentage(3 / 4);
-                }
+        .#{$DBgrid-column-namespace}--#{$i}-of-#{$group} {
+            @if $relation == 1 {
+                @extend %span-all;
+            } @else if $relation == 1 {
+                @extend %one-half;
+            } @else if $relation == (1 / 3) {
+                @extend %one-third;
+            } @else if $relation == (2 / 3) {
+                @extend %two-thirds;
+            } @else if $relation == (1 / 4) {
+                @extend %one-quarter;
+            } @else if $relation == (2 / 4) {
+                @extend %two-quarters;
+            } @else if $relation == (3 / 4) {
+                @extend %three-quarters;
+            } @else {
+                width: percentage($i / $group);
             }
         }
-    } // end if
 
-    // Centers the column in the grid and clears the row of all other columns
-    .#{$DBgrid-column-namespace}--centered {
+        .#{$DBgrid-column-namespace}--push-#{$i}-of-#{$group} {
+
+            @if $relation == 1 {
+                @extend %push-span-all;
+            } @else if $relation == (1 / 2) {
+                @extend %push-one-half;
+            } @else if $relation == (1 / 3) {
+                @extend %push-one-third;
+            } @else if $relation == (2 / 3) {
+                @extend %push-two-thirds;
+            } @else if $relation == (1 / 4) {
+                @extend %push-one-quarter;
+            } @else if $relation == (2 / 4) {
+                @extend %push-two-quarters;
+            } @else if $relation == (3 / 4) {
+                @extend %push-three-quarters;
+            } @else {
+                margin-left: percentage($i / $group);
+            }
+        }
+
+        .#{$DBgrid-column-namespace}--pull-#{$i}-of-#{$group} {
+
+            @if $relation == 1 {
+                @extend %pull-span-all;
+            } @else if $relation == (1 / 2) {
+                @extend %pull-one-half;
+            } @else if $relation == (1 / 3) {
+                @extend %pull-one-third;
+            } @else if $relation == (2 / 3) {
+                @extend %pull-two-thirds;
+            } @else if $relation == (1 / 4) {
+                @extend %pull-one-quarter;
+            } @else if $relation == (2 / 4) {
+                @extend %pull-two-quarters;
+            } @else if $relation == (3 / 4) {
+                @extend %pull-three-quarters;
+            } @else {
+
+                margin-left: -(percentage($i / $group));
+
+            }
+        }
+    } // end @for
+
+} // end @each
+
+// All direct descendents of .grid get treated the same way.
+// This might be overkill for some, but its a time-saver for me.
+.#{$DBgrid-column-namespace} {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -0.24em;
+    min-height: 1px;
+    padding-left: $DBgutter-width;
+    vertical-align: top;
+
+    // Remove whitespace offset when there is no whitespace
+    .#{$DBgrid-namespace}--nowhitespace &,
+    [data-reactid] & {
+        margin-right: 0;
+    }
+
+    @media (max-width: $DBbreakpoint-medium) {
         display: block;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-
-    // Displays the column as the first in its row
-    .#{$DBgrid-column-namespace}--d-first {
-        float: left;
-    }
-
-    // Displays the column as the last in its row
-    .#{$DBgrid-column-namespace}--d-last {
-        float: right;
-    }
-
-    // Removes gutters from the columns
-    &.grid--no-gutter {
-        width: 100%;
         margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
 
-        .#{$DBgrid-column-namespace} {
-            padding-left: 0;
+    @media (max-width: $DBbreakpoint-medium) and (min-width: $DBbreakpoint-small) {
+        &[class*="#{$DBgrid-column-namespace}--m-"] {
+            display: inline-block;
+            margin-right: -0.24em;
         }
 
-        .#{$DBgrid-column-namespace}--span-all {
-            width: 100%;
-            margin-left: 0;
+        &.#{$DBgrid-column-namespace}--m-1-of-2 {
+            width: percentage(1 / 2);
+        }
+
+        &.#{$DBgrid-column-namespace}--m-1-of-3 {
+            width: percentage(1 / 3);
+        }
+
+        &.#{$DBgrid-column-namespace}--m-2-of-3 {
+            width: percentage(2 / 3);
+        }
+
+        &.#{$DBgrid-column-namespace}--m-1-of-4 {
+            width: percentage(1 / 4);
+        }
+
+        &.#{$DBgrid-column-namespace}--m-2-of-4 {
+            @extend .#{$DBgrid-column-namespace}--m-1-of-2;
+        }
+
+        &.#{$DBgrid-column-namespace}--m-3-of-4 {
+            width: percentage(3 / 4);
         }
     }
 
-    // Align column to the bottom.
-    .#{$DBgrid-column-namespace}--ab {
-        vertical-align: bottom;
+    @media (max-width: $DBbreakpoint-small) {
+        &[class*="#{$DBgrid-column-namespace}--s-"] {
+            display: inline-block;
+            margin-right: -0.24em;
+        }
+
+        &.#{$DBgrid-column-namespace}--s-1-of-2,
+        &.#{$DBgrid-column-namespace}--s-2-of-4 {
+            width: percentage(1 / 2);
+        }
+
+        &.#{$DBgrid-column-namespace}--s-1-of-3 {
+            width: percentage(1 / 3);
+        }
+
+        &.#{$DBgrid-column-namespace}--s-2-of-3 {
+            width: percentage(2 / 3);
+        }
+
+        &.#{$DBgrid-column-namespace}--s-1-of-4 {
+            width: percentage(1 / 4);
+        }
+
+        &.#{$DBgrid-column-namespace}--s-3-of-4 {
+            width: percentage(3 / 4);
+        }
+    }
+}
+
+// Centers the column in the grid and clears the row of all other columns
+.#{$DBgrid-column-namespace}--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+// Displays the column as the first in its row
+.#{$DBgrid-column-namespace}--d-first {
+    float: left;
+}
+
+// Displays the column as the last in its row
+.#{$DBgrid-column-namespace}--d-last {
+    float: right;
+}
+
+// Removes gutters from the columns
+.#{$DBgrid-namespace}--no-gutter {
+    margin-left: 0;
+    width: 100%;
+
+    .#{$DBgrid-column-namespace} {
+        padding-left: 0;
     }
 
-    // Align column to the middle.
-    .#{$DBgrid-column-namespace}--am {
-        vertical-align: middle;
+    .#{$DBgrid-column-namespace}--span-all {
+        margin-left: 0;
+        width: 100%;
     }
+}
 
+// Align column to the bottom.
+.#{$DBgrid-column-namespace}--ab,
+.#{$DBgrid-column-namespace}--align-bottom {
+    vertical-align: bottom;
+}
+
+// Align column to the middle.
+.#{$DBgrid-column-namespace}--am,
+.#{$DBgrid-column-namespace}--align-middle {
+    vertical-align: middle;
 }
