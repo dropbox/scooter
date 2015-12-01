@@ -2,3 +2,7 @@
 .DS_Store
 docs/source/assets/css/vendor/scooter.scss
 *.css.map
+
+# Hound requires a slightly different name for the lint config,
+# so .scss-lint.yml is symlinked and ignored here.
+.scss-lint.yml
