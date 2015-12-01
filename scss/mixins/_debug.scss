@@ -1,0 +1,81 @@
+//-----------------------------
+//
+// Debugging
+// =========
+//
+// Mixins for debugging class use, etc.
+//
+//-----------------------------
+
+// Simple toggle for switching debugging on and off
+$DBdebug: true;
+
+// Mixin that gives visual feedback in the DOM if a selector is used outside of
+// a given context. Useful for detecting misused Elements in BEM.
+//
+//  .simple {
+//    font-weight: bold;
+//  }
+//
+//    .simple__usage {
+//      color: red;
+//      @include nest-check(".simple");
+//    }
+//
+// Courtesy Harry Roberts (@csswizardry)
+@mixin nest-check($element) {
+    @if ($DBdebug == true) {
+        position: relative;
+        outline: 1px solid color(red);
+
+        &::after {
+            content: "Error: Element `." attr(class) "` should be within `#{$element}`.";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            white-space: nowrap;
+
+            font-family: monospace;
+
+            background-color: color(white);
+            color: color(red);
+        }
+
+        #{$element} & {
+            outline: none;
+
+            &::after {
+                content: normal;
+            }
+        }
+    }
+}
+
+@if ($DBdebug == true) {
+
+    // If an element has a class attribute containing two hyphens but no space
+    // (i.e. only one class is being used, and it’s a Modifier), provide visual
+    // feedback in the DOM.
+    //
+    // N.B. This isn’t bulletproof: `class="foo--bar baz"` would pass, as would
+    //      `class=" foo--bar"`. Use with a pinch of salt.
+    //
+    [class*="--"]:not([class*=" "]) {
+        position: relative;
+        outline: 1px solid red;
+
+        &:after {
+            content: "Error: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            white-space: nowrap;
+
+            font-family: monospace;
+
+            background-color: white;
+            color: red;
+        }
+    }
+
+}

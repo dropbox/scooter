@@ -11,5 +11,5 @@ postcss --use autoprefixer css/scooter.css --dir css
 mv docs/source/assets/css/vendor/scooter.css docs/source/assets/css/vendor/scooter.scss
 
 # Build and deploy to gh-pages
-middleman build
-middleman deploy
+# middleman build
+# middleman deploy

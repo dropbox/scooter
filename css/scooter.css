@@ -12,6 +12,19 @@
  *   go or leave somewhere quickly: "I'd better scoot"
  *
  */
+[class*="--"]:not([class*=" "]) {
+  position: relative;
+  outline: 1px solid red; }
+  [class*="--"]:not([class*=" "]):after {
+    content: "Error: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    white-space: nowrap;
+    font-family: monospace;
+    background-color: white;
+    color: red; }
+
 *, ::after, ::before {
   position: relative;
   margin: 0;
