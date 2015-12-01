@@ -26,6 +26,7 @@ $DBdebug: true;
 @mixin nest-check($element) {
     @if ($DBdebug == true) {
         position: relative;
+
         outline: 1px solid color(red);
 
         &::after {
@@ -37,8 +38,8 @@ $DBdebug: true;
 
             font-family: monospace;
 
-            background-color: color(white);
             color: color(red);
+            background-color: color(white);
         }
 
         #{$element} & {
@@ -62,6 +63,7 @@ $DBdebug: true;
     //
     [class*="--"]:not([class*=" "]) {
         position: relative;
+
         outline: 1px solid red;
 
         &:after {
@@ -73,8 +75,8 @@ $DBdebug: true;
 
             font-family: monospace;
 
-            background-color: white;
             color: red;
+            background-color: white;
         }
     }
 
