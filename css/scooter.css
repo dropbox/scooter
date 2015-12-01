@@ -22,8 +22,8 @@
     left: 0;
     white-space: nowrap;
     font-family: monospace;
-    background-color: white;
-    color: red; }
+    color: red;
+    background-color: white; }
 
 *, ::after, ::before {
   position: relative;
@@ -929,40 +929,40 @@ select.c-input {
 
 .u-l-island {
   padding: 23px; }
-  .u-l-island--v {
+  .u-l-island-v {
     padding-top: 23px;
     padding-bottom: 23px; }
 
 .u-l-isle,
 .c-banner {
   padding: 12px; }
-  .u-l-isle--v {
+  .u-l-isle-v {
     padding-top: 12px;
     padding-bottom: 12px; }
 
 .u-l-spit {
   padding: 6px; }
-  .u-l-spit--v {
+  .u-l-spit-v {
     padding-top: 6px;
     padding-bottom: 6px; }
 
 .u-l-country {
   padding: 46px; }
-  .u-l-country--v {
+  .u-l-country-v {
     padding-top: 46px;
     padding-bottom: 46px; }
 
 .u-l-continent {
   padding: 92px; }
-  .u-l-continent--v {
+  .u-l-continent-v {
     padding-top: 92px;
     padding-bottom: 92px; }
 
 .u-l-p {
   margin-bottom: 23px !important; }
-  .u-l-p--dbl {
+  .u-l-p-dbl {
     margin-bottom: 46px !important; }
-  .u-l-p--hlf {
+  .u-l-p-hlf {
     margin-bottom: 12px !important; }
 
 .u-l-trim {
