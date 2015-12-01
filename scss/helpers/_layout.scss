@@ -16,7 +16,7 @@
 %u-l-island {
     padding: $DBbaseline;
 
-    &--v {
+    &-v {
         @include share(padding-top, padding-bottom, $DBbaseline);
     }
 }
@@ -26,7 +26,7 @@
 %u-l-isle {
     padding: half($DBbaseline);
 
-    &--v {
+    &-v {
         @include share(padding-top, padding-bottom, half($DBbaseline));
     }
 }
@@ -36,7 +36,7 @@
 %u-l-spit {
     padding: quarter($DBbaseline);
 
-    &--v {
+    &-v {
         @include share(padding-top, padding-bottom, quarter($DBbaseline));
     }
 }
@@ -46,7 +46,7 @@
 %u-l-country {
     padding: double($DBbaseline);
 
-    &--v {
+    &-v {
         @include share(padding-top, padding-bottom, double($DBbaseline));
     }
 }
@@ -56,7 +56,7 @@
 %u-l-continent {
     padding: quadruple($DBbaseline);
 
-    &--v {
+    &-v {
         @include share(padding-top, padding-bottom, quadruple($DBbaseline));
     }
 }
@@ -79,11 +79,11 @@
 %u-l-p {
     margin-bottom: $DBbaseline !important;
 
-    &--dbl {
+    &-dbl {
         margin-bottom: double($DBbaseline) !important;
     }
 
-    &--hlf {
+    &-hlf {
         margin-bottom: half($DBbaseline) !important;
     }
 }
