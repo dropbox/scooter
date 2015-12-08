@@ -44,8 +44,8 @@ $DBbutton-border-tertiary: color(blue) !default;
 
     &[disabled], &#{&}--disabled {
         opacity: 0.5;
-        pointer-events: none;
         cursor: default;
+        pointer-events: none;
     }
 
     &:focus {
