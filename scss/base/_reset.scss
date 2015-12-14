@@ -4,42 +4,52 @@
 //
 //---------------------------
 
-// This is a pretty overzealous reset, but what the heck. That's what code
-// reviews are for.
-//
-*, ::after, ::before {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+$DBscope-scooter-reset: false !default;
+
+@mixin scooter-reset {
+    *, ::after, ::before {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    input, button, textarea, select {
+        font: inherit;
+
+        appearance: none;
+    }
+
+    input[type=checkbox] {
+        -webkit-appearance: checkbox;
+        -moz-appearance: checkbox;
+        appearance: checkbox;
+    }
+
+    input[type=radio] {
+        -webkit-appearance: radio;
+        -moz-appearance: radio;
+        appearance: radio;
+    }
+
+    ul, ol {
+        margin-left: double($DBbaseline);
+    }
+
+    p {
+        margin-bottom: $DBbaseline;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
 }
 
-input, button, textarea, select {
-    font: inherit;
-
-    appearance: none;
+@if ($DBscope-scooter-reset == true) {
+    .scooter-css {
+        @include scooter-reset;
+    }
+} @else {
+    @include scooter-reset;
 }
 
-input[type=checkbox] {
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
-    appearance: checkbox;
-}
-
-input[type=radio] {
-    -webkit-appearance: radio;
-    -moz-appearance: radio;
-    appearance: radio;
-}
-
-ul, ol {
-    margin-left: double($DBbaseline);
-}
-
-p {
-    margin-bottom: $DBbaseline;
-}
-
-table {
-    border-collapse: collapse;
-}

@@ -22,9 +22,11 @@ xl: 64px
 // Set proportional font size, weight, and line-height for avatars without photos
 @mixin __avatarSize($s: 32px) {
     width: $s;
+    // min-width provides a fallback for flexible-width elements like c-avatar--meta
+    min-width: $s;
     height: $s;
 
-    font-size: round($s * 0.45);
+    font-size: round($s * 0.4);
     line-height: ($s - 4px);
 
     @if($s < 32px) {
@@ -54,7 +56,7 @@ xl: 64px
 
     // Default color for avatars without images
     color: $DBavatar-color;
-    border-radius: 100%;
+    border-radius: 1000px;
 
     &__img,
     > img {
@@ -63,6 +65,10 @@ xl: 64px
         height: 100%;
         // Keep proportions in tact even if the container is the wrong size
         object-fit: cover;
+    }
+
+    &--square {
+        border-radius: 4px;
     }
 
     // Give avatars a subtle little border
@@ -74,7 +80,7 @@ xl: 64px
         bottom: 0;
         left: 0;
 
-        border-radius: 100%;
+        border-radius: 1000px;
         box-shadow: inset 0 0 0 1px color(gray, x-dark, 0.1);
 
         pointer-events: none;
@@ -91,6 +97,26 @@ xl: 64px
 
         &.#{$DBavatar-namespace}--xs:after {
             content: "";
+        }
+    }
+
+    &#{&}--meta {
+        width: auto;
+        padding: 2px;
+
+        color: color(gray, medium);
+        background-color: color(gray, light, 0.7);
+
+        > img {
+            display: inline-block;
+            vertical-align: center;
+            width: auto;
+            object-fit: none;
+        }
+
+        &:after {
+            // Prevent the shadow pseudo-element from rendering
+            content: none;
         }
     }
 

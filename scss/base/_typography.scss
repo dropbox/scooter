@@ -5,76 +5,87 @@
 //
 //---------------------------
 
-// Headings
-// ========
-//
-// Only h1-h4 are used/styled. If your DOM heirarchy goes as deep at h5 or h6,
-// you have some rethinking to do.
-//
-h1,
-%f-alpha,
-.f-alpha {
-    display: block;
-    margin-bottom: $DBbaseline;
+@mixin scooter-type() {
+    // Headings
+    // ========
+    //
+    // Only h1-h4 are used/styled. If your DOM heirarchy goes as deep at h5 or h6,
+    // you have some rethinking to do.
+    //
+    h1,
+    %f-alpha,
+    .f-alpha {
+        display: block;
+        margin-bottom: $DBbaseline;
 
-    font-size: 28px;
-    font-weight: 200;
-    line-height: 36px;
-}
+        font-size: 28px;
+        font-weight: 200;
+        line-height: 36px;
+    }
 
-h2,
-%f-beta,
-.f-beta {
-    display: block;
-    margin-bottom: $DBbaseline;
+    h2,
+    %f-beta,
+    .f-beta {
+        display: block;
+        margin-bottom: $DBbaseline;
 
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
-}
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+    }
 
-h3,
-%f-gamma,
-.f-gamma {
-    display: block;
-    margin-bottom: $DBbaseline;
+    h3,
+    %f-gamma,
+    .f-gamma {
+        display: block;
+        margin-bottom: $DBbaseline;
 
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-}
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+    }
 
-h4,
-%f-delta,
-.f-delta {
-    display: block;
+    h4,
+    %f-delta,
+    .f-delta {
+        display: block;
 
-    font-size: 13px;
-    font-weight: 600;
-    line-height: $DBbaseline;
-}
+        font-size: 13px;
+        font-weight: 600;
+        line-height: $DBbaseline;
+    }
 
-// Other type styles
-// =================
-//
-hr,
-%hr{
-    margin-bottom: $DBbaseline;
+    // Other type styles
+    // =================
+    //
+    hr,
+    %hr{
+        margin-bottom: $DBbaseline;
 
-    border: 0;
-    border-top: 1px solid color(gray, x-dark, 0.1);
-}
+        border: 0;
+        border-top: 1px solid color(gray, x-dark, 0.1);
+    }
 
-a,
-%f-a,
-.f-a {
-    text-decoration: none;
+    a,
+    %f-a,
+    .f-a {
+        text-decoration: none;
 
-    color: color(blue);
+        color: color(blue);
 
-    cursor: pointer;
+        cursor: pointer;
 
-    &:hover {
-        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
+
+@if ($DBscope-scooter-reset == true) {
+    .scooter-css {
+        @include scooter-type;
+    }
+} @else {
+    @include scooter-type;
+}
+
