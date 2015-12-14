@@ -12,19 +12,6 @@
  *   go or leave somewhere quickly: "I'd better scoot"
  *
  */
-[class*="--"]:not([class*=" "]) {
-  position: relative;
-  outline: 1px solid red; }
-  [class*="--"]:not([class*=" "]):after {
-    content: "Error: Cannot have a Modifier (i.e. `." attr(class) "`) without a Block.";
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    white-space: nowrap;
-    font-family: monospace;
-    color: red;
-    background-color: white; }
-
 *, ::after, ::before {
   position: relative;
   margin: 0;
@@ -59,7 +46,7 @@ table {
 html, :root {
   box-sizing: border-box;
   font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  color: #47525d; }
+  color: #3d464d; }
 
 h1,
 .f-alpha {
@@ -559,8 +546,9 @@ select.c-input {
  */
 .c-avatar {
   width: 32px;
+  min-width: 32px;
   height: 32px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 28px;
   font-weight: 600;
   display: inline-block;
@@ -570,7 +558,7 @@ select.c-input {
   box-sizing: border-box;
   text-align: center;
   color: #007ee5;
-  border-radius: 100%; }
+  border-radius: 1000px; }
   .c-avatar__img,
   .c-avatar > img {
     display: block;
@@ -578,6 +566,8 @@ select.c-input {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
+  .c-avatar--square {
+    border-radius: 4px; }
   .c-avatar:after {
     content: "";
     position: absolute;
@@ -585,7 +575,7 @@ select.c-input {
     right: 0;
     bottom: 0;
     left: 0;
-    border-radius: 100%;
+    border-radius: 1000px;
     box-shadow: inset 0 0 0 1px rgba(37, 40, 43, 0.1);
     pointer-events: none; }
   .c-avatar.c-avatar--no-img {
@@ -595,36 +585,54 @@ select.c-input {
       box-shadow: none; }
     .c-avatar.c-avatar--no-img.c-avatar--xs:after {
       content: ""; }
+  .c-avatar.c-avatar--meta {
+    width: auto;
+    padding: 2px;
+    background-color: rgba(208, 212, 217, 0.7);
+    color: #7b8994; }
+    .c-avatar.c-avatar--meta > img {
+      display: inline-block;
+      vertical-align: center;
+      width: auto;
+      -o-object-fit: none;
+         object-fit: none; }
+    .c-avatar.c-avatar--meta:after {
+      content: none; }
   .c-avatar--xs {
     width: 16px;
+    min-width: 16px;
     height: 16px;
-    font-size: 7px;
+    font-size: 6px;
     line-height: 12px;
     font-weight: 700; }
     .c-avatar--xs:after {
       content: ""; }
   .c-avatar--s {
     width: 24px;
+    min-width: 24px;
     height: 24px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 20px;
     font-weight: 700; }
   .c-avatar--m {
     width: 32px;
+    min-width: 32px;
     height: 32px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 28px;
     font-weight: 600; }
   .c-avatar--l {
     width: 48px;
+    min-width: 48px;
     height: 48px;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 44px;
     font-weight: 400; }
   .c-avatar--xl {
     width: 64px;
+    min-width: 64px;
     height: 64px;
-    font-size: 29px;
+    font-size: 26px;
     line-height: 60px;
     font-weight: 400; }
 
@@ -1043,12 +1051,52 @@ select.c-input {
     padding-top: 92px;
     padding-bottom: 92px; }
 
+.u-l-mt {
+  margin-top: 23px !important; }
+  .u-l-mt-xs {
+    margin-top: 6px !important; }
+  .u-l-mt-s {
+    margin-top: 12px !important; }
+  .u-l-mt-l {
+    margin-top: 46px !important; }
+  .u-l-mt-xl {
+    margin-top: 92px !important; }
+
+.u-l-mr {
+  margin-right: 23px !important; }
+  .u-l-mr-xs {
+    margin-right: 6px !important; }
+  .u-l-mr-s {
+    margin-right: 12px !important; }
+  .u-l-mr-l {
+    margin-right: 46px !important; }
+  .u-l-mr-xl {
+    margin-right: 92px !important; }
+
+.u-l-mb,
 .u-l-p {
   margin-bottom: 23px !important; }
-  .u-l-p-dbl {
-    margin-bottom: 46px !important; }
+  .u-l-mb-xs {
+    margin-bottom: 6px !important; }
+  .u-l-mb-s,
   .u-l-p-hlf {
     margin-bottom: 12px !important; }
+  .u-l-mb-l,
+  .u-l-p-dbl {
+    margin-bottom: 46px !important; }
+  .u-l-mb-xl {
+    margin-bottom: 92px !important; }
+
+.u-l-ml {
+  margin-left: 23px !important; }
+  .u-l-ml-xs {
+    margin-left: 6px !important; }
+  .u-l-ml-s {
+    margin-left: 12px !important; }
+  .u-l-ml-l {
+    margin-left: 46px !important; }
+  .u-l-ml-xl {
+    margin-left: 92px !important; }
 
 .u-l-trim {
   margin: 0 !important; }

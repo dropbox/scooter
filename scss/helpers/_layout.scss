@@ -107,11 +107,11 @@ $DBlayoutHelperDirections: 'top', 'right', 'bottom', 'left';
     @extend %u-l-mb;
 
     &-dbl {
-        @extend %u-l-mbl;
+        @extend %u-l-mb-l;
     }
 
     &-hlf {
-        @extend %u-l-mbs;
+        @extend %u-l-mb-s;
     }
 }
 
