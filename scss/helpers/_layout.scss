@@ -75,16 +75,43 @@
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
+$DBlayoutHelperDirections: 'top', 'right', 'bottom', 'left';
+@each $direction in $DBlayoutHelperDirections {
+    $micro: str-slice($direction, 1, 1);
+
+    .u-l-m#{$micro},
+    %u-l-m#{$micro} {
+        // We always want helper classes to trump other values, hence the !important here
+        margin-#{$direction}: $DBbaseline !important;
+
+        &-xs {
+            margin-#{$direction}: round($DBbaseline / 4) !important;
+        }
+
+        &-s {
+            margin-#{$direction}: round($DBbaseline / 2) !important;
+        }
+
+        &-l {
+            margin-#{$direction}: round($DBbaseline * 2) !important;
+        }
+
+        &-xl {
+            margin-#{$direction}: round($DBbaseline * 4) !important;
+        }
+    }
+}
+
 .u-l-p,
 %u-l-p {
-    margin-bottom: $DBbaseline !important;
+    @extend %u-l-mb;
 
     &-dbl {
-        margin-bottom: double($DBbaseline) !important;
+        @extend %u-l-mbl;
     }
 
     &-hlf {
-        margin-bottom: half($DBbaseline) !important;
+        @extend %u-l-mbs;
     }
 }
 

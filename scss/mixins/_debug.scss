@@ -8,7 +8,7 @@
 //-----------------------------
 
 // Simple toggle for switching debugging on and off
-$DBdebug: true;
+$DBdebug: false !default;
 
 // Mixin that gives visual feedback in the DOM if a selector is used outside of
 // a given context. Useful for detecting misused Elements in BEM.
@@ -55,10 +55,10 @@ $DBdebug: true;
 @if ($DBdebug == true) {
 
     // If an element has a class attribute containing two hyphens but no space
-    // (i.e. only one class is being used, and it’s a Modifier), provide visual
+    // (i.e. only one class is being used, and it's a Modifier), provide visual
     // feedback in the DOM.
     //
-    // N.B. This isn’t bulletproof: `class="foo--bar baz"` would pass, as would
+    // N.B. This isn't bulletproof: `class="foo--bar baz"` would pass, as would
     //      `class=" foo--bar"`. Use with a pinch of salt.
     //
     [class*="--"]:not([class*=" "]) {
