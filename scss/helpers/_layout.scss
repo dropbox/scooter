@@ -75,7 +75,7 @@
 // Vertical margins are strictly applied to the bottom edge only, with the
 // exception of negative margin-top values.
 //
-$DBlayoutHelperDirections: 'top', 'right', 'bottom', 'left';
+$DBlayoutHelperDirections: "top", "right", "bottom", "left";
 @each $direction in $DBlayoutHelperDirections {
     $micro: str-slice($direction, 1, 1);
 
