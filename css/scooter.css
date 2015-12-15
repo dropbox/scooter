@@ -383,7 +383,7 @@ a,
   border: 1px solid currentColor;
   border-radius: 3px;
   cursor: pointer; }
-  .c-btn:not(button, [type=submit]) {
+  .c-btn:not(button):not([type=submit]) {
     /*! You must ensure the element matches one of these selectors: button, [type=submit] */
     outline: 2px solid red !important; }
   .c-btn[disabled], .c-btn.c-btn--disabled {
@@ -506,7 +506,7 @@ a,
   border-radius: 3px;
   background-color: white;
   background-clip: padding-box; }
-  .c-input:not(input, select, textarea) {
+  .c-input:not(input):not(select):not(textarea) {
     /*! You must ensure the element matches one of these selectors: input, select, textarea */
     outline: 2px solid red !important; }
   .c-input:focus {
@@ -588,8 +588,8 @@ select.c-input {
   .c-avatar.c-avatar--meta {
     width: auto;
     padding: 2px;
-    background-color: rgba(208, 212, 217, 0.7);
-    color: #7b8994; }
+    color: #7b8994;
+    background-color: rgba(208, 212, 217, 0.7); }
     .c-avatar.c-avatar--meta > img {
       display: inline-block;
       vertical-align: center;
