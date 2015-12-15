@@ -70,18 +70,22 @@ toc:
   <h3>Margins</h3>
   <p>Use margin classes to add or remove margins to elements when they don't have any of their own.</p>
 
-  <p>The <code>p</code> in the margin helpers (<code>u-l-p</code> et al) indicates inheritence from
-    the bare <code>&lt;p&gt;</code> tag, which basically only has a margin applied to it.</p>
+  <p>As an example, take a look at the <code>u-l-mb</code> classes below. <code>mb</code> indicates that the class is
+    affecting the <code>m</code>argin <code>b</code>ottom. There are margin helpers available for each side: top, right,
+    bottom, and left (<code>mt</code>, <code>mr</code>, <code>mb</code>, and <code>ml</code> respectively).</p>
 
-  <%= code_example('<div class="u-l-p">This has a margin-bottom equal to the baseline</div>
+  <p>There are also modifiers that can be appended to determine the size of the margin, ranging from extra-small
+    <code>xs</code> to extra-large <code>xl</code>.</p>
+
+  <%= code_example('<div class="u-l-mb">This has a margin-bottom equal to the baseline</div>
 
 <hr/>
 
-<div class="u-l-p-dbl">This has a double-height margin-bottom</div>
+<div class="u-l-mb-l">This has a double-height margin-bottom</div>
 
 <hr/>
 
-<div class="u-l-p-hlf">This has a half-height margin-bottom</div>
+<div class="u-l-mb-s">This has a half-height margin-bottom</div>
 
 <hr/>
 
