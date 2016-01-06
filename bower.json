@@ -1,0 +1,16 @@
+{
+  "name": "scooter-css",
+  "ignore": [
+    "docs/",
+    ".gitignore",
+    ".hound.yml",
+    ".scss-lint.yml",
+    "config.rb",
+    "Gemfile",
+    "Gemfile.lock",
+    "deploy.sh"
+  ],
+  "main": [
+    "scss/scooter.scss"
+  ]
+}
