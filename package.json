@@ -1,0 +1,26 @@
+{
+  "name": "scooter-css",
+  "version": "1.0.0",
+  "homepage": "http://dropbox.github.io/scooter",
+  "author": "Dropbox, Inc.",
+  "scss": "./scss/scooter.scss",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dropbox/scooter.git"
+  },
+  "description": "Scooter is an SCSS framework built to provide base styles, CSS components, and rapid static prototyping for Dropbox.",
+  "bugs": {
+    "url": "https://github.com/dropbox/scooter/issues"
+  },
+  "main": "css/scooter.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "scooter",
+    "css",
+    "dropbox",
+    "scootercss"
+  ]
+}
