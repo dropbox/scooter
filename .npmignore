@@ -1,2 +1,10 @@
-# Ignore docs when installing via npm
+# Ignore these files when installing via npm
 docs/
+deploy.sh
+hound.yml
+.sass-cache
+.scss-style.yml
+Gemfile
+Gemfile.lock
+config.rb
+.editorconfig
