@@ -1,6 +1,6 @@
 {
   "name": "scooter-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "http://dropbox.github.io/scooter",
   "author": "Dropbox, Inc.",
   "scss": "./scss/scooter.scss",
