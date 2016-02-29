@@ -302,16 +302,44 @@ a,
       vertical-align: bottom; }
   .o-flag__fix {
     padding-right: 10px; }
-    .o-flag__fix > * {
-      display: block;
-      white-space: nowrap;
-      max-width: none; }
-    .o-flag--rev .o-flag__fix {
-      padding-right: 0;
-      padding-left: 10px; }
   .o-flag__flex {
     width: 100%; }
 
+@supports ((display: -webkit-box) or (display: -webkit-flex) or (display: -ms-flexbox) or (display: flex)) {
+  .o-flag {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .o-flag--top {
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .o-flag--bottom {
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+
+  .o-flag__flex,
+  .o-flag__fix {
+    display: initial; }
+
+  .o-flag__flex {
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+
+  .o-flag__fix {
+    padding-right: 0;
+    margin-right: 10px; } }
 /**
  * Banner component. Used to display messages to the user, typically pinned to
  * the top of the page.
@@ -467,13 +495,14 @@ a,
   width: 100%;
   padding: 7px;
   font-size: 13px;
+  text-align: left;
   color: #47525d;
   border: 1px solid rgba(37, 40, 43, 0.1);
   border-radius: 3px;
   background-color: white;
   background-clip: padding-box; }
-  .c-input:not(input):not(select):not(textarea) {
-    /*! You must ensure the element matches one of these selectors: input, select, textarea */
+  .c-input:not(input):not(button):not(select):not(textarea) {
+    /*! You must ensure the element matches one of these selectors: input, button, select, textarea */
     outline: 2px solid red !important; }
   .c-input:focus {
     border-color: #72b6ec;
@@ -532,8 +561,6 @@ select.c-input {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover; }
-  .c-avatar--square {
-    border-radius: 4px; }
   .c-avatar:after {
     content: "";
     position: absolute;
@@ -551,15 +578,33 @@ select.c-input {
       box-shadow: none; }
     .c-avatar.c-avatar--no-img.c-avatar--xs:after {
       content: ""; }
+  .c-avatar.c-avatar--square {
+    text-transform: uppercase;
+    border-radius: 3px; }
+    .c-avatar.c-avatar--square:after {
+      content: none; }
   .c-avatar.c-avatar--meta {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: auto;
     padding: 2px;
     color: #7b8994;
     background-color: rgba(208, 212, 217, 0.7); }
     .c-avatar.c-avatar--meta > img {
       display: inline-block;
-      vertical-align: center;
+      vertical-align: middle;
       width: auto;
+      height: auto;
       -o-object-fit: none;
          object-fit: none; }
     .c-avatar.c-avatar--meta:after {
@@ -602,6 +647,89 @@ select.c-input {
     line-height: 60px;
     font-weight: 400; }
 
+.c-facepile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .c-facepile > * {
+    margin-right: 6px; }
+  .c-facepile.is-animated .c-avatar {
+    -webkit-animation: DBavatar-animation .3s;
+            animation: DBavatar-animation .3s;
+    -webkit-animation-timing-function: cubic-bezier(0.57, 0.23, 0.39, 1.6);
+            animation-timing-function: cubic-bezier(0.57, 0.23, 0.39, 1.6);
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+    .c-facepile.is-animated .c-avatar:nth-child(1) {
+      -webkit-animation-delay: 0.025s;
+              animation-delay: 0.025s; }
+    .c-facepile.is-animated .c-avatar:nth-child(2) {
+      -webkit-animation-delay: 0.05s;
+              animation-delay: 0.05s; }
+    .c-facepile.is-animated .c-avatar:nth-child(3) {
+      -webkit-animation-delay: 0.075s;
+              animation-delay: 0.075s; }
+    .c-facepile.is-animated .c-avatar:nth-child(4) {
+      -webkit-animation-delay: 0.1s;
+              animation-delay: 0.1s; }
+    .c-facepile.is-animated .c-avatar:nth-child(5) {
+      -webkit-animation-delay: 0.125s;
+              animation-delay: 0.125s; }
+    .c-facepile.is-animated .c-avatar:nth-child(6) {
+      -webkit-animation-delay: 0.15s;
+              animation-delay: 0.15s; }
+    .c-facepile.is-animated .c-avatar:nth-child(7) {
+      -webkit-animation-delay: 0.175s;
+              animation-delay: 0.175s; }
+    .c-facepile.is-animated .c-avatar:nth-child(8) {
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s; }
+    .c-facepile.is-animated .c-avatar:nth-child(9) {
+      -webkit-animation-delay: 0.225s;
+              animation-delay: 0.225s; }
+    .c-facepile.is-animated .c-avatar:nth-child(10) {
+      -webkit-animation-delay: 0.25s;
+              animation-delay: 0.25s; }
+    .c-facepile.is-animated .c-avatar:nth-child(11) {
+      -webkit-animation-delay: 0.275s;
+              animation-delay: 0.275s; }
+    .c-facepile.is-animated .c-avatar:nth-child(12) {
+      -webkit-animation-delay: 0.3s;
+              animation-delay: 0.3s; }
+    .c-facepile.is-animated .c-avatar:nth-child(13) {
+      -webkit-animation-delay: 0.325s;
+              animation-delay: 0.325s; }
+    .c-facepile.is-animated .c-avatar:nth-child(14) {
+      -webkit-animation-delay: 0.35s;
+              animation-delay: 0.35s; }
+    .c-facepile.is-animated .c-avatar:nth-child(15) {
+      -webkit-animation-delay: 0.375s;
+              animation-delay: 0.375s; }
+
+@-webkit-keyframes DBavatar-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes DBavatar-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
 /**
  * Modal component
  */
@@ -917,8 +1045,18 @@ select.c-input {
     color: #3d464d;
     border-bottom-color: currentColor; }
 
+.c-datepicker {
+  position: relative;
+  box-sizing: border-box;
+  background-color: white; }
+  .c-datepicker .c-calendar {
+    position: absolute;
+    top: 100%;
+    left: 0; }
+
 .c-calendar {
   display: inline-block;
+  z-index: 1;
   border-radius: 5px;
   background-color: #f7f9fa; }
   .c-calendar__header {
@@ -928,32 +1066,40 @@ select.c-input {
     text-transform: uppercase;
     color: #7b8994; }
   .c-calendar__date {
+    box-sizing: border-box;
     padding: 4px 8px;
+    width: 100%;
+    min-width: 32px;
     text-align: center;
     color: #007ee5;
     border: 1px solid #f7f9fa;
     background-color: white;
-    cursor: pointer; }
-    tr:first-child .c-calendar__date:first-child {
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+    tr:first-child td:first-child .c-calendar__date {
       border-top-left-radius: 4px; }
-    tr:first-child .c-calendar__date:last-child {
+    tr:first-child td:last-child .c-calendar__date {
       border-top-right-radius: 4px; }
-    tr:last-child .c-calendar__date:first-child {
+    tr:last-child td:first-child .c-calendar__date {
       border-bottom-left-radius: 4px; }
-    tr:last-child .c-calendar__date:last-child {
+    tr:last-child td:last-child .c-calendar__date {
       border-bottom-right-radius: 4px; }
     .c-calendar__date:hover {
       background-color: #f4faff; }
-    .c-calendar__date--disabled, .c-calendar__date--disabled:hover {
-      color: #d0d4d9;
-      background-color: #f7f9fa;
-      cursor: default; }
+    .c-calendar__date:hover, .c-calendar__date:focus:not([class*="--disabled"]) {
+      text-decoration: underline; }
     .c-calendar__date.is-selected {
       color: white;
       background-color: #007ee5; }
     .c-calendar__date.is-in-range {
       color: white;
       background-color: #72b6ec; }
+    .c-calendar__date.c-calendar__date--disabled, .c-calendar__date.c-calendar__date--disabled:hover {
+      color: #d0d4d9;
+      background-color: #f7f9fa;
+      cursor: default; }
 
 .c-arrow, .c-arrow--down {
   display: inline-block;
@@ -1079,7 +1225,14 @@ select.c-input {
 .u-l-ib {
   display: inline-block !important; }
   .u-l-ib.u-l-ib {
-    vertical-align: middle; }
+    vertical-align: middle !important; }
+  .u-l-ib.u-l-ib {
+    vertical-align: top !important; }
+  .u-l-ib.u-l-ib {
+    vertical-align: bottom !important; }
+
+.u-l-dn {
+  display: none !important; }
 
 .u-font-center {
   text-align: center !important; }
@@ -1106,5 +1259,11 @@ select.c-input {
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%; }
+
+.u-ellip {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
 /*# sourceMappingURL=scooter.css.map */

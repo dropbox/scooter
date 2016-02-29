@@ -463,7 +463,7 @@ toc:
     <%= gh_link("components/_calendar.scss") %>
   </header>
 
-  <%= code_example('<div class="c-calendar  u-l-spit">
+  <%= code_example('<div class="c-calendar c-card u-l-spit">
     <nav class="c-calendar__nav  u-cf u-font-center u-l-p--hlf">
       <div class="u-l-fl">
         <a title="Previous month" href="#" class="u-thide  c-arrow c-arrow--left">Previous</a>
@@ -473,61 +473,66 @@ toc:
       </div>
       <strong>September 2015</strong>
     </nav>
+
     <table class="c-calendar__picker">
-      <tr>
-        <th class="c-calendar__header">Sun</th>
-        <th class="c-calendar__header">Mon</th>
-        <th class="c-calendar__header">Tue</th>
-        <th class="c-calendar__header">Wed</th>
-        <th class="c-calendar__header">Thu</th>
-        <th class="c-calendar__header">Fri</th>
-        <th class="c-calendar__header">Sat</th>
-      </tr>
-      <tr>
-        <td class="c-calendar__date c-calendar__date--disabled">30</td>
-        <td class="c-calendar__date c-calendar__date--disabled">31</td>
-        <td class="c-calendar__date">1</td>
-        <td class="c-calendar__date">2</td>
-        <td class="c-calendar__date">3</td>
-        <td class="c-calendar__date">4</td>
-        <td class="c-calendar__date">5</td>
-      </tr>
-      <tr>
-        <td class="c-calendar__date">6</td>
-        <td class="c-calendar__date">7</td>
-        <td class="c-calendar__date">8</td>
-        <td class="c-calendar__date">9</td>
-        <td class="c-calendar__date">10</td>
-        <td class="c-calendar__date">11</td>
-        <td class="c-calendar__date">12</td>
-      </tr>
-      <tr>
-        <td class="c-calendar__date">13</td>
-        <td class="c-calendar__date">14</td>
-        <td class="c-calendar__date">15</td>
-        <td class="c-calendar__date">16</td>
-        <td class="c-calendar__date">17</td>
-        <td class="c-calendar__date">18</td>
-        <td class="c-calendar__date">19</td>
-      </tr>
-      <tr>
-        <td class="c-calendar__date">20</td>
-        <td class="c-calendar__date">21</td>
-        <td class="c-calendar__date is-selected">22</td>
-        <td class="c-calendar__date is-in-range">23</td>
-        <td class="c-calendar__date is-in-range">24</td>
-        <td class="c-calendar__date is-in-range">25</td>
-        <td class="c-calendar__date is-in-range">26</td>
-      </tr>
-      <tr>
-        <td class="c-calendar__date is-in-range">27</td>
-        <td class="c-calendar__date is-selected">28</td>
-        <td class="c-calendar__date">29</td>
-        <td class="c-calendar__date">30</td>
-        <td class="c-calendar__date c-calendar__date--disabled">1</td>
-        <td class="c-calendar__date c-calendar__date--disabled">2</td>
-        <td class="c-calendar__date c-calendar__date--disabled">3</td>
-      </tr>
+      <thead class="ax-visually-hidden">
+        <tr>
+          <th><abbr title="Sunday">Sun</abbr></th>
+          <th><abbr title="Monday">Mon</abbr></th>
+          <th><abbr title="Tuesday">Tue</abbr></th>
+          <th><abbr title="Wednesday">Wed</abbr></th>
+          <th><abbr title="Thursday">Thu</abbr></th>
+          <th><abbr title="Friday">Fri</abbr></th>
+          <th><abbr title="Saturday">Sat</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><button class="c-calendar__date c-calendar__date--disabled" disabled="">28</button></td>
+          <td><button class="c-calendar__date c-calendar__date--disabled" disabled="">29</button></td>
+          <td><button class="c-calendar__date u-unbutton">1</button></td>
+          <td><button class="c-calendar__date u-unbutton">2</button></td>
+          <td><button class="c-calendar__date u-unbutton">3</button></td>
+          <td><button class="c-calendar__date u-unbutton">4</button></td>
+          <td><button class="c-calendar__date u-unbutton">5</button></td>
+        </tr>
+        <tr>
+          <td><button class="c-calendar__date u-unbutton">6</button></td>
+          <td><button class="c-calendar__date is-selected u-unbutton">7</button></td>
+          <td><button class="c-calendar__date u-unbutton">8</button></td>
+          <td><button class="c-calendar__date u-unbutton">9</button></td>
+          <td><button class="c-calendar__date u-unbutton">10</button></td>
+          <td><button class="c-calendar__date u-unbutton">11</button></td>
+          <td><button class="c-calendar__date u-unbutton">12</button></td>
+        </tr>
+        <tr>
+          <td><button class="c-calendar__date u-unbutton">13</button></td>
+          <td><button class="c-calendar__date u-unbutton">14</button></td>
+          <td><button class="c-calendar__date u-unbutton">15</button></td>
+          <td><button class="c-calendar__date u-unbutton">16</button></td>
+          <td><button class="c-calendar__date u-unbutton">17</button></td>
+          <td><button class="c-calendar__date u-unbutton">18</button></td>
+          <td><button class="c-calendar__date u-unbutton">19</button></td>
+        </tr>
+        <tr>
+          <td><button class="c-calendar__date u-unbutton">20</button></td>
+          <td><button class="c-calendar__date u-unbutton">21</button></td>
+          <td><button class="c-calendar__date u-unbutton">22</button></td>
+          <td><button class="c-calendar__date u-unbutton">23</button></td>
+          <td><button class="c-calendar__date u-unbutton">24</button></td>
+          <td><button class="c-calendar__date u-unbutton">25</button></td>
+          <td><button class="c-calendar__date u-unbutton">26</button></td>
+        </tr>
+        <tr>
+          <td><button class="c-calendar__date u-unbutton">27</button></td>
+          <td><button class="c-calendar__date u-unbutton">28</button></td>
+          <td><button class="c-calendar__date u-unbutton">29</button></td>
+          <td><button class="c-calendar__date u-unbutton">30</button></td>
+          <td><button class="c-calendar__date u-unbutton">31</button></td>
+          <td><button class="c-calendar__date c-calendar__date--disabled" disabled="">1</button></td>
+          <td><button class="c-calendar__date c-calendar__date--disabled" disabled="">2</button></td>
+        </tr>
+      </tbody>
     </table>
 
   </div>') %>
