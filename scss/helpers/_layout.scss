@@ -146,6 +146,19 @@ $DBlayoutHelperDirections: "top", "right", "bottom", "left";
     display: inline-block !important;
 
     &#{&}--m {
-        vertical-align: middle;
+        vertical-align: middle !important;
     }
+
+    &#{&}--t {
+        vertical-align: top !important;
+    }
+
+    &#{&}--b {
+        vertical-align: bottom !important;
+    }
+}
+
+.u-l-dn,
+%u-l-dn {
+    display: none !important;
 }

@@ -1,0 +1,11 @@
+//
+// Scoped Scooter
+// ==============
+//
+// Use this superset of Scooter in order to scope its reset to
+// pages/container elements with a class of `scooter-css`
+//
+
+$DBscope-scooter-reset: true;
+
+@import 'scooter';

@@ -28,7 +28,6 @@ $DBflag-namespace: "o-flag" !default;
     display: table;
     width: 100%;
 
-
     &__fix,
     &__flex {
         display: table-cell;
@@ -49,25 +48,41 @@ $DBflag-namespace: "o-flag" !default;
     // The fixed-width element
     &__fix {
         padding-right: 10px;
-
-        > * {
-            display: block;
-            // Force the "pinned" element to not wrap lines
-            white-space: nowrap;
-            max-width: none;
-        }
-
-        // Use the --rev modifier when the order is reversed (fixed-width element on
-        // the right of the fluid width element)
-        .#{$DBflag-namespace}--rev & {
-            padding-right: 0;
-            padding-left: 10px;
-        }
-
     }
 
     // This element grows to fill the remainder of its container
     &__flex {
         width: 100%;
+    }
+}
+
+// Flexbox adjustments
+@supports (display: flex) {
+    .#{$DBflag-namespace} {
+        display: flex;
+        align-items: center;
+
+        &--top {
+            align-items: flex-start;
+        }
+
+        &--bottom {
+            align-items: flex-end;
+        }
+    }
+
+    .#{$DBflag-namespace}__flex,
+    .#{$DBflag-namespace}__fix {
+        display: initial;
+    }
+
+    .#{$DBflag-namespace}__flex {
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+
+    .#{$DBflag-namespace}__fix {
+        padding-right: 0;
+        margin-right: 10px;
     }
 }

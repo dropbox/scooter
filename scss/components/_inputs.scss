@@ -35,13 +35,14 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 
 .#{$DBinput-namespace} {
     // Ensure the element is actually a kind of input
-    @include assert-selector(input, select, textarea);
+    @include assert-selector(input, button, select, textarea);
 
     display: block;
     width: 100%;
     padding: 7px;
 
     font-size: $DBfont-size;
+    text-align: left;
 
     color: $DBinput-color;
     border: 1px solid $DBinput-border;

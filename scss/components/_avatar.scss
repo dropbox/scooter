@@ -5,6 +5,7 @@
 //-----------------------------
 
 $DBavatar-namespace: "c-avatar" !default;
+$DBavatar-container-namespace: "c-facepile" !default;
 // Ideally, colors are set by JS, but this provides a fallback
 $DBavatar-color: color(blue) !default;
 
@@ -67,10 +68,6 @@ xl: 64px
         object-fit: cover;
     }
 
-    &--square {
-        border-radius: 4px;
-    }
-
     // Give avatars a subtle little border
     &:after {
         content: "";
@@ -100,7 +97,22 @@ xl: 64px
         }
     }
 
+    &#{&}--square {
+        text-transform: uppercase;
+
+        border-radius: 3px;
+
+        &:after {
+            // Prevent the shadow pseudo-element from rendering
+            content: none;
+        }
+    }
+
     &#{&}--meta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
         width: auto;
         padding: 2px;
 
@@ -109,8 +121,9 @@ xl: 64px
 
         > img {
             display: inline-block;
-            vertical-align: center;
+            vertical-align: middle;
             width: auto;
+            height: auto;
             object-fit: none;
         }
 
@@ -135,3 +148,36 @@ xl: 64px
         }
     } // end @each
 } // end .avatar
+
+.#{$DBavatar-container-namespace} {
+    display: flex;
+    align-items: center;
+
+    > * {
+        margin-right: quarter($DBbaseline);
+    }
+
+    &.is-animated .#{$DBavatar-namespace} {
+        animation: DBavatar-animation .3s;
+        animation-timing-function: cubic-bezier(.57,.23,.39,1.6);
+        animation-fill-mode: both;
+
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i*.025}s;
+            }
+        }
+    }
+}
+
+@keyframes DBavatar-animation {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

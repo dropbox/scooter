@@ -5,9 +5,24 @@
 //-----------------------------
 
 $DBcalendar-namespace: "c-calendar";
+$DBdatepicker-namespace: "c-datepicker";
+
+.#{$DBdatepicker-namespace} {
+    position: relative;
+    box-sizing: border-box;
+
+    background-color: color(white);
+
+    .#{$DBcalendar-namespace} {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
 
 .#{$DBcalendar-namespace} {
     display: inline-block;
+    z-index: 1;
 
     border-radius: 5px;
     background-color: color(gray, x-light);
@@ -23,7 +38,11 @@ $DBcalendar-namespace: "c-calendar";
     }
 
     &__date {
+        box-sizing: border-box;
         padding: 4px 8px;
+        // This assumes that the `date` element is a child nested inside a `td`
+        width: 100%;
+        min-width: 32px;
 
         text-align: center;
 
@@ -32,20 +51,21 @@ $DBcalendar-namespace: "c-calendar";
         background-color: color(white);
 
         cursor: pointer;
+        appearance: none;
 
-        tr:first-child &:first-child {
+        tr:first-child td:first-child & {
             border-top-left-radius: 4px;
         }
 
-        tr:first-child &:last-child {
+        tr:first-child td:last-child & {
             border-top-right-radius: 4px;
         }
 
-        tr:last-child &:first-child {
+        tr:last-child td:first-child & {
             border-bottom-left-radius: 4px;
         }
 
-        tr:last-child &:last-child {
+        tr:last-child td:last-child & {
             border-bottom-right-radius: 4px;
         }
 
@@ -53,11 +73,8 @@ $DBcalendar-namespace: "c-calendar";
             background-color: color(blue, x-light);
         }
 
-        &--disabled, &--disabled:hover {
-            color: color(gray, light);
-            background-color: color(gray, x-light);
-
-            cursor: default;
+        &:hover, &:focus:not([class*="--disabled"]) {
+            text-decoration: underline;
         }
 
         &.is-selected {
@@ -68,6 +85,13 @@ $DBcalendar-namespace: "c-calendar";
         &.is-in-range {
             color: color(white);
             background-color: color(blue, medium);
+        }
+
+        &#{&}--disabled, &#{&}--disabled:hover {
+            color: color(gray, light);
+            background-color: color(gray, x-light);
+
+            cursor: default;
         }
     }
 }
