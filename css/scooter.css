@@ -1266,4 +1266,11 @@ select.c-input {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
+.u-unbutton {
+  padding: 0;
+  background: none;
+  border: 0; }
+  .u-unbutton:focus {
+    box-shadow: 0 0 0 2px #cce6fa; }
+
 /*# sourceMappingURL=scooter.css.map */
