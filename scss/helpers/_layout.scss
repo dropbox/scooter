@@ -6,118 +6,68 @@
 //
 //---------------------------
 
-// Islands are the most common layout helper. They throw a padding around the
-// selected element equal to the global baseline.
-//
-// Each layout helper has a vertical modifier ('*--v') to apply only
-// top/bottom padding
-//
-.u-l-island,
-%u-l-island {
-    padding: $DBbaseline;
+$DBspacing-unit: 16px !default;
 
-    &-v {
-        @include share(padding-top, padding-bottom, $DBbaseline);
-    }
-}
+$DBspacing-sizes: (
+  'xs': .5,
+  's': 1,
+  'm': 1.5,
+  'l': 2,
+  'xl': 4
+);
 
-// Half an island
-.u-l-isle,
-%u-l-isle {
-    padding: half($DBbaseline);
+$DBspacing-edges: (
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'vertical' ('top' 'bottom'),
+  'horizontal' ('left' 'right')
+);
 
-    &-v {
-        @include share(padding-top, padding-bottom, half($DBbaseline));
-    }
-}
+@each $size, $scale in $DBspacing-sizes {
 
-// Half an isle
-.u-l-spit,
-%u-l-spit {
-    padding: quarter($DBbaseline);
+  .u-pad-#{$size} {
+    padding: round($DBspacing-unit * $scale);
+  }
 
-    &-v {
-        @include share(padding-top, padding-bottom, quarter($DBbaseline));
-    }
-}
+  .u-mar-#{$size} {
+    padding: round($DBspacing-unit * $scale);
+  }
 
-// Twice the size of an island
-.u-l-country,
-%u-l-country {
-    padding: double($DBbaseline);
-
-    &-v {
-        @include share(padding-top, padding-bottom, double($DBbaseline));
-    }
-}
-
-// Twice the size of a country
-.u-l-continent,
-%u-l-continent {
-    padding: quadruple($DBbaseline);
-
-    &-v {
-        @include share(padding-top, padding-bottom, quadruple($DBbaseline));
-    }
-}
-
-// Margin layout helpers
-// =====================
-//
-// Typically, we want most elements to have the same vertical spacing, often
-// just with a margin-bottom.
-//
-// The most basic element with this spacing is a paragraph, hence the 'l-p'
-// selector name.
-//
-// Only two modifiers here: half- and double-spacing.
-//
-// Vertical margins are strictly applied to the bottom edge only, with the
-// exception of negative margin-top values.
-//
-$DBlayoutHelperDirections: "top", "right", "bottom", "left";
-@each $direction in $DBlayoutHelperDirections {
-    $micro: str-slice($direction, 1, 1);
-
-    .u-l-m#{$micro},
-    %u-l-m#{$micro} {
-        // We always want helper classes to trump other values, hence the !important here
-        margin-#{$direction}: $DBbaseline !important;
-
-        &-xs {
-            margin-#{$direction}: round($DBbaseline / 4) !important;
+  @each $edge, $sub in $DBspacing-edges {
+    // Padding
+    .u-pad-#{$edge}-#{$size} {
+      @if $sub {
+        @each $subedge in $sub {
+          padding-#{$subedge}: round($DBspacing-unit * $scale);
         }
-
-        &-s {
-            margin-#{$direction}: round($DBbaseline / 2) !important;
-        }
-
-        &-l {
-            margin-#{$direction}: round($DBbaseline * 2) !important;
-        }
-
-        &-xl {
-            margin-#{$direction}: round($DBbaseline * 4) !important;
-        }
+      } @else {
+        padding-#{$edge}: round($DBspacing-unit * $scale);
+      }
     }
+
+    // Margins
+    .u-mar-#{$edge}-#{$size} {
+      @if $sub {
+        @each $subedge in $sub {
+          margin-#{$subedge}: round($DBspacing-unit * $scale);
+        }
+      } @else {
+        margin-#{$edge}: round($DBspacing-unit * $scale);
+      }
+    }
+  }
 }
 
-.u-l-p,
-%u-l-p {
-    @extend %u-l-mb;
 
-    &-dbl {
-        @extend %u-l-mb-l;
-    }
 
-    &-hlf {
-        @extend %u-l-mb-s;
-    }
-}
-
-.u-l-trim,
-%u-l-trim {
+.u-trim-margin {
     margin: 0 !important;
+}
+
+.u-trim-padding {
+    padding: 0 !important;
 }
 
 // Floats

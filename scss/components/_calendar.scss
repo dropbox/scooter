@@ -27,7 +27,7 @@ $DBdatepicker-namespace: "c-datepicker";
     border-radius: 5px;
     background-color: color(gray, x-light);
 
-    &__header {
+    .#{$DBcalendar-namespace}__header {
         padding-bottom: 4px;
 
         font-size: 0.6em;
@@ -37,7 +37,7 @@ $DBdatepicker-namespace: "c-datepicker";
         color: color(gray, medium);
     }
 
-    &__date {
+    .#{$DBcalendar-namespace}__date {
         box-sizing: border-box;
         padding: 4px 8px;
         // This assumes that the `date` element is a child nested inside a `td`
@@ -87,7 +87,7 @@ $DBdatepicker-namespace: "c-datepicker";
             background-color: color(blue, medium);
         }
 
-        &#{&}--disabled, &#{&}--disabled:hover {
+        &--disabled, &--disabled:hover {
             color: color(gray, light);
             background-color: color(gray, x-light);
 
