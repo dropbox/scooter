@@ -32,7 +32,7 @@ $DBspacing-edges: (
   }
 
   .u-mar-#{$size} {
-    padding: round($DBspacing-unit * $scale);
+    margin: round($DBspacing-unit * $scale);
   }
 
   @each $edge, $sub in $DBspacing-edges {
