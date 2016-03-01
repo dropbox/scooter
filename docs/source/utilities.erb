@@ -33,39 +33,26 @@ toc:
     <%= gh_link("helpers/_layout.scss") %>
   </header>
 
-  <h3>Padding (Islands)</h3>
-  <p>Padding helpers are known as "islands". Islands come in five types:</p>
-
-  <ul>
-    <li><strong>Islands</strong> have padding equal to the global baseline.</li>
-    <li><strong>Isles</strong> have padding half the size of the global baseline.</li>
-    <li><strong>Spits</strong> have padding half the size of <strong>isles</strong>.</li>
-    <li><strong>Countries</strong> have double the padding of <strong>islands</strong>.</li>
-    <li><strong>Continents</strong> have double the padding of <strong>countries</strong>.</li>
-  </ul>
-
-  <p>We're getting a little lost in the weeds here, so let's just look at some examples.
-  Note that the border and background color are only present for demonstration purposes.</p>
-
+  <h3>Padding</h3>
   <%= code_example('<p>
-  <span class="u-l-island">This is an island</span>
+  <span class="u-pad-m">Regular padding</span>
 </p>
 <p>
-  <span class="u-l-isle">This is an isle</span>
+  <span class="u-pad-s">Small padding</span>
 </p>
 <p>
-  <span class="u-l-spit">This is a spit</span>
+  <span class="u-pad-xs">Extra-small padding</span>
 </p>
 <p>
-  <span class="u-l-country">This is a country</span>
+  <span class="u-pad-l">Large padding</span>
 </p>
 <p>
-  <span class="u-l-continent">This is a continent</span>
+  <span class="u-pad-xl">Extra-large padding</span>
 </p>', "padding") %>
 
-  <p>You can also add a <code>-v</code> suffix to any island to apply only vertical padding:</p>
+  <p>You can also add a <code>vertical</code> or <code>horizontal</code> keyword to apply vertical or horizontal padding:</p>
 
-  <%= code_example('<span class="u-l-island-v">This is an island</span>', "padding") %>
+  <%= code_example('<span class="u-pad-vertical-m">Regular vertical padding</span>', "padding") %>
 
   <h3>Margins</h3>
   <p>Use margin classes to add or remove margins to elements when they don't have any of their own.</p>
@@ -77,19 +64,19 @@ toc:
   <p>There are also modifiers that can be appended to determine the size of the margin, ranging from extra-small
     <code>xs</code> to extra-large <code>xl</code>.</p>
 
-  <%= code_example('<div class="u-l-mb">This has a margin-bottom equal to the baseline</div>
+  <%= code_example('<div class="u-mar-bottom-m">This has a margin-bottom equal to the baseline</div>
 
 <hr/>
 
-<div class="u-l-mb-l">This has a double-height margin-bottom</div>
+<div class="u-mar-bottom-l">This has a double-height margin-bottom</div>
 
 <hr/>
 
-<div class="u-l-mb-s">This has a half-height margin-bottom</div>
+<div class="u-mar-bottom-s">This has a half-height margin-bottom</div>
 
 <hr/>
 
-<p class="u-l-trim">This paragraph has been trimmed of its margin</p>') %>
+<p class="u-trim-margin">This paragraph has been trimmed of its margin</p>') %>
 
   <h3>Floats</h3>
   <p>You can float things left and right with ease. Don't forget to put floated

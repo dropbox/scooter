@@ -34,7 +34,7 @@ $DBbanner-text-error: color(red, x-dark) !default;
  * the top of the page.
  */
 .#{$DBbanner-namespace} {
-    @extend %u-l-isle;
+    padding: 12px;
 
     color: $DBbanner-text-neutral;
     border-bottom-width: 1px;
