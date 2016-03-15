@@ -34,7 +34,7 @@ configure :build do
     config.line_comments = false
     # config.output_style = :compact did not seem to work for me but config.sass_options = {} did
     config.sass_options = {
-      :style => :compressed
+      :style => :compact
     }
   end
 end

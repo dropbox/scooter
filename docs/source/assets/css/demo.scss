@@ -54,7 +54,7 @@
 @import "../../../../scss/variables/colors";
 
 @each $key, $value in $DBglobalColors {
-  $selector: '.cp-#{$key}';
+  $selector: '.cp-#{inspect($key)}';
   @if type-of($value) == color {
     #{$selector} {
       background-color: $value;
@@ -71,7 +71,7 @@
 }
 
 @each $key, $value in $DBgrayscaleColors {
-  $selector: '.cp-grayscale-#{$key}';
+  $selector: '.cp-grayscale-#{inspect($key)}';
   @if type-of($value) == color {
     #{$selector} {
       background-color: $value;
