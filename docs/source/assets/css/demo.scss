@@ -1,3 +1,4 @@
+// Code demo styles
 .sc-demo {
   .highlight {
     border-top-left-radius: 0;
@@ -49,3 +50,42 @@
   }
 }
 
+// Color pallette demo styles
+@import "../../../../scss/variables/colors";
+
+@each $key, $value in $DBglobalColors {
+  $selector: '.cp-#{$key}';
+  @if type-of($value) == color {
+    #{$selector} {
+      background-color: $value;
+    }
+  } @else {
+    @each $lightness, $color in $value {
+      $deepSelector: $selector + '-#{$lightness}';
+
+      #{$deepSelector} {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+.cp-demo {
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+        min-height: 1.5rem;
+        height: 10vh;
+        flex: 1 1 calc(100%/6);
+
+        transition: .1s ease;
+
+        &:hover {
+            z-index: 1;
+            transform: scale(1.2);
+
+            box-shadow: 0 1px 2px rgba(0,0,0,.1);
+        }
+    }
+}
