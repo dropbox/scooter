@@ -35,3 +35,15 @@
     margin-left: .25em;
   }
 }
+
+.sc-note {
+    padding: $sc-baseline;
+    margin-bottom: $sc-baseline;
+
+    background-color: #F4FAFF;
+    border-left: 2px solid #CBE6FB;
+
+    :last-child {
+        margin: 0;
+    }
+}

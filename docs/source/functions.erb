@@ -34,17 +34,24 @@ toc:
     <%= gh_link("functions/_colors.scss") %>
   </header>
 
+  <aside class="sc-note">
+    <h3>WCAG Color Contrast Compliance</h3>
+    <p>Some of the colors in Scooter's <code>color</code> and <code>grayscale</code> functions meet the WCAG 2.0 AA color
+      contrast standards. Those colors have been indicated in the preview below. This means that the colors are safe to
+      use against a white background.</p>
+  </aside>
+
   <h3 id="grayscale">grayscale($gradation, [$alpha: 1])</h3>
   <p>Returns a value from <a href="variables.html#$dbgrayscalecolors"><code>$DBGrayscaleColors</code></a>.
     Passing an <code>$alpha</code> value between <code>0.0</code> and <code>1.0</code> returns the color as an
     <code>rgba</code> value.</p>
 
   <div class="sc-demo__output cp-demo cp-demo--grayscale">
-    <span data-title="grayscale(1)" class="c-title-bubble cp-grayscale-1"></span>
-    <span data-title="grayscale(2)" class="c-title-bubble cp-grayscale-2"></span>
-    <span data-title="grayscale(3)" class="c-title-bubble cp-grayscale-3"></span>
-    <span data-title="grayscale(4)" class="c-title-bubble cp-grayscale-4"></span>
-    <span data-title="grayscale(5)" class="c-title-bubble cp-grayscale-5"></span>
+    <span data-title="grayscale(1)" class="c-title-bubble cp-grayscale-1"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="grayscale(2)" class="c-title-bubble cp-grayscale-2"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="grayscale(3)" class="c-title-bubble cp-grayscale-3"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="grayscale(4)" class="c-title-bubble cp-grayscale-4"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="grayscale(5)" class="c-title-bubble cp-grayscale-5"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="grayscale(6)" class="c-title-bubble cp-grayscale-6"></span>
     <span data-title="grayscale(7)" class="c-title-bubble cp-grayscale-7"></span>
     <span data-title="grayscale(8)" class="c-title-bubble cp-grayscale-8"></span>
@@ -71,42 +78,42 @@ toc:
     an <code>rgba</code> value.</p>
 
   <div class="sc-demo__output cp-demo">
-    <span data-title="color(gray, x-dark)"  class="c-title-bubble cp-gray-x-dark"></span>
-    <span data-title="color(gray, dark)"    class="c-title-bubble cp-gray-dark"></span>
-    <span data-title="color(gray)"          class="c-title-bubble cp-gray-base"></span>
+    <span data-title="color(gray, x-dark)"  class="c-title-bubble cp-gray-x-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="color(gray, dark)"    class="c-title-bubble cp-gray-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="color(gray)"          class="c-title-bubble cp-gray-base"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(gray, medium)"  class="c-title-bubble cp-gray-medium"></span>
     <span data-title="color(gray, light)"   class="c-title-bubble cp-gray-light"></span>
     <span data-title="color(gray, x-light)" class="c-title-bubble cp-gray-x-light"></span>
 
-    <span data-title="color(blue, x-dark)"  class="c-title-bubble cp-blue-x-dark"></span>
-    <span data-title="color(blue, dark)"    class="c-title-bubble cp-blue-dark"></span>
+    <span data-title="color(blue, x-dark)"  class="c-title-bubble cp-blue-x-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="color(blue, dark)"    class="c-title-bubble cp-blue-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(blue)"          class="c-title-bubble cp-blue-base"></span>
     <span data-title="color(blue, medium)"  class="c-title-bubble cp-blue-medium"></span>
     <span data-title="color(blue, light)"   class="c-title-bubble cp-blue-light"></span>
     <span data-title="color(blue, x-light)" class="c-title-bubble cp-blue-x-light"></span>
 
-    <span data-title="color(red, x-dark)"  class="c-title-bubble cp-red-x-dark"></span>
-    <span data-title="color(red, dark)"    class="c-title-bubble cp-red-dark"></span>
-    <span data-title="color(red)"          class="c-title-bubble cp-red-base"></span>
+    <span data-title="color(red, x-dark)"  class="c-title-bubble cp-red-x-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="color(red, dark)"    class="c-title-bubble cp-red-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
+    <span data-title="color(red)"          class="c-title-bubble cp-red-base"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(red, medium)"  class="c-title-bubble cp-red-medium"></span>
     <span data-title="color(red, light)"   class="c-title-bubble cp-red-light"></span>
     <span data-title="color(red, x-light)" class="c-title-bubble cp-red-x-light"></span>
 
-    <span data-title="color(green, x-dark)"  class="c-title-bubble cp-green-x-dark"></span>
+    <span data-title="color(green, x-dark)"  class="c-title-bubble cp-green-x-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(green, dark)"    class="c-title-bubble cp-green-dark"></span>
     <span data-title="color(green)"          class="c-title-bubble cp-green-base"></span>
     <span data-title="color(green, medium)"  class="c-title-bubble cp-green-medium"></span>
     <span data-title="color(green, light)"   class="c-title-bubble cp-green-light"></span>
     <span data-title="color(green, x-light)" class="c-title-bubble cp-green-x-light"></span>
 
-    <span data-title="color(yellow, x-dark)"  class="c-title-bubble cp-yellow-x-dark"></span>
+    <span data-title="color(yellow, x-dark)"  class="c-title-bubble cp-yellow-x-dark"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(yellow, dark)"    class="c-title-bubble cp-yellow-dark"></span>
     <span data-title="color(yellow)"          class="c-title-bubble cp-yellow-base"></span>
     <span data-title="color(yellow, medium)"  class="c-title-bubble cp-yellow-medium"></span>
     <span data-title="color(yellow, light)"   class="c-title-bubble cp-yellow-light"></span>
     <span data-title="color(yellow, x-light)" class="c-title-bubble cp-yellow-x-light"></span>
 
-    <span data-title="color(black)" class="c-title-bubble cp-black"></span>
+    <span data-title="color(black)" class="c-title-bubble cp-black"><small class="wcag">WCAG 2.0 Compliant</small></span>
     <span data-title="color(white)" class="c-title-bubble cp-white"></span>
   </div>
 </section>
