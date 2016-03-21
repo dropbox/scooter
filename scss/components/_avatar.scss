@@ -28,7 +28,7 @@ xl: 64px
     height: $s;
 
     font-size: round($s * 0.4);
-    line-height: ($s - 4px);
+    line-height: $s;
 
     @if($s < 32px) {
         font-weight: 700;
@@ -56,7 +56,7 @@ xl: 64px
     text-align: center;
 
     // Default color for avatars without images
-    color: $DBavatar-color;
+    color: color(white);
     border-radius: 1000px;
 
     &__img,
@@ -84,7 +84,7 @@ xl: 64px
     }
 
     &#{&}--no-img {
-        border: 2px solid currentColor;
+        background-color: $DBavatar-color;
 
         &:after {
             content: attr(data-initials);
@@ -116,7 +116,6 @@ xl: 64px
         width: auto;
         padding: 2px;
 
-        color: color(gray, medium);
         background-color: color(gray, light, 0.7);
 
         > img {
