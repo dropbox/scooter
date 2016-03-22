@@ -547,7 +547,7 @@ select.c-input {
   min-width: 32px;
   height: 32px;
   font-size: 13px;
-  line-height: 28px;
+  line-height: 32px;
   font-weight: 600;
   display: inline-block;
   vertical-align: middle;
@@ -555,7 +555,7 @@ select.c-input {
   position: relative;
   box-sizing: border-box;
   text-align: center;
-  color: #007ee5;
+  color: white;
   border-radius: 1000px; }
   .c-avatar__img,
   .c-avatar > img {
@@ -575,7 +575,7 @@ select.c-input {
     box-shadow: inset 0 0 0 1px rgba(37, 40, 43, 0.1);
     pointer-events: none; }
   .c-avatar.c-avatar--no-img {
-    border: 2px solid currentColor; }
+    background-color: #007ee5; }
     .c-avatar.c-avatar--no-img:after {
       content: attr(data-initials);
       box-shadow: none; }
@@ -601,7 +601,6 @@ select.c-input {
             justify-content: center;
     width: auto;
     padding: 2px;
-    color: #7b8994;
     background-color: rgba(208, 212, 217, 0.7); }
     .c-avatar.c-avatar--meta > img {
       display: inline-block;
@@ -617,7 +616,7 @@ select.c-input {
     min-width: 16px;
     height: 16px;
     font-size: 6px;
-    line-height: 12px;
+    line-height: 16px;
     font-weight: 700; }
     .c-avatar--xs:after {
       content: ""; }
@@ -626,28 +625,28 @@ select.c-input {
     min-width: 24px;
     height: 24px;
     font-size: 10px;
-    line-height: 20px;
+    line-height: 24px;
     font-weight: 700; }
   .c-avatar--m {
     width: 32px;
     min-width: 32px;
     height: 32px;
     font-size: 13px;
-    line-height: 28px;
+    line-height: 32px;
     font-weight: 600; }
   .c-avatar--l {
     width: 48px;
     min-width: 48px;
     height: 48px;
     font-size: 19px;
-    line-height: 44px;
+    line-height: 48px;
     font-weight: 400; }
   .c-avatar--xl {
     width: 64px;
     min-width: 64px;
     height: 64px;
     font-size: 26px;
-    line-height: 60px;
+    line-height: 64px;
     font-weight: 400; }
 
 .c-facepile {
