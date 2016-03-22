@@ -16,14 +16,18 @@ toc:
   <h3>share($property, [$property...,] $value)</h3>
   <p>Outputs multiple <code>$property</code> values with the same value. For example:</p>
 
-  <% code("scss") do %>
-    // Input:
-    share(padding-top, padding-bottom, 20px);
+<% code("scss") do %>
+// Input:
+.element {
+  share(padding-top, padding-bottom, 20px);
+}
 
-    // Output:
-    padding-top: 20px;
-    padding-bottom: 20px;
-  <% end %>
+// Output:
+.element {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+<% end %>
 </section>
 
 <section id="arrow" class="sc-def">

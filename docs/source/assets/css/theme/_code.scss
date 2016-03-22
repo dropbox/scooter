@@ -2,7 +2,7 @@ code {
   padding: 2px 4px;
 
   font-size: 13px;
-  font-family: "Source Code Pro";
+  font-family: "Menlo", monospace;
 
   background-color: #F0F3F5;
   border-radius: 3px;
@@ -15,7 +15,6 @@ code {
 }
 
 pre.highlight {
-  -webkit-font-smoothing: antialiased;
   padding: ($sc-baseline/2);
   margin-bottom: $sc-baseline;
   overflow: auto;
