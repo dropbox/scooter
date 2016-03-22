@@ -63,6 +63,7 @@ $DBbutton-border-tertiary: color(blue) !default;
 
     &#{&}--full {
         display: block;
+        width: 100%;
     }
 
     &#{&}--primary {
