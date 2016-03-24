@@ -25,7 +25,7 @@ $DBtitlebubble-point-width: 5px !default;
     position: relative;
 
     &:before, &:after {
-        z-index: 1000;
+        z-index: 500;
     }
 
     &:after {
@@ -40,6 +40,7 @@ $DBtitlebubble-point-width: 5px !default;
 
         font-size: 11px;
         font-weight: 500;
+        line-height: 1.4;
 
         color: color(white);
         border-radius: 3px;
@@ -122,7 +123,7 @@ $DBtitlebubble-point-width: 5px !default;
         }
     }
 
-    &:hover, &:focus {
+    &:hover, &:focus, &.is-child-focused {
         &:before, &:after {
             display: block;
         }

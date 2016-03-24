@@ -28,7 +28,6 @@ xl: 64px
     height: $s;
 
     font-size: round($s * 0.4);
-    line-height: $s;
 
     @if($s < 32px) {
         font-weight: 700;
@@ -54,15 +53,14 @@ xl: 64px
     box-sizing: border-box;
 
     text-align: center;
+    line-height: 2.5;
 
-    // Default color for avatars without images
-    color: color(white);
     border-radius: 1000px;
 
     &__img,
     > img {
         display: block;
-        width: 100%;
+        min-width: 100%;
         height: 100%;
         // Keep proportions in tact even if the container is the wrong size
         object-fit: cover;
@@ -84,6 +82,8 @@ xl: 64px
     }
 
     &#{&}--no-img {
+        // Default color for avatars without images
+        color: color(white);
         background-color: $DBavatar-color;
 
         &:after {
@@ -112,10 +112,12 @@ xl: 64px
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex: 0 0 auto;
 
         width: auto;
-        padding: 2px;
+        padding: 0 2px;
 
+        color: color(gray, medium);
         background-color: color(gray, light, 0.7);
 
         > img {
@@ -124,6 +126,7 @@ xl: 64px
             width: auto;
             height: auto;
             object-fit: none;
+            margin: 0 auto;
         }
 
         &:after {

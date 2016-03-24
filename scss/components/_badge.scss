@@ -1,0 +1,45 @@
+//---------------------------
+//
+// Badge
+//
+//---------------------------
+
+$DBbadge-namespace: "c-badge" !default;
+
+$DBbadge-background: color(white) !default;
+$DBbadge-text-color: color(red, medium) !default;
+$DBbadge-border-color: color(red, light) !default;
+
+/**
+ * Badge component
+ */
+.#{$DBbadge-namespace} {
+    // Repeat the box-sizing reset here in case this component is used without the reset stylesheet.
+    box-sizing: border-box;
+
+    display: inline-block;
+    margin: 0;
+    padding: 1px 4px;
+
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+
+    color: $DBbadge-text-color;
+    background: $DBbadge-background;
+
+    border: 1px solid $DBbadge-border-color;
+    border-radius: 3px;
+
+    &#{&}--top-right {
+        position: absolute;
+        top: -1em;
+        left: -1em;
+
+        // Align the left edge relative to the right edge.
+        margin-left: 100%;
+    }
+}

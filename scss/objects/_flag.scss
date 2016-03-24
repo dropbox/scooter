@@ -47,7 +47,7 @@ $DBflag-namespace: "o-flag" !default;
 
     // The fixed-width element
     &__fix {
-        padding-right: 10px;
+        white-space: nowrap;
     }
 
     // This element grows to fill the remainder of its container
@@ -79,10 +79,5 @@ $DBflag-namespace: "o-flag" !default;
     .#{$DBflag-namespace}__flex {
         min-width: 0;
         flex: 1 1 auto;
-    }
-
-    .#{$DBflag-namespace}__fix {
-        padding-right: 0;
-        margin-right: 10px;
     }
 }

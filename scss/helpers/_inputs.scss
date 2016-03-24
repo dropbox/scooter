@@ -14,4 +14,9 @@
     &:focus {
         box-shadow: 0 0 0 2px color(blue, light);
     }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
 }

@@ -27,19 +27,41 @@
     font-size: 0.85em;
 }
 
+.u-font-strong,
+%u-font-strong {
+    font-weight: 600;
+}
+
+.u-font-black,
+%u-font-black {
+    color: color(black);
+}
+
 .u-font-meta,
 %u-font-meta {
     color: color(gray, medium);
 }
 
 .u-font-error,
-%u-font-error {
+%u-font-error,
+.u-font-danger,
+%u-font-danger {
     color: color(red);
 }
 
 .u-font-success,
 %u-font-success {
     color: color(green);
+}
+
+.u-font-wrap,
+%u-font-wrap {
+    white-space: normal;
+}
+
+.u-font-nowrap,
+%u-font-nowrap {
+    white-space: nowrap;
 }
 
 // Hide text in element

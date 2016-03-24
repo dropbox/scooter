@@ -86,29 +86,26 @@ $DBspacing-edges: (
 // Display types
 // =============
 //
-.u-l-b,
-%u-l-b {
+.u-l-b {
     display: block !important;
 }
 
-.u-l-ib,
-%u-l-ib {
+.u-l-ib {
     display: inline-block !important;
 
-    &#{&}--m {
+    &--m {
         vertical-align: middle !important;
     }
 
-    &#{&}--t {
+    &--t {
         vertical-align: top !important;
     }
 
-    &#{&}--b {
+    &--b {
         vertical-align: bottom !important;
     }
 }
 
-.u-l-dn,
-%u-l-dn {
+.u-l-dn {
     display: none !important;
 }
