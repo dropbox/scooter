@@ -1,0 +1,64 @@
+//-----------------------------
+//
+// Tables
+//
+//-----------------------------
+
+$DBtable-namespace: "c-table";
+
+.#{$DBtable-namespace} {
+    display: table;
+    width: 100%;
+
+    text-align: left;
+
+    &__th, th,
+    &__td, td {
+        @include share(padding-top, padding-bottom, $DBbaseline/2);
+        @include share(padding-left, padding-right, $DBbaseline/4);
+    }
+
+    &__th, th {
+        font-weight: 400;
+
+        color: grayscale(5);
+        border-bottom: 2px solid color(gray, light);
+    }
+
+    &__row, tr {
+        border-bottom: 1px solid color(gray, light);
+    }
+
+    // Messaging state modifiers
+    &__row, tr,
+    &__td, td {
+        &--success {
+            background-color: color(green, light);
+        }
+
+        &--warning {
+            background-color: color(yellow, light);
+        }
+
+        &--error {
+            background-color: color(red, light);
+        }
+    }
+
+    // "Zebra-striped" rows change in color every other row
+    &--zebra &__row:nth-child(odd) {
+        background-color: color(gray, x-light);
+    }
+
+    // Selectable states also get hover/focus interaction
+    &--selectable &__row {
+        &:hover, &:focus,
+        &.has-focus {
+            background-color: color(blue, x-light);
+        }
+
+        &.is-selected {
+            background-color: color(blue, light);
+        }
+    }
+}

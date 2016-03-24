@@ -4,16 +4,17 @@
 //
 //-----------------------------
 
+@import "arrow";
+@import "avatar";
 @import "banners";
 @import "buttons";
+@import "calendar";
 @import "cards";
 @import "inputs";
-@import "avatar";
+@import "loading-indicator";
 @import "modal";
-@import "typeahead";
+@import "tab-nav";
+@import "tables";
 @import "title-bubble";
 @import "tokens";
-@import "loading-indicator";
-@import "tab-nav";
-@import "calendar";
-@import "arrow";
+@import "typeahead";
