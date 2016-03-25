@@ -18,15 +18,15 @@ $DBbadge-border-color: color(red, light) !default;
     box-sizing: border-box;
 
     display: inline-block;
+    vertical-align: middle;
     margin: 0;
     padding: 1px 4px;
 
     font-size: 9px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.4;
     text-align: center;
     text-shadow: none;
-    vertical-align: middle;
 
     color: $DBbadge-text-color;
     background: $DBbadge-background;
@@ -36,6 +36,7 @@ $DBbadge-border-color: color(red, light) !default;
 
     &#{&}--top-right {
         position: absolute;
+        z-index: 1;
         top: -1em;
         left: -1em;
 

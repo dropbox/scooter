@@ -46,12 +46,14 @@ $DBtable-namespace: "c-table";
     }
 
     // "Zebra-striped" rows change in color every other row
-    &--zebra &__row:nth-child(odd) {
+    &--zebra &__row:nth-child(odd),
+    &--zebra tbody tr:nth-child(odd) {
         background-color: color(gray, x-light);
     }
 
     // Selectable states also get hover/focus interaction
-    &--selectable &__row {
+    &--selectable &__row,
+    &--selectable tbody tr {
         &:hover, &:focus,
         &.has-focus {
             background-color: color(blue, x-light);

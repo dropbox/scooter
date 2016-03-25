@@ -37,7 +37,7 @@ input[type=radio] {
 ul, ol {
   margin-left: 46px; }
 
-p {
+p, table {
   margin-bottom: 23px; }
 
 table {
@@ -559,6 +559,31 @@ a,
     -webkit-transform: translateX(0);
             transform: translateX(0); } }
 /**
+ * Badge component
+ */
+.c-badge {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 1px 4px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-shadow: none;
+  color: #ed7a6f;
+  background: white;
+  border: 1px solid #fcbdbd;
+  border-radius: 3px; }
+  .c-badge.c-badge--top-right {
+    position: absolute;
+    z-index: 1;
+    top: -1em;
+    left: -1em;
+    margin-left: 100%; }
+
+/**
  * Banner component. Used to display messages to the user, typically pinned to
  * the top of the page.
  */
@@ -642,6 +667,23 @@ a,
     .c-btn.c-btn--tertiary:active:not(:disabled) {
       background: -webkit-linear-gradient(#f4faff, #e3f1fc);
       background: linear-gradient(#f4faff, #e3f1fc); }
+
+.c-btn-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .c-btn-group .c-btn {
+    margin: 0;
+    border-radius: 0; }
+    .c-btn-group .c-btn + .c-btn {
+      border-left: 0; }
+    .c-btn-group .c-btn:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    .c-btn-group .c-btn:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
 
 .c-datepicker {
   position: relative;
@@ -982,11 +1024,11 @@ select.c-input {
     background-color: #fff5cc; }
   .c-table__row--error, .c-table tr--error, .c-table__td--error, .c-table td--error {
     background-color: #fcbdbd; }
-  .c-table--zebra .c-table__row:nth-child(odd) {
+  .c-table--zebra .c-table__row:nth-child(odd), .c-table--zebra tbody tr:nth-child(odd) {
     background-color: #f7f9fa; }
-  .c-table--selectable .c-table__row:hover, .c-table--selectable .c-table__row:focus, .c-table--selectable .c-table__row.has-focus {
+  .c-table--selectable .c-table__row:hover, .c-table--selectable .c-table__row:focus, .c-table--selectable .c-table__row.has-focus, .c-table--selectable tbody tr:hover, .c-table--selectable tbody tr:focus, .c-table--selectable tbody tr.has-focus {
     background-color: #f4faff; }
-  .c-table--selectable .c-table__row.is-selected {
+  .c-table--selectable .c-table__row.is-selected, .c-table--selectable tbody tr.is-selected {
     background-color: #cce6fa; }
 
 /**

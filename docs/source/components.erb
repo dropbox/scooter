@@ -5,6 +5,7 @@ gh_path: components
 toc:
 - Banners
 - Buttons
+- Badges
 - Cards
 - Inputs
 - Avatars
@@ -14,6 +15,7 @@ toc:
 - Loading-indicator
 - Tab-nav
 - Calendar
+- Tables
 
 ---
 
@@ -98,6 +100,27 @@ toc:
 <p>
   <button class="c-btn c-btn--secondary c-btn--big c-btn--full">A big, full-width button</button>
 </p>') %>
+
+  <p>You can also create a button group for a series of buttons attached to one another:</p>
+
+  <%= code_example('<div class="c-btn-group">
+  <button class="c-btn c-btn--secondary">Button</button>
+  <button class="c-btn c-btn--secondary">Button</button>
+  <button class="c-btn c-btn--secondary">Button</button>
+</div>') %>
+</section>
+
+<section class="sc-def" id="badges">
+  <header class="sc-def__header">
+    <h2>Badges</h2>
+    <%= gh_link("components/_badges.scss") %>
+  </header>
+
+  <p>Badges are most often used as counters, such as an indication of unread notifications.
+    A badge can have a <code>top-right</code> modifier to pin it to the top-right corner of
+    its parent.</p>
+
+  <%= code_example('<p>Notifications <span class="c-badge">12</span></p>') %>
 </section>
 
 <section class="sc-def" id="cards">
@@ -546,3 +569,104 @@ toc:
 
   </div>') %>
 </section>
+
+<section class="sc-def" id="tables">
+  <header class="sc-def__header">
+    <h2>Tables</h2>
+    <%= gh_link("components/_tables.scss") %>
+  </header>
+
+  <p>For basic table styling, add the <code>c-table</code> class to your tables.</p>
+
+  <%= code_example('<table class="c-table">
+  <thead>
+    <th>#</th>
+    <th>Name</th>
+    <th>Favorite animal</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Wes O&rsquo;Haire</td>
+      <td>Elephant</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sam Jau</td>
+      <td>Porcupine</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Zach Johnston</td>
+      <td>Red Panda</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Daina Lightfoot</td>
+      <td>Sea Otter</td>
+    </tr>
+  </tbody>
+</table>') %>
+
+  <p>Tables have two main additional modifiers/styles&mdash;<code>zebra</code> for alternating
+    striped rows, and <code>selectable</code> for hover and selected states on rows.</p>
+
+  <%= code_example('<table class="c-table c-table--zebra">
+  <thead>
+    <th>#</th>
+    <th>Name</th>
+    <th>Favorite Emoji</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Fiona Rolander</td>
+      <td>🙄</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Zach Johnston</td>
+      <td>💰</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Daina Lightfoot</td>
+      <td>🙈</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Andrew Chin</td>
+      <td>💁</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Liz Osaki</td>
+      <td>😬</td>
+    </tr>
+  </tbody>
+</table>') %>
+
+<%= code_example('<table class="c-table c-table--selectable">
+  <thead>
+    <th>#</th>
+    <th>Name</th>
+    <th>Favorite gif</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Fiona Rolander</td>
+      <td><a href="https://gif.daneden.me/tina_five.gif">Tina Fey giving herself a high-five</a></td>
+    </tr>
+    <tr class="is-selected">
+      <td>2</td>
+      <td>Daniel Eden</td>
+      <td><a href="https://gif.daneden.me/happy-place.gif">The happiest dog in the world</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Liz Osaki</td>
+      <td><a href="https://gif.daneden.me/excited_cloud.gif">Even rain clouds can be happy</a></td>
+    </tr>
+  </tbody>
+</table>') %>
