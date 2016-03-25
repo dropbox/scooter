@@ -7,8 +7,17 @@
 $DBbutton-namespace: "c-btn" !default;
 
 $DBbutton-background-primary: linear-gradient(color(blue), color(blue, dark)) !default;
+$DBbutton-background-primary-hover: color(blue) !default;
+$DBbutton-background-primary-active: color(blue, dark) !default;
+
 $DBbutton-background-secondary: color(white) !default;
+$DBbutton-background-secondary-hover: linear-gradient(color(white), color(gray, x-light)) !default;
+$DBbutton-background-secondary-active: color(gray, x-light) !default;
+
 $DBbutton-background-tertiary: linear-gradient(color(white), color(blue, x-light)) !default;
+$DBbutton-background-tertiary-hover: color(blue, x-light) !default;
+$DBbutton-background-tertiary-active: linear-gradient(color(blue, x-light), lighten(color(blue, light), 5%)) !default;
+
 
 // Providing fallback colors for IE <= 9
 $DBbutton-background-fallback-primary: color(blue);
@@ -71,12 +80,28 @@ $DBbutton-border-tertiary: color(blue) !default;
         border-color: $DBbutton-border-primary;
         background-color: $DBbutton-background-fallback-primary;
         background: $DBbutton-background-primary;
+
+        &:hover:not(:disabled) {
+            background: $DBbutton-background-primary-hover;
+        }
+
+        &:active:not(:disabled) {
+            background:$DBbutton-background-primary-active;
+        }
     }
 
     &#{&}--secondary {
         color: $DBbutton-text-secondary;
         border-color: $DBbutton-border-secondary;
         background: $DBbutton-background-secondary;
+
+        &:hover:not(:disabled) {
+            background: $DBbutton-background-secondary-hover;
+        }
+
+        &:active:not(:disabled) {
+            background:$DBbutton-background-secondary-active;
+        }
     }
 
     &#{&}--tertiary {
@@ -84,5 +109,13 @@ $DBbutton-border-tertiary: color(blue) !default;
         border-color: $DBbutton-border-tertiary;
         background-color: $DBbutton-background-fallback-tertiary;
         background: $DBbutton-background-tertiary;
+
+        &:hover:not(:disabled) {
+            background: $DBbutton-background-tertiary-hover;
+        }
+
+        &:active:not(:disabled) {
+            background:$DBbutton-background-tertiary-active;
+        }
     }
 }

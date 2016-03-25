@@ -618,16 +618,30 @@ a,
     background-color: #007ee5;
     background: -webkit-linear-gradient(#007ee5, #0071ce);
     background: linear-gradient(#007ee5, #0071ce); }
+    .c-btn.c-btn--primary:hover:not(:disabled) {
+      background: #007ee5; }
+    .c-btn.c-btn--primary:active:not(:disabled) {
+      background: #0071ce; }
   .c-btn.c-btn--secondary {
     color: #47525d;
     border-color: #d0d4d9;
     background: white; }
+    .c-btn.c-btn--secondary:hover:not(:disabled) {
+      background: -webkit-linear-gradient(white, #f7f9fa);
+      background: linear-gradient(white, #f7f9fa); }
+    .c-btn.c-btn--secondary:active:not(:disabled) {
+      background: #f7f9fa; }
   .c-btn.c-btn--tertiary {
     color: #007ee5;
     border-color: #007ee5;
     background-color: white;
     background: -webkit-linear-gradient(white, #f4faff);
     background: linear-gradient(white, #f4faff); }
+    .c-btn.c-btn--tertiary:hover:not(:disabled) {
+      background: #f4faff; }
+    .c-btn.c-btn--tertiary:active:not(:disabled) {
+      background: -webkit-linear-gradient(#f4faff, #e3f1fc);
+      background: linear-gradient(#f4faff, #e3f1fc); }
 
 .c-datepicker {
   position: relative;
