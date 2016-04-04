@@ -492,10 +492,16 @@ toc:
   <p>The tab nav component provides a tab-style navigation with active tab states.</p>
 
   <%= code_example('<nav>
-  <ul class="c-tab-nav">
-    <li role="tab" aria-selected="true" class="c-tab-nav__tab is-active"><button>Everything</button></li>
-    <li role="tab" aria-selected="false" class="c-tab-nav__tab"><button>Photos</button></li>
-    <li role="tab" aria-selected="false" class="c-tab-nav__tab"><button>Documents</button></li>
+  <ul class="c-tab-nav" role="tablist">
+    <li role="presentation" class="c-tab-nav__tab is-active">
+      <button role="tab" aria-selected="true" tabindex="0">Everything</button>
+    </li>
+    <li role="presentation" class="c-tab-nav__tab">
+      <button role="tab" aria-selected="false" tabindex="-1">Photos</button>
+    </li>
+    <li role="presentation" class="c-tab-nav__tab">
+      <button role="tab" aria-selected="false" tabindex="-1">Documents</button>
+    </li>
   </ul>
 </nav>') %>
 </section>
