@@ -1004,7 +1004,7 @@ select.c-input {
       text-decoration: none;
       outline: 0;
       color: #3d464d;
-      border-bottom-color: #007ee5; }
+      border-bottom-color: currentColor; }
   .c-tab-nav__tab.is-active a, .c-tab-nav__tab.is-active button {
     font-weight: 600;
     color: #3d464d;
