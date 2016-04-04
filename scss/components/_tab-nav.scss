@@ -31,31 +31,37 @@ $DBtab-nav-namespace: "c-tab-nav" !default;
     margin-bottom: -1px;
 
     color: color(gray, medium);
-    border-bottom: 1px solid transparent;
-    transition: 0.2s;
-
-    &:hover {
-        color: color(gray, dark);
-        border-bottom-color: color(gray, dark, 0.3);
-    }
 
     // Adjacent siblings get a margin-left
     + #{&} {
         margin-left: 16px;
     }
 
-    a {
+    a, button {
         display: inline-block;
+        padding: 0;
         padding-bottom: 8px;
 
+        border: 0;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s;
+        background-color: transparent;
         color: inherit;
 
-        &:hover {
+        appearance: none;
+        cursor: pointer;
+
+        &:hover, &:focus {
             text-decoration: none;
+
+            outline: 0;
+            color: color(gray, dark);
+            border-bottom-color: currentColor;
         }
     }
 
-    &#{&}--is-active {
+    &.is-active a,
+    &.is-active button {
         font-weight: 600;
 
         color: color(gray, dark);

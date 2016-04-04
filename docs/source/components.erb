@@ -493,9 +493,9 @@ toc:
 
   <%= code_example('<nav>
   <ul class="c-tab-nav">
-    <li class="c-tab-nav__tab c-tab-nav__tab--is-active"><a href="#">Everything</a></li>
-    <li class="c-tab-nav__tab"><a href="#">Photos</a></li>
-    <li class="c-tab-nav__tab"><a href="#">Documents</a></li>
+    <li role="tab" aria-selected="true" class="c-tab-nav__tab is-active"><button>Everything</button></li>
+    <li role="tab" aria-selected="false" class="c-tab-nav__tab"><button>Photos</button></li>
+    <li role="tab" aria-selected="false" class="c-tab-nav__tab"><button>Documents</button></li>
   </ul>
 </nav>') %>
 </section>
