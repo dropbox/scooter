@@ -983,22 +983,29 @@ select.c-input {
 .c-tab-nav__tab {
   display: inline-block;
   margin-bottom: -1px;
-  color: #7b8994;
-  border-bottom: 1px solid transparent;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-  .c-tab-nav__tab:hover {
-    color: #3d464d;
-    border-bottom-color: rgba(61, 70, 77, 0.3); }
+  color: #7b8994; }
   .c-tab-nav__tab + .c-tab-nav__tab {
     margin-left: 16px; }
-  .c-tab-nav__tab a {
+  .c-tab-nav__tab a, .c-tab-nav__tab button {
     display: inline-block;
+    padding: 0;
     padding-bottom: 8px;
-    color: inherit; }
-    .c-tab-nav__tab a:hover {
-      text-decoration: none; }
-  .c-tab-nav__tab.c-tab-nav__tab--is-active {
+    border: 0;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    background-color: transparent;
+    color: inherit;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    cursor: pointer; }
+    .c-tab-nav__tab a:hover, .c-tab-nav__tab a:focus, .c-tab-nav__tab button:hover, .c-tab-nav__tab button:focus {
+      text-decoration: none;
+      outline: 0;
+      color: #3d464d;
+      border-bottom-color: #007ee5; }
+  .c-tab-nav__tab.is-active a, .c-tab-nav__tab.is-active button {
     font-weight: 600;
     color: #3d464d;
     border-bottom-color: currentColor; }
