@@ -9,6 +9,7 @@
 $DBspacing-unit: 16px !default;
 
 $DBspacing-sizes: (
+  'xxs': .25,
   'xs': .5,
   's': 1,
   'm': 1.5,
@@ -28,11 +29,11 @@ $DBspacing-edges: (
 @each $size, $scale in $DBspacing-sizes {
 
   .u-pad-#{$size} {
-    padding: round($DBspacing-unit * $scale);
+    padding: round($DBspacing-unit * $scale) !important;
   }
 
   .u-mar-#{$size} {
-    margin: round($DBspacing-unit * $scale);
+    margin: round($DBspacing-unit * $scale) !important;
   }
 
   @each $edge, $sub in $DBspacing-edges {
@@ -40,10 +41,10 @@ $DBspacing-edges: (
     .u-pad-#{$edge}-#{$size} {
       @if $sub {
         @each $subedge in $sub {
-          padding-#{$subedge}: round($DBspacing-unit * $scale);
+          padding-#{$subedge}: round($DBspacing-unit * $scale) !important;
         }
       } @else {
-        padding-#{$edge}: round($DBspacing-unit * $scale);
+        padding-#{$edge}: round($DBspacing-unit * $scale) !important;
       }
     }
 
@@ -51,10 +52,10 @@ $DBspacing-edges: (
     .u-mar-#{$edge}-#{$size} {
       @if $sub {
         @each $subedge in $sub {
-          margin-#{$subedge}: round($DBspacing-unit * $scale);
+          margin-#{$subedge}: round($DBspacing-unit * $scale) !important;
         }
       } @else {
-        margin-#{$edge}: round($DBspacing-unit * $scale);
+        margin-#{$edge}: round($DBspacing-unit * $scale) !important;
       }
     }
   }

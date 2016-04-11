@@ -71,13 +71,18 @@ $DBflag-namespace: "o-flag" !default;
         }
     }
 
-    .#{$DBflag-namespace}__flex,
     .#{$DBflag-namespace}__fix {
-        display: initial;
+        display: inherit;
+        align-items: inherit;
+        flex: 0 0 auto;
     }
 
     .#{$DBflag-namespace}__flex {
+        display: initial;
         min-width: 0;
+        // Though width is set by flex in this selector, Safari 9 exhibits a bug
+        // causing it to ignore the implied width if an explicit width is set.
+        width: auto;
         flex: 1 1 auto;
     }
 }

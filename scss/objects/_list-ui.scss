@@ -12,8 +12,12 @@ $DBlist-ui-namespace: "o-list-ui" !default;
 
     list-style: none;
 
-    &--dividers li + li {
+    &--dividers > li + li {
         border-top: 1px solid;
         border-color: color(gray, x-dark, 0.1);
+    }
+
+    &--inline > li {
+        display: inline-block;
     }
 }

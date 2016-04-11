@@ -129,6 +129,12 @@ xl: 64px
             margin: 0 auto;
         }
 
+        > span {
+            // Safari has some trouble properly aligning elements in the avatar
+            // without explicit margins or widths
+            margin: auto;
+        }
+
         &:after {
             // Prevent the shadow pseudo-element from rendering
             content: none;

@@ -39,7 +39,8 @@ $DBinput-background-disabled: color(gray, x-light) !default;
 
     display: block;
     width: 100%;
-    padding: 7px;
+    padding: 5px 7px;
+    box-sizing: border-box;
 
     font-size: $DBfont-size;
     text-align: left;
