@@ -698,6 +698,13 @@ a,
     .c-btn-group .c-btn:last-child {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
+  .c-btn-group--justify {
+    width: 100%; }
+    .c-btn-group--justify .c-btn {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 0 auto;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; }
 
 .c-datepicker {
   position: relative;

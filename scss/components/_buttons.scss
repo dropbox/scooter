@@ -141,4 +141,12 @@ $DBbutton-border-tertiary: color(blue) !default;
             border-bottom-right-radius: 3px;
         }
     }
+
+    &--justify {
+        width: 100%;
+
+        .#{$DBbutton-namespace} {
+            flex: 1 0 auto;
+        }
+    }
 }

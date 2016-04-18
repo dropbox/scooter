@@ -107,13 +107,23 @@ toc:
       should always opt to disable buttons via the <code>disabled</code> attribute to ensure they are functionally disabled.</p>
   </aside>
 
-  <p>You can also create a button group for a series of buttons attached to one another:</p>
+  <p>You can also create a button group for a series of buttons attached to one another. Adding the <code>justify</code>
+  modifier makes the group fill its container and divides the space equally amongst the buttons.</p>
 
-  <%= code_example('<div class="c-btn-group">
-  <button class="c-btn c-btn--secondary">Button</button>
-  <button class="c-btn c-btn--secondary">Button</button>
-  <button class="c-btn c-btn--secondary">Button</button>
-</div>') %>
+  <%= code_example('<p>
+  <div class="c-btn-group">
+    <button class="c-btn c-btn--secondary">Button</button>
+    <button class="c-btn c-btn--secondary">Button</button>
+    <button class="c-btn c-btn--secondary">Button</button>
+  </div>
+</p>
+<p>
+  <div class="c-btn-group c-btn-group--justify">
+    <button class="c-btn c-btn--secondary">Button</button>
+    <button class="c-btn c-btn--secondary">Button</button>
+    <button class="c-btn c-btn--secondary">Button</button>
+  </div>
+</p>') %>
 </section>
 
 <section class="sc-def" id="badges">
