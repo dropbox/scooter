@@ -63,6 +63,12 @@ $DBtitlebubble-point-width: 5px !default;
         border-bottom-color: $DBtitlebubble-background;
     }
 
+    &--respect-line-break {
+        &:after {
+            white-space: pre-line;
+        }
+    }
+
     &--n {
         &:after {
             top: auto;

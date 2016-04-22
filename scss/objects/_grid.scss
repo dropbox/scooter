@@ -52,7 +52,6 @@ $DBcol-groups: (2, 3, 4, 6, 12) !default;
 $DBgutter-width: 20px !default;
 
 // Breakpoints
-$DBresponsive-grid: false !default;
 $DBbreakpoint-medium: 750px !default;
 $DBbreakpoint-small: 550px !default;
 
@@ -184,7 +183,7 @@ $DBbreakpoint-small: 550px !default;
         margin-right: 0;
     }
 
-    @if ($DBresponsive-grid) {
+    .#{$DBgrid-namespace}--responsive & {
         @media (max-width: $DBbreakpoint-medium) {
             display: block;
             margin-left: 0;
