@@ -26,6 +26,14 @@ $DBspacing-edges: (
   'horizontal' ('left' 'right')
 );
 
+.u-trim-margin {
+    margin: 0 !important;
+}
+
+.u-trim-padding {
+    padding: 0 !important;
+}
+
 @each $size, $scale in $DBspacing-sizes {
 
   .u-pad-#{$size} {
@@ -59,16 +67,6 @@ $DBspacing-edges: (
       }
     }
   }
-}
-
-
-
-.u-trim-margin {
-    margin: 0 !important;
-}
-
-.u-trim-padding {
-    padding: 0 !important;
 }
 
 // Floats

@@ -79,12 +79,14 @@ html, :root {
   line-height: 23px; }
 
 a,
-.f-a {
+.f-a,
+.f-link {
   text-decoration: none;
   color: #007ee5;
   cursor: pointer; }
   a:hover,
-  .f-a:hover {
+  .f-a:hover,
+  .f-link:hover {
     text-decoration: underline; }
 
 hr {
@@ -1271,6 +1273,11 @@ select.c-input {
   .c-typeahead__media {
     margin-right: 12px; }
 
+.c-rule {
+  margin-bottom: 23px;
+  border: 0;
+  border-top: 1px solid rgba(37, 40, 43, 0.1); }
+
 .ax-visually-hidden {
   position: absolute !important;
   border: 0 !important;
@@ -1303,6 +1310,12 @@ select.c-input {
   .u-unbutton::-moz-focus-inner {
     border: 0;
     padding: 0; }
+
+.u-trim-margin {
+  margin: 0 !important; }
+
+.u-trim-padding {
+  padding: 0 !important; }
 
 .u-pad-xxs {
   padding: 4px !important; }
@@ -1580,12 +1593,6 @@ select.c-input {
   margin-left: 64px !important;
   margin-right: 64px !important; }
 
-.u-trim-margin {
-  margin: 0 !important; }
-
-.u-trim-padding {
-  padding: 0 !important; }
-
 .u-l-fl {
   float: left !important; }
 
@@ -1617,7 +1624,8 @@ select.c-input {
   text-align: right !important; }
 
 .u-font-small {
-  font-size: 0.85em; }
+  font-size: 0.85em;
+  line-height: 1.8; }
 
 .u-font-strong {
   font-weight: 600; }

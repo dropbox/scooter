@@ -36,27 +36,32 @@ toc:
     <%= gh_link("base/_typography.scss") %>
   </header>
 
-  <p><code>base/typography</code> sets default styles for typographic elements and
-    adds classes for those styles. For example, if you want a piece of text to
-    <em>look</em> like a <code>h1</code> without changing its semantic value, you
-    can add a class of <code>f-alpha</code> to the element.</p>
+  <p><code>base/typography</code> provides a suite of typographic styles for headings,
+    links, and horizontal rules.</p>
 
-  <%= code_example('<small class="u-font-small u-font-caps u-font-meta u-font-strong">f-headline (48px)</small>
+  <p>Heading tags (<code>h1, h2</code>, etc.) are not directly styled. Instead,
+    classes are used to style headings at different levels to allow style to be
+    completely separated from document semantics.</p>
+
+  <p>This also allows designers and engineers to use a common vocabulary when describing
+    type sizes. The type scale and corresponding HTML classes can be seen below.</p>
+
+  <%= code_example('<code class="u-font-meta">.f-headline (48px)</code>
 <h1 class="f-headline">This is a headline</h1>
 
-<small class="u-font-small u-font-caps u-font-meta u-font-strong">f-subhead (36px)</small>
+<code class="u-font-meta">.f-subhead (36px)</code>
 <h1 class="f-subhead">This is a subheading</h1>
 
-<small class="u-font-small u-font-caps u-font-meta u-font-strong">f1 (24px)</small>
+<code class="u-font-meta">.f1 (24px)</code>
 <h1 class="f1">This is a first-level heading</h1>
 
-<small class="u-font-small u-font-caps u-font-meta u-font-strong">f2 (20px)</small>
+<code class="u-font-meta">.f2 (20px)</code>
 <h2 class="f2">A second-level heading</h2>
 
-<small class="u-font-small u-font-caps u-font-meta u-font-strong">f3 (16px)</small>
+<code class="u-font-meta">.f3 (16px)</code>
 <h3 class="f3">A third-level heading</h3>
 
-<small class="u-font-small u-font-caps u-font-meta u-font-strong">f4 (13px)</small>
+<code class="u-font-meta">.f4 (13px)</code>
 <h4 class="f4">A fourth-level heading</h4>
 
 <p>This is a paragraph.</p>
