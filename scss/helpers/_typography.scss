@@ -64,6 +64,13 @@
     white-space: nowrap;
 }
 
+.u-font-caps,
+%u-font-caps {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-feature-settings: "c2sc" 1, "smcp" 1;
+}
+
 // Hide text in element
 // Useful for icons with screenreader-accessible text
 .u-thide {

@@ -48,41 +48,35 @@ html, :root {
   font: 81.25%/1.75 "Open Sans", "Helvetica Neue", Arial, sans-serif;
   color: #3d464d; }
 
-h1,
-.f-alpha {
+.f-headline, .f-subhead,
+.f1, .f2, .f3, .f4 {
   display: block;
   margin-bottom: 23px;
-  font-size: 28px;
-  font-weight: 200;
-  line-height: 36px; }
-
-h2,
-.f-beta {
-  display: block;
-  margin-bottom: 23px;
-  font-size: 20px;
   font-weight: 400;
-  line-height: 28px; }
+  line-height: 1.25; }
 
-h3,
-.f-gamma {
-  display: block;
-  margin-bottom: 23px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px; }
+.f-headline {
+  font-size: 48px;
+  font-weight: 200; }
 
-h4,
-.f-delta {
-  display: block;
+.f-subhead {
+  font-size: 36px;
+  font-weight: 200; }
+
+.f1 {
+  font-size: 24px; }
+
+.f2 {
+  font-size: 20px; }
+
+.f3 {
+  font-size: 16px; }
+
+.f4 {
+  margin-bottom: 0;
   font-size: 13px;
   font-weight: 600;
   line-height: 23px; }
-
-hr {
-  margin-bottom: 23px;
-  border: 0;
-  border-top: 1px solid rgba(37, 40, 43, 0.1); }
 
 a,
 .f-a {
@@ -92,6 +86,11 @@ a,
   a:hover,
   .f-a:hover {
     text-decoration: underline; }
+
+hr {
+  margin-bottom: 23px;
+  border: 0;
+  border-top: 1px solid rgba(37, 40, 43, 0.1); }
 
 .o-wrap {
   display: block;
@@ -1641,6 +1640,12 @@ select.c-input {
 
 .u-font-nowrap {
   white-space: nowrap; }
+
+.u-font-caps {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  -webkit-font-feature-settings: "c2sc" 1, "smcp" 1;
+          font-feature-settings: "c2sc" 1, "smcp" 1; }
 
 .u-thide {
   overflow: hidden;
