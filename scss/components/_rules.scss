@@ -1,0 +1,14 @@
+//-----------------------------
+//
+// Horizontal Rule Component
+//
+//-----------------------------
+
+$DBrule-namespace: "c-rule";
+
+.#{$DBrule-namespace} {
+    margin-bottom: $DBbaseline;
+
+    border: 0;
+    border-top: 1px solid color(gray, x-dark, 0.1);
+}
