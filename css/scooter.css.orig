@@ -1593,6 +1593,7 @@ select.c-input {
   margin-left: 64px !important;
   margin-right: 64px !important; }
 
+<<<<<<< 8535da0aa7cbd9a0cdf282c3e43b5beac6d61995
 .u-pad-xxl {
   padding: 96px !important; }
 
@@ -1685,6 +1686,8 @@ select.c-input {
   margin-left: 128px !important;
   margin-right: 128px !important; }
 
+=======
+>>>>>>> Rewrite typography section, move margin/padding trim helpers upstream
 .u-l-fl {
   float: left !important; }
 
