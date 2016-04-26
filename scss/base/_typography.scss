@@ -5,87 +5,87 @@
 //
 //---------------------------
 
-@mixin scooter-type() {
-    // Headings
-    // ========
-    //
-    // Only h1-h4 are used/styled. If your DOM heirarchy goes as deep at h5 or h6,
-    // you have some rethinking to do.
-    //
-    h1,
-    %f-alpha,
-    .f-alpha {
-        display: block;
-        margin-bottom: $DBbaseline;
-
-        font-size: 28px;
-        font-weight: 200;
-        line-height: 36px;
+@mixin scoped-type() {
+    hr {
+        @extend %hr;
     }
 
-    h2,
-    %f-beta,
-    .f-beta {
-        display: block;
-        margin-bottom: $DBbaseline;
-
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
+    a {
+        @extend %f-a;
     }
+}
 
-    h3,
-    %f-gamma,
-    .f-gamma {
-        display: block;
-        margin-bottom: $DBbaseline;
+// Headings
+// ========
+//
+.f-headline, .f-subhead,
+.f1, .f2, .f3, .f4 {
+    display: block;
+    margin-bottom: $DBbaseline;
 
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.f-headline {
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.f-subhead {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.f1 {
+    font-size: 24px;
+}
+
+.f2 {
+    font-size: 20px;
+}
+
+.f3 {
+    font-size: 16px;
+}
+
+.f4 {
+    margin-bottom: 0;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: $DBbaseline;
+}
+
+// Links
+%f-a,
+.f-a,
+.f-link {
+    text-decoration: none;
+
+    color: color(blue);
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
     }
+}
 
-    h4,
-    %f-delta,
-    .f-delta {
-        display: block;
+// TODO:dte
+// Deprecate the %hr element in favor of the c-rule component
+%hr {
+    margin-bottom: $DBbaseline;
 
-        font-size: 13px;
-        font-weight: 600;
-        line-height: $DBbaseline;
-    }
-
-    // Other type styles
-    // =================
-    //
-    hr,
-    %hr{
-        margin-bottom: $DBbaseline;
-
-        border: 0;
-        border-top: 1px solid color(gray, x-dark, 0.1);
-    }
-
-    a,
-    %f-a,
-    .f-a {
-        text-decoration: none;
-
-        color: color(blue);
-
-        cursor: pointer;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    border: 0;
+    border-top: 1px solid color(gray, x-dark, 0.1);
 }
 
 @if ($DBscope-scooter-reset == true) {
     .scooter-css {
-        @include scooter-type;
+        @include scoped-type;
     }
 } @else {
-    @include scooter-type;
+    @include scoped-type;
 }
 
