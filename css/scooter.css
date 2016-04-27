@@ -1305,6 +1305,12 @@ select.c-input {
     border: 0;
     padding: 0; }
 
+.u-trim-margin {
+  margin: 0 !important; }
+
+.u-trim-padding {
+  padding: 0 !important; }
+
 .u-pad-xxs {
   padding: 4px !important; }
 
@@ -1581,11 +1587,97 @@ select.c-input {
   margin-left: 64px !important;
   margin-right: 64px !important; }
 
-.u-trim-margin {
-  margin: 0 !important; }
+.u-pad-xxl {
+  padding: 96px !important; }
 
-.u-trim-padding {
-  padding: 0 !important; }
+.u-mar-xxl {
+  margin: 96px !important; }
+
+.u-pad-top-xxl {
+  padding-top: 96px !important; }
+
+.u-mar-top-xxl {
+  margin-top: 96px !important; }
+
+.u-pad-right-xxl {
+  padding-right: 96px !important; }
+
+.u-mar-right-xxl {
+  margin-right: 96px !important; }
+
+.u-pad-bottom-xxl {
+  padding-bottom: 96px !important; }
+
+.u-mar-bottom-xxl {
+  margin-bottom: 96px !important; }
+
+.u-pad-left-xxl {
+  padding-left: 96px !important; }
+
+.u-mar-left-xxl {
+  margin-left: 96px !important; }
+
+.u-pad-vertical-xxl {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important; }
+
+.u-mar-vertical-xxl {
+  margin-top: 96px !important;
+  margin-bottom: 96px !important; }
+
+.u-pad-horizontal-xxl {
+  padding-left: 96px !important;
+  padding-right: 96px !important; }
+
+.u-mar-horizontal-xxl {
+  margin-left: 96px !important;
+  margin-right: 96px !important; }
+
+.u-pad-jumbo {
+  padding: 128px !important; }
+
+.u-mar-jumbo {
+  margin: 128px !important; }
+
+.u-pad-top-jumbo {
+  padding-top: 128px !important; }
+
+.u-mar-top-jumbo {
+  margin-top: 128px !important; }
+
+.u-pad-right-jumbo {
+  padding-right: 128px !important; }
+
+.u-mar-right-jumbo {
+  margin-right: 128px !important; }
+
+.u-pad-bottom-jumbo {
+  padding-bottom: 128px !important; }
+
+.u-mar-bottom-jumbo {
+  margin-bottom: 128px !important; }
+
+.u-pad-left-jumbo {
+  padding-left: 128px !important; }
+
+.u-mar-left-jumbo {
+  margin-left: 128px !important; }
+
+.u-pad-vertical-jumbo {
+  padding-top: 128px !important;
+  padding-bottom: 128px !important; }
+
+.u-mar-vertical-jumbo {
+  margin-top: 128px !important;
+  margin-bottom: 128px !important; }
+
+.u-pad-horizontal-jumbo {
+  padding-left: 128px !important;
+  padding-right: 128px !important; }
+
+.u-mar-horizontal-jumbo {
+  margin-left: 128px !important;
+  margin-right: 128px !important; }
 
 .u-l-fl {
   float: left !important; }

@@ -33,6 +33,19 @@ toc:
     <%= gh_link("helpers/_layout.scss") %>
   </header>
 
+  <p>Margins and padding have helpers with &ldquo;tshirt&rdquo; sizes for adding space between elements.</p>
+
+  <ul>
+    <li><code>xxs: 4px</code></li>
+    <li><code>xs: 8px</code></li>
+    <li><code>s: 16px</code></li>
+    <li><code>m: 24px</code></li>
+    <li><code>l: 32px</code></li>
+    <li><code>xl: 64px</code></li>
+    <li><code>xxl: 96px</code></li>
+    <li><code>jumbo: 128px</code></li>
+  </ul>
+
   <h3>Padding</h3>
   <%= code_example('<p>
   <span class="u-pad-m">Regular padding</span>
@@ -44,39 +57,56 @@ toc:
   <span class="u-pad-xs">Extra-small padding</span>
 </p>
 <p>
+  <span class="u-pad-xxs">Double-extra-small padding</span>
+</p>
+<p>
   <span class="u-pad-l">Large padding</span>
 </p>
 <p>
   <span class="u-pad-xl">Extra-large padding</span>
+</p>
+<p>
+  <span class="u-pad-xxl">Double-extra-large padding</span>
+</p>
+<p>
+  <span class="u-pad-jumbo">Jumbo padding</span>
 </p>', "padding") %>
 
-  <p>You can also add a <code>vertical</code> or <code>horizontal</code> keyword to apply vertical or horizontal padding:</p>
+  <p>You can also add a <code>vertical</code> or <code>horizontal</code> keyword to apply vertical or horizontal padding,
+    as well as edge keywords <code>top, right, bottom</code> or <code>left</code> to add padding to that edge:</p>
 
-  <%= code_example('<span class="u-pad-vertical-m">Regular vertical padding</span>', "padding") %>
+  <%= code_example('<p>
+  <span class="u-pad-vertical-m">Regular vertical padding</span>
+</p>
+<p>
+  <span class="u-pad-left-xl">Extra-large left padding</span>
+</p>',"padding") %>
 
   <h3>Margins</h3>
-  <p>Use margin classes to add or remove margins to elements when they don't have any of their own.</p>
+  <p>Margins have the same tshirt sizes available. (Note that paragraphs always get a margin-bottom by default in these
+    demos).</p>
 
-  <p>As an example, take a look at the <code>u-l-mb</code> classes below. <code>mb</code> indicates that the class is
-    affecting the <code>m</code>argin <code>b</code>ottom. There are margin helpers available for each side: top, right,
-    bottom, and left (<code>mt</code>, <code>mr</code>, <code>mb</code>, and <code>ml</code> respectively).</p>
-
-  <p>There are also modifiers that can be appended to determine the size of the margin, ranging from extra-small
-    <code>xs</code> to extra-large <code>xl</code>.</p>
-
-  <%= code_example('<div class="u-mar-bottom-m">This has a margin-bottom equal to the baseline</div>
+  <%= code_example('<div>
+  <p class="u-mar-bottom-m">This has a medium bottom margin</p>
+</div>
 
 <hr/>
 
-<div class="u-mar-bottom-l">This has a double-height margin-bottom</div>
+<div>
+  <p class="u-mar-vertical-l">This has a large vertical margin</p>
+</div>
 
 <hr/>
 
-<div class="u-mar-bottom-s">This has a half-height margin-bottom</div>
+<div>
+  <p class="u-mar-right-s">This has a small right margin</p>
+</div>
 
 <hr/>
 
-<p class="u-trim-margin">This paragraph has been trimmed of its margin</p>') %>
+<div>
+  <p class="u-trim-margin">This paragraph has been trimmed of its margin</p>
+</div>', "margin") %>
 
   <h3>Floats</h3>
   <p>You can float things left and right with ease. Don't forget to put floated

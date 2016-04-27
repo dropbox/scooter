@@ -14,7 +14,9 @@ $DBspacing-sizes: (
   's': 1,
   'm': 1.5,
   'l': 2,
-  'xl': 4
+  'xl': 4,
+  'xxl': 6,
+  'jumbo': 8
 );
 
 $DBspacing-edges: (
@@ -25,6 +27,14 @@ $DBspacing-edges: (
   'vertical' ('top' 'bottom'),
   'horizontal' ('left' 'right')
 );
+
+.u-trim-margin {
+    margin: 0 !important;
+}
+
+.u-trim-padding {
+    padding: 0 !important;
+}
 
 @each $size, $scale in $DBspacing-sizes {
 
@@ -59,16 +69,6 @@ $DBspacing-edges: (
       }
     }
   }
-}
-
-
-
-.u-trim-margin {
-    margin: 0 !important;
-}
-
-.u-trim-padding {
-    padding: 0 !important;
 }
 
 // Floats

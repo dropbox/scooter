@@ -49,6 +49,18 @@
     }
   }
 }
+.sc-demo--margin {
+    .sc-demo__output {
+        div {
+            background-color: rgba(#7b8944, .2);
+            overflow: hidden;
+
+            [class*="u-mar-"] {
+                background-color: rgba(#7b8944, .2);
+            }
+        }
+    }
+}
 
 // Color pallette demo styles
 @import "../../../../scss/variables/colors";
