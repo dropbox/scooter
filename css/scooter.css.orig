@@ -1593,6 +1593,7 @@ select.c-input {
   margin-left: 64px !important;
   margin-right: 64px !important; }
 
+<<<<<<< HEAD
 .u-pad-xxl {
   padding: 96px !important; }
 
@@ -1685,6 +1686,8 @@ select.c-input {
   margin-left: 128px !important;
   margin-right: 128px !important; }
 
+=======
+>>>>>>> 460fac9d7ae41fae44d60cd4bbae54c0b7e782b2
 .u-l-fl {
   float: left !important; }
 

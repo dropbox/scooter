@@ -25,6 +25,7 @@
 .u-font-small,
 %u-font-small {
     font-size: 0.85em;
+    line-height: 1.8;
 }
 
 .u-font-strong,
@@ -62,6 +63,13 @@
 .u-font-nowrap,
 %u-font-nowrap {
     white-space: nowrap;
+}
+
+.u-font-caps,
+%u-font-caps {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-feature-settings: "c2sc" 1, "smcp" 1;
 }
 
 // Hide text in element
