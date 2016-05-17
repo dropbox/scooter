@@ -1,39 +1,114 @@
-//---------------------------
-//
-// Buttons
-//
-//---------------------------
-
+/// Global namespace for button component
+/// @access public
+/// @group button
+/// @type string
 $DBbutton-namespace: "c-btn" !default;
 
+/// Background color for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-primary: linear-gradient(color(blue), color(blue, dark)) !default;
+
+/// Hover background color for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-primary-hover: color(blue) !default;
+
+/// Active background color for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-primary-active: color(blue, dark) !default;
 
+/// Background color for secondary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-secondary: color(white) !default;
+
+/// Hover background color for secondary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-secondary-hover: linear-gradient(color(white), color(gray, x-light)) !default;
+
+/// Active background color for secondary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-secondary-active: color(gray, x-light) !default;
 
+/// Background color for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-tertiary: linear-gradient(color(white), color(blue, x-light)) !default;
+
+/// Hover background color for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-tertiary-hover: color(blue, x-light) !default;
+
+/// Active background color for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-tertiary-active: linear-gradient(color(blue, x-light), lighten(color(blue, light), 5%)) !default;
 
 
-// Providing fallback colors for IE <= 9
+/// Fallback background color (IE <= 9) for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-fallback-primary: color(blue);
+
+/// Fallback background color (IE <= 9) for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-background-fallback-tertiary: color(white);
 
+/// Text background color for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-text-primary: color(white) !default;
+
+/// Text background color for secondary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-text-secondary: color(gray) !default;
+
+/// Text background color for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-text-tertiary: color(blue) !default;
 
+/// Border color for primary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-border-primary: color(blue, dark) !default;
+
+/// Border color for secondary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-border-secondary: color(gray, light) !default;
+
+/// Border color for tertiary button
+/// @access public
+/// @group button
+/// @type color
 $DBbutton-border-tertiary: color(blue) !default;
 
-/**
- * Button component
- */
+// Button component
+// @todo Absract out button mixin to be more DRY
 .#{$DBbutton-namespace} {
     // Ensure the element is actually a button
     @include assert-selector(button, "[type=submit]");

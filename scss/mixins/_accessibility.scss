@@ -1,13 +1,9 @@
 // scss-lint:disable ImportantRule
-//
-//-----------------------------------
-//
-// Accessibility mixins
-// ====================
-//
-//-----------------------------------
 
-// Assert that the parent selector matches one of the selectors passed into $selectors
+/// Assert that the parent selector matches one of the selectors passed into $selectors
+/// @access public
+/// @group accessiblity
+/// @param {selector} $selectors... - arglist of selctors to assert
 @mixin assert-selector($selectors...) {
     $result: &;
 

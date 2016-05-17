@@ -1,10 +1,11 @@
-//-----------------------------------
-//
-// Image mixins
-// ============
-//
-//-----------------------------------
-
+/// Sorthand for background properties
+/// @access public
+/// @group images
+/// @param {string} $name - Image name, appended to $DBimage-path
+/// @param {number} $size - background-size property
+/// @param {string} $position - background-position property
+/// @param {string} $repeat - background-repreat property
+/// @todo need registry for image paths/names
 @mixin background-image($name, $size: null, $position: center, $repeat: no-repeat) {
     background-image: url("#{$DBimage-path}#{$name}");
     @if ($size != null) {

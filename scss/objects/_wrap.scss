@@ -1,12 +1,25 @@
-//-----------------------------
-// Object: Wrap
-//-----------------------------
-
+/// Global namespace for wrap object
+/// @access public
+/// @group wrap
+/// @type string
 $DBwrap-namespace: "o-wrap" !default;
+
+/// Global width for wrap
+/// @access public
+/// @group wrap
+/// @type string
 $DBwrap-width: 990px !default;
 
-.#{$DBwrap-namespace} {
-    display: block;
-    max-width: $DBwrap-width;
-    margin: 0 auto;
+/// Create a simple wrap element with a max-width
+/// @access public
+/// @group wrap
+/// @param {string} namespace [$DBwrap-namespace] - Classname for wrap object
+/// @todo should this have a clearfix?
+@mixin wrap($namespace: $DBwrap-namespace, $width: $DBwrap-width) {
+    .#{$namespace} {
+        display: block;
+        max-width: $width;
+        margin: 0 auto;
+    }
 }
+@include wrap;

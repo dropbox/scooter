@@ -1,35 +1,70 @@
-//-----------------------------
-//
-// Tokens
-// ======
-//
-// Usage:
-//
+/// Global namespace for token component
+/// @access public
+/// @group token
+/// @type string
+$DBtoken-namespace: "c-token" !default;
+
+/// Neutral background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-neutral: color(gray, x-light) !default;
+
+/// Warning background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-warning: color(yellow, x-light) !default;
+
+/// Error background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-error: color(red, x-light) !default;
+
+/// Selected neutral background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-neutral-selected: color(gray, medium) !default;
+
+/// Selected warning background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-warning-selected: color(yellow, dark) !default;
+
+/// Selected error background color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-background-error-selected: color(red, dark) !default;
+
+/// Neutral text color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-text-neutral: color(gray) !default;
+
+/// Warning text color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-text-warning: color(yellow, x-dark) !default;
+
+/// Error text color for token component
+/// @access public
+/// @group token
+/// @type color
+$DBtoken-text-error: color(red, x-dark) !default;
+
+// Tokens component
+// @example html
 // <div class="c-token [modifier]">
 //   [avatar/icon]
 //   <span class="c-token__name">{{Name/email}}</span>
 //   <i class="c-token__delete">&times;</i>
 // </div>
-//
-//-----------------------------
-
-$DBtoken-namespace: "c-token" !default;
-
-$DBtoken-background-neutral: color(gray, x-light) !default;
-$DBtoken-background-warning: color(yellow, x-light) !default;
-$DBtoken-background-error: color(red, x-light) !default;
-
-$DBtoken-background-neutral-selected: color(gray, medium) !default;
-$DBtoken-background-warning-selected: color(yellow, dark) !default;
-$DBtoken-background-error-selected: color(red, dark) !default;
-
-$DBtoken-text-neutral: color(gray) !default;
-$DBtoken-text-warning: color(yellow, x-dark) !default;
-$DBtoken-text-error: color(red, x-dark) !default;
-
-/*!
- * Token components
- */
 .#{$DBtoken-namespace} {
     display: inline-block;
     // We want tokens to always remain on one line

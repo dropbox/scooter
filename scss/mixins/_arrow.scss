@@ -1,21 +1,6 @@
-//-----------------------------
-//
-// Arrow mixin
-// ===========
-//
-// Allows creation of CSS-only directional arrows
-//
-// The following example turns the .el element into a 10px downward-facing
-// arrow that inherits its color from the parent.
-//
-// .el {
-//   @include arrow(10px, inherit, down);
-// }
-//
-//-----------------------------
-
-// @private mixin arrow-base
-// Used to set up an arrow element
+/// Used to set up an arrow element
+/// @access private
+/// @group arrow
 @mixin __arrow-base($size: 10px) {
     display: inline-block;
     width: 0;
@@ -25,8 +10,10 @@
     border: $size solid transparent;
 }
 
-// @private mixin arrow-make
-// Used with arrow-base($size) to create an arrow shape
+/// Used with arrow-base($size) to create an arrow shape
+/// @access private
+/// @group arrow
+/// @todo abstract out direction to helper map
 @mixin __arrow-make($color: inherit, $direction: down) {
     // Set up the direction
     @if $direction == down {
@@ -45,8 +32,17 @@
     border-#{$direction}-color: $color;
 }
 
-// Arrow
-// Shorthand mixin accessor for arrow-base() and arrow-make()
+/// Allows creation of CSS-only directional arrows
+/// Shorthand mixin accessor for arrow-base() and arrow-make()
+/// @example scss - Turn the .el element into a 10px downward-facing arrow that inherits its color from the parent.
+///  .el {
+///    @include arrow(10px, inherit, down);
+///  }
+/// @access public
+/// @group arrow
+/// @param {number} $size [10px] - arglist of selctors to assert
+/// @param {color} $color [inherit] - arrow color
+/// @param {direction} $direction [down] - arrow direction
 @mixin arrow($size: 10px, $color: inherit, $direction: down) {
     @include __arrow-base($size);
     @include __arrow-make($color, $direction);

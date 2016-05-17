@@ -1,22 +1,19 @@
-//------------------------------
-//
-// Tab navigation
-// ==============
-//
-// Example:
-// <nav>
-//   <ul class="c-tab-nav">
-//     <li class="c-tab-nav__tab"><a href="#photos">Photos</a></li>
-//     <!-- Add the --is-active modifier to active tabs -->
-//     <li class="c-tab-nav__tab c-tab-nav__tav--is-active"><a
-//     href="#docs">Documents</a></li>
-//   </ul>
-// </nav>
-//
-//------------------------------
-
+/// Global namespace for tab nav component
+/// @access public
+/// @group tab nav
+/// @type string
 $DBtab-nav-namespace: "c-tab-nav" !default;
 
+// Tab navigation
+// @example html
+//  <nav>
+//    <ul class="c-tab-nav">
+//      <li class="c-tab-nav__tab"><a href="#photos">Photos</a></li>
+//      <!-- Add the --is-active modifier to active tabs -->
+//      <li class="c-tab-nav__tab c-tab-nav__tav--is-active"><a
+//      href="#docs">Documents</a></li>
+//    </ul>
+//  </nav>
 .#{$DBtab-nav-namespace} {
     margin-left: 0;
     padding-left: 0;

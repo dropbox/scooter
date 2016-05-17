@@ -1,12 +1,4 @@
 // scss-lint:disable ImportantRule
-//
-//-----------------------------
-//
-// Utility: Typography
-// ===================
-//
-//-----------------------------
-//
 .u-font-center,
 %u-font-center {
     text-align: center !important;
@@ -72,8 +64,7 @@
     font-feature-settings: "c2sc" 1, "smcp" 1;
 }
 
-// Hide text in element
-// Useful for icons with screenreader-accessible text
+// Hide text in element. Useful for icons with screenreader-accessible text
 .u-thide {
     overflow: hidden;
     white-space: nowrap;

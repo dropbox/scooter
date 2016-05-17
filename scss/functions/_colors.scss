@@ -1,29 +1,24 @@
-//---------------------------
-//
-// Color functions
-//
-//---------------------------
-
-//---------------------------
-//
-// Defining acceptable alpha & shade values for color functions
-//
-//---------------------------
+/// Defining acceptable alpha values for color functions
+/// @access public
+/// @group colors
+/// @type list
 $__alpha-stops: (0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1);
+
+/// Defining acceptable shade values for color functions
+/// @access public
+/// @group colors
+/// @type list
 $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
 
-//---------------------------
-//
-// The grayscale function takes two arguments:
-//  REQUIRED: Level of gray
-//    There are 10 levels of gray, ranging from 1 to 10 (darkest to lightest).
-//  OPTIONAL: Level of opacity
-//    There are 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
-//
-// Example: grayscale(1, 1);
-// This will create a dark gray that is fully opaque.
-//
-//---------------------------
+/// The grayscale function takes two arguments:
+/// @example scss
+///  grayscale(1, 1);
+///  This will create a dark gray that is fully opaque.
+/// @access public
+/// @group colors
+/// @require gradation
+/// @param {number} gradation - There are 10 levels of gray, ranging from 1 to 10 (darkest to lightest).
+/// @param {number} alpha - There are 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
 @function grayscale($gradation, $alpha: 1) {
     @if map-has-key($DBgrayscaleColors, $gradation) {
         $alpha-val: $alpha;
@@ -39,26 +34,18 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
     }
 }
 
-//---------------------------
-//
-// The color function takes three arguments:
-//  REQUIRED: Color
-//    There are 7 colors (gray, blue, green, red, yellow, black, white).
-//  OPTIONAL: Shade
-//    Each color has 6 shades (x-dark, dark, base, medium, light, x-light).
-//  OPTIONAL: Opacity
-//    Each shade has 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
-//
-// Example: color(blue);
-// This will create a base blue that is fully opaque.
-//
-// Example 2: color(red, dark, 0.8);
-// This will create a dark red that is 80% opaque.
-//
-// Example 3: color(yellow, 0.6);
-// This will create a base yellow that is 60% opaque.
-//
-//---------------------------
+/// Color helper used a color by it's name, select a shade and modify opacity
+/// @example scss - This will create a base blue that is fully opaque.
+///  color(blue);
+/// @example scss - This will create a dark red that is 80% opaque.
+///  color(red, dark, 0.8);
+/// @example scss - This will create a base yellow that is 60% opaque.
+///  color(yellow, 0.6);
+/// @access public
+/// @group colors
+/// @require name
+/// @param {string} name - Color named defined in `$DBglobalColors`. There are 7 colors (gray, blue, green, red, yellow, black, white).
+/// @param {string | number} properties... -  Each color has 6 shades (x-dark, dark, base, medium, light, x-light). Each shade has 11 levels of opacity, ranging from 0.0 to 1.0 (transparent to opaque).
 @function color($name, $properties...) {
     $n: length($properties);
     $i: 1;
@@ -101,4 +88,3 @@ $__shade-vals: ("x-dark", "dark", "base", "medium", "light", "x-light");
         + "Are you sure it's in `variables/colors?`";
     }
 }
-

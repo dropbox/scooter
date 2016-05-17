@@ -1,10 +1,13 @@
-//-----------------------------
-//
-// Component: Calendar
-//
-//-----------------------------
-
+/// Global namespace for calendar component
+/// @access public
+/// @group calendar
+/// @type string
 $DBcalendar-namespace: "c-calendar";
+
+/// Global namespace for datepicker component
+/// @access public
+/// @group calendar
+/// @type string
 $DBdatepicker-namespace: "c-datepicker";
 
 .#{$DBdatepicker-namespace} {

@@ -1,18 +1,27 @@
-//---------------------------
-//
-// Badge
-//
-//---------------------------
-
+/// Global namespace for badge component
+/// @access public
+/// @group badge
+/// @type string
 $DBbadge-namespace: "c-badge" !default;
 
+/// Global background color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbadge-background: color(white) !default;
+
+/// Global text color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbadge-text-color: color(red, medium) !default;
+
+/// Global border color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbadge-border-color: color(red, light) !default;
 
-/**
- * Badge component
- */
 .#{$DBbadge-namespace} {
     // Repeat the box-sizing reset here in case this component is used without the reset stylesheet.
     box-sizing: border-box;

@@ -1,25 +1,26 @@
-//-----------------------------
-//
-// Title Bubble
-// ============
-//
-// A tipsy-like tooltip component with default south direction
-//
-// Usage:
-// <div class="c-title-bubble [c-title-bubble--n | --e | --w]" data-title="Some text">
-//   {{content}}
-// </div>
-//
-//-----------------------------
-
+/// Global namespace for title bubble component
+/// @access public
+/// @group title button
+/// @type string
 $DBtitlebubble-namespace: "c-title-bubble" !default;
 
+/// Background color for title bubble component
+/// @access public
+/// @group title button
+/// @type string
 $DBtitlebubble-background: color(gray, dark) !default;
+
+/// Point width for title bubble component
+/// @access public
+/// @group title button
+/// @type string
 $DBtitlebubble-point-width: 5px !default;
 
-/**
- * Title-bubble component
- */
+// Title-bubble component. A tipsy-like tooltip component with default south direction
+// @example html
+//  <div class="c-title-bubble [c-title-bubble--n | --e | --w]" data-title="Some text">
+//    {{content}}
+//  </div>
 .#{$DBtitlebubble-namespace} {
     display: inline-block;
     position: relative;

@@ -1,24 +1,30 @@
-//-----------------------------
-//
-// Loading indicator
-// =================
-//
-// Usage:
-// <div class="c-loader">Loading...</div>
-//
-//-----------------------------
-
+/// Global namespace for loader component
+/// @access public
+/// @group loader
+/// @type string
 $DBloadingindicator-namespace: "c-loader";
 
+/// Color for loader component
+/// @access public
+/// @group loader
+/// @type color
 $DBloadingindicator-color: color(gray, dark);
 
+/// Size of loader component
+/// @access public
+/// @group loader
+/// @type number
 $DBloadingindicator-size: 6px;
 
+/// Animation speed of loader component
+/// @access public
+/// @group loader
+/// @type number
 $DBloadingindicator-speed: 0.9s;
 
-/**
- * Loading indicator component
- */
+// Loading indicator component
+// @example html
+//  <div class="c-loader">Loading...</div>
 .#{$DBloadingindicator-namespace} {
     display: inline-block;
     position: relative;

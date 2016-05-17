@@ -1,26 +1,23 @@
 // scss-lint:disable NestingDepth
-//
-//-----------------------------
-//
-// Cards
-//
-// Simple styling for a card-like component used in a variety of ways with
-// optional arrows for tooltip-like cards
-//
-//-----------------------------
 
+/// Global namespace for card component
+/// @access public
+/// @group button
+/// @type string
 $DBcard-namespace: "c-card" !default;
 
+/// Global namespace for button component
+/// @access public
+/// @group card
+/// @type color
 $DBcard-background: color(white) !default;
 
-// The opaque color for the card border/shadow. Transparency is handled by
-// the class itself.
+// The opaque color for the card border/shadow. Transparency is handled by the class itself.
 $DBcard-border: color(gray, x-dark) !default;
 $DBcard-border-selected: color(blue) !default;
 
-/**
- * Card component with optional arrow/tail
- */
+// Card component with optional arrow/tail
+// Simple styling for a card-like component used in a variety of ways with optional arrows for tooltip-like cards
 .#{$DBcard-namespace} {
     display: inline-block;
     vertical-align: top;
