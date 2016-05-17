@@ -6,8 +6,8 @@ sass scss/scooter.scss:css/scooter.css
 # npm install --global postcss-cli autoprefixer
 postcss --use autoprefixer css/scooter.css --dir css --autoprefixer.browsers "ie > 8, iOS > 6, > 1%"
 
-# npm i sassdocs --global
-sassdoc scss
+# npm install sassdocs --global
+sassdoc src --dest docs/build/sassdocs
 
 # Copy the compiled CSS to the docs dir
 \cp css/scooter.css docs/source/assets/css/vendor
