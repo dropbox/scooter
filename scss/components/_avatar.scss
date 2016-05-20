@@ -1,26 +1,37 @@
-//-----------------------------
-//
-// Avatars
-//
-//-----------------------------
-
+/// Global namespace for avatar component
+/// @access public
+/// @group avatar
+/// @type string
 $DBavatar-namespace: "c-avatar" !default;
+
+/// Global namespace for facepile component
+/// @access public
+/// @group avatar
+/// @type string
 $DBavatar-container-namespace: "c-facepile" !default;
-// Ideally, colors are set by JS, but this provides a fallback
+
+/// Color for avatar component. Ideally, colors are set by JS, but this provides a fallback
+/// @access public
+/// @group avatar
+/// @type color
 $DBavatar-color: color(blue) !default;
 
-// Map for the various sizes of avatars
-// This will help automate generation of classes for different avatar sizes
+/// Map for the various sizes of avatars for generated classes.
+/// @access public
+/// @group avatar
+/// @type map
 $DBavatar-sizes: (
-xs: 16px,
-s: 24px,
-m: 32px,
-l: 48px,
-xl: 64px
+    xs: 16px,
+    s: 24px,
+    m: 32px,
+    l: 48px,
+    xl: 64px
 ) !default;
 
-// @private mixin avatarSize
-// Set proportional font size, weight, and line-height for avatars without photos
+/// Set proportional font size, weight, and line-height for avatars without photos
+/// @access private
+/// @group avatar
+/// @param {number} size [32px] - Avatar size
 @mixin __avatarSize($s: 32px) {
     width: $s;
     // min-width provides a fallback for flexible-width elements like c-avatar--meta
@@ -38,10 +49,7 @@ xl: 64px
     }
 }
 
-/**
- * Avatar component. A wrapper element with an (optional) image or the user's
- * initials.
- */
+// Avatar component. A wrapper element with an (optional) image or the user's initials.
 .#{$DBavatar-namespace} {
     // Default size for avatars without explicit sizing
     @include __avatarSize(32px);

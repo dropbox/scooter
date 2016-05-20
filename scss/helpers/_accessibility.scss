@@ -1,9 +1,3 @@
-//---------------------------
-//
-// Accessibility Helpers
-//
-//---------------------------
-
 // Visually hide elements, leaving them accessible to screen readers
 .ax-visually-hidden {
     position: absolute !important;
@@ -17,12 +11,14 @@
 }
 
 // Give focusable elements a distinct outline
-.ax-focusable:focus, .ax-focusable.is-focused {
+.ax-focusable:focus,
+.ax-focusable.is-focused {
     box-shadow: 0 0 0 2px color(blue, medium, 0.7);
     outline: none;
 }
 
 // Alternative highlight for focusable elements
-.ax-focusable-inline:focus, .ax-focusable-inline.is-focused {
+.ax-focusable-inline:focus,
+.ax-focusable-inline.is-focused {
     text-decoration: underline;
 }

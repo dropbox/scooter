@@ -1,9 +1,7 @@
-//-----------------------------
-//
-// Component: Arrow
-//
-//-----------------------------
-
+/// Global namespace for arrow component
+/// @access public
+/// @group arrow
+/// @type string
 $DBarrow-namespace: "c-arrow";
 
 .#{$DBarrow-namespace} {

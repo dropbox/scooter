@@ -1,9 +1,4 @@
-//---------------------------
-//
 // Base/root styles
-//
-//---------------------------
-
 @if ($DBscope-scooter-reset == true) {
     html.scooter-css, .scooter-css:root {
         box-sizing: border-box;

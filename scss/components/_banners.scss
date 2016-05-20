@@ -1,38 +1,72 @@
-//-----------------------------
-//
-// Banners
-//
-// Example:
-// <div class="c-banner">
-//   This is a neutral banner
-// </div>
-//
-// <div class="c-banner c-banner--warning">
-//   This is a warning banner
-// </div>
-//
-// <div class="c-banner c-banner--unpinned">
-//   This is a free-floating banner
-// </div>
-//
-//-----------------------------
-
+/// Global namespace for banner component
+/// @access public
+/// @group banner
+/// @type string
 $DBbanner-namespace: "c-banner" !default;
 
+/// Global neutral background color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-background-neutral: color(gray, x-light) !default;
+
+/// Global success background color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-background-success: color(green, x-light) !default;
+
+/// Global warning background color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-background-warning: color(yellow, x-light) !default;
+
+/// Global error background color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-background-error: color(red, x-light) !default;
 
+/// Global neutral text color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-text-neutral: color(gray) !default;
+
+/// Global success text color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-text-success: color(green, x-dark) !default;
+
+/// Global warning text color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-text-warning: color(yellow, x-dark) !default;
+
+/// Global error text color for badge component
+/// @access public
+/// @group badge
+/// @type color
 $DBbanner-text-error: color(red, x-dark) !default;
 
-/**
- * Banner component. Used to display messages to the user, typically pinned to
- * the top of the page.
- */
+// Banner component is used to display messages to the user, typically pinned to the top of the page.
+// @example html - This is a neutral banner
+//  <div class="c-banner">
+//    Message text
+//  </div>
+// @example html - This is a warning banner
+//  <div class="c-banner c-banner--warning">
+//    Message text
+//  </div>
+// @example html - This is a free-floating banner
+//  <div class="c-banner c-banner--unpinned">
+//    Message text
+//  </div>
+// @access public
+// @group badge
 .#{$DBbanner-namespace} {
     padding: 12px;
 

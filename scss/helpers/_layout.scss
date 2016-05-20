@@ -1,13 +1,15 @@
 // scss-lint:disable ImportantRule
-//
-//---------------------------
-//
-// Layout Helpers
-//
-//---------------------------
 
+/// Global spacing unit
+/// @access public
+/// @group layout
+/// @type number
 $DBspacing-unit: 16px !default;
 
+/// Global spacing sizes
+/// @access public
+/// @group layout
+/// @type map
 $DBspacing-sizes: (
   'xxs': .25,
   'xs': .5,
@@ -19,6 +21,10 @@ $DBspacing-sizes: (
   'jumbo': 8
 );
 
+/// Global spacing edges
+/// @access public
+/// @group layout
+/// @type map
 $DBspacing-edges: (
   'top',
   'right',
@@ -72,8 +78,6 @@ $DBspacing-edges: (
 }
 
 // Floats
-// ======
-//
 .u-l-fl,
 %u-l-fl {
     float: left !important;
@@ -85,8 +89,6 @@ $DBspacing-edges: (
 }
 
 // Display types
-// =============
-//
 .u-l-b {
     display: block !important;
 }

@@ -1,9 +1,7 @@
-//---------------------------
-//
-// Reset
-//
-//---------------------------
-
+/// Style reset for base elements, but allows them to be scooped
+/// @access public
+/// @group reset
+/// @type bool
 $DBscope-scooter-reset: false !default;
 
 @mixin scooter-reset {

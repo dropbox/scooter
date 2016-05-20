@@ -1,23 +1,28 @@
-//-----------------------------
-//
-// List UI
-//
-//-----------------------------
-
+/// Global namespace for wrap object
+/// @access public
+/// @group list-ui
+/// @type string
 $DBlist-ui-namespace: "o-list-ui" !default;
 
-.#{$DBlist-ui-namespace} {
-    margin: 0;
-    padding: 0;
+/// Create a simple list style element with optional dividers or inline
+/// @access public
+/// @group list-ui
+/// @param {string} namespace [$DBwrap-namespace] - Classname for list-ui object
+@mixin list-ui($namespace: $DBlist-ui-namespace) {
+    .#{$DBlist-ui-namespace} {
+        margin: 0;
+        padding: 0;
 
-    list-style: none;
+        list-style: none;
 
-    &--dividers > li + li {
-        border-top: 1px solid;
-        border-color: color(gray, x-dark, 0.1);
-    }
+        &--dividers > li + li {
+            border-top: 1px solid;
+            border-color: color(gray, x-dark, 0.1);
+        }
 
-    &--inline > li {
-        display: inline-block;
+        &--inline > li {
+            display: inline-block;
+        }
     }
 }
+@include list-ui;

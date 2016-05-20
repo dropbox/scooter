@@ -1,88 +1,86 @@
-//-----------------------------
-//
-// Flag object
-// ===========
-//
-// Modified version of Harry Roberts' flag object
-// (http://csswizardry.com/2013/05/the-flag-object/)
-//
-// Similar to the media object. Used to vertically align a fluid-width element
-// and a fixed-width element next to one another.
-//
-// Usage:
-//
-// <div class="o-flag">
-//   <div class="o-flag__fix">
-//     <img src="" alt="This element will maintain its width" />
-//   </div>
-//   <div class="o-flag__flex">
-//     <p>This element will grow to fill the remaining space</p>
-//   </div>
-// </div>
-//
-//-----------------------------
-
+/// Global namespace for flag object
+/// @access public
+/// @group flag
+/// @type string
 $DBflag-namespace: "o-flag" !default;
 
-.#{$DBflag-namespace} {
-    display: table;
-    width: 100%;
-
-    &__fix,
-    &__flex {
-        display: table-cell;
-        vertical-align: middle;
-
-        // Use the --top modifier to align top edges of the elements
-        .#{$DBflag-namespace}--top & {
-            vertical-align: top;
-        }
-
-        // Use --bottom to align bottom edges of the elements
-        .#{$DBflag-namespace}--bottom & {
-            vertical-align: bottom;
-        }
-
-    }
-
-    // The fixed-width element
-    &__fix {
-        white-space: nowrap;
-    }
-
-    // This element grows to fill the remainder of its container
-    &__flex {
+/// Modified version of [Harry Roberts' flag object](http://csswizardry.com/2013/05/the-flag-object/)
+/// Similar to the media object. Used to vertically align a fluid-width element
+/// and a fixed-width element next to one another.
+/// @example html
+///  <div class="o-flag">
+///    <div class="o-flag__fix">
+///      <img src="" alt="This element will maintain its width" />
+///    </div>
+///    <div class="o-flag__flex">
+///      <p>This element will grow to fill the remaining space</p>
+///    </div>
+///  </div>
+/// @access public
+/// @group flag
+/// @param {string} namespace [$DBflag-namespace] - Classname for flag object
+@mixin flag($namespace: $DBflag-namespace) {
+    .#{$namespace} {
+        display: table;
         width: 100%;
-    }
-}
 
-// Flexbox adjustments
-@supports (display: flex) {
-    .#{$DBflag-namespace} {
-        display: flex;
-        align-items: center;
+        &__fix,
+        &__flex {
+            display: table-cell;
+            vertical-align: middle;
 
-        &--top {
-            align-items: flex-start;
+            // Use the --top modifier to align top edges of the elements
+            .#{$namespace}--top & {
+                vertical-align: top;
+            }
+
+            // Use --bottom to align bottom edges of the elements
+            .#{$namespace}--bottom & {
+                vertical-align: bottom;
+            }
+
         }
 
-        &--bottom {
-            align-items: flex-end;
+        // The fixed-width element
+        &__fix {
+            white-space: nowrap;
+        }
+
+        // This element grows to fill the remainder of its container
+        &__flex {
+            width: 100%;
         }
     }
 
-    .#{$DBflag-namespace}__fix {
-        display: inherit;
-        align-items: inherit;
-        flex: 0 0 auto;
-    }
+    // Flexbox adjustments
+    @supports (display: flex) {
+        .#{$namespace} {
+            display: flex;
+            align-items: center;
 
-    .#{$DBflag-namespace}__flex {
-        display: initial;
-        min-width: 0;
-        // Though width is set by flex in this selector, Safari 9 exhibits a bug
-        // causing it to ignore the implied width if an explicit width is set.
-        width: auto;
-        flex: 1 1 auto;
+            &--top {
+                align-items: flex-start;
+            }
+
+            &--bottom {
+                align-items: flex-end;
+            }
+        }
+
+        .#{$namespace}__fix {
+            display: inherit;
+            align-items: inherit;
+            flex: 0 0 auto;
+        }
+
+        .#{$namespace}__flex {
+            display: initial;
+            min-width: 0;
+            // Though width is set by flex in this selector, Safari 9 exhibits a bug
+            // causing it to ignore the implied width if an explicit width is set.
+            width: auto;
+            flex: 1 1 auto;
+        }
     }
 }
+@include flag;

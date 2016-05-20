@@ -1,8 +1,11 @@
-//---------------------------
-//
-// Units variables
-//
-//---------------------------
-
+/// Global baseline variable for typography
+/// @access public
+/// @group units
+/// @type number
 $DBbaseline: 23px !default;
+
+/// Global font-size variable for typography
+/// @access public
+/// @group units
+/// @type number
 $DBfont-size: 13px !default;

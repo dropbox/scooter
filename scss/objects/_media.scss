@@ -1,33 +1,32 @@
-//-----------------------------
-//
-// Media
-//
-//-----------------------------
-
+/// Global namespace for media object
+/// @access public
+/// @group media
+/// @type string
 $DBmedia-namespace: "o-media" !default;
 
+// Media Object
 .#{$DBmedia-namespace} {
     @extend %clearfix;
     display: block;
-}
 
-.#{$DBmedia-namespace}__img {
-    margin-right: half($DBbaseline);
-    float: left;
+    &__img {
+        margin-right: half($DBbaseline);
+        float: left;
 
-    > img {
+        > img {
+            display: block;
+        }
+
+    }
+
+    &__body {
         display: block;
+        overflow: hidden;
+
+        &,
+        > :last-child {
+            margin-bottom: 0;
+        }
+
     }
-
-}
-
-.#{$DBmedia-namespace}__body {
-    display: block;
-    overflow: hidden;
-
-    &,
-    > :last-child {
-        margin-bottom: 0;
-    }
-
 }

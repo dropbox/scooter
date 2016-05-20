@@ -1,15 +1,9 @@
-//---------------------------
-//
-// Property functions
-//
-//---------------------------
-
-// Share values for multiple properties
-// Usage:
-//
-// @include share(padding-top, padding-bottom, 23px);
-//
-@mixin share($props.../*, $value */) {
+/// Share values for multiple properties
+/// @access public
+/// @group properties
+/// @example scss
+///     @include share(padding-top, padding-bottom, 23px);
+@mixin share($props...) {
     @for $i from 1 to length($props) {
         #{nth($props, $i)}: nth($props, -1);
     }

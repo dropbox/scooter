@@ -109,16 +109,16 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rainbow (2.1.0)
+    rake (10.4.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
     rouge (1.10.1)
     sass (3.4.22)
-    scss-lint (0.38.0)
-      rainbow (~> 2.0)
-      sass (~> 3.4.1)
+    scss_lint (0.48.0)
+      rake (>= 0.9, < 12)
+      sass (~> 3.4.15)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -151,9 +151,9 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-syntax
   redcarpet
-  scss-lint
+  scss_lint
   tzinfo-data
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.4

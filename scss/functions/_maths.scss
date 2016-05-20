@@ -1,21 +1,39 @@
-//---------------------------
-//
-// Mathematical functions
-//
-//---------------------------
-
+/// Divide any any number by 4
+/// @access public
+/// @group math
+/// @require n
+/// @param n - number to perform operation on
+/// @return {number}
 @function half($n) {
     @return round($n / 2);
 }
 
+/// Divide any any number by 4
+/// @access public
+/// @group math
+/// @require n
+/// @param n - number to perform operation on
+/// @return {number}
 @function quarter($n) {
     @return round($n / 4);
 }
 
+/// Multiply any number by 2
+/// @access public
+/// @group math
+/// @require n
+/// @param n - number to perform operation on
+/// @return {number}
 @function double($n) {
     @return round($n * 2);
 }
 
+/// Multiply any number by 4
+/// @access public
+/// @group math
+/// @require n
+/// @param n - number to perform operation on
+/// @return {number}
 @function quadruple($n) {
     @return round($n * 4);
 }

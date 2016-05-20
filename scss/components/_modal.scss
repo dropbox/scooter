@@ -1,19 +1,28 @@
-//-----------------------------
-//
-// Modal
-//
-//-----------------------------
-
+/// Global namespace for modal component
+/// @access public
+/// @group modal
+/// @type string
 $DBmodal-namespace: "c-modal" !default;
 
+/// Padding for modal component
+/// @access public
+/// @group modal
+/// @type string
 $DBmodal-padding: 32px;
 
+/// Background color for modal component
+/// @access public
+/// @group modal
+/// @type color
 $DBmodal-background: color(white) !default;
+
+/// Background color for alternate modal component
+/// @access public
+/// @group modal
+/// @type color
 $DBmodal-background-alt: color(gray, x-light) !default;
 
-/**
- * Modal component
- */
+// Modal component
 .#{$DBmodal-namespace}-overlay {
     @include share(top, right, bottom, left, 0);
     display: flex;

@@ -1,11 +1,10 @@
-//-----------------------------
-//
-// Horizontal Rule Component
-//
-//-----------------------------
-
+/// Global namespace for horizontal rule component
+/// @access public
+/// @group horizontal
+/// @type string
 $DBrule-namespace: "c-rule";
 
+// Horizontal Rule Component
 .#{$DBrule-namespace} {
     margin-bottom: $DBbaseline;
 

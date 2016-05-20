@@ -1,11 +1,10 @@
-//-----------------------------
-//
-// Tables
-//
-//-----------------------------
-
+/// Global namespace for table component
+/// @access public
+/// @group table
+/// @type string
 $DBtable-namespace: "c-table";
 
+// Tables
 .#{$DBtable-namespace} {
     display: table;
     width: 100%;

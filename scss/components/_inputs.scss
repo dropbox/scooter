@@ -1,26 +1,65 @@
-//-----------------------------
-//
-// Inputs
-//
-//-----------------------------
 
+/// Global namespace for form component
+/// @access public
+/// @group form
+/// @type string
 $DBform-namespace: "c-form" !default;
+
+/// Global namespace for label component
+/// @access public
+/// @group form
+/// @type string
 $DBlabel-namespace: "c-label" !default;
+
+/// Global namespace for input component
+/// @access public
+/// @group form
+/// @type string
 $DBinput-namespace: "c-input" !default;
 
+/// Text color for label component
+/// @access public
+/// @group form
+/// @type color
 $DBlabel-color: color(gray, medium) !default;
+
+/// Text color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-color: color(gray) !default;
+
+/// Disabled text color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-color-disabled: color(gray, 0.7) !default;
 
+/// Border color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-border: color(gray, x-dark, 0.1) !default;
+
+/// Focus border color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-border-focused: color(blue, medium) !default;
 
+/// Background color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-background: color(white) !default;
+
+/// Disabled background color for input component
+/// @access public
+/// @group form
+/// @type color
 $DBinput-background-disabled: color(gray, x-light) !default;
 
-/**
- * Input & label components
- */
+// Label component
 .#{$DBlabel-namespace} {
     // Ensure the element is actually a label
     @include assert-selector(label);
@@ -33,6 +72,7 @@ $DBinput-background-disabled: color(gray, x-light) !default;
     color: $DBlabel-color;
 }
 
+// Input component
 .#{$DBinput-namespace} {
     // Ensure the element is actually a kind of input
     @include assert-selector(input, button, select, textarea);
@@ -80,10 +120,12 @@ $DBinput-background-disabled: color(gray, x-light) !default;
     }
 }
 
+// Textarea component
 textarea.#{$DBinput-namespace} {
     resize: vertical;
 }
 
+// Select component
 select.#{$DBinput-namespace} {
     @include background-image("icon-form-dropdown.svg", 7px 14px, right 10px center);
 

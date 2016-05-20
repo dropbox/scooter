@@ -1,11 +1,13 @@
-//-----------------------------
-//
-// Typeahead
-//
-//-----------------------------
-
+/// Global namespace for typehead component
+/// @access public
+/// @group typehead
+/// @type string
 $DBtypeahead-namespace: "c-typeahead" !default;
 
+/// Background for card component
+/// @access public
+/// @group typehead
+/// @type color
 $DBtypeahead-background: color(white) !default;
 
 .#{$DBinput-namespace}--typeahead {
@@ -16,9 +18,7 @@ $DBtypeahead-background: color(white) !default;
     }
 }
 
-/*!
- * Typeahead component
- */
+// Typeahead component
 .#{$DBtypeahead-namespace} {
     display: none;
     overflow: scroll;

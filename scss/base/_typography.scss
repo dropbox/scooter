@@ -1,10 +1,4 @@
-//---------------------------
-//
-// Typography
-// ==========
-//
-//---------------------------
-
+/// Style base elements, but allows them to be scooped
 @mixin scoped-type() {
     hr {
         @extend %hr;
@@ -16,8 +10,6 @@
 }
 
 // Headings
-// ========
-//
 .f-headline, .f-subhead,
 .f1, .f2, .f3, .f4 {
     display: block;
@@ -83,9 +75,11 @@
 
 @if ($DBscope-scooter-reset == true) {
     .scooter-css {
+
         @include scoped-type;
     }
 } @else {
+
     @include scoped-type;
 }
 

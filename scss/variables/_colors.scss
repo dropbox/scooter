@@ -1,12 +1,8 @@
-//---------------------------
-//
-// Color variables
-//
-// Inspired by/based on Erskine's color palette structure:
-// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
-//
-//---------------------------
-
+/// Map of color variables Inspired by/based on [Erskine's color palette structure](http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/)
+/// @access public
+/// @group colors
+/// @type map
+/// @todo need map registry with setters and getters
 $DBglobalColors: (
     white: #ffffff,
 
@@ -58,6 +54,10 @@ $DBglobalColors: (
     ),
 ) !default;
 
+/// Map of grayscale color variables
+/// @access public
+/// @group colors
+/// @type map
 $DBgrayscaleColors: (
     1: #171717,
     2: #2e2e2e,

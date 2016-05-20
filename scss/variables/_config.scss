@@ -1,5 +1,5 @@
-//-----------------------------------
-// Config variables
-//-----------------------------------
-
+/// Setting for global path for images
+/// @access public
+/// @group config
+/// @type string
 $DBimage-path: "../images/" !default;
