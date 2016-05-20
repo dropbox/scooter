@@ -4,7 +4,7 @@
 sass scss/scooter.scss:css/scooter.css
 
 # npm install --global postcss-cli autoprefixer
-postcss --use autoprefixer css/scooter.css --dir css --autoprefixer.browsers "ie > 8, iOS > 6, > 1%"
+postcss --use autoprefixer css/scooter.css --dir css --autoprefixer.browsers "ie > 9, last 2 versions" --autoprefixer.cascade false
 
 # npm install sassdocs --global
 sassdoc src --dest docs/build/sassdocs
