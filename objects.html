@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Scooter - Objects</title>
+
+    <link href="assets/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vendor/syntax.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="objects sc-site">
+    <header class="sc-site__header">
+
+      <div class="sc-u-l-wrap">
+        <a href="index.html" title="Scooter Home" class="sc-site__title">
+          <img src="assets/images/scooter-logo.svg" alt="Scooter logo" />
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="sc-site__nav">
+      <div class="sc-u-l-wrap">
+        <ul class="sc-o-nav sc-o-nav--inline">
+          <li><a href="./">Home</a></li>
+          <li><a href="variables.html">Variables</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="mixins.html">Mixins</a></li>
+          <li><a href="base.html">Base styles</a></li>
+          <li><a class="is-active" href="objects.html">Objects</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="sc-site__content">
+      <div class="sc-u-l-wrap">
+        <div class="sc-o-grid">
+
+          <div class="sc-o-grid__col sc-o-grid__col--9-of-12">
+            <header class="sc-content__header">
+              <h1>Objects</h1>
+                <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/objects'>View on GitHub</a>
+            </header>
+            <section class="sc-def">
+<p>Object classes are common design patterns, not unique to Dropbox specifically.
+  These classes are not designed to be tinkered with, since they affect high-level
+  layout properties and carry little visual styling.</p>
+
+<p>Rather than trying to create new pages with unique layouts, you may find all
+  the layout patterns you'll need right here.</p>
+</section>
+
+<section id="grid" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Grid</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/objects/_grid.scss'>View on GitHub</a>
+  </header>
+  <p>The grid object offers a collection of classes for grid-based layout. It should
+    be used within a container that sets the width or max-width.</p>
+
+  <h3>Configuration</h3>
+  <p>The grid object comes with a few configuration options:</p>
+
+  <ul>
+    <li><code>$DBcol-groups</code> is a map that sets the grid divisions. The default value is <code>2, 3, 4, 6, 12</code>.</li>
+    <li><code>$DBgutter-width</code> sets the margins (or gutters) between columns. Defaults to 20px.</li>
+  </ul>
+
+  <div class='sc-demo sc-demo--grid'><div class='sc-demo__output'><div class="o-grid">
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+
+  <div class="o-grid__col o-grid__col--6-of-12"></div>
+  <div class="o-grid__col o-grid__col--2-of-12"></div>
+  <div class="o-grid__col o-grid__col--3-of-12"></div>
+  <div class="o-grid__col o-grid__col--1-of-12"></div>
+</div></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid"</span>&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--6-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--2-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--3-of-12"</span>&gt;&lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-grid__col o-grid__col--1-of-12"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div></div>
+</section>
+
+<section id="media" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Media</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/objects/_media.scss'>View on GitHub</a>
+  </header>
+
+  <p>The media object allows you to layout an image and a block of text beside one
+    another. Based on Nicole Sullivan's original <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">
+      media object</a>.</p>
+
+  <div class='sc-demo sc-demo--'><div class='sc-demo__output'><div class="o-media">
+  <img class="o-media__img" src="http://i.imgur.com/GoCxCU3.jpg" width="64" alt="Aaron Robbs" />
+  <div class="o-media__body">
+    <p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam. Animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+  </div>
+</div></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-media"</span>&gt;
+  &lt;img <span class="nv">class</span><span class="o">=</span><span class="s2">"o-media__img"</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/GoCxCU3.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"64"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Aaron Robbs"</span> /&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-media__body"</span>&gt;
+    &lt;p&gt;Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui <span class="k">in </span>ea voluptate velit esse quam. Animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div></div>
+</section>
+
+<section id="list-ui" class="sc-def">
+  <header class="sc-def__header">
+    <h2 id="list-ui">List-UI</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/objects/_list-ui.scss'>View on GitHub</a>
+  </header>
+  <p>The List-UI object turns a <code>ul</code> or <code>ol</code> element into an
+    unstyled, vertically stacked list of navigation items. Using the <code>dividers</code>
+    modifier also adds a divider between items.</p>
+
+  <div class='sc-demo sc-demo--'><div class='sc-demo__output'><ul class="o-list-ui u-mar-bottom-m">
+  <!-- The `u-mar-bottom-m` class is just to add some space between these examples. -->
+  <li><a href="#">A menu item</a></li>
+  <li><a href="#">Another menu item</a></li>
+  <li><a href="#">A third menu item</a></li>
+  <li><a href="#">A final menu item</a></li>
+</ul>
+
+<!-- The `dividers` modifier adds dividers between the items -->
+<ul class="o-list-ui o-list-ui--dividers">
+  <li><a href="#">A menu item</a></li>
+  <li><a href="#">Another menu item</a></li>
+  <li><a href="#">A third menu item</a></li>
+  <li><a href="#">A final menu item</a></li>
+</ul></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;ul <span class="nv">class</span><span class="o">=</span><span class="s2">"o-list-ui u-mar-bottom-m"</span>&gt;
+  &lt;!-- The <span class="sb">`</span>u-mar-bottom-m<span class="sb">`</span> class is just to add some space between these examples. --&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;Another menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A third menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A final menu item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- The <span class="sb">`</span>dividers<span class="sb">`</span> modifier adds dividers between the items --&gt;
+&lt;ul <span class="nv">class</span><span class="o">=</span><span class="s2">"o-list-ui o-list-ui--dividers"</span>&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;Another menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A third menu item&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"#"</span>&gt;A final menu item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div></div>
+</section>
+
+<section id="flag" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Flag</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/objects/_flag.scss'>View on GitHub</a>
+  </header>
+  <p>The Flag object is very similar to the <a href="#media">Media object</a>, but
+    allows you to control the vertical alignment of the text and image. Based on
+    Harry Roberts' <a href="http://csswizardry.com/2013/05/the-flag-object/">flag
+      object</a>.</p>
+  <p>By default, elements are vertically center-aligned. Add <code>top</code> or
+    <code>bottom</code> modifiers to align top or bottom edges respectively.</p>
+  <p>Add the <code>rev</code> modifier for a fixed-width right-aligned element,
+    and flexible-with left-aligned element.</p>
+
+  <div class='sc-demo sc-demo--'><div class='sc-demo__output'><div class="o-flag u-mar-bottom-m">
+  <div class="o-flag__fix">
+    <img src="http://i.imgur.com/l2Gk1Q5.jpg" width="64" alt="Kristen Spilman" />
+  </div>
+  <div class="o-flag__flex">
+    This is a center-aligned flag object, the default state. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
+  </div>
+</div>
+
+<hr/>
+
+<!-- The `rev` modifier lets you have a right-aligned fixed-width element -->
+<div class="o-flag o-flag--rev u-mar-bottom-m">
+  <div class="o-flag__flex">
+    This is a reversed flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
+  </div>
+  <div class="o-flag__fix">
+    <img src="http://i.imgur.com/txMlllW.jpg" width="64" alt="Linda Eliasen" />
+  </div>
+</div>
+
+<hr/>
+
+<!-- The `top` modifier aligns the top edges of elements -->
+<div class="o-flag o-flag--top">
+  <div class="o-flag__fix">
+    <img src="http://i.imgur.com/3DzNLJQ.jpg" width="64" alt="Ryhan Hassan" />
+  </div>
+  <div class="o-flag__flex">
+    This is a top-aligned flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&nbsp;nesciunt.
+  </div>
+</div></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag u-mar-bottom-m"</span>&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__fix"</span>&gt;
+    &lt;img <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/l2Gk1Q5.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"64"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Kristen Spilman"</span> /&gt;
+  &lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__flex"</span>&gt;
+    This is a center-aligned flag object, the default state. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&amp;nbsp;nesciunt.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;!-- The <span class="sb">`</span>rev<span class="sb">`</span> modifier lets you have a right-aligned fixed-width element --&gt;
+&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag o-flag--rev u-mar-bottom-m"</span>&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__flex"</span>&gt;
+    This is a reversed flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&amp;nbsp;nesciunt.
+  &lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__fix"</span>&gt;
+    &lt;img <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/txMlllW.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"64"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Linda Eliasen"</span> /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;!-- The <span class="sb">`</span>top<span class="sb">`</span> modifier aligns the top edges of elements --&gt;
+&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag o-flag--top"</span>&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__fix"</span>&gt;
+    &lt;img <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/3DzNLJQ.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"64"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Ryhan Hassan"</span> /&gt;
+  &lt;/div&gt;
+  &lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"o-flag__flex"</span>&gt;
+    This is a top-aligned flag object. Quia consequuntur magni dolores eos qui ratione voluptatem sequi&amp;nbsp;nesciunt.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div></div>
+</section>
+
+          </div>
+
+          <div class="sc-o-grid__col sc-o-grid__col--3-of-12">
+              <h4>On this page</h4>
+              <nav class="sc-content__nav sc-o-nav">
+                <ul>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#list-ui">List-UI</a></li>
+                    <li><a href="#flag">Flag</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="sc-site__footer">
+      <div class="sc-u-l-wrap">
+        <a href="https://github.com/dropbox/scooter">View on GitHub</a>.
+      </div>
+    </footer>
+
+    <script src="assets/js/all.js" type="text/javascript"></script>
+  </body>
+</html>

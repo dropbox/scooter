@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Scooter - Utilities and Helpers</title>
+
+    <link href="assets/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vendor/syntax.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="utilities sc-site">
+    <header class="sc-site__header">
+
+      <div class="sc-u-l-wrap">
+        <a href="index.html" title="Scooter Home" class="sc-site__title">
+          <img src="assets/images/scooter-logo.svg" alt="Scooter logo" />
+        </a>
+      </div>
+
+    </header>
+
+    <nav class="sc-site__nav">
+      <div class="sc-u-l-wrap">
+        <ul class="sc-o-nav sc-o-nav--inline">
+          <li><a href="./">Home</a></li>
+          <li><a href="variables.html">Variables</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="mixins.html">Mixins</a></li>
+          <li><a href="base.html">Base styles</a></li>
+          <li><a href="objects.html">Objects</a></li>
+          <li><a href="components.html">Components</a></li>
+          <li><a class="is-active" href="utilities.html">Utilities</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="sc-site__content">
+      <div class="sc-u-l-wrap">
+        <div class="sc-o-grid">
+
+          <div class="sc-o-grid__col sc-o-grid__col--9-of-12">
+            <header class="sc-content__header">
+              <h1>Utilities and Helpers</h1>
+                <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/helpers'>View on GitHub</a>
+            </header>
+            <section class="sc-def">
+  <p>Utility classes are used for layout and font helpers, clearfixes, and other
+    helpful things.</p>
+</section>
+
+<section class="sc-def" id="clearfix">
+  <header class="sc-def__header">
+    <h2>Clearfix</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/helpers/_clearfix.scss'>View on GitHub</a>
+  </header>
+
+  <p>The clearfix helper is based on Thierry Koblentz's <a href="http://cssmojo.com/latest_new_clearfix_so_far/">
+      micro clearfix</a>. Use it to ensure that elements with floated children
+    correctly clear floats.</p>
+  <p>Either use the <code>clearfix</code> class in your markup or <code>@extend %clearfix</code>
+    in your SCSS.</p>
+</section>
+
+<section class="sc-def" id="layout">
+  <header class="sc-def__header">
+    <h2>Layout</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/helpers/_layout.scss'>View on GitHub</a>
+  </header>
+
+  <p>Margins and padding have helpers with &ldquo;tshirt&rdquo; sizes for adding space between elements.</p>
+
+  <ul>
+    <li><code>xxs: 4px</code></li>
+    <li><code>xs: 8px</code></li>
+    <li><code>s: 16px</code></li>
+    <li><code>m: 24px</code></li>
+    <li><code>l: 32px</code></li>
+    <li><code>xl: 64px</code></li>
+    <li><code>xxl: 96px</code></li>
+    <li><code>jumbo: 128px</code></li>
+  </ul>
+
+  <h3>Padding</h3>
+  <div class='sc-demo sc-demo--padding'><div class='sc-demo__output'><p>
+  <span class="u-pad-m">Regular padding</span>
+</p>
+<p>
+  <span class="u-pad-s">Small padding</span>
+</p>
+<p>
+  <span class="u-pad-xs">Extra-small padding</span>
+</p>
+<p>
+  <span class="u-pad-xxs">Double-extra-small padding</span>
+</p>
+<p>
+  <span class="u-pad-l">Large padding</span>
+</p>
+<p>
+  <span class="u-pad-xl">Extra-large padding</span>
+</p>
+<p>
+  <span class="u-pad-xxl">Double-extra-large padding</span>
+</p>
+<p>
+  <span class="u-pad-jumbo">Jumbo padding</span>
+</p></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-m"</span>&gt;Regular padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-s"</span>&gt;Small padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-xs"</span>&gt;Extra-small padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-xxs"</span>&gt;Double-extra-small padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-l"</span>&gt;Large padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-xl"</span>&gt;Extra-large padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-xxl"</span>&gt;Double-extra-large padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-jumbo"</span>&gt;Jumbo padding&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</div></div>
+
+  <p>You can also add a <code>vertical</code> or <code>horizontal</code> keyword to apply vertical or horizontal padding,
+    as well as edge keywords <code>top, right, bottom</code> or <code>left</code> to add padding to that edge:</p>
+
+  <div class='sc-demo sc-demo--padding'><div class='sc-demo__output'><p>
+  <span class="u-pad-vertical-m">Regular vertical padding</span>
+</p>
+<p>
+  <span class="u-pad-left-xl">Extra-large left padding</span>
+</p></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-vertical-m"</span>&gt;Regular vertical padding&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"u-pad-left-xl"</span>&gt;Extra-large left padding&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+</div></div>
+
+  <h3>Margins</h3>
+  <p>Margins have the same tshirt sizes available. (Note that paragraphs always get a margin-bottom by default in these
+    demos).</p>
+
+  <div class='sc-demo sc-demo--margin'><div class='sc-demo__output'><div>
+  <p class="u-mar-bottom-m">This has a medium bottom margin</p>
+</div>
+
+<hr/>
+
+<div>
+  <p class="u-mar-vertical-l">This has a large vertical margin</p>
+</div>
+
+<hr/>
+
+<div>
+  <p class="u-mar-right-s">This has a small right margin</p>
+</div>
+
+<hr/>
+
+<div>
+  <p class="u-trim-margin">This paragraph has been trimmed of its margin</p>
+</div></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;div&gt;
+  &lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-mar-bottom-m"</span>&gt;This has a medium bottom margin&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;div&gt;
+  &lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-mar-vertical-l"</span>&gt;This has a large vertical margin&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;div&gt;
+  &lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-mar-right-s"</span>&gt;This has a small right margin&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr/&gt;
+
+&lt;div&gt;
+  &lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-trim-margin"</span>&gt;This paragraph has been trimmed of its margin&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div></div>
+
+  <h3>Floats</h3>
+  <p>You can float things left and right with ease. Don't forget to put floated
+    elements in a clearfix.</p>
+
+  <div class='sc-demo sc-demo--'><div class='sc-demo__output'><div class="clearfix">
+  <img class="u-l-fl" src="http://i.imgur.com/l2Gk1Q5.jpg" width="128" alt="Kristen Spilman" />
+  <img class="u-l-fr" src="http://i.imgur.com/0tRX9MO.jpg" width="128" alt="Daniel Eden" />
+</div></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;div <span class="nv">class</span><span class="o">=</span><span class="s2">"clearfix"</span>&gt;
+  &lt;img <span class="nv">class</span><span class="o">=</span><span class="s2">"u-l-fl"</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/l2Gk1Q5.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"128"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Kristen Spilman"</span> /&gt;
+  &lt;img <span class="nv">class</span><span class="o">=</span><span class="s2">"u-l-fr"</span> <span class="nv">src</span><span class="o">=</span><span class="s2">"http://i.imgur.com/0tRX9MO.jpg"</span> <span class="nv">width</span><span class="o">=</span><span class="s2">"128"</span> <span class="nv">alt</span><span class="o">=</span><span class="s2">"Daniel Eden"</span> /&gt;
+&lt;/div&gt;</code></pre>
+</div></div>
+
+  <h3>Display helpers</h3>
+  <p>There are display helper classes available to change box-model behaviour of
+  elements.</p>
+
+  <ul>
+    <li><code>u-l-b</code> will set the element to <code>display: block;</code></li>
+    <li><code>u-l-ib</code> will set the element to <code>display: inline-block;</code>
+      <ul>
+        <li>There is an <code>--m</code> modifier available to set the element to
+          <code>vertical-align: middle;</code></li>
+      </ul>
+    </li>
+  </ul>
+
+</section>
+
+<section id="typography" class="sc-def">
+  <header class="sc-def__header">
+    <h2>Typography</h2>
+    <a class='ext-link sc-u-font-meta' href='https://github.com/dropbox/scooter/tree/master/scss/helpers/_typography.scss'>View on GitHub</a>
+  </header>
+
+  <p>Use the typography helper classes to change text alignment, size, and color.</p>
+
+  <div class='sc-demo sc-demo--'><div class='sc-demo__output'><p class="u-font-center">Center-aligned text</p>
+<hr/>
+<p class="u-font-left">Left-aligned text</p>
+<hr/>
+<p class="u-font-right">Right-aligned text</p>
+<hr/>
+<p class="u-font-small">Small text</p>
+<hr/>
+<p class="u-font-meta">De-emphasised or "meta" text</p>
+<p class="u-font-error">Error message text</p>
+<p class="u-font-success">Success message text</p></div><div class='sc-demo__input'><pre class="highlight"><code>&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-center"</span>&gt;Center-aligned text&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-left"</span>&gt;Left-aligned text&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-right"</span>&gt;Right-aligned text&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-small"</span>&gt;Small text&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-meta"</span>&gt;De-emphasised or <span class="s2">"meta"</span> text&lt;/p&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-error"</span>&gt;Error message text&lt;/p&gt;
+&lt;p <span class="nv">class</span><span class="o">=</span><span class="s2">"u-font-success"</span>&gt;Success message text&lt;/p&gt;</code></pre>
+</div></div>
+
+          </div>
+
+          <div class="sc-o-grid__col sc-o-grid__col--3-of-12">
+              <h4>On this page</h4>
+              <nav class="sc-content__nav sc-o-nav">
+                <ul>
+                    <li><a href="#clearfix">Clearfix</a></li>
+                    <li><a href="#layout">Layout</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="sc-site__footer">
+      <div class="sc-u-l-wrap">
+        <a href="https://github.com/dropbox/scooter">View on GitHub</a>.
+      </div>
+    </footer>
+
+    <script src="assets/js/all.js" type="text/javascript"></script>
+  </body>
+</html>
