@@ -2,8 +2,12 @@
 
 /// Assert that the parent selector matches one of the selectors passed into $selectors
 /// @access public
-/// @group accessiblity
+/// @group accessibility
 /// @param {selector} $selectors... - arglist of selctors to assert
+/// @example scss
+///  .c-label {
+///     @include assert-selector(label);
+///  }
 @mixin assert-selector($selectors...) {
     $result: &;
 
