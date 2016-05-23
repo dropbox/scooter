@@ -1,6 +1,7 @@
 .sass-cache
 .DS_Store
 docs/source/assets/css/vendor/scooter.scss
+docs/source/sassdocs
 *.css.map
 
 # Hound requires a slightly different name for the lint config,
