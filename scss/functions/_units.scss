@@ -2,6 +2,6 @@
 /// @access public
 /// @group units
 /// @return {number}
-@function stripUnit($n) {
-    @return $n / ($n*0+1);
+@function strip-unit($n) {
+  @return $n / ($n*0+1);
 }
